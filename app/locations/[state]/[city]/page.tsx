@@ -39,9 +39,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   }
   const found = keptCities(state).find((c) => c.slug === city);
   if (!found) return {};
-  const stAbbr = state.toUpperCase();
   return pageMeta({
-    title: `Charter Bus Rental in ${found.city}, ${stAbbr} | Cascade Charter Bus`,
+    title: `Charter Bus Rental in ${found.city} | Cascade Charter Bus`,
     description: `Charter bus rental in ${found.city}, ${stateName(state)} for weddings, school trips, sports travel and corporate events. DOT-certified drivers, 24/7 dispatch, final quotes.`,
     path: `/locations/${state}/${city}/`,
   });

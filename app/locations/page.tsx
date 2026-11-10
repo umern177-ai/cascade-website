@@ -23,10 +23,17 @@ export default function LocationsHub() {
     <main className="bg-white min-vh-100">
       <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
+          <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">Service Areas</span>
           <h1 className="display-4 fw-bold mb-3">Our Service Locations</h1>
-          <p className="lead opacity-75 mx-auto mb-0" style={{ maxWidth: 700 }}>
-            Charter Bus Rental | Explore our charter bus network across {count} states and DC.
+          <p className="lead opacity-75 mx-auto mb-4" style={{ maxWidth: 700 }}>
+            Charter bus rental in {count} states and Washington, DC — pick a state to see
+            its destinations, or send the form from any town in America.
           </p>
+          <div className="d-flex justify-content-center flex-wrap gap-3">
+            <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{count} States + DC</span>
+            <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">710 City Pages</span>
+            <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">24/7 Dispatch</span>
+          </div>
         </div>
       </section>
       <div className="container py-3">
@@ -34,14 +41,24 @@ export default function LocationsHub() {
       </div>
       <section className="pb-5">
         <div className="container">
-          <div className="row g-4">
-            {areas.map((a) => (
-              <div className="col-lg-3 col-md-4 col-6" key={a.code}>
+          <p className="text-center text-muted mb-4">
+            Every state below has a full page with its destinations — popular cities at the
+            top, every other town one click away through the quote form.
+          </p>
+          <div className="row g-3 g-md-4">
+            {areas.map((a, i) => (
+              <div className="col-lg-3 col-sm-6 col-6" key={a.code}>
                 <Link href={`/locations/${a.code}/`} className="text-decoration-none">
-                  <div className="card border-0 shadow-sm rounded-4 hover-lift h-100">
-                    <div className="card-body p-4 d-flex align-items-center justify-content-between">
-                      <h2 className="h6 fw-bold mb-0 text-dark">{a.name}</h2>
-                      <span className="badge bg-primary text-dark x-small-bold">VIEW CITIES</span>
+                  <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 location-tile">
+                    <div className="card-body p-3 p-md-4 d-flex flex-column align-items-center text-center">
+                      <span className="bg-primary-soft text-primary rounded-circle mb-2 mb-md-3" style={{ width: 46, height: 46 }} aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: 8 }}>
+                          <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                          <circle cx="12" cy="10" r="3" />
+                        </svg>
+                      </span>
+                      <h2 className="h5 fw-bold mb-1 mt-1 text-dark lh-sm">{a.name}</h2>
+                      <span className="badge bg-primary text-dark rounded-pill px-3 mb-2 mt-2">VIEW CITIES</span>
                     </div>
                   </div>
                 </Link>

@@ -68,7 +68,7 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">
             Charter Bus Rental
           </span>
-          <h1 className="display-5 fw-bold mb-3">{data.h1}</h1>
+          <p className="display-4 fw-bold mb-3 lh-1">{`Charter Bus Rental in ${name}`}</p>
           <div className="d-flex justify-content-center gap-3 flex-wrap mt-4">
             <a
               href="/contact/"
@@ -100,6 +100,7 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
       {/* Local intro */}
       <section className="py-5 pb-0">
         <div className="container" style={{ maxWidth: 880 }}>
+          <h1 className="h2 fw-bold text-dark mb-3">{data.h1}</h1>
           <p className="text-muted lead mb-0">{data.heroIntro}</p>
         </div>
       </section>

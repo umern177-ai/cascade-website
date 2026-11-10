@@ -54,11 +54,11 @@ export default function BookingProcess({ pickup }: { pickup: string }) {
               </p>
               <div className="row g-2">
                 {[
-                  "Pickup address and time (hotel, venue, office, home)",
-                  "Destination — and every stop between",
-                  "Date, plus the return time for round trips",
-                  "Headcount and total luggage (bags, gear, coolers count)",
-                  "Anything special: children, accessibility needs, a late-night return",
+                  "Pickup address — hotel, venue, office, or home",
+                  "Pickup time and trip date (and the return time for round trips)",
+                  "Destination, plus every stop in between",
+                  "Arrival or event end time, so timing is built around your plan",
+                  "Headcount, luggage and extras — gear, children, accessibility needs",
                 ].map((t) => (
                   <div className="col-md-6" key={t}>
                     <p className="text-muted small mb-0 d-flex align-items-start gap-2">

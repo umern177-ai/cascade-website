@@ -9,16 +9,14 @@ import { MessageSquareText } from "lucide-react";
 export function KeptCityButton({ stateCode, city, slug }: { stateCode: string; city: string; slug: string }) {
   return (
     <Link href={`/locations/${stateCode}/${slug}/`} className="text-decoration-none">
-      <div className="card h-100 border-0 shadow-sm rounded-4 hover-lift transition-all">
-        <div className="card-body p-4 d-flex align-items-center justify-content-between">
-          <div className="d-flex align-items-center">
-            <div className="bg-primary-soft p-2 rounded-3 text-primary me-3">
-              <BusIcon />
-            </div>
-            <h2 className="h6 fw-bold mb-0 text-dark">{city}</h2>
-          </div>
-          <ChevronArrow />
-        </div>
+      <div className="city-tile city-tile-kept">
+        <span className="d-flex align-items-center gap-2">
+          <span className="bg-primary-soft text-primary rounded-3 p-1 flex-shrink-0" aria-hidden="true">
+            <BusIcon />
+          </span>
+          <span className="city-name text-dark">{city}</span>
+        </span>
+        <ChevronArrow />
       </div>
     </Link>
   );

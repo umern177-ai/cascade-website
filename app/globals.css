@@ -164,6 +164,40 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 /* Amber brand color on WHITE fails contrast for small text: eyebrow/label
    spots use a darker amber that passes 4.5:1 while keeping the amber look */
 .services-card-text { font-size: 0.9rem; line-height: 1.65; }
+/* Locations hub tiles */
+.location-tile { background: #fff; }
+.location-tile .card-body { min-height: 128px; justify-content: center; }
+@media (min-width: 768px) {
+  .location-tile .card-body { min-height: 158px; }
+}
+
+/* State page city tiles (kept + quote) — themed, aligned, mobile friendly */
+.city-tile {
+  background: #fff;
+  border: 1px solid rgba(245, 160, 2, 0.18);
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.06) !important;
+  padding: 0.65rem 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  min-height: 52px;
+  width: 100%;
+  height: 100%;
+}
+.city-tile .city-name {
+  font-weight: 600;
+  font-size: 0.9rem;
+  line-height: 1.25;
+  margin: 0;
+}
+.city-quote:hover {
+  border-color: var(--fleet-orange);
+  box-shadow: 0 0.375rem 0.75rem rgba(245, 160, 2, 0.18) !important;
+  transform: translateY(-2px);
+}
+
 /* mobile: service photo floats under the title as its own spaced block */
 @media (max-width: 767.98px) {
   .service-photo-mobile { height: 210px; }

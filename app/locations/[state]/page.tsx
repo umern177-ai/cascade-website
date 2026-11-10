@@ -40,7 +40,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { state } = await params;
   const name = stateName(state);
   return pageMeta({
-    title: `Charter Bus Rental in ${name}, ${state.toUpperCase()} | Cascade Charter Bus`,
+    title: `Charter Bus Rental in ${name} | Cascade Charter Bus`,
     description: `Charter bus rental across ${name}. Choose your city to see local group transportation, or open the booking form with your pickup pre-filled. 24/7 dispatch nationwide.`,
     path: `/locations/${state}/`,
   });
@@ -88,7 +88,7 @@ export default async function StatePage({ params }: Props) {
                   <h2 className="h4 fw-bold text-dark mb-4">Popular {name} Charter Bus Locations</h2>
                 </div>
                 {kept.map((c) => (
-                  <div className="col-lg-3 col-md-4 col-6" key={c.slug}>
+                  <div className="col-6 col-lg-4 col-md-4" key={c.slug}>
                     <KeptCityButton stateCode={state} city={c.city} slug={c.slug} />
                   </div>
                 ))}
@@ -102,7 +102,7 @@ export default async function StatePage({ params }: Props) {
               <p className="text-muted mb-4">Don&apos;t see a page for your city? Pick it below and we&apos;ll start your quote.</p>
             </div>
             {others.map((c) => (
-              <div className="col-lg-3 col-md-4 col-6" key={c.slug}>
+              <div className="col-6 col-lg-4 col-md-4" key={c.slug}>
                 <QuoteCityButton city={c.city} stateCode={state} />
               </div>
             ))}

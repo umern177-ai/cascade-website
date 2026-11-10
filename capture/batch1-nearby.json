@@ -1,0 +1,183 @@
+{
+ "nm/Angel Fire": [
+  "Abiquiu",
+  "Carlsbad",
+  "Las Cruces",
+  "Los Ojos",
+  "Portales",
+  "Taos"
+ ],
+ "md/Berlin": [
+  "Aberdeen",
+  "Baltimore",
+  "Beltsville",
+  "California",
+  "Clinton",
+  "Easton"
+ ],
+ "co/Grand Junction": [
+  "Avon",
+  "Bayfield",
+  "Denver",
+  "Evergreen",
+  "Glenwood Springs",
+  "Golden"
+ ],
+ "nh/Hanover": [
+  "Alton",
+  "Amherst",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham"
+ ],
+ "or/Hood River": [
+  "Astoria",
+  "Brookings",
+  "Damascus",
+  "Eugene",
+  "Klamath Falls",
+  "McMinnville"
+ ],
+ "wi/Lac Du Flambeau": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "ny/New York": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "me/Newry": [
+  "Bangor",
+  "Bar Harbor",
+  "Belfast",
+  "Bethel",
+  "Ogunquit",
+  "Portland"
+ ],
+ "nh/North Conway": [
+  "Alton",
+  "Amherst",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham"
+ ],
+ "or/Astoria": [
+  "Brookings",
+  "Damascus",
+  "Eugene",
+  "Hood River",
+  "Klamath Falls",
+  "McMinnville"
+ ],
+ "ny/Beacon": [
+  "Alexandria Bay",
+  "Auburn",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley",
+  "Clayton"
+ ],
+ "mi/Benton Harbor": [
+  "Adrian",
+  "Alpena",
+  "Bellaire",
+  "Boyne Falls",
+  "Bridgman",
+  "Brimley"
+ ],
+ "wi/Crandon": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "mt/Kalispell": [
+  "Big Sky",
+  "Bozeman",
+  "Dillon",
+  "Emigrant",
+  "Great Falls",
+  "Livingston"
+ ],
+ "nh/Keene": [
+  "Alton",
+  "Amherst",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham"
+ ],
+ "vt/Ludlow": [
+  "Brattleboro",
+  "Manchester Center",
+  "Middletown Springs",
+  "Rutland",
+  "West Dover"
+ ],
+ "ny/Potsdam": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "nj/Red Bank": [
+  "Chatham",
+  "Emerson",
+  "Flemington",
+  "Glassboro",
+  "Mahwah",
+  "Mullica Hill"
+ ],
+ "wi/Shawano": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "ok/Shawnee": [
+  "McAlester",
+  "Sapulpa",
+  "Smithville",
+  "Stillwater"
+ ],
+ "nm/Taos": [
+  "Abiquiu",
+  "Angel Fire",
+  "Carlsbad",
+  "Las Cruces",
+  "Los Ojos",
+  "Portales"
+ ],
+ "mt/Whitefish": [
+  "Big Sky",
+  "Bozeman",
+  "Dillon",
+  "Emigrant",
+  "Great Falls",
+  "Kalispell"
+ ],
+ "ny/New York City": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ]
+}

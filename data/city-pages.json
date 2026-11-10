@@ -749,5 +749,2713 @@
       "https://www.visitpittsburgh.com/plan-your-trip/group-tour/motorcoach-parking/",
       "https://ihg.com/holidayinn/hotels/us/en/weirton/wwvwv/hoteldetail/local-guide-whats-nearby"
     ]
+  },
+  {
+    "state": "nm",
+    "slug": "angel-fire",
+    "city": "Angel Fire",
+    "title": "Charter Bus Rental in Angel Fire | Cascade Charter Bus",
+    "metaDescription": "Book a shuttle or van in Angel Fire, NM for Angel Fire Resort ski trips, Enchanted Circle tours & mountain weddings. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Angel Fire, NM for Ski and Mountain Trips",
+    "heroIntro": "Angel Fire sits at 8,700 feet in the Moreno Valley, and everything about moving a group here is mountain driving: the road in snakes up from Taos over Palo Flechado Pass, and winter brings chain rules and afternoon squalls. Cascade Charter Bus arranges shuttles, vans and coaches with mountain-experienced drivers for Angel Fire Resort ski weeks, weddings in the valley and tours around the Enchanted Circle. Tell us your dates before your headcount. On these roads, the season picks the vehicle.",
+    "servicesHeading": "Group Transportation Services in Angel Fire",
+    "services": [
+      {
+        "title": "Ski Week and Resort Transfers",
+        "text": "Angel Fire Resort runs lift-served skiing from December through March and a busy bike park all summer. Most groups fly into Albuquerque or Denver, then ride up. A minibus handles the mountain roads better than a big coach, and there is room under the floor for ski bags. Send us your flight times—we plan the climb with weather time already added.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "Mountain weddings here use the resort's event lawns, the lodge, and ranch properties along Highway 64. Guests fly into Albuquerque or Santa Fe, so a shuttle from the airport—and a loop on the wedding day—keeps nobody driving a canyon road at dusk. Tell us the venue and we check the driveway before we quote it.",
+        "href": "/services/wedding-transportation/"
+      },
+      {
+        "title": "Enchanted Circle Tours",
+        "text": "The Enchanted Circle—a loop through Taos, Eagle Nest and Red River—is a full-day drive of about 85 miles. Fall colors and the Fourth of July at Eagle Nest keep the route busy. A local-route driver makes the stops the schedule needs and skips the viewpoints a bus can't park at.",
+        "href": "/services/sightseeing-tour-bus/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Angel Fire Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Mountain roads and ski-bags with room to spare."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small wedding parties and lodge driveways."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Big groups staying on the highway routes."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Angel Fire",
+    "destinations": [
+      {
+        "name": "Angel Fire Resort",
+        "text": "The resort anchors the valley with skiing and snowboarding in winter and a lift-served mountain-bike park plus zip lines once the snow melts. Conference space and banquet rooms make it the area's natural base for gatherings.",
+        "tip": "Resort roads ice over fast after 5 p.m. in January. Ask us to schedule pickups before sunset so the bus isn't chaining up in the dark."
+      },
+      {
+        "name": "Vietnam Veterans Memorial State Park",
+        "text": "The country's first major Vietnam veterans memorial stands on a hill above the valley with a chapel and views for miles. School and veterans groups visit year-round, and the site hosts an annual memorial weekend ceremony.",
+        "tip": "The parking loop handles cars more comfortably than a 45-foot coach. We drop at the gate and the group walks the short path in."
+      },
+      {
+        "name": "Taos",
+        "text": "Taos Pueblo—a living Native community for over 1,000 years—Taos Plaza and the art galleries along the road make the drive south worth a day. Taos Ski Valley adds another hour up the canyon.",
+        "tip": "Buses are welcome at designated lots near the Plaza, not on the narrow side streets. We plan the drop with the stop, not after arrival."
+      },
+      {
+        "name": "Eagle Nest Lake and Cimarron",
+        "text": "Eagle Nest Lake sits on the Enchanted Circle with fishing in every season, and the road east drops into the Cimarron Canyon state park, a favorite for school geology trips and church retreats.",
+        "tip": "Canyon walls shade the road most of the day in winter. We carry chains in season and build in margin rather than promising a timetable the mountains don't hold."
+      }
+    ],
+    "mapPins": [
+      "Angel Fire Resort",
+      "Vietnam Veterans Memorial State Park",
+      "Taos Pueblo",
+      "Eagle Nest Lake",
+      "Moreno Valley"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Angel Fire",
+      "items": [
+        {
+          "city": "Abiquiu"
+        },
+        {
+          "city": "Carlsbad"
+        },
+        {
+          "city": "Las Cruces"
+        },
+        {
+          "city": "Los Ojos"
+        },
+        {
+          "city": "Portales"
+        },
+        {
+          "city": "Taos"
+        }
+      ]
+    },
+    "faqsHeading": "Angel Fire Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airport should our Angel Fire group fly into?",
+        "a": "Most groups use Albuquerque, about two and a half hours away on paved highway all the way. Taos Regional is closer but serves limited commercial flights, so check your itinerary before we plan the shuttle."
+      },
+      {
+        "q": "Can a big bus handle Angel Fire roads in winter?",
+        "a": "Minibuses and vans handle the mountain reliably; full-size coaches work on the highway legs. Our drivers run the route daily in season and carry chains where New Mexico requires them."
+      },
+      {
+        "q": "Do you shuttle weddings between Taos and Angel Fire?",
+        "a": "Yes—the two towns share venues, hotels and guests all winter and summer. Tell us both addresses and the reception end time, and we plan the runs around the mountain pass."
+      },
+      {
+        "q": "How early should we book for ski season?",
+        "a": "Book when your lodging is confirmed. Christmas week and the February holiday stretch fill the valley's shuttle calendars first."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Angel Fire Charter Bus?",
+    "reviewChecks": [
+      "Confirm Angel Fire Resort's event and parking arrangements for buses before publish.",
+      "Confirm Taos Pueblo group-visit rules and bus parking (nps.gov / taospueblo.com).",
+      "Eagle Nest: confirm gate/fee details with the state park.",
+      "Owner: add one real Angel Fire job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.emnrd.nm.gov/stateparks/vietnam-veterans/"
+    ]
+  },
+  {
+    "state": "md",
+    "slug": "berlin",
+    "city": "Berlin",
+    "title": "Charter Bus Rental in Berlin | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Berlin, MD for Assateague trips, Ocean City beach weeks, weddings & school outings. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Berlin, MD for Beach Season and School Trips",
+    "heroIntro": "Berlin sits seven miles inland from Ocean City's boardwalk, which makes this quiet Victorian town the parking lot for the whole coast every summer. Cascade Charter Bus runs charter buses, minibuses and school buses out of Berlin—beach-week shuttles, Assateague school trips, wedding guests moving between town and the water, and youth-group beach days. Route 50 is the only road in, and it chokes on Saturday afternoons in July. We build the schedule around that traffic before we quote anything.",
+    "servicesHeading": "Group Transportation Services in Berlin",
+    "services": [
+      {
+        "title": "Beach Week and Youth Group Shuttles",
+        "text": "Every June, graduating classes take over the Ocean City motels, and their parents want a plan that doesn't involve student drivers. A school bus on a fixed loop between the hotel strip and the boardwalk keeps the week organized at the lowest per-seat cost. Book the loop with return times—the last bus matters as much as the first.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "Coastal weddings here run on two addresses: a ceremony in Berlin's historic district or a country venue inland, and a reception along the Ocean City water. Parking at the beach costs more than the shuttle does. Give us both addresses and the reception end time; we plan around the Route 50 bridge.",
+        "href": "/services/wedding-transportation/"
+      },
+      {
+        "title": "Assateague and Museum Trips",
+        "text": "Assateague Island National Seashore—wild ponies, protected beaches and ranger programs—is fifteen minutes south and fills school calendars in May and October. The Atlantic Hotel in downtown Berlin anchors the town's own walking history tours. We handle the bus so the chaperones handle the students.",
+        "href": "/services/school-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Berlin Groups",
+    "vehicles": [
+      {
+        "slug": "school-bus",
+        "reason": "Beach-week loops and local field trips at the lowest per-seat cost."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Wedding parties moving between downtown and the water."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Long trips from Washington or Baltimore with gear."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Berlin",
+    "destinations": [
+      {
+        "name": "Assateague Island National Seashore",
+        "text": "The island's wild ponies walk the dunes while lifeguarded beaches stretch for miles. Ranger-led programs make it a working classroom for school groups; campers come for the overnight sites.",
+        "tip": "The national side charges an entrance fee and the lots fill by mid-morning in summer. Call ahead for group permits and confirm the drop lot that fits a bus."
+      },
+      {
+        "name": "Ocean City Boardwalk",
+        "text": "Three miles of boardwalk—Thrashers fries, rides, mini golf—run from the inlet to 27th Street. School reward trips and family reunions both use it as the anchor stop.",
+        "tip": "Bus parking is at the West Ocean City park-and-ride or the inlet lot on summer days. We pick the lot before the trip, not while the group waits."
+      },
+      {
+        "name": "Historic Downtown Berlin",
+        "text": "Berlin's Main Street holds antique shops, cafes and the Atlantic Hotel, restored to its 1895 bones. The walking district is an easy half-day stop between the beach and the mainland.",
+        "tip": "Jefferson Street fits a drop-and-pickup, and the side streets fill fast during the town's Second Friday art events. We stage a block away on event nights."
+      },
+      {
+        "name": "Fenwick Island and the Delaware Beaches",
+        "text": "North of the state line, Fenwick Island and Bethany Beach extend the trip for groups who want quieter sand without leaving the coast—about a twenty-minute ride from Berlin.",
+        "tip": "Delaware beach towns restrict bus drop-offs seasonally. Tell us the address and we confirm where the bus waits."
+      }
+    ],
+    "mapPins": [
+      "Assateague Island National Seashore",
+      "Ocean City Boardwalk",
+      "Atlantic Hotel, Berlin",
+      "Fenwick Island",
+      "Historic Downtown Berlin"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Berlin",
+      "items": [
+        {
+          "city": "Aberdeen"
+        },
+        {
+          "city": "Baltimore"
+        },
+        {
+          "city": "Beltsville"
+        },
+        {
+          "city": "California"
+        },
+        {
+          "city": "Clinton"
+        },
+        {
+          "city": "Easton"
+        }
+      ]
+    },
+    "faqsHeading": "Berlin Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How early should a bus arrive for an Ocean City beach day?",
+        "a": "Before 10 a.m. in summer—the Route 50 bridge backs up badly from late morning on Saturday. Midweek is calmer and parking is kinder to buses."
+      },
+      {
+        "q": "Can buses enter Assateague Island?",
+        "a": "Yes, onto specific lots. The national seashore issues group permits, and the state side has separate rules. We confirm the drop lot with the park before your date."
+      },
+      {
+        "q": "Do you run late-night buses after boardwalk events?",
+        "a": "Yes—when you book the day, tell us the end time of your last event. Drivers stay with the schedule instead of vanishing after the first pickup."
+      },
+      {
+        "q": "What's the best vehicle for a beach-week student group?",
+        "a": "A school bus on a repeating loop. It's the cheapest per seat and its seating suits short hops between motels, the boardwalk and dinner stops."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Berlin Charter Bus?",
+    "reviewChecks": [
+      "Confirm Assateague group-permit and parking rules with the National Park Service before publish.",
+      "Confirm Ocean City bus parking lots and summer restrictions with the city.",
+      "Fenwick Island seasonal bus rules: confirm with the town.",
+      "Owner: add one real Berlin job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.nps.gov/asis/index.htm"
+    ]
+  },
+  {
+    "state": "co",
+    "slug": "grand-junction",
+    "city": "Grand Junction",
+    "title": "Charter Bus Rental in Grand Junction | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Grand Junction, CO for Palisade winery tours, Colorado National Monument drives & conference transfers. Free quote, 24/7.",
+    "h1": "Charter Bus Rental in Grand Junction, CO for Wine Country and Conferences",
+    "heroIntro": "Grand Junction is Colorado's western-slope capital—energy, agriculture and, above all, wine country. The airport sits inside the city limits, six minutes from downtown, and Palisade's tasting rooms begin fifteen minutes east. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for winery days on the Fruit and Wine Byway, conference transfers at Two Rivers Convention Center, and drives into Colorado National Monument's red-rock canyons. The quote you get covers the roads the driver will actually use.",
+    "servicesHeading": "Group Transportation Services in Grand Junction",
+    "services": [
+      {
+        "title": "Winery and Orchard Tours",
+        "text": "Palisade's tasting rooms—two dozen of them along a flat valley byway—are the region's signature group trip. A minibus with a designated driver lets the whole party taste without anyone holding back. We build the day around your tasting reservations, add a peach-country lunch stop in season, and price it as one final quote.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Conference and Corporate Transfers",
+        "text": "Two Rivers Convention Center hosts state associations all year, and the energy and ag-consulting firms keep visitor groups arriving at Grand Junction Regional Airport. One minibus on a hotel-to-venue loop beats a stack of rental contracts, and your accounting team gets a single invoice.",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Monument and Mesa Drives",
+        "text": "Colorado National Monument's Rim Rock Drive climbs nineteen switchbacked miles above the city, and the Grand Mesa road tops 11,000 feet. Groups come for the overlooks, and the driver who knows which lots fit a bus makes both drives comfortable.",
+        "href": "/services/sightseeing-tour-bus/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Grand Junction Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Winery days and airport loops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Conference delegations and long drives into the mountains."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small tasting parties and tight winery lots."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Grand Junction",
+    "destinations": [
+      {
+        "name": "Palisade Wine Country",
+        "text": "The Fruit and Wine Byway links two dozen wineries, orchards and distilleries in a flat four-mile stretch—groups can cover three or four tastings in an afternoon. September's Palisade Peach Festival and autumn harvest weekends draw the biggest crowds.",
+        "tip": "Ask each winery to hold group reservations and confirm where the bus parks—several share gravel lots. September weekends need bookings a month ahead."
+      },
+      {
+        "name": "Colorado National Monument",
+        "text": "Red-rock monoliths and 450-foot canyon walls sit twenty minutes from downtown, with Rim Rock Drive's overlooks as some of the best photo stops in the state. School geology classes and photography clubs book it all spring.",
+        "tip": "Rim Rock Drive has vehicle-length limits on the sharper switchbacks—buses use designated overlook parking, and the monument's entrance fee applies per vehicle."
+      },
+      {
+        "name": "Downtown Grand Junction",
+        "text": "Main Street's art-lined blocks hold the farmers' market in summer, the Two Rivers Convention Center, breweries and galleries—an easy dinner stop that keeps a conference group together on foot.",
+        "tip": "Main Street is pedestrianized for festival days. We set the drop at 4th and Colorado and agree the pickup corner for after dinner."
+      },
+      {
+        "name": "Grand Mesa",
+        "text": "The world's largest flat-top mountain rises east of town—lakes, aspen groves and Powderhorn Ski Resort at the top. Fall-color drives here are a September tradition for senior and church groups.",
+        "tip": "Grand Mesa Scenic Byway climbs past 10,000 feet; hairpin lots near Land's End are small, so a Sprinter van often beats a full coach on the last stretch."
+      }
+    ],
+    "mapPins": [
+      "Palisade Wine Country",
+      "Colorado National Monument",
+      "Two Rivers Convention Center",
+      "Grand Mesa",
+      "Grand Junction Regional Airport"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Grand Junction",
+      "items": [
+        {
+          "city": "Avon"
+        },
+        {
+          "city": "Bayfield"
+        },
+        {
+          "city": "Denver"
+        },
+        {
+          "city": "Evergreen"
+        },
+        {
+          "city": "Glenwood Springs"
+        },
+        {
+          "city": "Golden"
+        }
+      ]
+    },
+    "faqsHeading": "Grand Junction Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Where do we land for a Grand Junction trip?",
+        "a": "Grand Junction Regional Airport (GJT) sits six miles north of downtown with direct flights from Denver, Salt Lake City, Dallas and Phoenix. We meet your group at the terminal and load downtown in ten minutes."
+      },
+      {
+        "q": "Which wineries take groups in Palisade?",
+        "a": "Most of the byway's two dozen welcome groups with reservations. Book your tastings first, tell each winery you arrive by bus, then send us the list and we route the day."
+      },
+      {
+        "q": "Can buses drive Rim Rock Drive?",
+        "a": "On the designated overlook route with a driver who knows the switchbacks—oversize sections have length limits. Tell us your vehicle preference and we confirm what fits before quoting."
+      },
+      {
+        "q": "How far is Denver, really?",
+        "a": "Four hours each way over the mountains, longer in winter. Groups connecting to Denver International usually fly into GJT instead; we build the mountain margin into every quote if you drive it."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Grand Junction Charter Bus?",
+    "reviewChecks": [
+      "Confirm Colorado National Monument bus/length limits and fees with the park (nps.gov/colm).",
+      "Palisade: confirm current tasting-room group policies per winery.",
+      "Confirm Powderhorn parking on the Grand Mesa route.",
+      "Owner: add one real Grand Junction job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://visitgrandjunction.com"
+    ]
+  },
+  {
+    "state": "nh",
+    "slug": "hanover",
+    "city": "Hanover",
+    "title": "Charter Bus Rental in Hanover | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Hanover, NH for Dartmouth visits, family weekends, ski trips & Boston airport transfers. Free final quote, 24/7.",
+    "h1": "Charter Bus Rental in Hanover, NH for Dartmouth and Mountain Weekends",
+    "heroIntro": "Hanover runs on Dartmouth's calendar. Move-in days, family weekends, reunions and admissions visits fill Main Street with parents arriving from Boston's two airports, from New York, and from every corner of New England. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for campus visits, Dartmouth Skiway days, wedding parties staying at the Hanover Inn, and the airport runs that make the Upper Valley reachable. There is no train here. The bus is how families arrive—so we plan it properly.",
+    "servicesHeading": "Group Transportation Services in Hanover",
+    "services": [
+      {
+        "title": "Dartmouth Campus Visits and Family Weekends",
+        "text": "Admissions days and October family weekends bring hundreds of visitors into a town built for foot traffic, not parking. One shuttle running between Boston Logan, campus and the Hanover Inn keeps families off the Boston traffic at peak times. Send us your group's flight list and we group the arrivals into sensible pickups.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Ski Day and Mountain Transfers",
+        "text": "The Dartmouth Skiway sits twenty minutes north, and Killington plus Sunapee are within an hour. School ski programs, dorm outings and reunion groups book winter runs on weekends from December to March. A minibus with ski-bag space under the floor beats a caravan of station wagons on the Notch road.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Upper Valley Wedding Shuttles",
+        "text": "Upper Valley weddings cluster around the Hanover Inn, Lebanon's mill district and barn venues up the Connecticut River. Guests land at three different airports. Give us the venue, the hotel list and the reception end time—we build the loop and the late run after the send-off.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Hanover Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Airport runs and family weekend loops."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Admissions visits and small wedding parties."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Reunions and big school programs with gear."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Hanover",
+    "destinations": [
+      {
+        "name": "Dartmouth College and the Green",
+        "text": "The Green anchors the town: the Hood Museum, Baker-Berry Library, Webster Avenue's Greek houses and the Hopkins Center for the Arts line up within a five-minute walk. Campus tours and alumni weekends share the same streets.",
+        "tip": "Hanover's metered streets don't fit a 45-foot coach for waiting. We drop at the Green and stage in Lebanon until the appointed pickup time."
+      },
+      {
+        "name": "Hanover Inn Dartmouth and Main Street",
+        "text": "The inn—Dartmouth's own—faces the Green with Lou's Restaurant next door, a campus institution since 1942. Wedding blocks and reunion dinners both base here.",
+        "tip": "Main Street is compact; a mid-day drop near the inn takes two minutes if it isn't during the lunch rush. We time it early."
+      },
+      {
+        "name": "Dartmouth Skiway",
+        "text": "The college's own ski area in Lyme runs student programs and public tickets—a small, uncrowded hill that suits school groups learning the sport. Thirty family-friendly acres within twenty minutes of campus.",
+        "tip": "The access road is narrow and unlit. We schedule departures back before the light goes, and the ski bags ride under the floor."
+      },
+      {
+        "name": "Quechee Gorge and Simon Pearce",
+        "text": "Vermont's Little Grand Canyon is a 165-foot gorge fifteen minutes west, with the Simon Pearce glassblowing workshop and riverside restaurant next door in Quechee—a favorite afternoon pairing for visiting families.",
+        "tip": "The gorge lot fits cars; the glassblowing lot handles a minibus comfortably. We confirm the drop when you send the itinerary."
+      }
+    ],
+    "mapPins": [
+      "Dartmouth College Green",
+      "Hanover Inn Dartmouth",
+      "Dartmouth Skiway, Lyme",
+      "Quechee Gorge",
+      "Simon Pearce Mill, Quechee"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Hanover",
+      "items": [
+        {
+          "city": "Alton"
+        },
+        {
+          "city": "Amherst"
+        },
+        {
+          "city": "Berlin"
+        },
+        {
+          "city": "Concord"
+        },
+        {
+          "city": "Exeter"
+        },
+        {
+          "city": "Gorham"
+        }
+      ]
+    },
+    "faqsHeading": "Hanover Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airport works best for Hanover?",
+        "a": "Boston Logan, about two hours southeast, is the usual choice—Manchester, New Hampshire is close behind. Tell us which flights your group uses and we plan the pickups at the right terminal doors."
+      },
+      {
+        "q": "Can you shuttle during Dartmouth family weekend?",
+        "a": "Yes—it's our busiest Hanover weekend. Book as soon as the college publishes its date; vehicles on the Boston run sell out first."
+      },
+      {
+        "q": "Is there parking near the Hanover Inn for a bus?",
+        "a": "Not for a waiting coach. The plan is a Main Street unload and a driver staging in Lebanon or Norwich until the agreed pickup time."
+      },
+      {
+        "q": "How does winter change these trips?",
+        "a": "Snow closes the Dartmouth Skiway's access road briefly during storms, and I-89/91 slows. We pad winter schedules and monitor the route with the driver during the trip."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Hanover Charter Bus?",
+    "reviewChecks": [
+      "Confirm Dartmouth Skiway hours and student-program dates.",
+      "Quechee/Simon Pearce lots: confirm minibus parking.",
+      "Owner: add one real Hanover job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://home.dartmouth.edu/visit"
+    ]
+  },
+  {
+    "state": "or",
+    "slug": "hood-river",
+    "city": "Hood River",
+    "title": "Charter Bus Rental in Hood River | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or van in Hood River, OR for Fruit Loop cider tours, Mt Hood ski trips, Gorge waterfalls & weddings. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Hood River, OR for Gorge Days and Ski Trips",
+    "heroIntro": "Hood River sits where the Columbia River Gorge narrows and the wind never stops—windsurfers below, orchards above, Mount Hood forty minutes south. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here for Fruit Loop cider tours, lift tickets at Mount Hood Meadows, waterfall drives along the Historic Highway, and weddings at the gorge-view venues. Guests usually land at Portland International sixty minutes west. The roads are short but the lots are small, so we match the vehicle before we write the price.",
+    "servicesHeading": "Group Transportation Services in Hood River",
+    "services": [
+      {
+        "title": "Fruit Loop Cider and Orchard Tours",
+        "text": "The Hood River Fruit Loop threads three dozen farms, cideries and alpaca ranches through the valley—groups can cover three stops in an easy afternoon. A Sprinter van or minibus keeps a sober professional driver on the loop roads, and September's harvest weekends fill fast. Send us your tasting list; we build the route around your reservations.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Mount Hood Ski and Snowboard Transfers",
+        "text": "Mount Hood Meadows—twenty-eight miles south—plus Timberline and Ski Bowl cover the region's lift season from November to May. Portland-based school and corporate groups book day trips with us directly; we time the mountain road against the chain law and the parking rules at each lodge.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "Gorge weddings happen at vineyard lawns, the Hood River Inn's waterfront deck and orchard venues above the valley, with guests flying into Portland. The last run home comes after the DJ stops. Give us the venue address—we check the entrance on a map before we quote.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Hood River Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Cider tours and mountain runs with real luggage space."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small tasting groups and orchard-lane venues."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Portland-based school and corporate days."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Hood River",
+    "destinations": [
+      {
+        "name": "Fruit Loop Farms and Cideries",
+        "text": "Pear orchards, cider presses and farm stands ring the valley on a forty-mile loop. Groups collect flat-picked fruit in season and taste at family cideries—Draper Girls, Kneeland Farms and the rest—without a single person drawing straws over the drive.",
+        "tip": "The loop's farm entrances are narrow. Tell each stop your group size and we confirm the vehicle that fits before booking the day."
+      },
+      {
+        "name": "Mount Hood Meadows",
+        "text": "The gorge's home ski area runs lifts from late November to May, with lessons, rentals and a big base lodge. Portland groups arrive in ninety minutes; parking at the base is paid and limited.",
+        "tip": "Meadows strongly encourages reservations for parking and lift tickets. We align the bus arrival with your lesson block and unload at the resort's group area."
+      },
+      {
+        "name": "Historic Columbia River Highway Waterfalls",
+        "text": "Multnomah Falls—620 feet of plume and footbridge—leads a sequence of falls along the cliff highway east of Portland. The gorge section is the classic Portland group day and pairs naturally with Hood River.",
+        "tip": "The falls corridor requires timed permits for vehicles in peak season and bans parking at some viewpoints. We route to where a bus can legally stop and walk you in."
+      },
+      {
+        "name": "Hood River Waterfront and Downtown",
+        "text": "The Event Site beach launches windsurfers all summer, the taphouses along Nitro Row pour the gorge's own beer, and Full Sail's brewery anchors downtown—a compact dinner-and-sunset stop for any group.",
+        "tip": "Waterfront lots fill by mid-morning on windy summer days. We drop by the taphouse block and stage the vehicle at the park-and-ride."
+      }
+    ],
+    "mapPins": [
+      "Hood River Fruit Loop",
+      "Mount Hood Meadows",
+      "Multnomah Falls",
+      "Hood River Waterfront Park",
+      "Full Sail Brewing, Hood River"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Hood River",
+      "items": [
+        {
+          "city": "Astoria"
+        },
+        {
+          "city": "Brookings"
+        },
+        {
+          "city": "Damascus"
+        },
+        {
+          "city": "Eugene"
+        },
+        {
+          "city": "Klamath Falls"
+        },
+        {
+          "city": "McMinnville"
+        }
+      ]
+    },
+    "faqsHeading": "Hood River Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Where should our Hood River group fly into?",
+        "a": "Portland International—about an hour west on I-84. The gorge drive from the airport is part of the scenery; your driver adds the wind-and-traffic margin automatically."
+      },
+      {
+        "q": "Can a bus reach the cider farms?",
+        "a": "Minibuses and Sprinter vans yes, full-size coaches rarely—the loop lanes aren't built for them. Match the vehicle to the farms and the tasting day runs itself."
+      },
+      {
+        "q": "Do we need permits for a Multnomah Falls stop?",
+        "a": "The Historic Highway corridor uses timed-use vehicle permits from late spring through summer. We handle the permit routing inside your trip plan so the stop is legal and quick."
+      },
+      {
+        "q": "How far ahead should we book for harvest weekends?",
+        "a": "September and October weekends need two to four weeks' notice for a dedicated driver and vehicle in the gorge. Midweek days move faster."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Hood River Charter Bus?",
+    "reviewChecks": [
+      "Confirm Mt Hood Meadows parking/reservation policy for group vehicles.",
+      "Confirm Multnomah Falls timed-permit rules for 2027 season.",
+      "Owner: add one real Hood River job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://hoodriverfruitloop.com",
+      "https://www.skihood.com"
+    ]
+  },
+  {
+    "state": "wi",
+    "slug": "lac-du-flambeau",
+    "city": "Lac Du Flambeau",
+    "title": "Charter Bus Rental in Lac Du Flambeau | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Lac Du Flambeau, WI for Lake of the Torches trips, Northwoods weddings, fishing weeks & casino nights. Free quote, 24/7.",
+    "h1": "Charter Bus Rental in Lac Du Flambeau, WI for Northwoods Trips",
+    "heroIntro": "Lac du Flambeau is lake country within lake country—a chain of ten lakes threaded through the Lac du Flambeau Band's reservation, an hour north of Wausau's airport. Groups come to fish the spring walleye run, to gather at casino nights, and to marry beside a northwoods shore. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here from Milwaukee, Madison, Chicago and Minneapolis—the drives are long, which is exactly why a coach with a restroom beats a four-car convoy. Winter roads are real here. We plan for them.",
+    "servicesHeading": "Group Transportation Services in Lac Du Flambeau",
+    "services": [
+      {
+        "title": "Fishing Week and Resort Shuttles",
+        "text": "The season opens the first Saturday in May and the walleye run brings guide parties and families for weeks. Resorts and cabins spread along the lake roads, groceries are twenty minutes apart, and guests without boats need wheels to dinner. A minibus on call for your week works like a private taxi service at a fraction of the fleet cost.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Casino and Group Nights",
+        "text": "Lake of the Torches Resort Casino hosts concerts, tournaments and group nights year-round. Social clubs, birthday groups and company outings book the evening run—pickup, show, safe ride home. Confirm the group desk booking and we handle the driving.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Northwoods Wedding Shuttles",
+        "text": "Lakeside ceremonies here end with bonfires, not parking meters—but the venue might be down a dark county road. A shuttle between the hotel block and the shore keeps your guests off the two-lanes at night. Tell us the venue and the reception end time; the last ride is scheduled, not improvised.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Lac Du Flambeau Groups",
+    "vehicles": [
+      {
+        "slug": "charter-bus",
+        "reason": "Milwaukee, Madison and Chicago runs with luggage for a long weekend."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Resort loops and wedding shuttles on county roads."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Guide parties of ten or fewer."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Lac Du Flambeau",
+    "destinations": [
+      {
+        "name": "Lake of the Torches Resort Casino",
+        "text": "The reservation's lakeside casino runs table games, a hotel, dining and a summer concert shed—groups of seniors, coworkers and birthday parties come in from across the Northwoods.",
+        "tip": "Call the group desk ahead; registered groups sometimes receive play and meal offers, and the shuttle lot is clearly signed off Highway 70."
+      },
+      {
+        "name": "Waswagoning Indian Village",
+        "text": "The living-history village recreates traditional seasonal lifeways with guided demonstrations—schooner-building, birchbark work and wild-rice camps. School groups and cultural tours book guided visits by appointment.",
+        "tip": "Visits are appointment-based. Book the tour first and tell us the time—we organize the drop so the walk-in is short."
+      },
+      {
+        "name": "The Lac du Flambeau Lakes Chain",
+        "text": "Ten connected lakes plus the surrounding streams make up the area's fishing and boating life—walleye, musky and panfish, with public launches and quiet bay holes for family outings.",
+        "tip": "Launch-lane and dock drop-offs don't fit a coach; a Sprinter van parks closest. Tell us your launch and we send the right size."
+      },
+      {
+        "name": "Minocqua and the Northwoods Towns",
+        "text": "Minocqua's tamarack-lined main island—shops, supper clubs, pontoon rentals—sits thirty minutes southeast and fills its summer Saturdays with visitors from every resort town nearby.",
+        "tip": "Min-qua-days events close parts of the island in summer. We plan a drop at the town edge and agree a pickup corner that survives the crowds."
+      }
+    ],
+    "mapPins": [
+      "Lake of the Torches Resort Casino",
+      "Waswagoning Indian Village",
+      "Lac du Flambeau lakes chain",
+      "Minocqua Island"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Lac Du Flambeau",
+      "items": [
+        {
+          "city": "Amherst"
+        },
+        {
+          "city": "Antigo"
+        },
+        {
+          "city": "Ashland"
+        },
+        {
+          "city": "Avoca"
+        },
+        {
+          "city": "Barron"
+        },
+        {
+          "city": "Cable"
+        }
+      ]
+    },
+    "faqsHeading": "Lac Du Flambeau Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How do guests reach Lac du Flambeau?",
+        "a": "Most fly into Central Wisconsin, Rhinelander or Wausau, or drive from Milwaukee, Madison, Chicago and Minneapolis. All the drives are two hours or more—exactly the length where a coach with a restroom earns its price."
+      },
+      {
+        "q": "Do you run casino night trips to Lake of the Torches?",
+        "a": "Yes, regularly. Tell us the concert or tournament and your pickup town; we price the evening run as one flat quote."
+      },
+      {
+        "q": "Are winter trips to the Northwoods reliable?",
+        "a": "They're routine. County plows clear the highways early, and we build storm margin into the schedule and keep the driver reachable as standard."
+      },
+      {
+        "q": "Can you shuttle a wedding between our resort and the venue?",
+        "a": "That's a typical Northwoods booking. Send both addresses and the end time of the reception—we'll plan the runs including the last one after the bonfire."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Lac Du Flambeau Charter Bus?",
+    "reviewChecks": [
+      "Confirm Lake of the Torches group-desk registration requirements.",
+      "Waswagoning: confirm current guided-visit schedule and drop point.",
+      "Owner: add one real Lac du Flambeau job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.ldfband.org"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "new-york",
+    "city": "New York City",
+    "title": "Charter Bus Rental in New York | Cascade Charter Bus",
+    "metaDescription": "Charter bus rental in New York for Broadway shows, airport transfers, stadium trips & school tours. Motorcoach parking planned, final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in New York City for Shows, Stadiums and Schools",
+    "heroIntro": "New York is the most rewarding city in America to bring a group to—and the hardest to drive a bus around. Coach parking is scarce, drop-offs are regulated, and the bridge approach you pick matters as much as your itinerary. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans into Manhattan and theboroughs with drivers who know where a 45-foot coach is allowed to stand: Times Square's bus zones, the museum lots, the stadium loops. Send us the itinerary; we send back a plan that fits New York's rules, not a wish.",
+    "servicesHeading": "Group Transportation Services in New York City",
+    "services": [
+      {
+        "title": "Airport Transfers for Groups",
+        "text": "JFK, Newark and LaGuardia all serve the city, and a group of twenty-five with checked bags is three taxis short of organized. One coach with luggage bays meets the arrivals hall, tracks delays and drops at the hotel door where a bus can legally stop. Flight numbers are all we need.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Broadway, Museums and School Tours",
+        "text": "School trip season and theater weekends are our New York specialty: one pickup in your home town, one compliant drop on or near the Theater District, museum stops that fit coach parking, and a driver who holds the schedule while the group eats. Teachers get a written timeline before travel day.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Stadium and Arena Game Days",
+        "text": "MetLife in East Rutherford, Yankee Stadium, Barclays Center, MSG—each has its own bus entrance and charter rules. A tailgate crowd arrives together and leaves together, and nobody designs a DD plan. Tell us the event and your pickup point; the loop is priced flat.",
+        "href": "/services/sports-team-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for NYC Groups",
+    "vehicles": [
+      {
+        "slug": "charter-bus",
+        "reason": "Airports, stadiums and long-distance arrivals with real luggage space."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Show nights, museum days and borough loops."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Executive transfers where coach parking doesn't exist."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in New York City",
+    "destinations": [
+      {
+        "name": "Times Square and the Theater District",
+        "text": "Forty-plus Broadway houses sit within six blocks; school groups and theater parties time their night around one curtain and one dinner. The energy is the reason you came.",
+        "tip": "Curbs on Eighth Avenue are for licensed buses only. We secure the drop, hold the show timing and agree a pickup corner two blocks out."
+      },
+      {
+        "name": "Statue of Liberty and Battery Park",
+        "text": "The ferry from Battery Park sets the pace for the Statue and Ellis Island—two islands, one ticket, a half-day well spent. The financial district skyline meets the harbor here.",
+        "tip": "No standing at Battery Place for coaches. Our drop is a block in, and the bus repositions to the approved lot until pickup."
+      },
+      {
+        "name": "The Metropolitan Museum of Art",
+        "text": "Two million works from Egypt to the Armory Show, plus the Cloisters uptown—school art itineraries are built around the Met's galleries and the steps everyone photographs.",
+        "tip": "Museum-side curbs are ticketed to commercial vehicles; the approved bus idles across the park and returns at your block's end time."
+      },
+      {
+        "name": "9/11 Memorial and the Oculus",
+        "text": "The twin reflecting pools, the Survivor Tree and the Oculus transit hub make a reflective, walkable stop that pairs naturally with a Wall Street or harbor cruise addition.",
+        "tip": "Security screening applies; bags get checked. We drop past the fence line and your group walks in with ID-ready timing."
+      }
+    ],
+    "mapPins": [
+      "Times Square",
+      "Statue of Liberty Ferry, Battery Park",
+      "Metropolitan Museum of Art",
+      "9/11 Memorial & Oculus",
+      "MetLife Stadium, East Rutherford"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near New York City",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Beacon"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        }
+      ]
+    },
+    "faqsHeading": "New York City Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Where can a charter bus legally drop off in Manhattan?",
+        "a": "Only at designated bus zones and commercial curbs—Times Square, the museum blocks and piers each have approved points. Your quote includes the drop and the pickup spot, both confirmed before travel day."
+      },
+      {
+        "q": "Which airport is easiest for a group?",
+        "a": "Whichever one your flights use—JFK for most international, LaGuardia for short hops, Newark for United blocks. All three are routine; the coach meets you at arrivals and repositions legally."
+      },
+      {
+        "q": "How do Yankees, Mets or Giants game days work?",
+        "a": "Each venue lists charter entrances and parking passes. We secure the drop, hold the loop for post-game crowds and price the evening as one number with nothing added."
+      },
+      {
+        "q": "Can you do overnight multi-day New York itineraries?",
+        "a": "Yes—school music tours and corporate blocks commonly run two to four days with the coach and driver staying with the group, hotel included for the driver on overnight trips."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your New York Charter Bus?",
+    "reviewChecks": [
+      "Confirm curbside coach zones with the city's 311 bus-permit guidance for your travel dates.",
+      "9/11 Memorial security rules for groups (nyc911memorial.org).",
+      "Stadium charter entrance rules per venue season.",
+      "Owner: add one real New York City job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.metro.us/bus-charter-parking-manhattan/"
+    ]
+  },
+  {
+    "state": "me",
+    "slug": "newry",
+    "city": "Newry",
+    "title": "Charter Bus Rental in Newry | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or van in Newry, ME for Sunday River ski weeks, Boston airport transfers, mountain weddings & school trips. Free final quote, 24/7.",
+    "h1": "Charter Bus Rental in Newry, ME for Sundays at Sunday River",
+    "heroIntro": "Newry exists on a ski map. Sunday River's eight peaks and its 132 trails carry the season from November to April, and the valley's condos, the Bethel inns and the Summit Lodge fill with groups from Boston every weekend. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here—Boston airport transfers, Friday-night ski runs from Portland and Providence, weddings at the resort's event barn and mountain-top deck, and summer camp shuttles. The drive is three hours from Logan; we build the mountain margin in.",
+    "servicesHeading": "Group Transportation Services in Newry",
+    "services": [
+      {
+        "title": "Ski Week Transfers",
+        "text": "School ski programs and corporate weeks book Sunday River by the season. One coach handles the Thursday-evening run up I-95 with gear under the floor; the resort's shuttle lot handles the drop; the return ride Sunday is already on the calendar. Send the roster and season dates—we'll quote the whole block.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Boston and Portland Airport Transfers",
+        "a": "",
+        "text": "Logan sits three hours south; Portland Jetport is ninety minutes. International guests often land in Boston. One vehicle with a restroom makes the run without pit-stop scheduling stress; we track the flight and the weather on travel day.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Mountain Wedding Shuttles",
+        "text": "Sunday River's event barn, the Jordan Grand deck and a handful of Bethel inns host weddings all four seasons. Parking at the resort is tight; guests staying on the mountain still need a loop between the lodge, the golf club and the ceremony site. Give us the three addresses and the reception end time.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Newry Groups",
+    "vehicles": [
+      {
+        "slug": "charter-bus",
+        "reason": "Boston and Providence runs with ski and wedding luggage."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Resort loops between lodges and the base area."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Executive and small-family weekend trips."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Newry",
+    "destinations": [
+      {
+        "name": "Sunday River Ski Resort",
+        "text": "Eight connected peaks, 132 trails, an eight-passenger chondola and a lift network that runs the largest night-skiing acreage in the East. The resort also hosts summer zip tours and concert weekends.",
+        "tip": "The base area splits between South Ridge and White Cap—confirm which base your group's lessons use, because they sit a lift apart and the drop points differ."
+      },
+      {
+        "name": "Bethel Village",
+        "text": "Bethel's Main Street—The Bethel Inn, cafes, outfitters and Sunday River Brewing—sits ten minutes below the slopes and handles dinner nights for the base-area crowd.",
+        "tip": "A Main Street drop takes two minutes outside the supper rush; the driver holds in the hotel side lot until your agreed pickup."
+      },
+      {
+        "name": "Grafton Notch State Park",
+        "text": "Screw Auger Falls and Old Speck Mountain sit thirteen miles northwest—groups hike the notch in summer, chase foliage in October and marvel at ice in February.",
+        "tip": "Trailhead lots are small and unlit. We drop at the gate and agree a firm pickup time on the paper before anyone hikes."
+      },
+      {
+        "name": "Portland and the Maine Coast",
+        "text": "Ninety minutes south, Portland's Old Port, lighthouse drives and the international jetport make the natural add-on for guests coming early—or the whole group on a coast day.",
+        "tip": "Old Port curbs are tight for coaches. We set the drop on Commercial Street's approved spot and stage until your dinner ends."
+      }
+    ],
+    "mapPins": [
+      "Sunday River Ski Resort",
+      "Bethel Main Street",
+      "Grafton Notch State Park",
+      "Sunday River Summit Lodge",
+      "Portland Old Port"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Newry",
+      "items": [
+        {
+          "city": "Bangor"
+        },
+        {
+          "city": "Bar Harbor"
+        },
+        {
+          "city": "Belfast"
+        },
+        {
+          "city": "Bethel"
+        },
+        {
+          "city": "Ogunquit"
+        },
+        {
+          "city": "Portland"
+        }
+      ]
+    },
+    "faqsHeading": "Newry Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How do we get to Sunday River from Boston?",
+        "a": "Three hours north on I-95 and Route 26 in clear conditions—longer in the storm windows we plan for. One coach carries twenty-plus ski bags under the floor and the crew in reclining seats."
+      },
+      {
+        "q": "Do you run Friday-night ski buses for schools?",
+        "a": "Yes. Season blocks (Thursday or Friday out, Sunday back) are our standard Newry format—quote the block once and your program rides all winter."
+      },
+      {
+        "q": "Can a minibus reach the resort's wedding venues?",
+        "a": "The resort lots and the Bethel inns handle minibuses comfortably; estate driveways sometimes prefer a Sprinter. Send the addresses and we check each one on the map."
+      },
+      {
+        "q": "What about summer in the valley?",
+        "a": "Zip tours, the resort's mountain-bike park and wedding weekends keep the calendar alive May to October—the shuttle plan works the same, just with bikes instead of skis."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Newry Charter Bus?",
+    "reviewChecks": [
+      "Confirm Sunday River base-area bus drop points with the resort.",
+      "Confirm Grafton Notch gate hours seasonally.",
+      "Owner: add one real Newry job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.sundayriver.com"
+    ]
+  },
+  {
+    "state": "nh",
+    "slug": "north-conway",
+    "city": "North Conway",
+    "title": "Charter Bus Rental in North Conway | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in North Conway, NH for Cranmore ski days, Story Land trips, outlet shopping & foliage tours. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in North Conway, NH for White Mountain Days",
+    "heroIntro": "North Conway is New England's mountain-town porch: Cranmore's slopes in back, 200 factory outlets out front, the Conway Scenic Railroad between them, and the Presidentials rising over everything. Groups land here from Boston for ski weeks, school trips, outlet weekends and the October foliage that turns the Kancamagus into a stop-and-gawk corridor. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for all of it—mountain roads, outlet days, Story Land afternoons and wedding inns up the valley. The roads are narrow. We plan for that on every quote.",
+    "servicesHeading": "Group Transportation Services in North Conway",
+    "services": [
+      {
+        "title": "Ski Weeks and Mountain Transfers",
+        "text": "Cranmore is the town's home hill; Wildcat and Attitash sit up Route 16; Bretton Woods lies an hour's scenic drive north. School and corporate groups book the winter weekend block—out Thursday evening, back Sunday—and the ski-bag storage under the floor makes the gear a non-issue.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Outlet Shopping Days",
+        "text": "Settlers' Green and the outlets on Route 16 bring bargain-bus season twice a year—back-to-school and holiday shopping. One coach, one dinner stop and a fixed pickup time keep the day moving; the driver knows which lots fit a bus.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Foliage, Foliage, Foliage",
+        "text": "Late September through mid-October, the Kancamagus Highway and the valley's back roads carry leaf-peeping groups. The stops are gorgeous; their parking is not. A driver who knows where a coach can pull off is the difference between a photo trip and a traffic jam.",
+        "href": "/services/sightseeing-tour-bus/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for North Conway Groups",
+    "vehicles": [
+      {
+        "slug": "charter-bus",
+        "reason": "Boston-area arrivals and full-day mountain loops."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Outlet runs and ski-bag legs on narrow roads."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small wedding parties at valley inns."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in North Conway",
+    "destinations": [
+      {
+        "name": "Cranmore Mountain Resort",
+        "text": "The home slope runs lifts all winter and its mountain-coaster through the summer—school ski programs and scout troops use it as their starter mountain, and the base lodge hosts evening functions.",
+        "tip": "Cranmore's drop zone is clearly marked off Route 16. Skis and boards ride the coach's under-floor bays, not the cabin."
+      },
+      {
+        "name": "Story Land",
+        "text": "The storybook amusement park in Glen has anchored children's trips since 1954—nursery-school outings and family reunions time it to the summer season and pumpkin-festival weekends.",
+        "tip": "The entrance lot handles buses with pre-notice. Book your park tickets first and send us the time—we'll be at the drop before the kids are."
+      },
+      {
+        "name": "Conway Scenic Railroad",
+        "text": "Vintage coaches depart the 1874 station for the Notch and valley runs—an easy rail-and-shop day that pairs with downtown North Conway's outlets in the same stop.",
+        "tip": "The station forecourt fits a bus drop on the track side. Confirm your rail departure times with us; we'll hold a tight window."
+      },
+      {
+        "name": "Kancamagus Highway Overlooks",
+        "text": "Thirty-four miles of river runs, granite cliffs and pull-off overlooks connect Lincoln to Conway through the White Mountain National Forest. Foliage season is a national draw.",
+        "tip": "Several overlook lots ban vehicles over a certain length. Your driver knows which stops fit a coach and which pairs the group with a minibus shuttle."
+      }
+    ],
+    "mapPins": [
+      "Cranmore Mountain Resort",
+      "Story Land, Glen",
+      "Conway Scenic Railroad, North Conway",
+      "Kancamagus Highway",
+      "Settlers Green Outlets"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near North Conway",
+      "items": [
+        {
+          "city": "Alton"
+        },
+        {
+          "city": "Amherst"
+        },
+        {
+          "city": "Berlin"
+        },
+        {
+          "city": "Concord"
+        },
+        {
+          "city": "Exeter"
+        },
+        {
+          "city": "Gorham"
+        }
+      ]
+    },
+    "faqsHeading": "North Conway Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is North Conway from Boston?",
+        "a": "About two and a half hours on I-95 and Route 16—the last stretch is mountain road, so we build weather margin into winter and foliage-season schedules."
+      },
+      {
+        "q": "When is foliage peak here?",
+        "a": "Usually the first two weeks of October. Leaf season moves the whole valley's calendar—the earlier you book a vehicle, the better your pickup windows."
+      },
+      {
+        "q": "Can a big coach drive the Kancamagus?",
+        "a": "Sections of the highway restrict long vehicles and some overlook cars only. Your itinerary uses the coach-legal stops and, when needed, a minibus for the tight overlooks."
+      },
+      {
+        "q": "Do you handle wedding shuttles at valley inns?",
+        "a": "Yes—inn-to-venue loops across the valley are routine. Give us the inn, the venue and the reception end time; the last bus waits for the send-off."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your North Conway Charter Bus?",
+    "reviewChecks": [
+      "Confirm Story Land bus notice requirements and 2027 season dates.",
+      "Kancamagus overlook length limits: re-check the Forest Service signage for the season.",
+      "Owner: add one real North Conway job in your own words (3 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.storylandnh.com",
+      "https://www.visitwhitemountains.com"
+    ]
+  },
+  {
+    "state": "or",
+    "slug": "astoria",
+    "city": "Astoria",
+    "title": "Charter Bus Rental in Astoria | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Astoria, OR for Fort Clatsop tours, Cannon Beach trips, museum visits & coastal weddings. Free final quote, 24/7.",
+    "h1": "Charter Bus Rental in Astoria, OR for Coastal and History Tours",
+    "heroIntro": "Astoria sits on the Columbia's mouth where the river meets the Pacific—the first European settlement west of the Rockies, and it still feels like a working harbor town. Fog, Victorian houses on the hillside, canneries turned galleries, and film sites from a 1985 kids' adventure that the town leans into with good humor. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for Fort Clatsop school trips, Cannon Beach transfers, museum days and the coastal weddings that make the north coast a destination.",
+    "servicesHeading": "Group Transportation Services in Astoria",
+    "services": [
+      {
+        "title": "Fort Clatsop and Lewis & Clark Tours",
+        "text": "Lewis and Clark wintered here in 1805-06; the reconstructed fort, canoe landing and trails tell the story with rangers who bring it to life. School districts from Portland book spring and fall visits around the tide tables—your driver holds the schedule while the students cover the trails.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Cannon Beach and Haystack Rock",
+        "text": "Haystack Rock—235 feet of sea stack with tide pools and puffins in season—sits twenty-five minutes south in Cannon Beach. A coach brings the class or family reunion down for the day and back in time for chowder.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Coastal Wedding Shuttles",
+        "text": "Coast weddings cluster at the headlands, the Cannery Pier Hotel and garden venues along Highway 101. Guests fly into Portland, ninety minutes away. A shuttle handles the coast highway in fog; we schedule the last run after the toasts.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Astoria Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Museum days and coastal wedding loops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "School trips from Portland with gear and chaperones."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small parties and cliff-side venue entrances."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Astoria",
+    "destinations": [
+      {
+        "name": "Columbia River Maritime Museum",
+        "text": "The museum's lightships, crabbing boats and bridge-bridge exhibits capture two centuries of crossing the Graveyard of the Pacific. Groups watch the bar pilots' work from the windows before touring the decks.",
+        "tip": "The museum lot on Marine Drive handles a minibus; a full coach drops at the pier and stages at the port lot. Confirm with us when you send the date."
+      },
+      {
+        "name": "Astoria Column",
+        "text": "The 125-foot column rings the city's highest point with murals of western exploration, and the spiral staircase tops out at a 360-degree view of river, ocean and forest.",
+        "tip": "Coxcomb Hill's road is steep and narrow at the top. We set the drop at the parking apron and give the group the walk-up time."
+      },
+      {
+        "name": "Fort Clatsop, Lewis and Clark NHP",
+        "text": "The winter fort's replica, the canoe landing and the salt-makers' camp make the expedition tangible. Ranger programs run for booked school groups most of the year.",
+        "tip": "Fort-to-sea trailheads split the parking. Groups with a timed ranger talk should send the schedule; the bus stays at the visitor-center lot."
+      },
+      {
+        "name": "Cannon Beach and Haystack Rock",
+        "text": "Oregon's most photographed rock rises from the tide line with puffins in spring and a 12-mile beach for the walkers. Galleries and chowder houses hold the town together behind the dune line.",
+        "tip": "Cannon Beach restricts coach parking in the village core—the designated lot is at the north end. We confirm the drop when you share the plan."
+      }
+    ],
+    "mapPins": [
+      "Columbia River Maritime Museum",
+      "Astoria Column",
+      "Fort Clatsop, Lewis and Clark NHP",
+      "Cannon Beach, Haystack Rock",
+      "Cannery Pier Hotel"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Astoria",
+      "items": [
+        {
+          "city": "Brookings"
+        },
+        {
+          "city": "Damascus"
+        },
+        {
+          "city": "Eugene"
+        },
+        {
+          "city": "Hood River"
+        },
+        {
+          "city": "Klamath Falls"
+        },
+        {
+          "city": "McMinnville"
+        }
+      ]
+    },
+    "faqsHeading": "Astoria Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Astoria from Portland?",
+        "a": "About ninety-five minutes on US-26 and Highway 101. Fog can slow the coast leg; the driver monitors it on travel morning as standard."
+      },
+      {
+        "q": "Where does the bus park for the Maritime Museum?",
+        "a": "Minibuses fit the museum's lot; larger coaches use the Port of Astoria area a short walk from the pier. Either way the drop is at the museum door."
+      },
+      {
+        "q": "Is Cannon Beach doable as a day trip?",
+        "a": "Easily—the round trip from Astoria is under an hour of driving. We add the tide-window timing for Haystack Rock so the tide pools are actually visible."
+      },
+      {
+        "q": "Do you run coastal wedding shuttles in the fog?",
+        "a": "101 in fog is a driver's route, not a GPS route. Our coast drivers run it in every season, and the wedding loop still ends after the send-off."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Astoria Charter Bus?",
+    "reviewChecks": [
+      "Confirm Fort Clatsop ranger-program scheduling for school groups (nps.gov/lewi).",
+      "Cannon Beach coach parking rules by season—confirm with the city.",
+      "Owner: add one real Astoria job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.nps.gov/lewi/index.htm",
+      "https://www.astoria.gov"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "beacon",
+    "city": "Beacon",
+    "title": "Charter Bus Rental in Beacon | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Beacon, NY for Dia Beacon visits, Storm King trips, Hudson Valley weddings & NYC transfers. Free final quote, 24/7.",
+    "h1": "Charter Bus Rental in Beacon, NY for Art, Trails Weddings",
+    "heroIntro": "Beacon rebuilt itself around art. Dia Beacon's 240,000 square feet of gallery hold works too large for anywhere else; Main Street's galleries and eateries run a mile below it; the Hudson and Mount Beacon frame everything. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for museum days from the city, Storm King and vineyard pairings, Hudson Valley weddings at the Roundhouse and riverfront venues, and the Metro-North-to-coach handoffs that make the valley reachable without a car.",
+    "servicesHeading": "Group Transportation Services in Beacon",
+    "services": [
+      {
+        "title": "Dia Beacon and Art-Day Itineraries",
+        "text": "Dia's galleries—former Nabisco factory bays—hold Twomblys, Flavins and Serras the size of rooms. School art programs and corporate culture trips add Storm King's sculpture fields or Boscobel for the full valley loop. Send us your gallery booking window; we build the day around it.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Metro-North and City Transfers",
+        "text": "Beacon station sits on the Hudson Line—seventy-some minutes from Grand Central—and a group arriving by train can hand off to a waiting Sprinter or minibus for the storm King leg and dinner. We meet the train time, not a guess.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Riverfront Wedding Shuttles",
+        "text": "The Roundhouse's waterfall terrace, the River Room and barn venues up Route 9 host weddings with guests coming from the city and Connecticut. Tell us the venue and the reception end time—the loop and the late run are planned before the quote.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Beacon Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Gallery loops and valley venue transfers."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Train-station meet-and-greets and small parties."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "School art programs from the city with gear."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Beacon",
+    "destinations": [
+      {
+        "name": "Dia Beacon",
+        "text": "Nearly a mile of gallery inside a 1929 factory—the waterfront grounds and sculpture park stretch to the river. Guided visits for schools run by appointment most weekdays.",
+        "tip": "Dia's lot handles buses from the west entrance. Book your group visit with the museum first and we align the arrival to the guided-talk time."
+      },
+      {
+        "name": "Mount Beacon and the Incline",
+        "text": "The trail from the base of Mount Beacon's old incline climbs to sweep the Hudson for miles—groups of hikers time the summit for sunset or the fire-tower views.",
+        "tip": "Howland Avenue's trailhead lot fits cars only. A Sprinter van drops closest; the coach stages at Main Street and meets the group at the pickup time."
+      },
+      {
+        "name": "Storm King Art Center",
+        "text": "Five hundred acres of hillsides carrying large-scale sculpture from di Suvero, Goldsworthy and peers—thirty minutes south, usually paired with Dia for a full art day.",
+        "tip": "Storm King requires group booking and runs timed vehicle windows. We reserve the bus slot and route the shuttle from the group parking field."
+      },
+      {
+        "name": "Main Street Beacon and the Roundhouse",
+        "text": "A mile of galleries, eateries and the waterfall-lit Roundhouse—an easy dinner-and-dessert stop that keeps a group together on foot before the ride home.",
+        "tip": "Main Street's meters are tight for a waiting coach. Drop at the Dia-side end and let the bus stage across town until the agreed pickup."
+      }
+    ],
+    "mapPins": [
+      "Dia Beacon",
+      "Mount Beacon Incline Trailhead",
+      "Storm King Art Center",
+      "Roundhouse Beacon",
+      "Main Street Beacon"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Beacon",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        },
+        {
+          "city": "Clayton"
+        }
+      ]
+    },
+    "faqsHeading": "Beacon Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Can you meet a group arriving by Metro-North?",
+        "a": "Yes—the station platform is two minutes from Main Street. Send the train number and we time the Sprinter or minibus to meet it on the platform side."
+      },
+      {
+        "q": "How does a Dia Beacon group visit work?",
+        "a": "Book with the museum, tell us the guided-talk time, and we schedule the arrival so the group walks in together from the bus lot, not scattered along the gate."
+      },
+      {
+        "q": "Is Storm King worth pairing with Dia in one day?",
+        "a": "It's the classic valley pairing—morning at Dia, picnic or early lunch, afternoon at Storm King's fields. One vehicle, one driver, one final quote for the whole day."
+      },
+      {
+        "q": "Where does the bus wait during a downtown wedding?",
+        "a": "The riverfront lots a few blocks from the venues. The loop home still runs after the reception ends—the last ride is scheduled, never optional."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Beacon Charter Bus?",
+    "reviewChecks": [
+      "Confirm Dia Beacon school-visit booking windows (diaart.org).",
+      "Confirm Storm King group-booking and vehicle-window rules for 2027.",
+      "Owner: add one real Beacon job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://diaart.org/visit/visit-beacon",
+      "https://stormking.org"
+    ]
+  },
+  {
+    "state": "mi",
+    "slug": "benton-harbor",
+    "city": "Benton Harbor",
+    "title": "Charter Bus Rental in Benton Harbor | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Benton Harbor, MI for Lake Michigan wine trail tours, Whirlpool transfers, beach weddings & school trips. Free quote, 24/7.",
+    "h1": "Charter Bus Rental in Benton Harbor, MI for Wine Trail and Lake Days",
+    "heroIntro": "Benton Harbor and its twin city St. Joseph face Lake Michigan from Michigan's fruit belt—whirlpool headquarters on one shore, vineyards on the ridge behind, beaches everywhere. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here for wine-trail Saturdays, corporate groups around Whirlpool and its suppliers, beach weddings at Harbor Shores, and school trips to the dunes and orchards. Chicago's an hour and a half south on I-94, which is why Wine Trail Saturdays have a Chicago accent.",
+    "servicesHeading": "Group Transportation Services in Benton Harbor",
+    "services": [
+      {
+        "title": "Lake Michigan Shore Wine Trail Tours",
+        "text": "A dozen wineries and cideries run from the ridge south of town—Round Barn, Tabor Hill, Domaine Berée among them—most within a fifteen-minute radius. A Sprinter or minibus with a designated driver keeps the whole group tasting; the trail's gravel-lane lots are the deciding factor on vehicle size.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Corporate and Supplier Transfers",
+        "text": "Whirlpool's global campus and its supplier network keep visitor groups moving between O'Hare and Midway, the South Bend airport and Benton Harbor offices. Recurring shuttle routes for meetings ride the same quoted plan with one invoice.",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Harbor Shores Wedding Shuttles",
+        "text": "The Inn at Harbor Shores, beach lawns and vineyard venues host lake weddings from May to October. Guest parking at the shore is the chokepoint. A shuttle loop from the hotels solves it; the last run waits for the sparkler send-off.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Benton Harbor Groups",
+    "vehicles": [
+      {
+        "slug": "sprinter-van",
+        "reason": "Wine-trail gravel lots and small tasting parties."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Wedding loops and airport runs for twenty to thirty."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Chicago delegations and school programs with gear."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Benton Harbor",
+    "destinations": [
+      {
+        "name": "Round Barn Estate and the Wine Trail",
+        "text": "Round Barn's tasting room sits in a century-old restored barn with wine, spirits and live music weekends; Tabor Hill and Domaine Berée add vineyard lawns and full restaurants.",
+        "tip": "Trail lots are gravel and size-limited. Confirm tasting reservations with each winery first, then tell us the list so we size the vehicle."
+      },
+      {
+        "name": "Silver Beach and St. Joseph",
+        "text": "St. Joseph's Silver Beach Carousel, splash pad and pier lighthouses sit across the river—the classic summer afternoon pairing with a downtown ice-cream stop for family groups.",
+        "tip": "Summer festival weekends (Sunsational Days, Krasl Art Fair) close curbs. We stage at the edge and agree a pickup corner in shade."
+      },
+      {
+        "name": "Harbor Shores and Jean Klock Park",
+        "text": "The Harbor Shores development wraps a golf course, trails and Jean Klock's dune beach—wedding lawns, kayak runs and boardwalk views within ten minutes of downtown.",
+        "tip": "Jean Klock charges seasonal parking and the beach lots fill by 11 a.m. on hot Saturdays. The shuttle arrives before the cars do."
+      },
+      {
+        "name": "Sarett Nature Center and the Orchards",
+        "text": "Sarett's boardwalk trails and the surrounding u-pick orchards—blueberries in July, apples in September—make the school-trip staple for Berrien County classrooms.",
+        "tip": "Nature-center lots are small. Buses drop on the entrance lane; confirm group bookings with Sarett before choosing the date."
+      }
+    ],
+    "mapPins": [
+      "Round Barn Estate",
+      "Silver Beach Carousel, St. Joseph",
+      "Inn at Harbor Shores",
+      "Jean Klock Park",
+      "Sarett Nature Center"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Benton Harbor",
+      "items": [
+        {
+          "city": "Adrian"
+        },
+        {
+          "city": "Alpena"
+        },
+        {
+          "city": "Bellaire"
+        },
+        {
+          "city": "Boyne Falls"
+        },
+        {
+          "city": "Bridgman"
+        },
+        {
+          "city": "Brimley"
+        }
+      ]
+    },
+    "faqsHeading": "Benton Harbor Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airports serve Benton Harbor groups?",
+        "a": "South Bend International is about forty-five minutes; Chicago O'Hare and Midway run an hour and a half in clear traffic. Groups use all three—tell us the arrivals and we plan pickups at the right doors."
+      },
+      {
+        "q": "Can a full-size bus drive the wine trail?",
+        "a": "Usually a minibus or Sprinter is smarter—several trail lots are gravel lanes. Match the vehicle to the tasting list and the whole afternoon stays on schedule."
+      },
+      {
+        "q": "Do you cover wedding loops between hotels and Harbor Shores?",
+        "a": "Regularly, May through October. Send the venue, hotel block and the reception end time; the last shuttle run is written into the schedule."
+      },
+      {
+        "q": "Is there a busy season for wine-trail vehicles?",
+        "a": "Yes—summer weekends and theSeptember harvest. Trail Saturdays sell vehicles first; midweek tasting days book with a week or two of notice."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Benton Harbor Charter Bus?",
+    "reviewChecks": [
+      "Confirm wine-trail lot sizes and reservations per venue on the route (miwinetrail.com listing).",
+      "Jean Klock seasonal parking rules — confirm with the city.",
+      "Owner: add one real Benton Harbor job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.miwestcoast.org"
+    ]
+  },
+  {
+    "state": "wi",
+    "slug": "crandon",
+    "city": "Crandon",
+    "title": "Charter Bus Rental in Crandon | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Crandon, WI for World Championship off-road racing, Wolf River tubing & Northwoods weddings. Free final quote, 24/7.",
+    "h1": "Charter Bus Rental in Crandon, WI for Race Weekends and Wild Rivers",
+    "heroIntro": "Crandon is a Forest County town built on logging, lakes and dust—the self-declared Off-Road Racing Capital of the World. Twice a year the town triples in size for the brush-run races, and between those weekends the Wolf River runs tubes, walleye hold the fishing logs, and the forests hold the weddings. Cascade Charter Bus arranges charter buses, minibuses and vans from Milwaukee, Green Bay and Madison—drives long enough that a coach with a restroom is the only sane way to bring a crew.",
+    "servicesHeading": "Group Transportation Services in Crandon",
+    "services": [
+      {
+        "title": "Race Weekend Transfers",
+        "text": "The Crandon International Off-Road Raceway's Forest County Potawatomi brush runs—June and Labor Day weekend—pull fans, crews and vendor staff from across the Midwest. Lodging spreads between town, hotel blocks in rhinelander and camp sites on the lakes. A shuttle that runs the loop from camp to track all weekend is the only calm way through the traffic.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Wolf River and Lake Days",
+        "text": "Tubing outfitters on the Wolf, canoe shuttles on the Chain O' Lakes and the beach at Lake Metonga fill summer group calendars. Buses don't drive to the launch ramps; we route to the outfitter's lot and time the return for when the river spits everyone out.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Northwoods Wedding Shuttles",
+        "text": "Lakeside ceremonies around Metonga and the surrounding lakes end with bonfires down unlit county roads. A shuttle between the hotel and shore keeps the evening civilized; tell us the venue and the bonfire end time and we'll have the bus waiting.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Crandon Groups",
+    "vehicles": [
+      {
+        "slug": "charter-bus",
+        "reason": "Milwaukee and Green Bay runs with coolers and gear."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Race-week loops between camp sites and the track."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Family river days and tight venue lanes."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Crandon",
+    "destinations": [
+      {
+        "name": "Crandon International Off-Road Raceway",
+        "text": "The short-course track on the town's edge races the BorgWarner World Championship through a bowl so tight spectators watch from the campgrounds around it. Race weekends are the town's whole calendar in summer.",
+        "tip": "Camping passes include vehicle stickers—buses stage in the designated group lot off County H. Book the shuttle loop at the same time as the passes."
+      },
+      {
+        "name": "Wolf River Tubing Outfitters",
+        "text": "Runners-in-tubes drift the Wolf through pine corridors for hours; outfitters rent tubes, shuttle paddlers and time the runs to the water levels.",
+        "tip": "Let the outfitter's shuttle handle the river legs and we handle the drive in and out—the launch roads don't suit anything bigger than a van."
+      },
+      {
+        "name": "Mole Lake Casino and Conference Space",
+        "text": "The Sokaogon Chippewa community's casino lodge sits south of town with gaming, dining and event space serving the Northwoods year-round.",
+        "tip": "Evening runs are the standard Crandon booking—pickup, tables, safe ride home. Confirm the group visit when you book and we do the rest."
+      },
+      {
+        "name": "Lake Metonga and Argonne",
+        "text": "Metonga's shoreline holds public beaches, resorts and the weddings that fill the town's inns—Argonne's forests and trails round out the north side of the county.",
+        "tip": "Shoreline venues share private lots; drop on the county lane and the group walks the drive. Send the address and we check it on the map."
+      }
+    ],
+    "mapPins": [
+      "Crandon International Off-Road Raceway",
+      "Wolf River tubing outfitters",
+      "Mole Lake Casino & Lodge",
+      "Lake Metonga"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Crandon",
+      "items": [
+        {
+          "city": "Amherst"
+        },
+        {
+          "city": "Antigo"
+        },
+        {
+          "city": "Ashland"
+        },
+        {
+          "city": "Avoca"
+        },
+        {
+          "city": "Barron"
+        },
+        {
+          "city": "Cable"
+        }
+      ]
+    },
+    "faqsHeading": "Crandon Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "When are the big race weekends?",
+        "a": "The Forest County Potawatomi brush runs typically run in June and over Labor Day weekend—confirm the seasonal dates with the raceway, then book the shuttle loop early because lodging tracks the same calendar."
+      },
+      {
+        "q": "Can we bring a group by bus to the track?",
+        "a": "Yes—the group lot stages off County H and the loop to campgrounds and town runs continuously on race days. Tell us your camp site and we price the weekend run."
+      },
+      {
+        "q": "Do buses reach the Wolf River launches?",
+        "a": "Vans do; coaches stage at the outfitters' lots. The tubing day runs best with the combo—coach from home, outfitter shuttle on the water."
+      },
+      {
+        "q": "How far is Crandon from Green Bay?",
+        "a": "About an hour and fifteen minutes northeast. Chicago is four hours—long enough that the coach's restroom is why most Chicago crews ride one vehicle instead of four cars."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Crandon Charter Bus?",
+    "reviewChecks": [
+      "Confirm 2027 raceway event dates and group-lot rules with Crandon International Raceway.",
+      "Confirm Mole Lake group-desk booking requirements.",
+      "Owner: add one real Crandon job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://crandonoffroad.com"
+    ]
+  },
+  {
+    "state": "mt",
+    "slug": "kalispell",
+    "city": "Kalispell",
+    "title": "Charter Bus Rental in Kalispell | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Kalispell, MT for Glacier National Park tours, Whitefish ski transfers & Flathead Lake weddings. Free final quote, 24/7.",
+    "h1": "Charter Bus Rental in Kalispell, MT for Glacier Park and Mountain Trips",
+    "heroIntro": "Kalispell is the Flathead Valley's base camp—Glacier National Park's west entrance half an hour east, Whitefish Mountain twenty minutes north, Flathead Lake twenty minutes south, and an airport (FCA) inside the city limits that lands red-eye flights from twelve states. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for Glacier tours, conference transfers at the valley's hotels, ski runs to Whitefish and the weddings that fill the valley's barn venues from June to September.",
+    "servicesHeading": "Group Transportation Services in Kalispell",
+    "services": [
+      {
+        "title": "Glacier National Park Tours",
+        "text": "Going-to-the-Sun Road, Apgar Village and Lake McDonald make the classic park day. Vehicle-size limits and timed-entry permits on the Sun Road decide the vehicle, not the headcount—a minibus with a park-legal permit beats a stranded coach every time. Send your dates; we confirm the permit window first.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Airport, Conference and Corporate Transfers",
+        "text": "Glacier Park International handles groups from Seattle, Denver, Chicago and beyond; the valley's hotels and the Flathead Valley's business community book recurring transfers. A van or minibus on call costs less per movement than a taxi counter, and one invoice covers every run.",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Whitefish Ski and Mountain Runs",
+        "text": "Whitefish Mountain Resort runs December through April and its summer bike park and walk-in-the-treetops keep groups busy off-season. The 20-minute drive from the valley hotels runs twice a day on booked schedules.",
+        "href": "/services/airport-transfer/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Kalispell Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Glacier's park-legal size for the Sun Road."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small tour parties and venue entrances."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Conference delegations from Seattle or Denver with luggage."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Kalispell",
+    "destinations": [
+      {
+        "name": "Glacier National Park (West Entrance)",
+        "text": "Apgar Village, Lake McDonald's colored stones and the Sun Road's first cliffs are all inside the west entrance. Park tours run May to October, snow conditions permitting—the road itself is half the experience.",
+        "tip": "Sun Road vehicle permits and vehicle-length limits decide the plan. We confirm your permit window and vehicle size before quoting—the park enforces both."
+      },
+      {
+        "name": "Whitefish Mountain Resort",
+        "text": "The summit lifts, walk-in-the-treetops course and the winter slopes sit above the town of Whitefish, with the base village's restaurants and the lodge's event decks for group evenings.",
+        "tip": "The summit road closes to public vehicles in mud season; groups ride the lift instead. Winter drop is at the paid lodge lots—we set the arrival to beat the 8 a.m. rush."
+      },
+      {
+        "name": "Flathead Lake and Polson",
+        "text": "The largest natural freshwater lake west of the Mississippi—wild horse island state park sits mid-lake, cherry orchards line the east shore, and the lake's wedding lawns run sold out every summer.",
+        "tip": "Shoreline venues share county lots; June through September weekends need the shuttle booked before the venue's date. Tell us the ceremony time."
+      },
+      {
+        "name": "Conrad Mansion and Downtown Kalispell",
+        "text": "The 1895 Conrad Mansion museum, the depot-anchored downtown and the farmers' market Saturdays give visiting groups an easy half-day stop between airport and mountains.",
+        "tip": "Downtown curbs fit a quick unload; the driver stages at the county lot. We confirm event-street closures on festival dates."
+      }
+    ],
+    "mapPins": [
+      "Glacier National Park West Entrance",
+      "Whitefish Mountain Resort",
+      "Flathead Lake",
+      "Conrad Mansion, Kalispell",
+      "Glacier Park International Airport"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Kalispell",
+      "items": [
+        {
+          "city": "Big Sky"
+        },
+        {
+          "city": "Bozeman"
+        },
+        {
+          "city": "Dillon"
+        },
+        {
+          "city": "Emigrant"
+        },
+        {
+          "city": "Great Falls"
+        },
+        {
+          "city": "Livingston"
+        }
+      ]
+    },
+    "faqsHeading": "Kalispell Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Do we need a permit for a Glacier tour?",
+        "a": "Going-to-the-Sun Road uses vehicle reservations in season, and commercial operators hold park-issued authorization. We confirm both with your dates before the quote—don't book lodging without the permit plan."
+      },
+      {
+        "q": "Which vehicle fits Going-to-the-Sun Road?",
+        "a": "Vehicles over 21 feet have length restrictions on the Sun Road; minibuses and vans handle it with a park-experienced driver. Groups larger than one vehicle's capacity split across two."
+      },
+      {
+        "q": "When is the Sun Road open?",
+        "a": "Typically late June to mid-October for the full crossing; winter closures shift the tour to Apgar and McDonald. We confirm the plow status with the park inside your quote."
+      },
+      {
+        "q": "How far is Whitefish from Kalispell?",
+        "a": "Twenty minutes by road. The evening run for dinner in Whitefish's mountain village is one of the valley's most-booked group outings."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Kalispell Charter Bus?",
+    "reviewChecks": [
+      "Confirm Glacier NPS commercial tours authorization + Sun Road dates for the season (nps.gov/glac).",
+      "Confirm Whitefish Mountain Resort group/lift logistics.",
+      "Owner: add one real Kalispell job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.nps.gov/glac/index.htm",
+      "https://glaciermt.com"
+    ]
+  },
+  {
+    "state": "nh",
+    "slug": "keene",
+    "city": "Keene",
+    "title": "Charter Bus Rental in Keene | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Keene, NH for Keene State visits, Pumpkin Festival weekends, Monadnock hikes & Boston transfers. Free quote, 24/7.",
+    "h1": "Charter Bus Rental in Keene, NH for College and Monadnock Trips",
+    "heroIntro": "Keene is the Monadnock Region's crossroads—a college square, brick mill buildings turned brewery halls, and Mount Monadnock (the world's most-climbed mountain) twenty minutes south. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for Keene State move-ins and parents' weekends, school hiking trips up Monadnock, brewery nights in the old mills, and the Boston airport runs that connect this corner of New Hampshire to everywhere. Roundabouts, not traffic lights. We plan for them.",
+    "servicesHeading": "Group Transportation Services in Keene",
+    "services": [
+      {
+        "title": "Keene State and Campus Visits",
+        "text": "Move-in days, orientation sessions and Owl game days bring families up I-91 and Route 101 from Boston and Hartford. Boston Logan is about ninety minutes away. A coach or minibus on move-in weekend saves three cars' worth of parking tickets, and we meet the arrivals hall rather than guessing.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Monadnock Hiking Days",
+        "text": "Mount Monadnock—2,965 feet and climbed more than any other mountain on earth—trails school groups, scouts and corporate retreat teams from the state-park side in Jaffrey. The trailheads fill by nine on October Saturdays; the bus beats the lot by dropping the group right at it.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Brewery and Mill-District Evenings",
+        "text": "Elm City Brewery, the old mill halls and Keene's roundabout-ring downtown hold the region's evening events. Brewery groups, rehearsal dinners and company nights book the shuttle so the tastings stay tastings.",
+        "href": "/services/sightseeing-tour-bus/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Keene Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Airport runs and brewery evenings."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "College move-ins and big school hiking programs."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Admissions visits and small family parties."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Keene",
+    "destinations": [
+      {
+        "name": "Mount Monadnock State Park",
+        "text": "Bare granite summit, four trail systems and forty miles of routes—the state park side in Jaffrey is the classic climb for school groups and first-timers, with rangers who know every switchback.",
+        "tip": "The park charges per person, the lots fill by nine on leaf weekends, and the park road closes at full. Plan the drop early; we do this math in the quote."
+      },
+      {
+        "name": "Keene State College",
+        "text": "The campus sits on Appian Way beside the Main Street roundabouts—Owl athletics, the Redfern Arts Center and the science buildings anchor family weekends each fall and spring.",
+        "tip": "Appian Way is pedestrian on class days. We drop at the parking-side corner and the family walks two minutes in."
+      },
+      {
+        "name": "Downtown Keene and the Mill District",
+        "text": "Bricked Main Street with the country's widest roundabout at its center, the colonial theater, and the mill brewery halls—a compact evening loop for any group.",
+        "tip": "Roundabout rules confuse out-of-town drivers; ours deal with them weekly. We stage out of the circle and pick up at the agreed corner."
+      },
+      {
+        "name": "Pumpkin Festival Weekends",
+        "text": "Keene's famous jack-o-lantern weekends light downtown with tens of thousands of carved towers—families and alumni book October shuttles a season ahead.",
+        "tip": "Festival days close central streets entirely. Buses stage at the perimeter lots we book in advance; the walking distance is three blocks."
+      }
+    ],
+    "mapPins": [
+      "Mount Monadnock State Park, Jaffrey",
+      "Keene State College",
+      "Downtown Keene Main Street",
+      "Colonial Theatre, Keene"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Keene",
+      "items": [
+        {
+          "city": "Alton"
+        },
+        {
+          "city": "Amherst"
+        },
+        {
+          "city": "Berlin"
+        },
+        {
+          "city": "Concord"
+        },
+        {
+          "city": "Exeter"
+        },
+        {
+          "city": "Gorham"
+        }
+      ]
+    },
+    "faqsHeading": "Keene Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Keene from Boston?",
+        "a": "About ninety minutes to Logan on Route 2 and I-495, longer through leaf-season Saturday traffic. We add that margin automatically in fall quotes."
+      },
+      {
+        "q": "When is the Pumpkin Festival?",
+        "a": "Keene holds its pumpkin tradition in October—confirm the year's official date with the organizers, and book the shuttle as soon as your group's plans are firm."
+      },
+      {
+        "q": "Can we combine Monadnock with a brewery stop?",
+        "a": "Yes—the climb in the morning, the mill halls in the evening is a standard one-day plan. One vehicle, one driver, one final quote."
+      },
+      {
+        "q": "Do you handle Keene State move-ins?",
+        "a": "Yes—August move-in days get their own planning: dorm-drop timing, luggage flow and a return pickup window for the family. Send the college's schedule and we build it in."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Keene Charter Bus?",
+    "reviewChecks": [
+      "Confirm Monadnock State Park group fees and trailhead rules with NH State Parks.",
+      "Confirm the year's Pumpkin Festival official date before publish.",
+      "Owner: add one real Keene job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.nhstateparks.org/visit/state-parks/monadnock-state-park"
+    ]
+  },
+  {
+    "state": "vt",
+    "slug": "ludlow",
+    "city": "Ludlow",
+    "title": "Charter Bus Rental in Ludlow | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or van in Ludlow, VT for Okemo ski weeks, Boston airport transfers, mountain weddings & brew tours. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Ludlow, VT for Okemo Seasons",
+    "heroIntro": "Ludlow is a ski town wrapped around one mountain. Okemo's lifts run out of the village, the condos stack up Route 100, and Boston's weekend ski traffic arrives Friday at five. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for Okemo ski weeks, Boston airport transfers, the mountain weddings that fill Jackson Gore every summer, and the foliage weekends that do it again in October. Mountain roads in mud season, snow season and leaf season are the variables. Four years a year, we plan for them.",
+    "servicesHeading": "Group Transportation Services in Ludlow",
+    "services": [
+      {
+        "title": "Okemo Ski Week Transfers",
+        "text": "School programs and family reunions book the winter block—four nights, three days, one coach. The village drop is minutes from the lifts, ski bags ride the under-floor bays, and the Sunday return is on the same contract so nobody hunts a ride home.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Boston Airport Transfers",
+        "text": "Logan is two and a half hours southeast; Manchester-Boston Regional is ninety minutes. One coach with a restroom makes the run comfortable, and the driver adds the Blizzard-of-the-week margin to winter schedules automatically.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Mountain Wedding Shuttles",
+        "text": "Jackson Gore's event barn, Okemo's summit lawn and the valley's inn venues fill June-September weekends. Parking at the mountain is the constraint. A shuttle between the hotel block and the venue solves it—book it before the venue books you.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Ludlow Groups",
+    "vehicles": [
+      {
+        "slug": "charter-bus",
+        "reason": "Boston runs with ski bags and luggage."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Mountain loops and wedding shuttles."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small parties and steep inn driveways."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Ludlow",
+    "destinations": [
+      {
+        "name": "Okemo Mountain Resort",
+        "text": "The village base—Clock Tower, Roundhouse and Jackson Gore—serves 120 trails with a six-passenger gondola; the timberline café sits at 3,300 feet. Wedding lawns and conference rooms keep the calendar full through summer.",
+        "tip": "Okemo's base circle is busy at 8:30 a.m. lift openings—we arrive ahead of the cars and unload at the drop, not the parking rows."
+      },
+      {
+        "name": "Jackson Gore Inn",
+        "text": "The inn and conference annex host wedding receptions, corporate retreats and family reunions—its own base complex a mile from the main village with event space for two hundred.",
+        "tip": "Jackson Gore's driveway is resort-managed; groups with events get event parking. We check the access rules with your event planner."
+      },
+      {
+        "name": "Buttermilk Falls and Route 100",
+        "text": "A short riverside walk reaches the waterfall below the village—the classic quick-stop for school trips and wedding-photo groups, with the Route 100 scenic byway running straight north.",
+        "tip": "The falls lot is small and popular. We drop, the group walks in, and the bus meets them at the agreed point ten minutes later."
+      },
+      {
+        "name": "Killington and the Green Mountains",
+        "text": "Killington's bigger mountain sits forty minutes north for groups wanting to ski both resorts in one trip—fall foliage along Route 100 rivals any New England drive in October.",
+        "tip": "Foliage Saturdays clog Route 100; early departures beat the leaf-peeping congestion. We plan the schedule to the season."
+      }
+    ],
+    "mapPins": [
+      "Okemo Mountain Resort",
+      "Jackson Gore Inn",
+      "Buttermilk Falls, Ludlow",
+      "Route 100 Scenic Byway",
+      "Killington Resort"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Ludlow",
+      "items": [
+        {
+          "city": "Brattleboro"
+        },
+        {
+          "city": "Manchester Center"
+        },
+        {
+          "city": "Middletown Springs"
+        },
+        {
+          "city": "Rutland"
+        },
+        {
+          "city": "West Dover"
+        }
+      ]
+    },
+    "faqsHeading": "Ludlow Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How do groups get to Okemo from Boston?",
+        "a": "Two and a half hours each way via I-89 and Route 100; Manchester-Boston Regional shaves forty minutes for groups willing to use the smaller airport. Winter margin is standard in every quote."
+      },
+      {
+        "q": "Do you shuttle ski bags and are they safe?",
+        "a": "Under-floor luggage bays carry skis and boards strapped—the coach's equipment, not a passenger-side stack. Tell us your gear list and we confirm space before the trip."
+      },
+      {
+        "q": "When should weddings book shuttles?",
+        "a": "June through September Saturdays fill six to twelve months out at Okemo venues. The shuttle books before the venue's parking plan does—typically as soon as the date is set."
+      },
+      {
+        "q": "Is there a foliage window you recommend?",
+        "a": "Late September to mid-October usually peaks; the exact week shifts with the year. Booking early in that window buys the best pickup slots on Route 100."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Ludlow Charter Bus?",
+    "reviewChecks": [
+      "Confirm Okemo group and wedding-venue access rules for the season.",
+      "Confirm Killington double-resort routing times if offered.",
+      "Owner: add one real Ludlow job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.okemo.com"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "potsdam",
+    "city": "Potsdam",
+    "title": "Charter Bus Rental in Potsdam | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Potsdam, NY for Clarkson & SUNY Potsdam trips, Ottawa transfers, Adirondack tours & weddings. Free quote, 24/7.",
+    "h1": "Charter Bus Rental in Potsdam, NY for Campus and Adirondack Trips",
+    "heroIntro": "Potsdam sits on the Raquette River in St. Lawrence County with two colleges in town and a third ten minutes up the road—Clarkson, SUNY Potsdam and St. Lawrence in Canton. Families visit from Toronto, Ottawa, Syracuse and the city; students arrive by the busload at semester. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here for campus visits, graduation weekends, Adirondack excursions, and the Ottawa transfers that make the border thirty minutes matter. The drives out here are long. We plan for gas, weather and moose, in that order.",
+    "servicesHeading": "Group Transportation Services in Potsdam",
+    "services": [
+      {
+        "title": "Campus Visits and Graduation Weekends",
+        "text": "Clarkson, SUNY Potsdam and St. Lawrence all draw families from Toronto and Ottawa—Canadian guests save a border-crossing airport run with one shuttle from home. Graduation weekends in May stack hotels across three towns; one shuttle on a fixed loop is the family's calmest weekend plan.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Ottawa and Montreal Transfers",
+        "text": "Ottawa is an hour and a half northeast; Montreal two hours east. Cross-border groups need a smooth customs experience—the driver manages documentation paperwork in advance. Groups of relatives landing at YUL or YOW reach the North Country without renting three cars.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Adirondack Excursions",
+        "text": "The park's western lakes—Star Lake, Cranberry Lake, the high peaks a bit further—make day trips from campus weekends. A van with a driver who knows the park roads turns the visit into a tour; the quote covers everything the driver needs.",
+        "href": "/services/sightseeing-tour-bus/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Potsdam Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Campus moves and family transfers at graduation."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Cross-border small parties and campus visits."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Student move-ins and big school sports travel."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Potsdam",
+    "destinations": [
+      {
+        "name": "Clarkson University",
+        "text": "The hill-side campus on Route 11 with its golden-ratio clock tower hosts visitor days, career fairs and hockey nights at Cheel Arena—parents book shuttles for every visit, not just graduation.",
+        "tip": "Campus visits are appointment-based; parking lots don't fit a waiting coach. We drop at Cheel's circle and stage in town until the tour ends."
+      },
+      {
+        "name": "SUNY Potsdam and Downtown",
+        "text": "The Crane School of Music's concert halls and SUNY Potsdam's campus meet downtown's cafés and shops on the river—an easy walk-between-stops itinerary for visiting families.",
+        "tip": "Crane concert nights fill the halls; the drop takes two minutes but the pickup needs the crowd's five-minute margin built in."
+      },
+      {
+        "name": "St. Lawrence University, Canton",
+        "text": "Ten minutes east, SLU's hilltop campus adds another graduation and hockey schedule to the May calendar—many families cover both on one weekend.",
+        "tip": "The two campuses are a 12-minute drive apart; we schedule both drops on the same shuttle so parents don't split the rental."
+      },
+      {
+        "name": "Adirondack Park Lakes and Trailheads",
+        "text": "Star Lake's beaches, Cranberry Lake's campgrounds and the high-peak trailheads sit within an hour south. Foliage drives in October rival anything upstate New York offers.",
+        "tip": "Trailhead lots fill early in leaf season; the coach uses the town-side staging and the hikers shuttle in—your driver knows which lots fit the van."
+      }
+    ],
+    "mapPins": [
+      "Clarkson University",
+      "SUNY Potsdam",
+      "Crane School of Music",
+      "St. Lawrence University, Canton",
+      "Adirondack Park Trailheads"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Potsdam",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Beacon"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        }
+      ]
+    },
+    "faqsHeading": "Potsdam Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Can you meet Canadian families arriving from Ottawa?",
+        "a": "Yes—cross-border transfers run regularly from Ottawa and Montreal. The border crosses smoothly when documentation is organized in advance; the driver handles the paperwork with the group before the trip."
+      },
+      {
+        "q": "When is graduation season here?",
+        "a": "Clarkson, SUNY Potsdam and St. Lawrence all graduate mid-May—three campuses inside two weeks. Hotels across the three towns fill first; the shuttle books right behind them."
+      },
+      {
+        "q": "Do you handle student move-in day logistics?",
+        "a": "Yes. Dorm-drop timing, luggage flow at load-in zones and the family's return pickup are all scheduled—send the college's move-in letter and we build the plan from it."
+      },
+      {
+        "q": "Is the Adirondack trip suitable for school groups?",
+        "a": "Very much—star Lake and Cranberry Lake programs run May to October with rangers and camp staff. Confirm group programming with the site first and we route the bus."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Potsdam Charter Bus?",
+    "reviewChecks": [
+      "Confirm Clarkson and SUNP visitor parking rules with each campus.",
+      "Cross-border documentation: confirm current passport/ID requirements with the owner.",
+      "Owner: add one real Potsdam job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.clarkson.edu",
+      "https://www.potsdam.edu"
+    ]
+  },
+  {
+    "state": "nj",
+    "slug": "red-bank",
+    "city": "Red Bank",
+    "title": "Charter Bus Rental in Red Bank | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Red Bank, NJ for Count Basie shows, Jersey Shore beaches, PNC concerts & weddings. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Red Bank, NJ for Shows and Shore Days",
+    "heroIntro": "Red Bank is the Twin Rivers' night out—Count Basie's Broadway-style shows, Two River Theater's performances, the riverside restaurants along Broad Street, and the Jersey Shore beaches ten minutes east. Guests land at Newark forty minutes west or arrive from the shore by train. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here for show nights, PNC Bank Arts Center concerts, beach trips to Sea Bright and Long Branch, and the riverfront weddings that book out the town's venues every summer.",
+    "servicesHeading": "Group Transportation Services in Red Bank",
+    "services": [
+      {
+        "title": "Show Nights at the Basie and Two River",
+        "text": "Count Basie Center's headline tours and Two River Theater's seasons fill weekend evenings—groups book the shuttle from home town to curtain and back with the pickup timed to the final bow. One price, no parking meters, no designated-driver math.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "PNC Bank Arts Center Concerts",
+        "text": "Holmdel's amphitheater twenty minutes west hosts the summer's biggest tours, and its post-show lot empties slowly. Groups that arrive by coach beat the lot traffic entirely—the driver holds a private meeting point you agree in advance.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Riverfront Wedding Shuttles",
+        "text": "The Oyster Point Hotel, Molly Pitcher Inn and riverside venues host weddings with guests spread from shore hotels to local inns. Tell us the venue and the reception end time—the last bus waits for the sparkler send-off, not before.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Red Bank Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Show nights, concerts and wedding loops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Airport arrivals and shore-day groups with beach gear."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Executive dinners and small anniversary parties."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Red Bank",
+    "destinations": [
+      {
+        "name": "Count Basie Center for the Arts",
+        "text": "The 1926 vaudeville house on Broad Street books national tours and comedy acts—its marquee is Red Bank's postcard. Show-night traffic runs two deep around the block.",
+        "tip": "Drop zones on Broad Street are tight and timed; the driver stages a few blocks east and walks the pickup to the door at curtain-down."
+      },
+      {
+        "name": "Two River Theater",
+        "text": "The professional regional theater on Bridge Avenue draws New York-caliber productions with matinee-and-dinner matinee crowds from across Monmouth County.",
+        "tip": "Bridge Avenue adds riverside pedestrians on show nights—the pickup point sits on a side street we agree at booking."
+      },
+      {
+        "name": "Sea Bright and Long Branch Beaches",
+        "text": "Ten minutes east, the Seven Presidents oceanfront park and Long Branch's boardwalk and pier run the beach-day summers that fill the shore towns' rental calendars.",
+        "tip": "Seven Presidents charges seasonal entry and lot fills by 10 a.m. on hot Saturdays; the shuttle arrives before the cars do."
+      },
+      {
+        "name": "PNC Bank Arts Center, Holmdel",
+        "text": "The amphitheater's summer tour schedule pulls Monmouth County crowds from June to September—tailgate lots, lawn seats and the encore-traffic crawl every attendee knows.",
+        "tip": "The arts center's coach lot is separate from general parking—the driver stages next to your gate and the group walks in ahead of the lot line."
+      }
+    ],
+    "mapPins": [
+      "Count Basie Center for the Arts",
+      "Two River Theater",
+      "Sea Bright Beach",
+      "PNC Bank Arts Center, Holmdel",
+      "Oyster Point Hotel"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Red Bank",
+      "items": [
+        {
+          "city": "Chatham"
+        },
+        {
+          "city": "Emerson"
+        },
+        {
+          "city": "Flemington"
+        },
+        {
+          "city": "Glassboro"
+        },
+        {
+          "city": "Mahwah"
+        },
+        {
+          "city": "Mullica Hill"
+        }
+      ]
+    },
+    "faqsHeading": "Red Bank Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Can we book a shuttle for a Count Basie show?",
+        "a": "That's a Red Bank staple—home pickup, curtain timed, and the bus waiting when the house lights come up. Tell us the show and your pickup town; one flat quote covers it."
+      },
+      {
+        "q": "How do PNC Arts Center concerts work with a bus?",
+        "a": "The venue's charter lot sits apart from general parking—we drop at your gate, stage nearby and hold pickup until the encore crowd passes. The post-show crawl skips you entirely."
+      },
+      {
+        "q": "Where can the bus wait during a Broad Street wedding?",
+        "a": "The riverfront lots a few blocks off. The loop between hotel and venue runs on schedule, and the last pickup waits through the send-off rather than leaving early."
+      },
+      {
+        "q": "Is a shore-day trip from Red Book doable as a day?",
+        "a": "Easily—Sea Bright and Long Branch are ten minutes each way. We add the tide and traffic windows in summer and price the day as one number."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Red Bank Charter Bus?",
+    "reviewChecks": [
+      "Confirm Count Basie Center show-night drop rules with the venue.",
+      "Confirm PNC Arts Center charter-lot booking process for groups.",
+      "Owner: add one real Red Bank job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://countbasiecentre.org",
+      "https://www.visitthejerseyshore.com"
+    ]
+  },
+  {
+    "state": "wi",
+    "slug": "shawano",
+    "city": "Shawano",
+    "title": "Charter Bus Rental in Shawano | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Shawano, WI for fishing tournaments, Shawano Lake weddings, wolf tours & seasonal festivals. Free final quote, 24/7.",
+    "h1": "Charter Bus Rental in Shawano, WI for the Lake and Trophy Seasons",
+    "heroIntro": "Shawano sits on the lake it's named for—eighteen miles of water in the middle of the state, framed by Menominee tribal lands, bass tournaments and the Wisconsin trophy-hunting season in fall. Groups arrive from Green Bay, Appleton and Milwaukee for tournament weekends, lake weddings and the county fair. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here with drivers who know the northwoods roads, because the venues are lake lanes and the weather is Wisconsin's. The quote covers the roads, not just miles.",
+    "servicesHeading": "Group Transportation Services in Shawano",
+    "services": [
+      {
+        "title": "Tournament and Fishing-Week Shuttles",
+        "text": "Bass and walleye tournaments on Shawano Lake fill the launch lanes and the inns—teams arrive with boats, rods and coolers and no patience for parking. A minibus on call for your tournament week shuttles between the motel, the boat ramp and the weigh-in tent. Book the loop with the tournament dates.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Lake Wedding Shuttles",
+        "text": "Lakeside wedding lawns and resort halls run June through September—and the venue's lane might be a quarter-mile of gravel. Tell us the lake address and the reception end time; the shuttle handles the lane and the last ride runs after the bonfire.",
+        "href": "/services/wedding-transportation/"
+      },
+      {
+        "title": "Casino and County Fair Evenings",
+        "text": "North Star Mohican Casino Resort sits ten minutes north, and the Shawano County Fair anchors the fair week family trips. Evening runs are priced flat per group; the ride home is the part the planner doesn't worry about.",
+        "href": "/services/sightseeing-tour-bus/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Shawano Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Tournament loops and wedding shuttles."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Milwaukee and Green Bay arrivals with fishing gear."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small guide parties and lake-lane venues."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Shawano",
+    "destinations": [
+      {
+        "name": "Shawano Lake and the County Park",
+        "text": "The lake's county park runs a swimming beach, boat launches and picnic groves—families base here for the week with the inns in town fifteen minutes away.",
+        "tip": "Launch lanes belong to boats, not buses. A Sprinter van drops closest; the coach stages at the county lot a half-mile out."
+      },
+      {
+        "name": "North Star Mohican Casino Resort",
+        "text": "Gaming, dining and event space in the Stockbridge-Munsee community north of town—casino nights, concert evenings and tournament weekends run all winter when the lake is quiet.",
+        "tip": "Evening shuttles are the standard booking—pickup at the inn, drop at the casino, safe ride home. Confirm the group visit with the resort's desk."
+      },
+      {
+        "name": "Menominee Nation and Keshena",
+        "text": "The Menominee Reservation's ancestral grounds—cultural sites and the tribal forestry lands—offer educational group visits by arrangement with the nation's heritage programs.",
+        "tip": "Respect the sovereign-nation protocol: cultural site visits are by appointment with the tribe's program first, then the transport plan."
+      },
+      {
+        "name": "Shawano County Fairgrounds",
+        "text": "The county fair's July week—livestock, demolition derby and grandstand concerts—plus year-round expo events bring school and family groups through the fairgrounds gates.",
+        "tip": "Fair week closes the gate roads to cars; buses stage on the perimeter lot and the group walks the fairway in."
+      }
+    ],
+    "mapPins": [
+      "Shawano Lake County Park",
+      "North Star Mohican Casino Resort",
+      "Menominee Nation cultural sites, Keshena",
+      "Shawano County Fairgrounds"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Shawano",
+      "items": [
+        {
+          "city": "Amherst"
+        },
+        {
+          "city": "Antigo"
+        },
+        {
+          "city": "Ashland"
+        },
+        {
+          "city": "Avoca"
+        },
+        {
+          "city": "Barron"
+        },
+        {
+          "city": "Cable"
+        }
+      ]
+    },
+    "faqsHeading": "Shawano Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "When do the fishing tournaments hit Shawano Lake?",
+        "a": "Bass and walleye tournaments run May through September—confirm the exact date with the tournament organizer, then book your shuttle loop around it."
+      },
+      {
+        "q": "Do you shuttle to North Star Mohican Casino?",
+        "a": "Yes—evening runs from Shawano, Green Bay and the surrounding towns. Price it as one flat quote; the safe ride home is standard."
+      },
+      {
+        "q": "Can a coach reach the lake wedding venues?",
+        "a": "Some; others share gravel lanes better suited to a minibus or Sprinter. Send us the venue address and we check the lane before writing the quote."
+      },
+      {
+        "q": "How far is Shawano from Green Bay?",
+        "a": "About forty-five minutes southwest. Milwaukee is two hours; both are routine runs with gear room calculated into the price."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Shawano Charter Bus?",
+    "reviewChecks": [
+      "Confirm Menominee cultural-visit appointment protocol with the nation's program.",
+      "Confirm North Star Mohican group-desk booking requirements.",
+      "Owner: add one real Shawano job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.co.shawano.wi.us"
+    ]
+  },
+  {
+    "state": "ok",
+    "slug": "shawnee",
+    "city": "Shawnee",
+    "title": "Charter Bus Rental in Shawnee | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or minibus in Shawnee, OK for OBU campus visits, Grand Casino nights, OKC transfers & tribal events. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Shawnee, OK for Campus and Casino Trips",
+    "heroIntro": "Shawnee sits thirty-five minutes east of Oklahoma City—college square, tribal grounds, a casino resort and a civic center all within ten blocks. Groups arrive from OKC and Tulsa for Oklahoma Baptist University visit days, Grand Casino nights, tribal celebrations at the Citizen Potawatomi Nation, and the rodeo weekends that fill the expo center. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here—drivers who handle Oklahoma weather on I-40 as standard.",
+    "servicesHeading": "Group Transportation Services in Shawnee",
+    "services": [
+      {
+        "title": "OBU and Campus Transfers",
+        "text": "Oklahoma Baptist University's Bison Hill hosts visit days, orientation weekends and family Saturdays—families from Dallas, Tulsa and Kansas City arrive by flight or drive. One shuttle on a hotel-to-campus loop saves three cars' worth of parking on the hill.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Grand Casino and Event Evenings",
+        "text": "The Grand Casino Hotel Resort's concerts and gaming nights, plus FireLake Arena's rodeos and gatherings, anchor the area's evening calendar. A shuttle runs the circuit—pickup from OKC hotels or Tulsa, the event, and a safe ride home. Confirm the group visit and we handle the rest.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "OKC Airport and Corporate Transfers",
+        "text": "Will Rogers World Airport is forty-five minutes; Tulsa International about ninety. Recurring shuttle contracts for visiting teams, contractors and church networks run the same quoted plan month after month with one invoice.",
+        "href": "/services/corporate-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Shawnee Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Campus visits, casino nights and event loops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Church networks and athletic teams with real gear."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small family parties and campus visits."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Shawnee",
+    "destinations": [
+      {
+        "name": "Oklahoma Baptist University",
+        "text": "OBU's Bison Hill—stone buildings, the Mabee Center and the campus green—hosts admissions days, ball games at the Hurt complex and graduation weekends each May.",
+        "tip": "Bison Hill's lots fill for graduation; the shuttle drops at the green and stages at the civic center until the ceremony ends."
+      },
+      {
+        "name": "Grand Casino Hotel Resort",
+        "text": "The Citizen Potawatomi Nation's resort runs gaming, concerts, dining and conference space—the region's biggest event calendar outside OKC.",
+        "tip": "Group evenings register with the casino's desk ahead—registered groups often receive play and meal offers with the shuttle."
+      },
+      {
+        "name": "Downtown Shawnee and the Rodeo Grounds",
+        "text": "Main Street's restaurants and the Heart of Oklahoma exposition center—rodeo weekends and state-level livestock shows fill its calendar with groups from across the state.",
+        "tip": "Rodeo nights pack the expo lot; the shuttle loop drops on the convention side and circles at your agreed pickup window."
+      },
+      {
+        "name": "Oklahoma City Attractions",
+        "text": "Forty-five minutes west: the OKC Memorial, Bricktown's canal district and the riverwalk entertainment make the natural add-on day for visiting conference and youth groups.",
+        "tip": "Bricktown's curbs are metered; the coach drops at the parking hub on the east side and the group walks the canal walk."
+      }
+    ],
+    "mapPins": [
+      "Oklahoma Baptist University",
+      "Grand Casino Hotel Resort",
+      "Heart of Oklahoma Exposition Center",
+      "FireLake Arena",
+      "Bricktown, Oklahoma City"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Shawnee",
+      "items": [
+        {
+          "city": "McAlester"
+        },
+        {
+          "city": "Sapulpa"
+        },
+        {
+          "city": "Smithville"
+        },
+        {
+          "city": "Stillwater"
+        }
+      ]
+    },
+    "faqsHeading": "Shawnee Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Shawnee from OKC and Tulsa?",
+        "a": "Thirty-five minutes from Will Rogers World Airport in OKC; Tulsa is about ninety minutes northeast. Both are standard shuttle legs with driver margins built in."
+      },
+      {
+        "q": "Do you run casino nights to Grand Casino?",
+        "a": "Regularly—social clubs, birthday groups and conference guests book the evening circuit. One flat quote covers the whole run including the ride home."
+      },
+      {
+        "q": "Can you handle OBU move-in and graduation weekends?",
+        "a": "Yes—both are scheduled Bison Hill events. Send the university's letter and we build the dorm-drop and family pickups from it."
+      },
+      {
+        "q": "Is there a busy season for events in Shawnee?",
+        "a": "Spring rodeo weekends, May graduation, and fall football Saturdays fill first; summer runs move steady between casino and conference bookings."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Shawnee Charter Bus?",
+    "reviewChecks": [
+      "Confirm Grand Casino and FireLake Arena group-registration processes.",
+      "Confirm OBU graduation-week parking rules with the university.",
+      "Owner: add one real Shawnee job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.okbu.edu",
+      "https://www.potawatomi.org"
+    ]
+  },
+  {
+    "state": "nm",
+    "slug": "taos",
+    "city": "Taos",
+    "title": "Charter Bus Rental in Taos | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or van in Taos, NM for Taos Pueblo tours, Ski Valley transfers, gorge drives & hacienda weddings. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Taos, NM for Pueblo, Ski and Art Tours",
+    "heroIntro": "Taos sits at 7,000 feet where the Sangre de Cristo mountains meet the Rio Grande Gorge—a thousand-year-old pueblo, a ski valley thirty minutes up the canyon, an art colony a century deep, and light so clear that painters came for it. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for Taos Pueblo visits, Ski Valley transfers, Earthship and gorge drives, and hacienda weddings along the high-desert roads. Buses in Taos respect the old streets: we plan the drops that fit, before we quote.",
+    "servicesHeading": "Group Transportation Services in Taos",
+    "services": [
+      {
+        "title": "Taos Pueblo and Cultural Tours",
+        "text": "Taos Pueblo—the continuously inhabited adobe community and UNESCO site—welcomes groups with tribal guides on appointed days. Cultural respect comes first: visits are booked through the pueblo, and photography honors its rules. We handle the drop and the schedule; your guide handles the history.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Taos Ski Valley Transfers",
+        "text": "The ski valley's base sits thirty minutes up a canyon road at 9,200 feet—expert terrain and a renovated village. Groups from Albuquerque and Santa Fe book the winter block; ski bags ride the floor bays and the mountain margin is planned into every winter quote.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Hacienda and Village Wedding Shuttles",
+        "text": "Hacienda del Sol, the haciendas along the valley lanes and the plaza-area venues fill summer and ski-season weekends. Guests fly into Albuquerque or Santa Fe. The shuttle from the airport and the village loop between venues are both planned around the adobe lanes.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Taos Groups",
+    "vehicles": [
+      {
+        "slug": "sprinter-van",
+        "reason": "Village lanes, hacienda driveways and gorge overlooks."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Ski valley runs and wedding shuttles with gear."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Santa Fe and Albuquerque long-distance legs."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Taos",
+    "destinations": [
+      {
+        "name": "Taos Pueblo",
+        "text": "Multistory adobe homes continuously inhabited for over a thousand years—a UNESCO World Heritage site and the cultural heart of the region, with Red Willow Creek running between the buildings.",
+        "tip": "The pueblo charges entry, sets its own visit days and restricts photography in places. Book through the pueblo's office; we schedule the drop around their rules."
+      },
+      {
+        "name": "Rio Grande Gorge Bridge",
+        "text": "The 650-foot steel arch spans the gorge twenty minutes northwest—one of America's highest bridges, with rim-side parking and the river's silver thread 560 feet down.",
+        "tip": "The lot is open and windy; the bus parks nose into the wind. Photographers want the east-side walk—your driver knows which side the light favors."
+      },
+      {
+        "name": "Taos Ski Valley",
+        "text": "The village at 9,200 feet holds expert slopes, a renovated base with hotels and the highest restaurant in New Mexico. Ski weeks from Albuquerque book the season block.",
+        "tip": "The canyon road ices early; chain laws apply in storms. Ski bags ride the bays and the driver runs the valley year-round."
+      },
+      {
+        "name": "Millicent Rogers Museum and the Art Colony",
+        "text": "The museum's Southwestern galleries—Rogers' collection, Hispanic tinwork and Taos Society paintings—sit minutes from the plaza where the art colony began in 1898.",
+        "tip": "The museum lot fits minibuses with notice; coaches stage at the plaza's designated parking and the group shuttles—confirm with us in the quote."
+      }
+    ],
+    "mapPins": [
+      "Taos Pueblo",
+      "Rio Grande Gorge Bridge",
+      "Taos Ski Valley",
+      "Millicent Rogers Museum",
+      "Hacienda del Sol"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Taos",
+      "items": [
+        {
+          "city": "Abiquiu"
+        },
+        {
+          "city": "Angel Fire"
+        },
+        {
+          "city": "Carlsbad"
+        },
+        {
+          "city": "Las Cruces"
+        },
+        {
+          "city": "Los Ojos"
+        },
+        {
+          "city": "Portales"
+        }
+      ]
+    },
+    "faqsHeading": "Taos Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airport serves Taos groups?",
+        "a": "Albuquerque is two and a half hours away; Santa Fe Regional about ninety minutes with limited commercial flights. Taos Regional (TAO) handles regional services—the quote depends on which airport your group chooses."
+      },
+      {
+        "q": "How do group visits to Taos Pueblo work?",
+        "a": "Visits are arranged through the pueblo; the tribe sets days, fees and photography rules. Book with them first, send us the appointment, and the drop and schedule fit their instructions."
+      },
+      {
+        "q": "Can a coach reach the ski valley?",
+        "a": "The canyon road is bus-friendly with a mountain-experienced driver; chain restrictions apply in storms. Skis and boards ride the bays, and the mountain margin is in the schedule."
+      },
+      {
+        "q": "Do winter roads change the plan?",
+        "a": "They change the margin, not the plan. US-64 and NM-522 see snow; the driver monitors the route on travel day and the schedule holds extra time as standard."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Taos Charter Bus?",
+    "reviewChecks": [
+      "Confirm Taos Pueblo visit days, entry fees and photography rules through the pueblo (taospueblo.com).",
+      "Confirm Ski Valley 2027 seasonal logistics with the resort.",
+      "Owner: add one real Taos job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.taospueblo.com",
+      "https://www.taos.org"
+    ]
+  },
+  {
+    "state": "mt",
+    "slug": "whitefish",
+    "city": "Whitefish",
+    "title": "Charter Bus Rental in Whitefish | Cascade Charter Bus",
+    "metaDescription": "Book a charter bus or van in Whitefish, MT for Whitefish Mountain ski trips, Glacier transfers, Amtrak pickups & lodge weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Whitefish, MT for Glacier and Ski Seasons",
+    "heroIntro": "Whitefish is Glacier's fun hometown—the mountain a twenty-minute drive from the depot where the Empire Builder train arrives three times a week from Chicago and Seattle. Ski season fills the resort from December to April; Glacier National Park's west entrance brings summer tours an hour away; the lake holds the weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans for ski weeks, park tours, Amtrak pickups and the lodge weddings along the lakeshores. The valley roads are easy; the park's are not. Different vehicles for each.",
+    "servicesHeading": "Group Transportation Services in Whitefish",
+    "services": [
+      {
+        "title": "Whitefish Mountain Resort Transfers",
+        "text": "Winter lifts from December to April, then the walk-in-treetops course and bike park run the summer on the same summit. Groups from Seattle, Denver and Chicago book the season block—arrival by air or Amtrak, seven nights, the daily mountain loop priced once.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Amtrak and Airport Meet-and-Greet",
+        "text": "The Empire Builder rolls into Whitefish's depot—westbound Wednesdays and Saturdays, eastbound the other days. FCA airport (Glacier Park International) sits fifteen minutes away with flights from twelve cities. We meet the train time or the flight, whichever your group rides.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Glacier Park and Wedding Shuttles",
+        "text": "Park tours use the minibus-and-permit plan; weddings fill The Patio, the lodge decks and the lake lawns from June to September—guests arrive by air, by rail and by road. The parking plan at lake venues is the bottleneck; the shuttle solves it before the quote.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Whitefish Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Ski runs and wedding loops with ski bags aboard."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Amtrak pickups and small Glacier tours."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Seattle and Denver delegations with luggage."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Whitefish",
+    "destinations": [
+      {
+        "name": "Whitefish Mountain Resort",
+        "text": "3,000 acres of skiing above the town, a summit that looks across to Glacier's peaks, the treetops walk and the bike park in summer—the resort's village holds hotels, dining and the event deck.",
+        "tip": "Big Mountain Road climbs into the fog zone; the drop zone at the village is time-managed. We arrive ahead of the 8:30 a.m. chairlines as standard."
+      },
+      {
+        "name": "Glacier National Park West Entrance",
+        "text": "Apgar Village and Lake McDonald sit an hour east—the classic park day with the red jammers, ranger talks and the lake's colored stones as the anchors of any itinerary.",
+        "tip": "Park permits and Sun Road restrictions decide the vehicle; our minibus handles the road and the park rules—confirm the permit window in your quote."
+      },
+      {
+        "name": "Whitefish Lake and City Beach",
+        "text": "City Beach's sand, the lake's marina and the lakeside dining row run the summer evenings—wedding lawns and dock ceremonies line the north shore.",
+        "tip": "Lakeside lots fill on warm weekends; the shuttle's drop keeps the group at the water and the driver in the shaded lot until send-off."
+      },
+      {
+        "name": "Downtown Whitefish",
+        "text": "Central Avenue's brewpubs, galleries and the O'Shaughnessy Center hold the town's evenings—the Amtrak depot and the ski hill shuttle meet there year-round.",
+        "tip": "The depot curbs are timed to arrivals; the driver stages two blocks out and walks the platform to meet your rail group."
+      }
+    ],
+    "mapPins": [
+      "Whitefish Mountain Resort",
+      "Glacier National Park West Entrance, Apgar",
+      "Whitefish Lake City Beach",
+      "Whitefish Amtrak Depot",
+      "The Patio Wedding Venue"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Whitefish",
+      "items": [
+        {
+          "city": "Big Sky"
+        },
+        {
+          "city": "Bozeman"
+        },
+        {
+          "city": "Dillon"
+        },
+        {
+          "city": "Emigrant"
+        },
+        {
+          "city": "Great Falls"
+        },
+        {
+          "city": "Kalispell"
+        }
+      ]
+    },
+    "faqsHeading": "Whitefish Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Can you meet our group on the Empire Builder train?",
+        "a": "Yes—the Amtrak depot is a two-minute pickup and the schedule runs three days a week each direction. Tell us which day your group arrives and we meet the platform."
+      },
+      {
+        "q": "Which airport works for Whitefish groups?",
+        "a": "Glacier Park International (FCA) sits fifteen minutes from downtown with twelve-city coverage. Sea-Tac and Denver connect the longer legs—your driver adds the mountain margin automatically."
+      },
+      {
+        "q": "When does the ski season run?",
+        "a": "December to early April with the busiest stretches at Christmas, Presidents' Day and the March Saturdays. Season blocks book first; single-day trips move faster."
+      },
+      {
+        "q": "Are Glacier park tours legal for buses?",
+        "a": "Yes on the park-legal minibuses with commercial authorization—Sun Road limits decide size, and the permits are confirmed inside your quote before any lodging is booked."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Whitefish Charter Bus?",
+    "reviewChecks": [
+      "Confirm Glacier National Park 2027 vehicle reservations and commercial authorization windows.",
+      "Confirm Amtrak Empire Builder arrival days (schedule shifts seasonally).",
+      "Owner: add one real Whitefish job in your own words (2 enquiries came from here)."
+    ],
+    "sourceLinks": [
+      "https://skiwhitefish.com",
+      "https://www.nps.gov/glac/index.htm"
+    ]
   }
 ]

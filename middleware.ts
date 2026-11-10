@@ -16,7 +16,7 @@ export const config = {
   matcher: ["/((?!api/|_next/|favicon|robots.txt|sitemap|llms.txt|images/|brand/|manifest).*)"],
 };
 
-export default function proxy(req: NextRequest) {
+export function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
   // 0. STAGING deployments are never indexable (robots.txt blocks crawling;

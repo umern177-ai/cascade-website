@@ -164,6 +164,18 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 /* Amber brand color on WHITE fails contrast for small text: eyebrow/label
    spots use a darker amber that passes 4.5:1 while keeping the amber look */
 .services-card-text { font-size: 0.9rem; line-height: 1.65; }
+/* mobile: service photo floats under the title as its own spaced block */
+@media (max-width: 767.98px) {
+  .service-photo-mobile { height: 210px; }
+}
+@media (min-width: 768px) {
+  .row > [class*="col-"] > .service-photo-h { height: 100% !important; }
+}
+.card .badge {
+  max-width: 100%;
+  white-space: normal;
+  text-align: center;
+}
 .text-brand-dark {
   color: #7a5600 !important;
 }

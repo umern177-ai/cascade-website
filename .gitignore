@@ -21,3 +21,5 @@ next-env.d.ts
 
 # editor
 .vscode/settings.json
+__pycache__/
+*.pyc

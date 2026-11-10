@@ -68,7 +68,7 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">
             Charter Bus Rental
           </span>
-          <p className="city-hero-display fw-bold mb-3">{`Charter Bus Rental in ${name}`}</p>
+          <p className="city-hero-display fw-bold mb-3">{`Charter Bus Rental in ${name}, ${state.toUpperCase()}`}</p>
           <div className="d-flex justify-content-center gap-3 flex-wrap mt-4">
             <a
               href="/contact/"

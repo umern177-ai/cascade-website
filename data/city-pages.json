@@ -5394,7 +5394,7 @@
   },
   {
     "state": "fl",
-    "slug": "port-st-joe",
+    "slug": "port-saint-joe",
     "city": "Port St. Joe",
     "title": "Charter Bus Rental in Port St. Joe | Cascade Charter Bus",
     "metaDescription": "Book a charter bus or van in Port St. Joe, FL for Cape San Blas beaches, scallop season runs, bay weddings & school trips. Free final quote, 24/7.",
@@ -5512,7 +5512,8 @@
     ],
     "sourceLinks": [
       "https://_visitgulf.com"
-    ]
+    ],
+    "path": "/locations/fl/port-saint-joe/"
   },
   {
     "state": "ga",

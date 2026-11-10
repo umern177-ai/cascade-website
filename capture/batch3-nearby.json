@@ -1,0 +1,178 @@
+{
+ "mn/Wabasha": [
+  "Alexandria",
+  "Baxter",
+  "Bemidji",
+  "Big Lake",
+  "Blackduck",
+  "Crookston"
+ ],
+ "nh/Manchester": [
+  "Alton",
+  "Amherst",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham"
+ ],
+ "nj/Wayne": [
+  "Chatham",
+  "Emerson",
+  "Flemington",
+  "Glassboro",
+  "Mahwah",
+  "Mullica Hill"
+ ],
+ "ny/Lake George": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "ny/Tarrytown": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "ny/Utica": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "or/Eugene": [
+  "Astoria",
+  "Brookings",
+  "Damascus",
+  "Hood River",
+  "Klamath Falls",
+  "McMinnville"
+ ],
+ "or/Klamath Falls": [
+  "Astoria",
+  "Brookings",
+  "Damascus",
+  "Eugene",
+  "Hood River",
+  "McMinnville"
+ ],
+ "tn/Franklin": [
+  "Chattanooga",
+  "Gatlinburg",
+  "Mt. Juliet",
+  "Nashville",
+  "Paris",
+  "Pigeon Forge"
+ ],
+ "tx/Austin": [
+  "Alpine",
+  "Brenham",
+  "Buchanan Dam",
+  "Cotulla",
+  "Cypress",
+  "Driftwood"
+ ],
+ "tx/Houston": [
+  "Alpine",
+  "Austin",
+  "Brenham",
+  "Buchanan Dam",
+  "Cotulla",
+  "Cypress"
+ ],
+ "ut/Ogden": [
+  "Draper",
+  "Jensen",
+  "Kamas",
+  "Moab",
+  "Park City",
+  "Richfield"
+ ],
+ "va/Fredericksburg": [
+  "Cape Charles",
+  "Chesterfield",
+  "Colonial Heights",
+  "Danville",
+  "Elkton",
+  "Harrisonburg"
+ ],
+ "wa/Richland": [
+  "Anacortes",
+  "Chehalis",
+  "Chelan",
+  "Cle Elum",
+  "Davenport",
+  "Ellensburg"
+ ],
+ "wa/White Salmon": [
+  "Anacortes",
+  "Chehalis",
+  "Chelan",
+  "Cle Elum",
+  "Davenport",
+  "Ellensburg"
+ ],
+ "wi/Sheboygan": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "wi/Trevor": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "wy/Jackson": [
+  "Alpine",
+  "Buffalo",
+  "Cheyenne",
+  "Cora",
+  "Dubois",
+  "Sheridan"
+ ],
+ "co/Glenwood Springs": [
+  "Avon",
+  "Bayfield",
+  "Denver",
+  "Evergreen",
+  "Golden",
+  "Grand Junction"
+ ],
+ "wi/Minocqua": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "tn/Gatlinburg": [
+  "Chattanooga",
+  "Franklin",
+  "Mt. Juliet",
+  "Nashville",
+  "Paris",
+  "Pigeon Forge"
+ ],
+ "wa/Cle Elum": [
+  "Anacortes",
+  "Chehalis",
+  "Chelan",
+  "Davenport",
+  "Ellensburg",
+  "Forks"
+ ]
+}

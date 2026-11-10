@@ -207,6 +207,19 @@ Updated every phase. Current status at the top.
 - **Next batches**: 22 cities per batch in priority order — 678 remaining (73 Medium →
   556 Standard → 54 Traffic). Owner reviews Batch 1 on staging before Batch 2 starts.
 
+## City enhancement: Batch 1+2 DONE (Nov 10) — 51 of 710 pages
+
+- **27 High-priority + 24 Medium-priority pages now run the full consultant structure.**
+  Batch 2 cities: Juneau AK, Atmore AL, Roscommon MI, Moultonborough NH, Plymouth NH,
+  Summit NJ, Sulphur Springs TX, Spokane WA, Mammoth Lakes CA, Westbrook CT,
+  Rehoboth Beach DE, Sebastian FL, Bangor ME, Hazleton PA, Sevierville TN, Richmond VA,
+  Port St. Joe FL, Savannah GA, Louisville KY, Amesbury MA, Uxbridge MA, Alpena MI,
+  Boyne Falls MI, Minneapolis MN.
+- Same-state similarity on researched pages: **0.001 Jaccard** (gate < 0.20) — fully unique.
+- Remaining: **659 pages** (49 Medium + 556 Standard + 54 Traffic), ~28 batches of ~22.
+- Priority numbers are production sequencing only (enquiry/click demand) — NOT a Google
+  signal. Every page gets the same research + unique content + gates regardless of tier.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

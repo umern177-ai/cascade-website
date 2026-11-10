@@ -1,0 +1,711 @@
+state_code,state,city,slug,path,kept_because,priority,enquiries,clicks_pre_drop,clicks_last_3m,tier
+al,Alabama,Atmore,atmore,/locations/al/atmore/,enquiry,Medium,2,2,0,A
+al,Alabama,Athens,athens,/locations/al/athens/,enquiry,Standard,1,2,0,B
+al,Alabama,Albertville,albertville,/locations/al/albertville/,enquiry,Standard,1,1,1,B
+al,Alabama,Selma,selma,/locations/al/selma/,enquiry,Standard,1,1,0,B
+al,Alabama,Auburn,auburn,/locations/al/auburn/,enquiry,Standard,1,0,0,B
+al,Alabama,Calera,calera,/locations/al/calera/,enquiry,Standard,1,0,0,B
+al,Alabama,Fairhope,fairhope,/locations/al/fairhope/,enquiry,Standard,1,0,1,B
+al,Alabama,Opp,opp,/locations/al/opp/,enquiry,Standard,1,0,0,B
+al,Alabama,Pinson,pinson,/locations/al/pinson/,enquiry,Standard,1,0,0,B
+al,Alabama,Troy,troy,/locations/al/troy/,traffic,Traffic,0,3,0,B
+ak,Alaska,Juneau,juneau,/locations/ak/juneau/,enquiry,Medium,2,2,1,A
+ak,Alaska,Kodiak,kodiak,/locations/ak/kodiak/,enquiry,Standard,1,1,0,B
+ak,Alaska,Palmer,palmer,/locations/ak/palmer/,enquiry,Standard,1,1,0,B
+ak,Alaska,Talkeetna,talkeetna,/locations/ak/talkeetna/,enquiry,Standard,1,1,0,B
+az,Arizona,Bellemont,bellemont,/locations/az/bellemont/,enquiry,Standard,1,0,0,B
+az,Arizona,Bullhead City,bullhead-city,/locations/az/bullhead-city/,enquiry,Standard,1,0,1,B
+az,Arizona,Glendale,glendale,/locations/az/glendale/,enquiry,Standard,1,0,0,B
+az,Arizona,Goodyear,goodyear,/locations/az/goodyear/,enquiry,Standard,1,0,0,B
+az,Arizona,Pinetop,pinetop,/locations/az/pinetop/,enquiry,Standard,1,0,0,B
+az,Arizona,Prescott,prescott,/locations/az/prescott/,enquiry,Standard,1,0,1,B
+az,Arizona,Prescott Valley,prescott-valley,/locations/az/prescott-valley/,enquiry,Standard,1,0,1,B
+az,Arizona,Sierra Vista,sierra-vista,/locations/az/sierra-vista/,enquiry,Standard,1,0,1,B
+az,Arizona,Show Low,show-low,/locations/az/show-low/,traffic,Traffic,0,3,0,B
+ar,Arkansas,Benton,benton,/locations/ar/benton/,traffic,Traffic,0,3,0,B
+ca,California,Mammoth Lakes,mammoth-lakes,/locations/ca/mammoth-lakes/,enquiry,Medium,2,1,0,A
+ca,California,Cayucos,cayucos,/locations/ca/cayucos/,enquiry,Standard,1,1,0,B
+ca,California,Emeryville,emeryville,/locations/ca/emeryville/,enquiry,Standard,1,1,0,B
+ca,California,Granada Hills,granada-hills,/locations/ca/granada-hills/,enquiry,Standard,1,1,0,B
+ca,California,Los Angeles,los-angeles,/locations/ca/los-angeles/,enquiry,Standard,1,1,0,B
+ca,California,Mendocino,mendocino,/locations/ca/mendocino/,enquiry,Standard,1,1,0,B
+ca,California,San Diego,san-diego,/locations/ca/san-diego/,enquiry,Standard,1,1,0,B
+ca,California,Anaheim,anaheim,/locations/ca/anaheim/,enquiry,Standard,1,0,0,B
+ca,California,Arnold,arnold,/locations/ca/arnold/,enquiry,Standard,1,0,0,B
+ca,California,Cambria,cambria,/locations/ca/cambria/,enquiry,Standard,1,0,0,B
+ca,California,Camino,camino,/locations/ca/camino/,enquiry,Standard,1,0,1,B
+ca,California,Dixon,dixon,/locations/ca/dixon/,enquiry,Standard,1,0,0,B
+ca,California,Fallbrook,fallbrook,/locations/ca/fallbrook/,enquiry,Standard,1,0,0,B
+ca,California,Folsom,folsom,/locations/ca/folsom/,enquiry,Standard,1,0,0,B
+ca,California,Fort Bragg,fort-bragg,/locations/ca/fort-bragg/,enquiry,Standard,1,0,0,B
+ca,California,Jamestown,jamestown,/locations/ca/jamestown/,enquiry,Standard,1,0,0,B
+ca,California,Monterey,monterey,/locations/ca/monterey/,enquiry,Standard,1,0,0,B
+ca,California,Nevada City,nevada-city,/locations/ca/nevada-city/,enquiry,Standard,1,0,0,B
+ca,California,Northridge,northridge,/locations/ca/northridge/,enquiry,Standard,1,0,0,B
+ca,California,Sacramento,sacramento,/locations/ca/sacramento/,enquiry,Standard,1,0,0,B
+ca,California,Santa Ynez,santa-ynez,/locations/ca/santa-ynez/,enquiry,Standard,1,0,0,B
+ca,California,Trinidad,trinidad,/locations/ca/trinidad/,enquiry,Standard,1,0,0,B
+ca,California,Van Nuys,van-nuys,/locations/ca/van-nuys/,enquiry,Standard,1,0,0,B
+co,Colorado,Grand Junction,grand-junction,/locations/co/grand-junction/,enquiry,High,3,2,0,A
+co,Colorado,Glenwood Springs,glenwood-springs,/locations/co/glenwood-springs/,enquiry,Medium,1,7,0,B
+co,Colorado,Evergreen,evergreen,/locations/co/evergreen/,enquiry,Standard,1,2,0,B
+co,Colorado,Larkspur,larkspur,/locations/co/larkspur/,enquiry,Standard,1,1,0,B
+co,Colorado,Nederland,nederland,/locations/co/nederland/,enquiry,Standard,1,1,0,B
+co,Colorado,Salida,salida,/locations/co/salida/,enquiry,Standard,1,1,0,B
+co,Colorado,Avon,avon,/locations/co/avon/,enquiry,Standard,1,0,0,B
+co,Colorado,Bayfield,bayfield,/locations/co/bayfield/,enquiry,Standard,1,0,0,B
+co,Colorado,Denver,denver,/locations/co/denver/,enquiry,Standard,1,0,0,B
+co,Colorado,Golden,golden,/locations/co/golden/,enquiry,Standard,1,0,0,B
+co,Colorado,Vail,vail,/locations/co/vail/,enquiry,Standard,1,0,0,B
+co,Colorado,Woodland Park,woodland-park,/locations/co/woodland-park/,enquiry,Standard,1,0,2,B
+co,Colorado,Westcliffe,westcliffe,/locations/co/westcliffe/,traffic,Traffic,0,3,0,B
+ct,Connecticut,Shelton,shelton,/locations/ct/shelton/,enquiry,High,4,0,0,A
+ct,Connecticut,Westbrook,westbrook,/locations/ct/westbrook/,enquiry,Medium,2,1,0,A
+ct,Connecticut,Darien,darien,/locations/ct/darien/,enquiry,Medium,1,3,0,B
+ct,Connecticut,Essex,essex,/locations/ct/essex/,enquiry,Standard,1,1,0,B
+ct,Connecticut,New Haven,new-haven,/locations/ct/new-haven/,enquiry,Standard,1,1,0,B
+ct,Connecticut,Roxbury,roxbury,/locations/ct/roxbury/,enquiry,Standard,1,1,0,B
+ct,Connecticut,Bethel,bethel,/locations/ct/bethel/,enquiry,Standard,1,0,0,B
+ct,Connecticut,Groton,groton,/locations/ct/groton/,enquiry,Standard,1,0,0,B
+ct,Connecticut,Litchfield,litchfield,/locations/ct/litchfield/,enquiry,Standard,1,0,0,B
+ct,Connecticut,Milford,milford,/locations/ct/milford/,enquiry,Standard,1,0,0,B
+ct,Connecticut,Orange,orange,/locations/ct/orange/,enquiry,Standard,1,0,0,B
+ct,Connecticut,Stratford,stratford,/locations/ct/stratford/,enquiry,Standard,1,0,0,B
+ct,Connecticut,Westport,westport,/locations/ct/westport/,enquiry,Standard,1,0,0,B
+ct,Connecticut,New London,new-london,/locations/ct/new-london/,traffic,Traffic,0,4,1,B
+ct,Connecticut,Old Lyme,old-lyme,/locations/ct/old-lyme/,traffic,Traffic,0,3,1,B
+de,Delaware,Rehoboth Beach,rehoboth-beach,/locations/de/rehoboth-beach/,enquiry,Medium,2,1,1,A
+fl,Florida,Sebastian,sebastian,/locations/fl/sebastian/,enquiry,Medium,2,1,0,A
+fl,Florida,Port St. Joe,port-saint-joe,/locations/fl/port-saint-joe/,enquiry,Medium,2,0,1,A
+fl,Florida,Englewood,englewood,/locations/fl/englewood/,enquiry,Standard,1,2,0,B
+fl,Florida,Palatka,palatka,/locations/fl/palatka/,enquiry,Standard,1,1,0,B
+fl,Florida,Vero Beach,vero-beach,/locations/fl/vero-beach/,enquiry,Standard,1,1,0,B
+fl,Florida,Alachua,alachua,/locations/fl/alachua/,enquiry,Standard,1,0,1,B
+fl,Florida,Bonita Springs,bonita-springs,/locations/fl/bonita-springs/,enquiry,Standard,1,0,1,B
+fl,Florida,Bradenton Beach,bradenton-beach,/locations/fl/bradenton-beach/,enquiry,Standard,1,0,0,B
+fl,Florida,Daytona Beach,daytona-beach,/locations/fl/daytona-beach/,enquiry,Standard,1,0,0,B
+fl,Florida,Jacksonville,jacksonville,/locations/fl/jacksonville/,enquiry,Standard,1,0,0,B
+fl,Florida,Jensen Beach,jensen-beach,/locations/fl/jensen-beach/,enquiry,Standard,1,0,0,B
+fl,Florida,Perry,perry,/locations/fl/perry/,enquiry,Standard,1,0,0,B
+fl,Florida,St. Petersburg,saint-petersburg,/locations/fl/saint-petersburg/,enquiry,Standard,1,0,0,B
+fl,Florida,Stuart,stuart,/locations/fl/stuart/,enquiry,Standard,1,0,0,B
+fl,Florida,Tampa,tampa,/locations/fl/tampa/,enquiry,Standard,1,0,0,B
+fl,Florida,The Villages,the-villages,/locations/fl/the-villages/,enquiry,Standard,1,0,0,B
+fl,Florida,Venice,venice,/locations/fl/venice/,enquiry,Standard,1,0,0,B
+fl,Florida,Winter Haven,winter-haven,/locations/fl/winter-haven/,enquiry,Standard,1,0,0,B
+fl,Florida,Yulee,yulee,/locations/fl/yulee/,enquiry,Standard,1,0,0,B
+ga,Georgia,Savannah,savannah,/locations/ga/savannah/,enquiry,Medium,2,0,0,A
+ga,Georgia,Cleveland,cleveland,/locations/ga/cleveland/,enquiry,Medium,1,3,0,B
+ga,Georgia,Greensboro,greensboro,/locations/ga/greensboro/,enquiry,Medium,1,3,0,B
+ga,Georgia,Statesboro,statesboro,/locations/ga/statesboro/,enquiry,Medium,1,3,1,B
+ga,Georgia,Buford,buford,/locations/ga/buford/,enquiry,Standard,1,2,0,B
+ga,Georgia,Cedartown,cedartown,/locations/ga/cedartown/,enquiry,Standard,1,1,0,B
+ga,Georgia,Cumming,cumming,/locations/ga/cumming/,enquiry,Standard,1,1,0,B
+ga,Georgia,Dalton,dalton,/locations/ga/dalton/,enquiry,Standard,1,1,0,B
+ga,Georgia,Dawsonville,dawsonville,/locations/ga/dawsonville/,enquiry,Standard,1,1,0,B
+ga,Georgia,Helen,helen,/locations/ga/helen/,enquiry,Standard,1,1,0,B
+ga,Georgia,Milledgeville,milledgeville,/locations/ga/milledgeville/,enquiry,Standard,1,1,0,B
+ga,Georgia,Alamo,alamo,/locations/ga/alamo/,enquiry,Standard,1,0,0,B
+ga,Georgia,Atlanta,atlanta,/locations/ga/atlanta/,enquiry,Standard,1,0,0,B
+ga,Georgia,Barnesville,barnesville,/locations/ga/barnesville/,enquiry,Standard,1,0,0,B
+ga,Georgia,Calhoun,calhoun,/locations/ga/calhoun/,enquiry,Standard,1,0,0,B
+ga,Georgia,Claxton,claxton,/locations/ga/claxton/,enquiry,Standard,1,0,0,B
+ga,Georgia,Darien,darien,/locations/ga/darien/,enquiry,Standard,1,0,0,B
+ga,Georgia,Douglas,douglas,/locations/ga/douglas/,enquiry,Standard,1,0,0,B
+ga,Georgia,Ellijay,ellijay,/locations/ga/ellijay/,enquiry,Standard,1,0,0,B
+ga,Georgia,Fayetteville,fayetteville,/locations/ga/fayetteville/,enquiry,Standard,1,0,0,B
+ga,Georgia,Fort Stewart,fort-stewart,/locations/ga/fort-stewart/,enquiry,Standard,1,0,0,B
+ga,Georgia,Gainesville,gainesville,/locations/ga/gainesville/,enquiry,Standard,1,0,1,B
+ga,Georgia,Macon,macon,/locations/ga/macon/,enquiry,Standard,1,0,0,B
+ga,Georgia,Mineral Bluff,mineral-bluff,/locations/ga/mineral-bluff/,enquiry,Standard,1,0,0,B
+ga,Georgia,Norman Park,norman-park,/locations/ga/norman-park/,enquiry,Standard,1,0,0,B
+ga,Georgia,Tifton,tifton,/locations/ga/tifton/,enquiry,Standard,1,0,1,B
+ga,Georgia,Young Harris,young-harris,/locations/ga/young-harris/,enquiry,Standard,1,0,0,B
+ga,Georgia,Forsyth,forsyth,/locations/ga/forsyth/,traffic,Traffic,0,4,0,B
+ga,Georgia,Thomasville,thomasville,/locations/ga/thomasville/,traffic,Traffic,0,3,0,B
+hi,Hawaii,Kailua-Kona,kailua-kona,/locations/hi/kailua-kona/,enquiry,High,4,5,0,A
+id,Idaho,Eagle,eagle,/locations/id/eagle/,enquiry,Standard,1,2,1,B
+id,Idaho,Ketchum,ketchum,/locations/id/ketchum/,enquiry,Standard,1,1,0,B
+id,Idaho,McCall,mccall,/locations/id/mccall/,enquiry,Standard,1,1,1,B
+id,Idaho,Boise,boise,/locations/id/boise/,enquiry,Standard,1,0,0,B
+id,Idaho,Fairfield,fairfield,/locations/id/fairfield/,enquiry,Standard,1,0,0,B
+id,Idaho,Hailey,hailey,/locations/id/hailey/,enquiry,Standard,1,0,0,B
+id,Idaho,Moscow,moscow,/locations/id/moscow/,enquiry,Standard,1,0,0,B
+il,Illinois,Carbondale,carbondale,/locations/il/carbondale/,enquiry,Standard,1,2,3,B
+il,Illinois,Edwardsville,edwardsville,/locations/il/edwardsville/,enquiry,Standard,1,1,0,B
+il,Illinois,Olympia Fields,olympia-fields,/locations/il/olympia-fields/,enquiry,Standard,1,1,0,B
+il,Illinois,Woodstock,woodstock,/locations/il/woodstock/,enquiry,Standard,1,1,0,B
+il,Illinois,East St. Louis,east-saint-louis,/locations/il/east-saint-louis/,enquiry,Standard,1,0,0,B
+il,Illinois,Elgin,elgin,/locations/il/elgin/,enquiry,Standard,1,0,0,B
+il,Illinois,Lake Zurich,lake-zurich,/locations/il/lake-zurich/,enquiry,Standard,1,0,0,B
+il,Illinois,Machesney Park,machesney-park,/locations/il/machesney-park/,enquiry,Standard,1,0,0,B
+il,Illinois,South Beloit,south-beloit,/locations/il/south-beloit/,enquiry,Standard,1,0,0,B
+il,Illinois,Taylor Ridge,taylor-ridge,/locations/il/taylor-ridge/,enquiry,Standard,1,0,0,B
+in,Indiana,Seymour,seymour,/locations/in/seymour/,enquiry,Medium,1,4,1,B
+in,Indiana,Florence,florence,/locations/in/florence/,enquiry,Standard,1,2,0,B
+in,Indiana,Marion,marion,/locations/in/marion/,enquiry,Standard,1,2,0,B
+in,Indiana,Columbus,columbus,/locations/in/columbus/,enquiry,Standard,1,1,0,B
+in,Indiana,Culver,culver,/locations/in/culver/,enquiry,Standard,1,1,0,B
+in,Indiana,Goshen,goshen,/locations/in/goshen/,enquiry,Standard,1,1,1,B
+in,Indiana,Middlebury,middlebury,/locations/in/middlebury/,enquiry,Standard,1,1,0,B
+in,Indiana,West Lafayette,west-lafayette,/locations/in/west-lafayette/,enquiry,Standard,1,1,0,B
+in,Indiana,Bloomington,bloomington,/locations/in/bloomington/,enquiry,Standard,1,0,0,B
+in,Indiana,Chesterton,chesterton,/locations/in/chesterton/,enquiry,Standard,1,0,0,B
+in,Indiana,Granger,granger,/locations/in/granger/,enquiry,Standard,1,0,0,B
+in,Indiana,Huntingburg,huntingburg,/locations/in/huntingburg/,enquiry,Standard,1,0,0,B
+in,Indiana,Lowell,lowell,/locations/in/lowell/,enquiry,Standard,1,0,0,B
+in,Indiana,Munster,munster,/locations/in/munster/,enquiry,Standard,1,0,0,B
+in,Indiana,Shoals,shoals,/locations/in/shoals/,enquiry,Standard,1,0,0,B
+in,Indiana,Sunman,sunman,/locations/in/sunman/,enquiry,Standard,1,0,0,B
+in,Indiana,Valparaiso,valparaiso,/locations/in/valparaiso/,enquiry,Standard,1,0,0,B
+in,Indiana,Warsaw,warsaw,/locations/in/warsaw/,enquiry,Standard,1,0,0,B
+in,Indiana,Whitestown,whitestown,/locations/in/whitestown/,enquiry,Standard,1,0,0,B
+in,Indiana,Greensburg,greensburg,/locations/in/greensburg/,traffic,Traffic,0,3,0,B
+ia,Iowa,Muscatine,muscatine,/locations/ia/muscatine/,traffic,Traffic,0,3,0,B
+ks,Kansas,Atchison,atchison,/locations/ks/atchison/,enquiry,Standard,1,1,0,B
+ks,Kansas,Hays,hays,/locations/ks/hays/,enquiry,Standard,1,1,0,B
+ks,Kansas,Leawood,leawood,/locations/ks/leawood/,enquiry,Standard,1,0,0,B
+ks,Kansas,Wichita,wichita,/locations/ks/wichita/,enquiry,Standard,1,0,0,B
+ky,Kentucky,Louisville,louisville,/locations/ky/louisville/,enquiry,Medium,2,0,0,A
+ky,Kentucky,Ashland,ashland,/locations/ky/ashland/,enquiry,Standard,1,1,0,B
+ky,Kentucky,Georgetown,georgetown,/locations/ky/georgetown/,enquiry,Standard,1,1,0,B
+ky,Kentucky,Carlisle,carlisle,/locations/ky/carlisle/,enquiry,Standard,1,0,0,B
+ky,Kentucky,Hebron,hebron,/locations/ky/hebron/,enquiry,Standard,1,0,0,B
+ky,Kentucky,Independence,independence,/locations/ky/independence/,enquiry,Standard,1,0,0,B
+la,Louisiana,Covington,covington,/locations/la/covington/,enquiry,Standard,1,0,0,B
+la,Louisiana,Hammond,hammond,/locations/la/hammond/,enquiry,Standard,1,0,0,B
+la,Louisiana,Jennings,jennings,/locations/la/jennings/,enquiry,Standard,1,0,1,B
+la,Louisiana,Ruston,ruston,/locations/la/ruston/,enquiry,Standard,1,0,0,B
+me,Maine,Newry,newry,/locations/me/newry/,enquiry,High,3,2,0,A
+me,Maine,Bangor,bangor,/locations/me/bangor/,enquiry,Medium,2,1,0,A
+me,Maine,Belfast,belfast,/locations/me/belfast/,enquiry,Standard,1,1,0,B
+me,Maine,Rockland,rockland,/locations/me/rockland/,enquiry,Standard,1,1,0,B
+me,Maine,Bethel,bethel,/locations/me/bethel/,enquiry,Standard,1,0,0,B
+me,Maine,Ogunquit,ogunquit,/locations/me/ogunquit/,enquiry,Standard,1,0,0,B
+me,Maine,Portland,portland,/locations/me/portland/,enquiry,Standard,1,0,0,B
+me,Maine,Sanford,sanford,/locations/me/sanford/,enquiry,Standard,1,0,0,B
+me,Maine,York,york,/locations/me/york/,enquiry,Standard,1,0,2,B
+me,Maine,Bar Harbor,bar-harbor,/locations/me/bar-harbor/,traffic,Traffic,0,4,0,B
+md,Maryland,Berlin,berlin,/locations/md/berlin/,enquiry,High,3,0,0,A
+md,Maryland,California,california,/locations/md/california/,enquiry,Standard,1,1,0,B
+md,Maryland,Easton,easton,/locations/md/easton/,enquiry,Standard,1,1,0,B
+md,Maryland,Aberdeen,aberdeen,/locations/md/aberdeen/,enquiry,Standard,1,0,0,B
+md,Maryland,Baltimore,baltimore,/locations/md/baltimore/,enquiry,Standard,1,0,0,B
+md,Maryland,Beltsville,beltsville,/locations/md/beltsville/,enquiry,Standard,1,0,0,B
+md,Maryland,Clinton,clinton,/locations/md/clinton/,enquiry,Standard,1,0,0,B
+md,Maryland,Laurel,laurel,/locations/md/laurel/,enquiry,Standard,1,0,0,B
+md,Maryland,Lexington Park,lexington-park,/locations/md/lexington-park/,enquiry,Standard,1,0,0,B
+md,Maryland,Pasadena,pasadena,/locations/md/pasadena/,enquiry,Standard,1,0,0,B
+md,Maryland,Perryville,perryville,/locations/md/perryville/,enquiry,Standard,1,0,0,B
+md,Maryland,Poolesville,poolesville,/locations/md/poolesville/,enquiry,Standard,1,0,0,B
+md,Maryland,Windsor Mill,windsor-mill,/locations/md/windsor-mill/,enquiry,Standard,1,0,0,B
+md,Maryland,Pocomoke City,pocomoke-city,/locations/md/pocomoke-city/,traffic,Traffic,0,3,0,B
+ma,Massachusetts,Amesbury,amesbury,/locations/ma/amesbury/,enquiry,Medium,2,0,0,A
+ma,Massachusetts,Uxbridge,uxbridge,/locations/ma/uxbridge/,enquiry,Medium,2,0,0,A
+ma,Massachusetts,Salisbury,salisbury,/locations/ma/salisbury/,enquiry,Medium,1,4,1,B
+ma,Massachusetts,Littleton,littleton,/locations/ma/littleton/,enquiry,Medium,1,3,0,B
+ma,Massachusetts,Saugus,saugus,/locations/ma/saugus/,enquiry,Standard,1,2,0,B
+ma,Massachusetts,Westford,westford,/locations/ma/westford/,enquiry,Standard,1,2,0,B
+ma,Massachusetts,Plainville,plainville,/locations/ma/plainville/,enquiry,Standard,1,1,0,B
+ma,Massachusetts,Attleboro,attleboro,/locations/ma/attleboro/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Blackstone,blackstone,/locations/ma/blackstone/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Brockton,brockton,/locations/ma/brockton/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Brookline,brookline,/locations/ma/brookline/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Buzzards Bay,buzzards-bay,/locations/ma/buzzards-bay/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Chelmsford,chelmsford,/locations/ma/chelmsford/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Colrain,colrain,/locations/ma/colrain/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Greenfield,greenfield,/locations/ma/greenfield/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Lynnfield,lynnfield,/locations/ma/lynnfield/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Milton,milton,/locations/ma/milton/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Southbridge,southbridge,/locations/ma/southbridge/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Springfield,springfield,/locations/ma/springfield/,enquiry,Standard,1,0,0,B
+ma,Massachusetts,Great Barrington,great-barrington,/locations/ma/great-barrington/,traffic,Traffic,0,3,0,B
+mi,Michigan,Benton Harbor,benton-harbor,/locations/mi/benton-harbor/,enquiry,High,2,3,1,A
+mi,Michigan,Roscommon,roscommon,/locations/mi/roscommon/,enquiry,Medium,2,2,0,A
+mi,Michigan,Alpena,alpena,/locations/mi/alpena/,enquiry,Medium,2,0,0,A
+mi,Michigan,Boyne Falls,boyne-falls,/locations/mi/boyne-falls/,enquiry,Medium,2,0,0,A
+mi,Michigan,Charlevoix,charlevoix,/locations/mi/charlevoix/,enquiry,Standard,1,2,0,B
+mi,Michigan,St. Joseph,saint-joseph,/locations/mi/saint-joseph/,enquiry,Standard,1,2,0,B
+mi,Michigan,Cadillac,cadillac,/locations/mi/cadillac/,enquiry,Standard,1,1,0,B
+mi,Michigan,East Lansing,east-lansing,/locations/mi/east-lansing/,enquiry,Standard,1,1,0,B
+mi,Michigan,Evart,evart,/locations/mi/evart/,enquiry,Standard,1,1,0,B
+mi,Michigan,Gladwin,gladwin,/locations/mi/gladwin/,enquiry,Standard,1,1,0,B
+mi,Michigan,Harris,harris,/locations/mi/harris/,enquiry,Standard,1,1,1,B
+mi,Michigan,Ludington,ludington,/locations/mi/ludington/,enquiry,Standard,1,1,0,B
+mi,Michigan,Petoskey,petoskey,/locations/mi/petoskey/,enquiry,Standard,1,1,0,B
+mi,Michigan,Adrian,adrian,/locations/mi/adrian/,enquiry,Standard,1,0,0,B
+mi,Michigan,Bellaire,bellaire,/locations/mi/bellaire/,enquiry,Standard,1,0,0,B
+mi,Michigan,Brimley,brimley,/locations/mi/brimley/,enquiry,Standard,1,0,0,B
+mi,Michigan,Clarkston,clarkston,/locations/mi/clarkston/,enquiry,Standard,1,0,0,B
+mi,Michigan,Coloma,coloma,/locations/mi/coloma/,enquiry,Standard,1,0,0,B
+mi,Michigan,Dowagiac,dowagiac,/locations/mi/dowagiac/,enquiry,Standard,1,0,0,B
+mi,Michigan,Flint,flint,/locations/mi/flint/,enquiry,Standard,1,0,0,B
+mi,Michigan,Garden City,garden-city,/locations/mi/garden-city/,enquiry,Standard,1,0,1,B
+mi,Michigan,Glen Arbor,glen-arbor,/locations/mi/glen-arbor/,enquiry,Standard,1,0,0,B
+mi,Michigan,Ironwood,ironwood,/locations/mi/ironwood/,enquiry,Standard,1,0,0,B
+mi,Michigan,Maple City,maple-city,/locations/mi/maple-city/,enquiry,Standard,1,0,0,B
+mi,Michigan,Novi,novi,/locations/mi/novi/,enquiry,Standard,1,0,0,B
+mi,Michigan,Onekama,onekama,/locations/mi/onekama/,enquiry,Standard,1,0,0,B
+mi,Michigan,Port Austin,port-austin,/locations/mi/port-austin/,enquiry,Standard,1,0,0,B
+mi,Michigan,Spring Arbor,spring-arbor,/locations/mi/spring-arbor/,enquiry,Standard,1,0,0,B
+mi,Michigan,Temperance,temperance,/locations/mi/temperance/,enquiry,Standard,1,0,0,B
+mi,Michigan,Bridgman,bridgman,/locations/mi/bridgman/,traffic,Traffic,0,3,1,B
+mi,Michigan,Sault Sainte Marie,sault-sainte-marie,/locations/mi/sault-sainte-marie/,traffic,Traffic,0,3,1,B
+mi,Michigan,Sturgis,sturgis,/locations/mi/sturgis/,traffic,Traffic,0,3,0,B
+mn,Minnesota,Alexandria,alexandria,/locations/mn/alexandria/,enquiry,High,3,6,0,A
+mn,Minnesota,Minneapolis,minneapolis,/locations/mn/minneapolis/,enquiry,Medium,2,0,0,A
+mn,Minnesota,Wabasha,wabasha,/locations/mn/wabasha/,enquiry,Medium,2,0,0,A
+mn,Minnesota,Baxter,baxter,/locations/mn/baxter/,enquiry,Standard,1,1,0,B
+mn,Minnesota,Big Lake,big-lake,/locations/mn/big-lake/,enquiry,Standard,1,1,0,B
+mn,Minnesota,Crookston,crookston,/locations/mn/crookston/,enquiry,Standard,1,1,0,B
+mn,Minnesota,Blackduck,blackduck,/locations/mn/blackduck/,enquiry,Standard,1,0,0,B
+mn,Minnesota,Duluth,duluth,/locations/mn/duluth/,enquiry,Standard,1,0,0,B
+mn,Minnesota,Fairmont,fairmont,/locations/mn/fairmont/,enquiry,Standard,1,0,0,B
+mn,Minnesota,Mankato,mankato,/locations/mn/mankato/,enquiry,Standard,1,0,0,B
+mn,Minnesota,North Branch,north-branch,/locations/mn/north-branch/,enquiry,Standard,1,0,0,B
+mn,Minnesota,Taylors Falls,taylors-falls,/locations/mn/taylors-falls/,enquiry,Standard,1,0,0,B
+mn,Minnesota,Victoria,victoria,/locations/mn/victoria/,enquiry,Standard,1,0,1,B
+mn,Minnesota,Bemidji,bemidji,/locations/mn/bemidji/,traffic,Traffic,0,3,0,B
+mn,Minnesota,Plainview,plainview,/locations/mn/plainview/,traffic,Traffic,0,3,0,B
+mn,Minnesota,Willmar,willmar,/locations/mn/willmar/,traffic,Traffic,0,3,0,B
+ms,Mississippi,Columbus,columbus,/locations/ms/columbus/,enquiry,Medium,1,3,0,B
+ms,Mississippi,Oxford,oxford,/locations/ms/oxford/,enquiry,Standard,1,2,0,B
+ms,Mississippi,Ridgeland,ridgeland,/locations/ms/ridgeland/,enquiry,Standard,1,0,0,B
+ms,Mississippi,Ruth,ruth,/locations/ms/ruth/,enquiry,Standard,1,0,0,B
+ms,Mississippi,Tylertown,tylertown,/locations/ms/tylertown/,enquiry,Standard,1,0,2,B
+ms,Mississippi,Waveland,waveland,/locations/ms/waveland/,enquiry,Standard,1,0,0,B
+ms,Mississippi,Greenwood,greenwood,/locations/ms/greenwood/,traffic,Traffic,0,5,2,B
+ms,Mississippi,Greenville,greenville,/locations/ms/greenville/,traffic,Traffic,0,3,0,B
+mo,Missouri,Bethany,bethany,/locations/mo/bethany/,enquiry,Standard,1,2,0,B
+mo,Missouri,Belton,belton,/locations/mo/belton/,enquiry,Standard,1,0,0,B
+mo,Missouri,Branson,branson,/locations/mo/branson/,enquiry,Standard,1,0,0,B
+mo,Missouri,Independence,independence,/locations/mo/independence/,enquiry,Standard,1,0,0,B
+mo,Missouri,Joplin,joplin,/locations/mo/joplin/,enquiry,Standard,1,0,0,B
+mo,Missouri,Mount Vernon,mount-vernon,/locations/mo/mount-vernon/,enquiry,Standard,1,0,1,B
+mo,Missouri,Springfield,springfield,/locations/mo/springfield/,enquiry,Standard,1,0,0,B
+mo,Missouri,Wellsville,wellsville,/locations/mo/wellsville/,enquiry,Standard,1,0,0,B
+mo,Missouri,Hannibal,hannibal,/locations/mo/hannibal/,traffic,Traffic,0,3,0,B
+mt,Montana,Whitefish,whitefish,/locations/mt/whitefish/,enquiry,High,2,5,3,A
+mt,Montana,Kalispell,kalispell,/locations/mt/kalispell/,enquiry,High,2,4,0,A
+mt,Montana,Great Falls,great-falls,/locations/mt/great-falls/,enquiry,Standard,1,2,0,B
+mt,Montana,Big Sky,big-sky,/locations/mt/big-sky/,enquiry,Standard,1,1,0,B
+mt,Montana,Livingston,livingston,/locations/mt/livingston/,enquiry,Standard,1,1,1,B
+mt,Montana,Troy,troy,/locations/mt/troy/,enquiry,Standard,1,1,0,B
+mt,Montana,Bozeman,bozeman,/locations/mt/bozeman/,enquiry,Standard,1,0,1,B
+mt,Montana,Emigrant,emigrant,/locations/mt/emigrant/,enquiry,Standard,1,0,0,B
+mt,Montana,Marion,marion,/locations/mt/marion/,enquiry,Standard,1,0,0,B
+mt,Montana,Plentywood,plentywood,/locations/mt/plentywood/,enquiry,Standard,1,0,0,B
+mt,Montana,Shelby,shelby,/locations/mt/shelby/,enquiry,Standard,1,0,0,B
+mt,Montana,Dillon,dillon,/locations/mt/dillon/,traffic,Traffic,0,3,0,B
+ne,Nebraska,Sidney,sidney,/locations/ne/sidney/,traffic,Traffic,0,3,0,B
+nh,New Hampshire,North Conway,north-conway,/locations/nh/north-conway/,enquiry,High,3,4,0,A
+nh,New Hampshire,Hanover,hanover,/locations/nh/hanover/,enquiry,High,3,1,1,A
+nh,New Hampshire,Keene,keene,/locations/nh/keene/,enquiry,High,2,5,0,A
+nh,New Hampshire,Moultonborough,moultonborough,/locations/nh/moultonborough/,enquiry,Medium,2,2,0,A
+nh,New Hampshire,Plymouth,plymouth,/locations/nh/plymouth/,enquiry,Medium,2,2,0,A
+nh,New Hampshire,Manchester,manchester,/locations/nh/manchester/,enquiry,Medium,2,0,0,A
+nh,New Hampshire,Amherst,amherst,/locations/nh/amherst/,enquiry,Standard,1,2,0,B
+nh,New Hampshire,Laconia,laconia,/locations/nh/laconia/,enquiry,Standard,1,2,0,B
+nh,New Hampshire,Lebanon,lebanon,/locations/nh/lebanon/,enquiry,Standard,1,1,0,B
+nh,New Hampshire,Alton,alton,/locations/nh/alton/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Berlin,berlin,/locations/nh/berlin/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Concord,concord,/locations/nh/concord/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Exeter,exeter,/locations/nh/exeter/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Gorham,gorham,/locations/nh/gorham/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Hampton,hampton,/locations/nh/hampton/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Meredith,meredith,/locations/nh/meredith/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Nashua,nashua,/locations/nh/nashua/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Newbury,newbury,/locations/nh/newbury/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Peterborough,peterborough,/locations/nh/peterborough/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Whitefield,whitefield,/locations/nh/whitefield/,enquiry,Standard,1,0,0,B
+nh,New Hampshire,Sunapee,sunapee,/locations/nh/sunapee/,traffic,Traffic,0,4,1,B
+nj,New Jersey,Red Bank,red-bank,/locations/nj/red-bank/,enquiry,High,2,3,0,A
+nj,New Jersey,Summit,summit,/locations/nj/summit/,enquiry,Medium,2,2,0,A
+nj,New Jersey,Wayne,wayne,/locations/nj/wayne/,enquiry,Medium,2,0,1,A
+nj,New Jersey,Flemington,flemington,/locations/nj/flemington/,enquiry,Medium,1,4,0,B
+nj,New Jersey,Wildwood,wildwood,/locations/nj/wildwood/,enquiry,Standard,1,2,0,B
+nj,New Jersey,Chatham,chatham,/locations/nj/chatham/,enquiry,Standard,1,1,0,B
+nj,New Jersey,Glassboro,glassboro,/locations/nj/glassboro/,enquiry,Standard,1,1,1,B
+nj,New Jersey,Ocean City,ocean-city,/locations/nj/ocean-city/,enquiry,Standard,1,1,0,B
+nj,New Jersey,Stockton,stockton,/locations/nj/stockton/,enquiry,Standard,1,1,0,B
+nj,New Jersey,Williamstown,williamstown,/locations/nj/williamstown/,enquiry,Standard,1,1,0,B
+nj,New Jersey,Emerson,emerson,/locations/nj/emerson/,enquiry,Standard,1,0,0,B
+nj,New Jersey,Mahwah,mahwah,/locations/nj/mahwah/,enquiry,Standard,1,0,0,B
+nj,New Jersey,Mullica Hill,mullica-hill,/locations/nj/mullica-hill/,enquiry,Standard,1,0,0,B
+nj,New Jersey,Plainfield,plainfield,/locations/nj/plainfield/,enquiry,Standard,1,0,0,B
+nj,New Jersey,Springfield,springfield,/locations/nj/springfield/,enquiry,Standard,1,0,0,B
+nj,New Jersey,Stone Harbor,stone-harbor,/locations/nj/stone-harbor/,enquiry,Standard,1,0,0,B
+nj,New Jersey,Sussex,sussex,/locations/nj/sussex/,enquiry,Standard,1,0,0,B
+nj,New Jersey,Whippany,whippany,/locations/nj/whippany/,enquiry,Standard,1,0,0,B
+nm,New Mexico,Angel Fire,angel-fire,/locations/nm/angel-fire/,enquiry,High,3,0,0,A
+nm,New Mexico,Taos,taos,/locations/nm/taos/,enquiry,High,2,6,1,A
+nm,New Mexico,Abiquiu,abiquiu,/locations/nm/abiquiu/,enquiry,Standard,1,0,0,B
+nm,New Mexico,Las Cruces,las-cruces,/locations/nm/las-cruces/,enquiry,Standard,1,0,0,B
+nm,New Mexico,Los Ojos,los-ojos,/locations/nm/los-ojos/,enquiry,Standard,1,0,0,B
+nm,New Mexico,Portales,portales,/locations/nm/portales/,enquiry,Standard,1,0,0,B
+nm,New Mexico,Carlsbad,carlsbad,/locations/nm/carlsbad/,traffic,Traffic,0,3,0,B
+ny,New York,New York City,new-york,/locations/ny/new-york/,enquiry,High,3,1,0,A
+ny,New York,Potsdam,potsdam,/locations/ny/potsdam/,enquiry,High,2,5,0,A
+ny,New York,Beacon,beacon,/locations/ny/beacon/,enquiry,High,2,3,0,A
+ny,New York,Lake George,lake-george,/locations/ny/lake-george/,enquiry,Medium,2,0,0,A
+ny,New York,Tarrytown,tarrytown,/locations/ny/tarrytown/,enquiry,Medium,2,0,0,A
+ny,New York,Utica,utica,/locations/ny/utica/,enquiry,Medium,2,0,1,A
+ny,New York,Himrod,himrod,/locations/ny/himrod/,enquiry,Medium,1,4,0,B
+ny,New York,Alexandria Bay,alexandria-bay,/locations/ny/alexandria-bay/,enquiry,Medium,1,3,0,B
+ny,New York,Canandaigua,canandaigua,/locations/ny/canandaigua/,enquiry,Medium,1,3,0,B
+ny,New York,Monticello,monticello,/locations/ny/monticello/,enquiry,Medium,1,3,3,B
+ny,New York,Geneseo,geneseo,/locations/ny/geneseo/,enquiry,Standard,1,2,0,B
+ny,New York,Lake Placid,lake-placid,/locations/ny/lake-placid/,enquiry,Standard,1,2,0,B
+ny,New York,Stone Ridge,stone-ridge,/locations/ny/stone-ridge/,enquiry,Standard,1,2,0,B
+ny,New York,Suffern,suffern,/locations/ny/suffern/,enquiry,Standard,1,2,0,B
+ny,New York,Webster,webster,/locations/ny/webster/,enquiry,Standard,1,2,0,B
+ny,New York,Auburn,auburn,/locations/ny/auburn/,enquiry,Standard,1,1,0,B
+ny,New York,Larchmont,larchmont,/locations/ny/larchmont/,enquiry,Standard,1,1,0,B
+ny,New York,Lowville,lowville,/locations/ny/lowville/,enquiry,Standard,1,1,0,B
+ny,New York,Mayfield,mayfield,/locations/ny/mayfield/,enquiry,Standard,1,1,0,B
+ny,New York,Oneonta,oneonta,/locations/ny/oneonta/,enquiry,Standard,1,1,0,B
+ny,New York,Rock Tavern,rock-tavern,/locations/ny/rock-tavern/,enquiry,Standard,1,1,0,B
+ny,New York,Warwick,warwick,/locations/ny/warwick/,enquiry,Standard,1,1,0,B
+ny,New York,Windham,windham,/locations/ny/windham/,enquiry,Standard,1,1,0,B
+ny,New York,Boonville,boonville,/locations/ny/boonville/,enquiry,Standard,1,0,0,B
+ny,New York,Central Valley,central-valley,/locations/ny/central-valley/,enquiry,Standard,1,0,0,B
+ny,New York,Clayton,clayton,/locations/ny/clayton/,enquiry,Standard,1,0,0,B
+ny,New York,Cobleskill,cobleskill,/locations/ny/cobleskill/,enquiry,Standard,1,0,0,B
+ny,New York,Cornwallville,cornwallville,/locations/ny/cornwallville/,enquiry,Standard,1,0,0,B
+ny,New York,Eldred,eldred,/locations/ny/eldred/,enquiry,Standard,1,0,0,B
+ny,New York,Elka Park,elka-park,/locations/ny/elka-park/,enquiry,Standard,1,0,0,B
+ny,New York,Ellicottville,ellicottville,/locations/ny/ellicottville/,enquiry,Standard,1,0,0,B
+ny,New York,Endicott,endicott,/locations/ny/endicott/,enquiry,Standard,1,0,1,B
+ny,New York,Fallsburg,fallsburg,/locations/ny/fallsburg/,enquiry,Standard,1,0,0,B
+ny,New York,Geneva,geneva,/locations/ny/geneva/,enquiry,Standard,1,0,0,B
+ny,New York,Hunter,hunter,/locations/ny/hunter/,enquiry,Standard,1,0,0,B
+ny,New York,Interlaken,interlaken,/locations/ny/interlaken/,enquiry,Standard,1,0,0,B
+ny,New York,Lawrence,lawrence,/locations/ny/lawrence/,enquiry,Standard,1,0,0,B
+ny,New York,Medina,medina,/locations/ny/medina/,enquiry,Standard,1,0,0,B
+ny,New York,Middle Village,middle-village,/locations/ny/middle-village/,enquiry,Standard,1,0,0,B
+ny,New York,Middletown,middletown,/locations/ny/middletown/,enquiry,Standard,1,0,0,B
+ny,New York,Mt Kisco,mount-kisco,/locations/ny/mount-kisco/,enquiry,Standard,1,0,0,B
+ny,New York,Olean,olean,/locations/ny/olean/,enquiry,Standard,1,0,0,B
+ny,New York,Penn Yan,penn-yan,/locations/ny/penn-yan/,enquiry,Standard,1,0,1,B
+ny,New York,Port Jefferson Station,port-jefferson-station,/locations/ny/port-jefferson-station/,enquiry,Standard,1,0,0,B
+ny,New York,Port Jervis,port-jervis,/locations/ny/port-jervis/,enquiry,Standard,1,0,0,B
+ny,New York,Poughkeepsie,poughkeepsie,/locations/ny/poughkeepsie/,enquiry,Standard,1,0,0,B
+ny,New York,Quogue,quogue,/locations/ny/quogue/,enquiry,Standard,1,0,0,B
+ny,New York,Roxbury,roxbury,/locations/ny/roxbury/,enquiry,Standard,1,0,0,B
+ny,New York,Rye,rye,/locations/ny/rye/,enquiry,Standard,1,0,0,B
+ny,New York,Saugerties,saugerties,/locations/ny/saugerties/,enquiry,Standard,1,0,0,B
+ny,New York,Schroon Lake,schroon-lake,/locations/ny/schroon-lake/,enquiry,Standard,1,0,0,B
+ny,New York,Wainscott,wainscott,/locations/ny/wainscott/,enquiry,Standard,1,0,0,B
+ny,New York,West Point,west-point,/locations/ny/west-point/,enquiry,Standard,1,0,0,B
+ny,New York,Woodbourne,woodbourne,/locations/ny/woodbourne/,enquiry,Standard,1,0,0,B
+ny,New York,Plattsburgh,plattsburgh,/locations/ny/plattsburgh/,traffic,Traffic,0,4,0,B
+ny,New York,Clymer,clymer,/locations/ny/clymer/,traffic,Traffic,0,3,0,B
+nc,North Carolina,Laurinburg,laurinburg,/locations/nc/laurinburg/,enquiry,Medium,1,3,0,B
+nc,North Carolina,Beaufort,beaufort,/locations/nc/beaufort/,enquiry,Standard,1,2,0,B
+nc,North Carolina,Clinton,clinton,/locations/nc/clinton/,enquiry,Standard,1,2,0,B
+nc,North Carolina,Marion,marion,/locations/nc/marion/,enquiry,Standard,1,2,0,B
+nc,North Carolina,Clemmons,clemmons,/locations/nc/clemmons/,enquiry,Standard,1,1,1,B
+nc,North Carolina,Havelock,havelock,/locations/nc/havelock/,enquiry,Standard,1,1,0,B
+nc,North Carolina,Kitty Hawk,kitty-hawk,/locations/nc/kitty-hawk/,enquiry,Standard,1,1,1,B
+nc,North Carolina,Lillington,lillington,/locations/nc/lillington/,enquiry,Standard,1,1,0,B
+nc,North Carolina,Mebane,mebane,/locations/nc/mebane/,enquiry,Standard,1,1,1,B
+nc,North Carolina,Avon,avon,/locations/nc/avon/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Charlotte,charlotte,/locations/nc/charlotte/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Corolla,corolla,/locations/nc/corolla/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Davidson,davidson,/locations/nc/davidson/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Fayetteville,fayetteville,/locations/nc/fayetteville/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Forest City,forest-city,/locations/nc/forest-city/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Goldsboro,goldsboro,/locations/nc/goldsboro/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Hayesville,hayesville,/locations/nc/hayesville/,enquiry,Standard,1,0,0,B
+nc,North Carolina,High Point,high-point,/locations/nc/high-point/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Lake Lure,lake-lure,/locations/nc/lake-lure/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Oriental,oriental,/locations/nc/oriental/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Raeford,raeford,/locations/nc/raeford/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Raleigh,raleigh,/locations/nc/raleigh/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Rocky Mount,rocky-mount,/locations/nc/rocky-mount/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Selma,selma,/locations/nc/selma/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Taylorsville,taylorsville,/locations/nc/taylorsville/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Winston-Salem,winston-salem,/locations/nc/winston-salem/,enquiry,Standard,1,0,0,B
+nc,North Carolina,Kings Mountain,kings-mountain,/locations/nc/kings-mountain/,traffic,Traffic,0,6,2,B
+nc,North Carolina,Mocksville,mocksville,/locations/nc/mocksville/,traffic,Traffic,0,4,0,B
+nc,North Carolina,Asheboro,asheboro,/locations/nc/asheboro/,traffic,Traffic,0,3,0,B
+nc,North Carolina,Salisbury,salisbury,/locations/nc/salisbury/,traffic,Traffic,0,3,0,B
+nc,North Carolina,Yadkinville,yadkinville,/locations/nc/yadkinville/,traffic,Traffic,0,3,0,B
+oh,Ohio,Sidney,sidney,/locations/oh/sidney/,enquiry,Standard,1,2,0,B
+oh,Ohio,Beachwood,beachwood,/locations/oh/beachwood/,enquiry,Standard,1,1,0,B
+oh,Ohio,Logan,logan,/locations/oh/logan/,enquiry,Standard,1,1,0,B
+oh,Ohio,Port Clinton,port-clinton,/locations/oh/port-clinton/,enquiry,Standard,1,1,0,B
+oh,Ohio,Wapakoneta,wapakoneta,/locations/oh/wapakoneta/,enquiry,Standard,1,1,0,B
+oh,Ohio,Akron,akron,/locations/oh/akron/,enquiry,Standard,1,0,0,B
+oh,Ohio,Bellaire,bellaire,/locations/oh/bellaire/,enquiry,Standard,1,0,0,B
+oh,Ohio,Cadiz,cadiz,/locations/oh/cadiz/,enquiry,Standard,1,0,1,B
+oh,Ohio,Carroll,carroll,/locations/oh/carroll/,enquiry,Standard,1,0,0,B
+oh,Ohio,Chillicothe,chillicothe,/locations/oh/chillicothe/,enquiry,Standard,1,0,0,B
+oh,Ohio,Cincinnati,cincinnati,/locations/oh/cincinnati/,enquiry,Standard,1,0,0,B
+oh,Ohio,Columbus,columbus,/locations/oh/columbus/,enquiry,Standard,1,0,0,B
+oh,Ohio,Huron,huron,/locations/oh/huron/,enquiry,Standard,1,0,0,B
+oh,Ohio,Kimbolton,kimbolton,/locations/oh/kimbolton/,enquiry,Standard,1,0,0,B
+oh,Ohio,Lewis Center,lewis-center,/locations/oh/lewis-center/,enquiry,Standard,1,0,0,B
+oh,Ohio,Madison,madison,/locations/oh/madison/,enquiry,Standard,1,0,1,B
+oh,Ohio,Middlefield,middlefield,/locations/oh/middlefield/,enquiry,Standard,1,0,0,B
+oh,Ohio,Milford,milford,/locations/oh/milford/,enquiry,Standard,1,0,0,B
+oh,Ohio,Newark,newark,/locations/oh/newark/,enquiry,Standard,1,0,0,B
+oh,Ohio,North Canton,north-canton,/locations/oh/north-canton/,enquiry,Standard,1,0,0,B
+oh,Ohio,Ottawa,ottawa,/locations/oh/ottawa/,enquiry,Standard,1,0,0,B
+oh,Ohio,Sugar Grove,sugar-grove,/locations/oh/sugar-grove/,enquiry,Standard,1,0,0,B
+oh,Ohio,Vermilion,vermilion,/locations/oh/vermilion/,enquiry,Standard,1,0,0,B
+oh,Ohio,West Portsmouth,west-portsmouth,/locations/oh/west-portsmouth/,enquiry,Standard,1,0,0,B
+oh,Ohio,Zanesville,zanesville,/locations/oh/zanesville/,enquiry,Standard,1,0,0,B
+oh,Ohio,Portsmouth,portsmouth,/locations/oh/portsmouth/,traffic,Traffic,0,4,0,B
+ok,Oklahoma,Shawnee,shawnee,/locations/ok/shawnee/,enquiry,High,2,3,0,A
+ok,Oklahoma,Sapulpa,sapulpa,/locations/ok/sapulpa/,enquiry,Standard,1,2,0,B
+ok,Oklahoma,McAlester,mcalester,/locations/ok/mcalester/,enquiry,Standard,1,1,0,B
+ok,Oklahoma,Smithville,smithville,/locations/ok/smithville/,enquiry,Standard,1,0,0,B
+ok,Oklahoma,Stillwater,stillwater,/locations/ok/stillwater/,enquiry,Standard,1,0,0,B
+or,Oregon,Hood River,hood-river,/locations/or/hood-river/,enquiry,High,3,2,1,A
+or,Oregon,Astoria,astoria,/locations/or/astoria/,enquiry,High,2,3,0,A
+or,Oregon,Eugene,eugene,/locations/or/eugene/,enquiry,Medium,2,0,0,A
+or,Oregon,Klamath Falls,klamath-falls,/locations/or/klamath-falls/,enquiry,Medium,2,0,2,A
+or,Oregon,Ontario,ontario,/locations/or/ontario/,enquiry,Medium,1,3,0,B
+or,Oregon,Newport,newport,/locations/or/newport/,enquiry,Standard,1,2,0,B
+or,Oregon,Rockaway Beach,rockaway-beach,/locations/or/rockaway-beach/,enquiry,Standard,1,1,0,B
+or,Oregon,Damascus,damascus,/locations/or/damascus/,enquiry,Standard,1,0,0,B
+or,Oregon,Otter Rock,otter-rock,/locations/or/otter-rock/,enquiry,Standard,1,0,0,B
+or,Oregon,Pacific City,pacific-city,/locations/or/pacific-city/,enquiry,Standard,1,0,0,B
+or,Oregon,McMinnville,mcminnville,/locations/or/mcminnville/,traffic,Traffic,0,4,0,B
+or,Oregon,Brookings,brookings,/locations/or/brookings/,traffic,Traffic,0,3,0,B
+or,Oregon,Tillamook,tillamook,/locations/or/tillamook/,traffic,Traffic,0,3,0,B
+pa,Pennsylvania,Hazleton,hazleton,/locations/pa/hazleton/,enquiry,Medium,2,1,0,A
+pa,Pennsylvania,Bradford,bradford,/locations/pa/bradford/,enquiry,Standard,1,2,0,B
+pa,Pennsylvania,Selinsgrove,selinsgrove,/locations/pa/selinsgrove/,enquiry,Standard,1,2,0,B
+pa,Pennsylvania,Gibsonia,gibsonia,/locations/pa/gibsonia/,enquiry,Standard,1,1,0,B
+pa,Pennsylvania,Honesdale,honesdale,/locations/pa/honesdale/,enquiry,Standard,1,1,0,B
+pa,Pennsylvania,Lehighton,lehighton,/locations/pa/lehighton/,enquiry,Standard,1,1,0,B
+pa,Pennsylvania,Meadville,meadville,/locations/pa/meadville/,enquiry,Standard,1,1,0,B
+pa,Pennsylvania,Mt. Carmel,mount-carmel,/locations/pa/mount-carmel/,enquiry,Standard,1,1,1,B
+pa,Pennsylvania,Wellsboro,wellsboro,/locations/pa/wellsboro/,enquiry,Standard,1,1,1,B
+pa,Pennsylvania,Allentown,allentown,/locations/pa/allentown/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Broomall,broomall,/locations/pa/broomall/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Butler,butler,/locations/pa/butler/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Denver,denver,/locations/pa/denver/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,East Greenville,east-greenville,/locations/pa/east-greenville/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,East Stroudsburg,east-stroudsburg,/locations/pa/east-stroudsburg/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Hatboro,hatboro,/locations/pa/hatboro/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Lake Ariel,lake-ariel,/locations/pa/lake-ariel/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Lewisburg,lewisburg,/locations/pa/lewisburg/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Middletown,middletown,/locations/pa/middletown/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Monaca,monaca,/locations/pa/monaca/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Moscow,moscow,/locations/pa/moscow/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,North East,north-east,/locations/pa/north-east/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Ohiopyle,ohiopyle,/locations/pa/ohiopyle/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Peach Bottom,peach-bottom,/locations/pa/peach-bottom/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Philadelphia,philadelphia,/locations/pa/philadelphia/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Ronks,ronks,/locations/pa/ronks/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Royersford,royersford,/locations/pa/royersford/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,State College,state-college,/locations/pa/state-college/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Stroudsburg,stroudsburg,/locations/pa/stroudsburg/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Summerdale,summerdale,/locations/pa/summerdale/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Ulster,ulster,/locations/pa/ulster/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Uniontown,uniontown,/locations/pa/uniontown/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,West Grove,west-grove,/locations/pa/west-grove/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Williamsport,williamsport,/locations/pa/williamsport/,enquiry,Standard,1,0,0,B
+pa,Pennsylvania,Beaver,beaver,/locations/pa/beaver/,traffic,Traffic,0,4,1,B
+pa,Pennsylvania,Hawley,hawley,/locations/pa/hawley/,traffic,Traffic,0,3,0,B
+ri,Rhode Island,Block Island,block-island,/locations/ri/block-island/,enquiry,Medium,1,5,0,B
+ri,Rhode Island,Bristol,bristol,/locations/ri/bristol/,enquiry,Standard,1,1,0,B
+ri,Rhode Island,Exeter,exeter,/locations/ri/exeter/,enquiry,Standard,1,1,0,B
+ri,Rhode Island,Newport,newport,/locations/ri/newport/,enquiry,Standard,1,0,0,B
+ri,Rhode Island,Warwick,warwick,/locations/ri/warwick/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Pawleys Island,pawleys-island,/locations/sc/pawleys-island/,enquiry,Medium,1,4,1,B
+sc,South Carolina,Ridgeland,ridgeland,/locations/sc/ridgeland/,enquiry,Medium,1,4,3,B
+sc,South Carolina,Walterboro,walterboro,/locations/sc/walterboro/,enquiry,Medium,1,3,0,B
+sc,South Carolina,Port Royal,port-royal,/locations/sc/port-royal/,enquiry,Standard,1,2,0,B
+sc,South Carolina,Yemassee,yemassee,/locations/sc/yemassee/,enquiry,Standard,1,2,0,B
+sc,South Carolina,Clemson,clemson,/locations/sc/clemson/,enquiry,Standard,1,1,0,B
+sc,South Carolina,Belton,belton,/locations/sc/belton/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Bishopville,bishopville,/locations/sc/bishopville/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Bluffton,bluffton,/locations/sc/bluffton/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Columbia,columbia,/locations/sc/columbia/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Conway,conway,/locations/sc/conway/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Cross,cross,/locations/sc/cross/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Darlington,darlington,/locations/sc/darlington/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Georgetown,georgetown,/locations/sc/georgetown/,enquiry,Standard,1,0,1,B
+sc,South Carolina,Greenville,greenville,/locations/sc/greenville/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Greenwood,greenwood,/locations/sc/greenwood/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Myrtle Beach,myrtle-beach,/locations/sc/myrtle-beach/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Plum Branch,plum-branch,/locations/sc/plum-branch/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Taylors,taylors,/locations/sc/taylors/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Winnsboro,winnsboro,/locations/sc/winnsboro/,enquiry,Standard,1,0,0,B
+sc,South Carolina,Hartsville,hartsville,/locations/sc/hartsville/,traffic,Traffic,0,3,1,B
+sc,South Carolina,Kingstree,kingstree,/locations/sc/kingstree/,traffic,Traffic,0,3,0,B
+sd,South Dakota,Deadwood,deadwood,/locations/sd/deadwood/,traffic,Traffic,0,3,0,B
+tn,Tennessee,Sevierville,sevierville,/locations/tn/sevierville/,enquiry,Medium,2,1,0,A
+tn,Tennessee,Franklin,franklin,/locations/tn/franklin/,enquiry,Medium,2,0,0,A
+tn,Tennessee,Gatlinburg,gatlinburg,/locations/tn/gatlinburg/,enquiry,Medium,1,6,1,B
+tn,Tennessee,Sewanee,sewanee,/locations/tn/sewanee/,enquiry,Standard,1,2,0,B
+tn,Tennessee,Union City,union-city,/locations/tn/union-city/,enquiry,Standard,1,2,0,B
+tn,Tennessee,Paris,paris,/locations/tn/paris/,enquiry,Standard,1,1,0,B
+tn,Tennessee,Chattanooga,chattanooga,/locations/tn/chattanooga/,enquiry,Standard,1,0,0,B
+tn,Tennessee,Mt. Juliet,mount-juliet,/locations/tn/mount-juliet/,enquiry,Standard,1,0,0,B
+tn,Tennessee,Nashville,nashville,/locations/tn/nashville/,enquiry,Standard,1,0,0,B
+tn,Tennessee,Pulaski,pulaski,/locations/tn/pulaski/,enquiry,Standard,1,0,1,B
+tn,Tennessee,Shelbyville,shelbyville,/locations/tn/shelbyville/,enquiry,Standard,1,0,0,B
+tn,Tennessee,Pigeon Forge,pigeon-forge,/locations/tn/pigeon-forge/,traffic,Traffic,0,3,0,B
+tx,Texas,Sulphur Springs,sulphur-springs,/locations/tx/sulphur-springs/,enquiry,Medium,2,2,0,A
+tx,Texas,Austin,austin,/locations/tx/austin/,enquiry,Medium,2,0,0,A
+tx,Texas,Houston,houston,/locations/tx/houston/,enquiry,Medium,2,0,0,A
+tx,Texas,Granbury,granbury,/locations/tx/granbury/,enquiry,Medium,1,3,0,B
+tx,Texas,Wharton,wharton,/locations/tx/wharton/,enquiry,Standard,1,2,0,B
+tx,Texas,Brenham,brenham,/locations/tx/brenham/,enquiry,Standard,1,1,0,B
+tx,Texas,Fredericksburg,fredericksburg,/locations/tx/fredericksburg/,enquiry,Standard,1,1,0,B
+tx,Texas,Manor,manor,/locations/tx/manor/,enquiry,Standard,1,1,0,B
+tx,Texas,Marble Falls,marble-falls,/locations/tx/marble-falls/,enquiry,Standard,1,1,0,B
+tx,Texas,Mont Belvieu,mont-belvieu,/locations/tx/mont-belvieu/,enquiry,Standard,1,1,0,B
+tx,Texas,Rockport,rockport,/locations/tx/rockport/,enquiry,Standard,1,1,0,B
+tx,Texas,Alpine,alpine,/locations/tx/alpine/,enquiry,Standard,1,0,0,B
+tx,Texas,Buchanan Dam,buchanan-dam,/locations/tx/buchanan-dam/,enquiry,Standard,1,0,0,B
+tx,Texas,Cotulla,cotulla,/locations/tx/cotulla/,enquiry,Standard,1,0,0,B
+tx,Texas,Cypress,cypress,/locations/tx/cypress/,enquiry,Standard,1,0,0,B
+tx,Texas,Driftwood,driftwood,/locations/tx/driftwood/,enquiry,Standard,1,0,1,B
+tx,Texas,Giddings,giddings,/locations/tx/giddings/,enquiry,Standard,1,0,0,B
+tx,Texas,Glen Rose,glen-rose,/locations/tx/glen-rose/,enquiry,Standard,1,0,0,B
+tx,Texas,Groveton,groveton,/locations/tx/groveton/,enquiry,Standard,1,0,0,B
+tx,Texas,Harlingen,harlingen,/locations/tx/harlingen/,enquiry,Standard,1,0,0,B
+tx,Texas,Katy,katy,/locations/tx/katy/,enquiry,Standard,1,0,0,B
+tx,Texas,Kenedy,kenedy,/locations/tx/kenedy/,enquiry,Standard,1,0,0,B
+tx,Texas,Marfa,marfa,/locations/tx/marfa/,enquiry,Standard,1,0,0,B
+tx,Texas,Mercedes,mercedes,/locations/tx/mercedes/,enquiry,Standard,1,0,0,B
+tx,Texas,Midland,midland,/locations/tx/midland/,enquiry,Standard,1,0,0,B
+tx,Texas,Plainview,plainview,/locations/tx/plainview/,enquiry,Standard,1,0,0,B
+tx,Texas,Spicewood,spicewood,/locations/tx/spicewood/,enquiry,Standard,1,0,0,B
+tx,Texas,Spurger,spurger,/locations/tx/spurger/,enquiry,Standard,1,0,0,B
+tx,Texas,Gatesville,gatesville,/locations/tx/gatesville/,traffic,Traffic,0,3,0,B
+tx,Texas,Nacogdoches,nacogdoches,/locations/tx/nacogdoches/,traffic,Traffic,0,3,0,B
+ut,Utah,Park City,park-city,/locations/ut/park-city/,enquiry,High,7,9,2,A
+ut,Utah,Ogden,ogden,/locations/ut/ogden/,enquiry,Medium,2,0,0,A
+ut,Utah,Kamas,kamas,/locations/ut/kamas/,enquiry,Standard,1,1,0,B
+ut,Utah,Richfield,richfield,/locations/ut/richfield/,enquiry,Standard,1,1,1,B
+ut,Utah,Draper,draper,/locations/ut/draper/,enquiry,Standard,1,0,1,B
+ut,Utah,Jensen,jensen,/locations/ut/jensen/,enquiry,Standard,1,0,0,B
+ut,Utah,Moab,moab,/locations/ut/moab/,enquiry,Standard,1,0,0,B
+vt,Vermont,Ludlow,ludlow,/locations/vt/ludlow/,enquiry,High,2,4,0,A
+vt,Vermont,West Dover,west-dover,/locations/vt/west-dover/,enquiry,Medium,1,3,0,B
+vt,Vermont,Manchester Center,manchester-center,/locations/vt/manchester-center/,enquiry,Standard,1,2,0,B
+vt,Vermont,Brattleboro,brattleboro,/locations/vt/brattleboro/,enquiry,Standard,1,0,1,B
+vt,Vermont,Middletown Springs,middletown-springs,/locations/vt/middletown-springs/,enquiry,Standard,1,0,0,B
+vt,Vermont,Rutland,rutland,/locations/vt/rutland/,enquiry,Standard,1,0,0,B
+va,Virginia,Richmond,richmond,/locations/va/richmond/,enquiry,Medium,2,1,0,A
+va,Virginia,Fredericksburg,fredericksburg,/locations/va/fredericksburg/,enquiry,Medium,2,0,0,A
+va,Virginia,Tappahannock,tappahannock,/locations/va/tappahannock/,enquiry,Medium,1,3,2,B
+va,Virginia,Wytheville,wytheville,/locations/va/wytheville/,enquiry,Medium,1,3,0,B
+va,Virginia,Jonesville,jonesville,/locations/va/jonesville/,enquiry,Standard,1,1,0,B
+va,Virginia,Orange,orange,/locations/va/orange/,enquiry,Standard,1,1,1,B
+va,Virginia,Powhatan,powhatan,/locations/va/powhatan/,enquiry,Standard,1,1,0,B
+va,Virginia,South Hill,south-hill,/locations/va/south-hill/,enquiry,Standard,1,1,0,B
+va,Virginia,Stanardsville,stanardsville,/locations/va/stanardsville/,enquiry,Standard,1,1,1,B
+va,Virginia,Cape Charles,cape-charles,/locations/va/cape-charles/,enquiry,Standard,1,0,1,B
+va,Virginia,Chesterfield,chesterfield,/locations/va/chesterfield/,enquiry,Standard,1,0,1,B
+va,Virginia,Colonial Heights,colonial-heights,/locations/va/colonial-heights/,enquiry,Standard,1,0,0,B
+va,Virginia,Danville,danville,/locations/va/danville/,enquiry,Standard,1,0,0,B
+va,Virginia,Elkton,elkton,/locations/va/elkton/,enquiry,Standard,1,0,0,B
+va,Virginia,Harrisonburg,harrisonburg,/locations/va/harrisonburg/,enquiry,Standard,1,0,0,B
+va,Virginia,Hot Springs,hot-springs,/locations/va/hot-springs/,enquiry,Standard,1,0,0,B
+va,Virginia,King George,king-george,/locations/va/king-george/,enquiry,Standard,1,0,0,B
+va,Virginia,Moneta,moneta,/locations/va/moneta/,enquiry,Standard,1,0,0,B
+va,Virginia,Nellysford,nellysford,/locations/va/nellysford/,enquiry,Standard,1,0,0,B
+va,Virginia,Norfolk,norfolk,/locations/va/norfolk/,enquiry,Standard,1,0,0,B
+va,Virginia,Penn Laird,penn-laird,/locations/va/penn-laird/,enquiry,Standard,1,0,0,B
+va,Virginia,Petersburg,petersburg,/locations/va/petersburg/,enquiry,Standard,1,0,0,B
+va,Virginia,Stafford,stafford,/locations/va/stafford/,enquiry,Standard,1,0,0,B
+va,Virginia,Swoope,swoope,/locations/va/swoope/,enquiry,Standard,1,0,0,B
+va,Virginia,Williamsburg,williamsburg,/locations/va/williamsburg/,enquiry,Standard,1,0,1,B
+va,Virginia,Winchester,winchester,/locations/va/winchester/,enquiry,Standard,1,0,0,B
+va,Virginia,Hopewell,hopewell,/locations/va/hopewell/,traffic,Traffic,0,3,0,B
+wa,Washington,Spokane,spokane,/locations/wa/spokane/,enquiry,Medium,2,2,0,A
+wa,Washington,Richland,richland,/locations/wa/richland/,enquiry,Medium,2,0,0,A
+wa,Washington,White Salmon,white-salmon,/locations/wa/white-salmon/,enquiry,Medium,2,0,0,A
+wa,Washington,Cle Elum,cle-elum,/locations/wa/cle-elum/,enquiry,Medium,1,6,0,B
+wa,Washington,Chelan,chelan,/locations/wa/chelan/,enquiry,Medium,1,5,0,B
+wa,Washington,Tokeland,tokeland,/locations/wa/tokeland/,enquiry,Standard,1,2,0,B
+wa,Washington,Monroe,monroe,/locations/wa/monroe/,enquiry,Standard,1,1,0,B
+wa,Washington,Port Townsend,port-townsend,/locations/wa/port-townsend/,enquiry,Standard,1,1,0,B
+wa,Washington,Stevenson,stevenson,/locations/wa/stevenson/,enquiry,Standard,1,1,0,B
+wa,Washington,Anacortes,anacortes,/locations/wa/anacortes/,enquiry,Standard,1,0,0,B
+wa,Washington,Chehalis,chehalis,/locations/wa/chehalis/,enquiry,Standard,1,0,0,B
+wa,Washington,Davenport,davenport,/locations/wa/davenport/,enquiry,Standard,1,0,0,B
+wa,Washington,Hoquiam,hoquiam,/locations/wa/hoquiam/,enquiry,Standard,1,0,0,B
+wa,Washington,Kennewick,kennewick,/locations/wa/kennewick/,enquiry,Standard,1,0,0,B
+wa,Washington,Moses Lake,moses-lake,/locations/wa/moses-lake/,enquiry,Standard,1,0,0,B
+wa,Washington,North Bend,north-bend,/locations/wa/north-bend/,enquiry,Standard,1,0,0,B
+wa,Washington,Omak,omak,/locations/wa/omak/,enquiry,Standard,1,0,0,B
+wa,Washington,Port Orchard,port-orchard,/locations/wa/port-orchard/,enquiry,Standard,1,0,0,B
+wa,Washington,Renton,renton,/locations/wa/renton/,enquiry,Standard,1,0,0,B
+wa,Washington,Ridgefield,ridgefield,/locations/wa/ridgefield/,enquiry,Standard,1,0,0,B
+wa,Washington,Sequim,sequim,/locations/wa/sequim/,enquiry,Standard,1,0,0,B
+wa,Washington,Snoqualmie Pass,snoqualmie-pass,/locations/wa/snoqualmie-pass/,enquiry,Standard,1,0,0,B
+wa,Washington,Woodinville,woodinville,/locations/wa/woodinville/,enquiry,Standard,1,0,0,B
+wa,Washington,Ellensburg,ellensburg,/locations/wa/ellensburg/,traffic,Traffic,0,6,1,B
+wa,Washington,Kingston,kingston,/locations/wa/kingston/,traffic,Traffic,0,4,0,B
+wa,Washington,Forks,forks,/locations/wa/forks/,traffic,Traffic,0,3,0,B
+wv,West Virginia,Weirton,weirton,/locations/wv/weirton/,enquiry,High,3,2,0,A
+wv,West Virginia,Fairmont,fairmont,/locations/wv/fairmont/,enquiry,Standard,1,1,1,B
+wv,West Virginia,Kingwood,kingwood,/locations/wv/kingwood/,enquiry,Standard,1,1,0,B
+wv,West Virginia,Shepherdstown,shepherdstown,/locations/wv/shepherdstown/,enquiry,Standard,1,1,0,B
+wv,West Virginia,White Sulphur Springs,white-sulphur-springs,/locations/wv/white-sulphur-springs/,enquiry,Standard,1,1,1,B
+wv,West Virginia,Charles Town,charles-town,/locations/wv/charles-town/,enquiry,Standard,1,0,0,B
+wv,West Virginia,Lesage,lesage,/locations/wv/lesage/,enquiry,Standard,1,0,0,B
+wv,West Virginia,Princeton,princeton,/locations/wv/princeton/,enquiry,Standard,1,0,0,B
+wv,West Virginia,West Union,west-union,/locations/wv/west-union/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Lac Du Flambeau,lac-du-flambeau,/locations/wi/lac-du-flambeau/,enquiry,High,3,0,0,A
+wi,Wisconsin,Shawano,shawano,/locations/wi/shawano/,enquiry,High,2,5,0,A
+wi,Wisconsin,Crandon,crandon,/locations/wi/crandon/,enquiry,High,2,3,0,A
+wi,Wisconsin,Sheboygan,sheboygan,/locations/wi/sheboygan/,enquiry,Medium,2,0,0,A
+wi,Wisconsin,Trevor,trevor,/locations/wi/trevor/,enquiry,Medium,2,0,0,A
+wi,Wisconsin,Minocqua,minocqua,/locations/wi/minocqua/,enquiry,Medium,1,7,3,B
+wi,Wisconsin,Menomonie,menomonie,/locations/wi/menomonie/,enquiry,Medium,1,5,1,B
+wi,Wisconsin,River Falls,river-falls,/locations/wi/river-falls/,enquiry,Medium,1,5,1,B
+wi,Wisconsin,Monroe,monroe,/locations/wi/monroe/,enquiry,Medium,1,3,0,B
+wi,Wisconsin,Amherst,amherst,/locations/wi/amherst/,enquiry,Standard,1,2,0,B
+wi,Wisconsin,Danbury,danbury,/locations/wi/danbury/,enquiry,Standard,1,2,1,B
+wi,Wisconsin,Reedsburg,reedsburg,/locations/wi/reedsburg/,enquiry,Standard,1,2,0,B
+wi,Wisconsin,Cable,cable,/locations/wi/cable/,enquiry,Standard,1,1,1,B
+wi,Wisconsin,Elkhart Lake,elkhart-lake,/locations/wi/elkhart-lake/,enquiry,Standard,1,1,0,B
+wi,Wisconsin,Middleton,middleton,/locations/wi/middleton/,enquiry,Standard,1,1,0,B
+wi,Wisconsin,Necedah,necedah,/locations/wi/necedah/,enquiry,Standard,1,1,0,B
+wi,Wisconsin,Sparta,sparta,/locations/wi/sparta/,enquiry,Standard,1,1,1,B
+wi,Wisconsin,Antigo,antigo,/locations/wi/antigo/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Avoca,avoca,/locations/wi/avoca/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Cassville,cassville,/locations/wi/cassville/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Comstock,comstock,/locations/wi/comstock/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Elk Mound,elk-mound,/locations/wi/elk-mound/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Kewaskum,kewaskum,/locations/wi/kewaskum/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Lake Geneva,lake-geneva,/locations/wi/lake-geneva/,enquiry,Standard,1,0,1,B
+wi,Wisconsin,Land O’ Lakes,land-o-lakes,/locations/wi/land-o-lakes/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Madison,madison,/locations/wi/madison/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Mukwonago,mukwonago,/locations/wi/mukwonago/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Oxford,oxford,/locations/wi/oxford/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Pewaukee,pewaukee,/locations/wi/pewaukee/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Plain,plain,/locations/wi/plain/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Racine,racine,/locations/wi/racine/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Rice Lake,rice-lake,/locations/wi/rice-lake/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Sheboygan Falls,sheboygan-falls,/locations/wi/sheboygan-falls/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Slinger,slinger,/locations/wi/slinger/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,South Wayne,south-wayne,/locations/wi/south-wayne/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Spring Green,spring-green,/locations/wi/spring-green/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,St Croix Falls,saint-croix-falls,/locations/wi/saint-croix-falls/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,St Germain,saint-germain,/locations/wi/saint-germain/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Stevens Point,stevens-point,/locations/wi/stevens-point/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Turtle Lake,turtle-lake,/locations/wi/turtle-lake/,enquiry,Standard,1,0,1,B
+wi,Wisconsin,West Salem,west-salem,/locations/wi/west-salem/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Wisconsin Dells,wisconsin-dells,/locations/wi/wisconsin-dells/,enquiry,Standard,1,0,0,B
+wi,Wisconsin,Cumberland,cumberland,/locations/wi/cumberland/,traffic,Traffic,0,6,0,B
+wi,Wisconsin,Rhinelander,rhinelander,/locations/wi/rhinelander/,traffic,Traffic,0,6,1,B
+wi,Wisconsin,Ashland,ashland,/locations/wi/ashland/,traffic,Traffic,0,3,0,B
+wi,Wisconsin,Barron,barron,/locations/wi/barron/,traffic,Traffic,0,3,1,B
+wy,Wyoming,Jackson,jackson,/locations/wy/jackson/,enquiry,Medium,2,0,0,A
+wy,Wyoming,Alpine,alpine,/locations/wy/alpine/,enquiry,Standard,1,1,0,B
+wy,Wyoming,Buffalo,buffalo,/locations/wy/buffalo/,enquiry,Standard,1,1,2,B
+wy,Wyoming,Dubois,dubois,/locations/wy/dubois/,enquiry,Standard,1,1,0,B
+wy,Wyoming,Cheyenne,cheyenne,/locations/wy/cheyenne/,enquiry,Standard,1,0,0,B
+wy,Wyoming,Cora,cora,/locations/wy/cora/,enquiry,Standard,1,0,0,B
+wy,Wyoming,Sheridan,sheridan,/locations/wy/sheridan/,traffic,Traffic,0,4,0,B

@@ -1,0 +1,221 @@
+{
+  "ut/park-city": {
+    "places": [
+      { "name": "Historic Main Street", "note": "Walkable downtown with a free trolley; standard drop-off for dinner groups." },
+      { "name": "Park City Mountain", "note": "Largest ski resort in the US; lodge-to-lift shuttles run all winter." },
+      { "name": "Deer Valley Resort", "note": "Ski-only resort known for guest lodges and wedding hosting." },
+      { "name": "Utah Olympic Park", "note": "2002 Olympic venue; group tours and activity trips." }
+    ],
+    "airports": [{ "code": "SLC", "name": "Salt Lake City International Airport", "miles": 35 }],
+    "weddingVenues": [
+      { "name": "Sheraton Park City", "note": "Seen in real inquiries" },
+      { "name": "Deer Valley Resort lodges", "note": "Mountain ceremony and reception hosting" }
+    ],
+    "wineries": [],
+    "notes": "Ski season Dec to Apr drives the heaviest airport and resort demand."
+  },
+  "hi/kailua-kona": {
+    "places": [
+      { "name": "Kailua Pier and Waterfront", "note": "Central meeting point for tours and cruise-day runs." },
+      { "name": "Kahaluu Bay", "note": "Popular snorkeling stop; shuttle wait-time planning matters here." }
+    ],
+    "airports": [{ "code": "KOA", "name": "Kona International Airport (KOE)", "miles": 10 }],
+    "weddingVenues": [{ "name": "Outrigger Kona Resort & Spa", "note": "Seen in real inquiries" }],
+    "wineries": [],
+    "notes": "Kona coffee farm tours are a common group request; ocean-side venues drive wedding work."
+  },
+  "ct/shelton": {
+    "places": [{ "name": "Housatonic River waterfront", "note": "Corporate retreat and celebration spots along the valley." }],
+    "airports": [{ "code": "JFK", "name": "John F. Kennedy International", "miles": 60 }],
+    "weddingVenues": [{ "name": "Courtyard Shelton", "note": "Seen in real inquiries" }],
+    "wineries": [{ "name": "Connecticut shore-plain vineyards", "note": "North and east of town; tastings run March to December" }],
+    "notes": "Fairfield County corporate base with wedding shuttles into the valley towns."
+  },
+  "mn/alexandria": {
+    "places": [{ "name": "Big Ole Central Park and the Runestone Museum", "note": "Town landmarks used for reunion and tour photos." }],
+    "airports": [],
+    "weddingVenues": [{ "name": "Arrowwood Resort", "note": "Seen in real inquiries; lakeside weddings and conferences" }],
+    "wineries": [{ "name": "Lake-region wineries", "note": "Minnesota west-central lakes area" }],
+    "notes": "Lakes-area reunions and resort weddings are the main group work here."
+  },
+  "nm/angel-fire": {
+    "places": [{ "name": "Angel Fire Resort", "note": "Ski and mountain-bike resort with lodge events." }],
+    "airports": [{ "code": "TAO", "name": "Taos Regional Airport", "miles": 20 }],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "Mountain weddings and ski shuttles; Enchanted Circle drives the seasons."
+  },
+  "md/berlin": {
+    "places": [{ "name": "Historic downtown Berlin", "note": "Walkable main street; standard tour stop." },
+               { "name": "Assateague Island National Seashore", "note": "Wild-horse seashore nearby; common group destination." }],
+    "airports": [{ "code": "SBY", "name": "Salisbury-Ocean City Wicomico Regional", "miles": 25 }],
+    "weddingVenues": [{ "name": "Atlantic Hotel", "note": "Seen in real inquiries" }],
+    "wineries": [{ "name": "Coastal Maryland wineries", "note": "Eastern Shore tasting rooms" }],
+    "notes": "Ocean City beach-season overflow makes this a summer shuttle town."
+  },
+  "co/grand-junction": {
+    "places": [
+      { "name": "Colorado National Monument", "note": "Canyon-drive viewpoints; coaches route the overlooks." },
+      { "name": "Downtown Main Street", "note": "Tasting rooms and galleries group stops." }
+    ],
+    "airports": [{ "code": "GJT", "name": "Grand Junction Regional Airport", "miles": 6 }],
+    "weddingVenues": [],
+    "wineries": [{ "name": "Palisade wine country", "note": "Colorado's main wine valley, 15 min east; tasting tours are a core trip" }],
+    "notes": "The state's fruit-and-wine region: Palisade tasting rooms keep tour coaches busy May to October."
+  },
+  "nh/hanover": {
+    "places": [{ "name": "Dartmouth College campus", "note": "Seen in real inquiries; move-in, events and family weekends." }],
+    "airports": [{ "code": "BOS", "name": "Boston Logan International", "miles": 120 }],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "College town: campus events, family weekends and ski-day runs to nearby areas."
+  },
+  "or/hood-river": {
+    "places": [{ "name": "Hood River Waterfront Park", "note": "Windsurfing and kite beach; groups stage here." },
+               { "name": "Columbia River Gorge waterfalls", "note": "Multnomah Falls area runs are a full-day route." }],
+    "airports": [{ "code": "PDX", "name": "Portland International", "miles": 60 }],
+    "weddingVenues": [],
+    "wineries": [{ "name": "Hood River County fruit loop wineries", "note": "Orchards and cideries on the Fruit Loop; tasting tours are seasonal staples" }],
+    "notes": "Gorge tourism, fruit-loop tastings and Portland transfers are the core trips."
+  },
+  "wi/lac-du-flambeau": {
+    "places": [{ "name": "Waswagoning Indian Village living-history site", "note": "Cultural tours; school and group visits." }],
+    "airports": [],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "Northwoods lakes and casino runs; summer weddings at lake resorts."
+  },
+  "ny/new-york": {
+    "places": [
+      { "name": "Times Square", "note": "Standard drop-off for show nights; motorcoaches park at designated bays." },
+      { "name": "Central Park", "note": "Group walks and photo stops." },
+      { "name": "Statue of Liberty & Battery Park", "note": "Ferry-connection shuttles." }
+    ],
+    "airports": [
+      { "code": "JFK", "name": "John F. Kennedy International", "miles": 15 },
+      { "code": "EWR", "name": "Newark Liberty International", "miles": 16 },
+      { "code": "LGA", "name": "LaGuardia", "miles": 8 }
+    ],
+    "weddingVenues": [{ "name": "Belvidere Hotel", "note": "Seen in real inquiries" }],
+    "wineries": [{ "name": "Hudson Valley wineries", "note": "Day-trip tasting runs north of the city" }],
+    "notes": "Airport transfer hub for the whole tri-state area; coach parking rules are strict and we plan them into every route."
+  },
+  "me/newry": {
+    "places": [{ "name": "Sunday River Ski Resort", "note": "The town's core destination; ski shuttles and lodge wedding runs." }],
+    "airports": [{ "code": "PWM", "name": "Portland Jetport", "miles": 75 }],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "Sunday River drives winter groups: ski weeks, college trips and lodge weddings."
+  },
+  "nh/north-conway": {
+    "places": [{ "name": "Mount Washington area and the Cog Railway", "note": "Classic group day trip." },
+               { "name": "Settlers Green outlet shopping", "note": "Standard shopping-day stop." }],
+    "airports": [{ "code": "BOS", "name": "Boston Logan International", "miles": 140 }],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "White Mountain tourism: ski shuttles, foliage runs and outlet weekends."
+  },
+  "wv/weirton": {
+    "places": [],
+    "airports": [{ "code": "PIT", "name": "Pittsburgh International", "miles": 30 }],
+    "weddingVenues": [],
+    "wineries": [{ "name": "Ohio Valley wineries", "note": "Riverfront tasting rooms in nearby Steubenville and Wellsville" }],
+    "notes": "Sports-complex travel (Madonna Athletic Complex seen in real inquiries) and Pittsburgh transfers."
+  },
+  "or/astoria": {
+    "places": [{ "name": "Columbia River Maritime Museum", "note": "Seen in real inquiries; school and group visits." },
+               { "name": "Astoria Column", "note": "City-view landmark; standard photo stop." }],
+    "airports": [{ "code": "PDX", "name": "Portland International", "miles": 95 }],
+    "weddingVenues": [],
+    "wineries": [{ "name": "North Coast wineries", "note": "Oregon coast tasting rooms" }],
+    "notes": "Goonies-era filming town; coastal tourism and Portland transfers."
+  },
+  "ny/beacon": {
+    "places": [{ "name": "Dia Beacon", "note": "Modern-art museum; standard group destination." },
+               { "name": "Main Street and the Hudson riverfront", "note": "Walkable gallery and restaurant stretch." }],
+    "airports": [],
+    "weddingVenues": [{ "name": "Roundhouse Beacon", "note": "Seen in real inquiries; riverfront wedding and event hotel" }],
+    "wineries": [{ "name": "Hudson Valley wineries", "note": "Millbrook and New Paltz area tasting rooms" }],
+    "notes": "Hudson Valley art town with Metro-North access; wedding and museum runs dominate."
+  },
+  "mi/benton-harbor": {
+    "places": [{ "name": "Silver Beach County Park and shoreline", "note": "Lake Michigan beach groups." }],
+    "airports": [{ "code": "SBN", "name": "South Bend International", "miles": 45 }],
+    "weddingVenues": [],
+    "wineries": [{ "name": "Lake Michigan Shore Wine Trail", "note": "Michigan's oldest wine region runs along this shore" }],
+    "notes": "Whirlpool HQ corporate travel plus beach and wine-trail groups."
+  },
+  "wi/crandon": {
+    "places": [{ "name": "Crandon International Off-Road Raceway", "note": "World-championship off-road racing weekends." }],
+    "airports": [],
+    "weddingVenues": [{ "name": "Crandon Inn & Suites", "note": "Seen in real inquiries" }],
+    "wineries": [],
+    "notes": "Race weekends and forest-lake tourism drive the seasons here."
+  },
+  "mt/kalispell": {
+    "places": [{ "name": "Glacier National Park west entrance", "note": "The region's core destination; summer park shuttles." }],
+    "airports": [{ "code": "FCA", "name": "Glacier Park International", "miles": 8 }],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "Glacier gateway: summer park tours and Big Mountain (Whitefish) ski runs."
+  },
+  "nh/keene": {
+    "places": [{ "name": "Keene State College", "note": "Move-in and campus-event runs." }],
+    "airports": [],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "Monadnock-region college town; Boston and Hartford transfers."
+  },
+  "vt/ludlow": {
+    "places": [{ "name": "Okemo Mountain Resort", "note": "Ski shuttles and lodge weddings drive the calendar." }],
+    "airports": [],
+    "weddingVenues": [],
+    "wineries": [{ "name": "Southern Vermont wineries", "note": "Local tasting rooms on the scenic byways" }],
+    "notes": "Okemo village: lift-served winters, mountain weddings in summer."
+  },
+  "ny/potsdam": {
+    "places": [{ "name": "SUNY Potsdam and Clarkson University", "note": "Campus-event and move-in runs." }],
+    "airports": [],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "North Country college town; Adirondack and Ottawa routing passes nearby."
+  },
+  "nj/red-bank": {
+    "places": [{ "name": "Count Basie Center for the Arts", "note": "Show-night group drop-offs." }],
+    "airports": [{ "code": "EWR", "name": "Newark Liberty International", "miles": 40 }],
+    "weddingVenues": [{ "name": "Marriott Lincroft", "note": "Seen in real inquiries" }],
+    "wineries": [{ "name": "New Jersey wineries", "note": "Monmouth County tasting rooms" }],
+    "notes": "Jersey Shore access town: rail connections plus beach-season shuttles."
+  },
+  "wi/shawano": {
+    "places": [{ "name": "Shawano Lake", "note": "Fishing tournaments and lake weddings." }],
+    "airports": [],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "Northwoods lakes: fishing weeks, family reunions and resort weddings."
+  },
+  "ok/shawnee": {
+    "places": [{ "name": "Oklahoma Baptist University", "note": "Seen in real inquiries; campus-event runs." }],
+    "airports": [{ "code": "OKC", "name": "Will Rogers World Airport", "miles": 45 }],
+    "weddingVenues": [],
+    "wineries": [],
+    "notes": "Oklahoma City-area college town; casino and event travel."
+  },
+  "nm/taos": {
+    "places": [{ "name": "Taos Pueblo", "note": "Living Native-American pueblo; guided group visits." },
+               { "name": "Taos Ski Valley", "note": "Winter shuttle core." },
+               { "name": "Rio Grande Gorge Bridge", "note": "Standard scenic stop." }],
+    "airports": [{ "code": "TAO", "name": "Taos Regional", "miles": 15 }],
+    "weddingVenues": [{ "name": "Hacienda del Sol", "note": "Seen in real inquiries; hacienda weddings" }],
+    "wineries": [{ "name": "Black's Winery and Taos-area tasting rooms", "note": "Local high-desert wines" }],
+    "notes": "Art town plus ski valley; the Enchanted Circle loop is a full-day tour."
+  },
+  "mt/whitefish": {
+    "places": [{ "name": "Whitefish Mountain Resort", "note": "Ski in winter, lift-served bike park in summer." },
+               { "name": "Glacier National Park west entrance", "note": "Amtrak's Empire Builder arrives here; park tours start nearby." }],
+    "airports": [{ "code": "FCA", "name": "Glacier Park International", "miles": 15 }],
+    "weddingVenues": [{ "name": "The Patio", "note": "Seen in real inquiries" }],
+    "wineries": [],
+    "notes": "Resort town at Glacier's door: ski transfers, park tours and lake weddings."
+  }
+}

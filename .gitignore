@@ -1,0 +1,23 @@
+# dependencies / build output
+node_modules/
+.next/
+out/
+
+# local captures and generated reports kept out of the repo (recreatable)
+capture/live-html/
+capture/live-css/
+docs/live-reference/shots/
+docs/new-site-shots/
+docs/compare/
+reports/lh-*.json
+.lead-queue/
+.next/dev*.log
+.next/start3200*.log
+next-env.d.ts
+
+# environment / secrets
+.env
+.env*
+
+# editor
+.vscode/settings.json

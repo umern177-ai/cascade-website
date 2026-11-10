@@ -1,0 +1,63 @@
+// Blogs hub — same layout as the live /blogs/ hub. The live cards are
+// div[role=button] (no real links; posts have no per-post URLs live). Until the
+// owner decides the blog's future (see QUESTIONS.md), cards match the live look.
+import type { Metadata } from "next";
+import Image from "next/image";
+import { ChevronRight } from "lucide-react";
+import blogData from "@/data/blogs-live.json";
+
+export const metadata: Metadata = {
+  title: "The Cascade Travel Blog",
+  description:
+    "Guides and planning tips for charter bus travel: weddings, corporate trips, sports travel, band tours, safety and nationwide group transportation.",
+  alternates: { canonical: "/blogs/" },
+};
+
+type Post = { img: string; title: string; category: string; excerpt: string; minutes: number };
+
+const categories = [...new Set(blogData.map((p) => p.category))];
+
+export default function BlogsPage() {
+  const posts = blogData as Post[];
+  return (
+    <main className="bg-white min-vh-100">
+      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 60 }}>
+        <div className="container text-center">
+          <h1 className="display-4 fw-bold mb-2">The Cascade Travel Blog</h1>
+          <p className="opacity-75 mx-auto mb-0" style={{ maxWidth: 620 }}>
+            Planning guides and practical tips for group travel—weddings, corporate trips,
+            tours and everything in between.
+          </p>
+        </div>
+      </section>
+      <section className="py-5">
+        <div className="container py-lg-3">
+          <div className="row g-4">
+            {posts.map((p, i) => (
+              <div className="col-lg-6" key={i}>
+                <div className="card border-0 shadow-sm overflow-hidden h-100 bg-white rounded-4 hover-lift">
+                  <div className="row g-0 h-100">
+                    <div className="col-md-5 position-relative">
+                      <Image src={p.img} alt={p.title} width={480} height={320} className="w-100 h-100 object-fit-cover" style={{ minHeight: 240 }} sizes="(max-width: 768px) 100vw, 40vw" />
+                      <span className="position-absolute top-0 start-0 m-3 badge bg-dark bg-opacity-75 text-white rounded-pill px-3 py-2 small">{p.category}</span>
+                    </div>
+                    <div className="col-md-7 p-4 d-flex flex-column">
+                      <h2 className="fw-bold mb-2 h5 text-dark lh-base">{p.title}</h2>
+                      <p className="text-muted small mb-4 flex-grow-1">{p.excerpt}</p>
+                      <div className="mt-auto pt-3 border-top d-flex justify-content-between align-items-center">
+                        <span className="text-primary fw-bold small d-flex align-items-center gap-1">
+                          READ ARTICLE <ChevronRight size={14} aria-hidden="true" />
+                        </span>
+                        <span className="text-muted small">{p.minutes} Min Read</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}

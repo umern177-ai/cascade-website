@@ -1,0 +1,67 @@
+{
+  "name": "Cascade Charter Bus",
+  "tagline": "Cascade Charter Bus | Premium Group Transportation",
+  "primary_url": "https://cascadecharterbus.com",
+  "phone_display": "+1 (646) 705-0816",
+  "phone_tel": "+16467050816",
+  "phone_note": "24/7 Dispatch",
+  "email": "info@cascadecharterbus.com",
+  "address": {
+    "street": "12409 Linden Blvd",
+    "city": "South Ozone Park",
+    "state": "NY",
+    "zip": "11420",
+    "country": "US"
+  },
+  "facts_allowed": {
+    "years": "5+ years of service",
+    "fleet": "Multiple vehicles across 7 vehicle types",
+    "coverage": "Stations across every state / All 50 states (US states and DC only; no Puerto Rico)",
+    "dispatch": "24/7 dispatch",
+    "sleeper": "Sleeper buses with 4 to 15 bunks; restroom and shower on board"
+  },
+  "facts_banned": [
+    "10+ years",
+    "15+ years",
+    "500+ verified units",
+    "500+ verified drivers",
+    "15,000+ trips",
+    "15k+ trips",
+    "5,000+ organizations",
+    "4.9/5",
+    "Fortune 500",
+    "+1 (800) 000-0000",
+    "Bronx, NY 10462",
+    "South Richmond Hill, NY 11419"
+  ],
+  "facts_to_confirm_with_owner": [
+    "average response time 15 minutes",
+    "the quote is final, no hidden fuel surcharges or driver fees",
+    "punctuality guarantee",
+    "dedicated account manager on every trip",
+    "USDOT / MC numbers behind the DOT COMPLIANT badge",
+    "opening hours",
+    "sleeper bus: seat count; private artist room / queen bed on every bus or only some"
+  ],
+  "gtm_id": "GTM-5WTG8HBP",
+  "trustpilot": {
+    "profile_url": "https://www.trustpilot.com/review/cascadecharterbus.com",
+    "display": "official TrustBox widget only; embed code from the owner",
+    "seen_on_2026_11_09": {
+      "reviews": 7,
+      "trustscore": 4.2,
+      "note": "all 5-star, verified; never hard-code these numbers on the site"
+    }
+  },
+  "social": {
+    "facebook": "https://www.facebook.com/people/Cascade-Charter-Bus/61583281777154",
+    "instagram": "https://www.instagram.com/cascadecharterbus",
+    "linkedin": "https://www.linkedin.com/company/cascadecharterbus",
+    "tiktok": "https://www.tiktok.com/@cascadecharterbus"
+  },
+  "robots_meta": "index, follow, max-video-preview:-1, max-image-preview:large, max-snippet:-1",
+  "not_found": {
+    "title": "Page Not Found | Cascade Charter Bus",
+    "description": "Sorry, the page you're looking for could not be found. It may have been moved or removed. Explore our locations or return to the homepage to find the transportation services you need."
+  }
+}

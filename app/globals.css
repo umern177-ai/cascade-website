@@ -1,0 +1,215 @@
+/* Cascade theme layer — rebuilt from the live site's custom global stylesheet
+   (docs/theme-tokens.md has the verified values). Bootstrap itself is imported in layout.tsx. */
+
+:root {
+  --fleet-orange: #f5a002;
+  --fleet-black: #0f1115;
+  --fleet-dark-gray: #1e2126;
+  --fleet-text: #faf9f9;
+  --fleet-shadow: #f5a00233;
+  /* Brand amber wins: Bootstrap's leftover default blue can never leak. */
+  --bs-primary: #f5a002;
+  --bs-primary-rgb: 245, 160, 2;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  color: var(--fleet-text);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+}
+
+.text-primary { color: var(--fleet-orange) !important; }
+
+.tracking-wide {
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+.navbar {
+  -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
+  border-bottom: 3px solid var(--fleet-orange);
+  transition: all 0.3s;
+  background-color: var(--fleet-black) !important;
+}
+.navbar .nav-link {
+  font-weight: 600;
+  color: #fff !important;
+}
+.navbar .nav-link:hover {
+  color: var(--fleet-orange) !important;
+}
+
+.btn-primary {
+  letter-spacing: 1px;
+  padding: 0.8rem 1.8rem;
+  font-weight: 800;
+  background-color: var(--fleet-orange) !important;
+  color: var(--fleet-black) !important;
+  border: none !important;
+  transition: all 0.2s ease-in-out !important;
+}
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px var(--fleet-shadow) !important;
+  background-color: #fff !important;
+}
+
+.hover-lift:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 1rem 3rem #00000026 !important;
+}
+
+.form-control:focus {
+  border-color: var(--fleet-orange);
+  box-shadow: 0 0 0 0.25rem #f5a00240;
+}
+
+.form-check-inline .btn-check + .btn { /* pill radio toggles (booking form) */
+  border-radius: 50rem;
+}
+
+.vanguard-footer,
+.footer-modern {
+  border-top: 4px solid var(--fleet-orange);
+  padding-top: 5rem;
+  padding-bottom: 2rem;
+  background-color: var(--fleet-black) !important;
+  color: #fff !important;
+}
+.vanguard-footer .text-muted,
+.footer-modern .text-muted {
+  color: #a1a1a1 !important;
+}
+.footer-logo-outline {
+  border: 2px solid var(--fleet-orange);
+  padding: 5px 15px;
+  display: inline-block;
+}
+.vanguard-footer a,
+.vanguard-footer .footer-link,
+.footer-icon {
+  font-weight: 500;
+  text-decoration: none;
+  transition: all 0.3s;
+  color: var(--fleet-orange) !important;
+}
+.vanguard-footer a:hover,
+.vanguard-footer .footer-link:hover,
+.footer-icon:hover {
+  padding-left: 5px;
+  color: #d4d4d4 !important;
+}
+.footer-divider {
+  border-top: 1px solid #ffffff1a;
+  margin: 3rem 0 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .vanguard-footer {
+    padding-top: 3rem;
+  }
+}
+
+svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
+
+.city-quote {
+  display: flex;
+  height: 100%;
+  border: 0;
+  border-radius: 0.75rem;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  background: #fff;
+  padding: 0.75rem 0.9rem;
+}
+.city-quote:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Every button: content perfectly centered (vertical + horizontal), icons never squashed */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  vertical-align: middle;
+}
+.btn > svg {
+  flex-shrink: 0;
+}
+.form-control::placeholder {
+  text-align: left; /* form placeholders stay left-aligned like the live form */
+}
+
+/* Small helpers the live site's components rely on (no Bootstrap equivalent) */
+.fw-black { font-weight: 900; }
+.fw-semibold { font-weight: 600; }
+.tracking-tighter { letter-spacing: -0.05em; }
+.tracking-widest { letter-spacing: 0.1em; }
+.tracking-wider { letter-spacing: 0.05em; }
+.opacity-90 { opacity: 0.9; }
+.opacity-75 { opacity: 0.75; }
+.opacity-50 { opacity: 0.5; }
+.x-small { font-size: 0.75rem; }
+.x-small-bold { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
+.z-index-10 { z-index: 10; }
+.max-w-2xl { max-width: 42rem; }
+.lh-relaxed { line-height: 1.7; }
+.bg-primary-soft { background-color: rgba(245, 160, 2, 0.12); }
+/* Amber brand color on WHITE fails contrast for small text: eyebrow/label
+   spots use a darker amber that passes 4.5:1 while keeping the amber look */
+.text-brand-dark {
+  color: #7a5600 !important;
+}
+/* Breadcrumbs: dark links (Bootstrap's blue link color doesn't belong on this site) */
+.breadcrumb-item > a {
+  color: #212529 !important;
+}
+.breadcrumb-item > a:hover {
+  color: var(--fleet-orange) !important;
+}
+.top-ribbon { font-size: 0.8rem; }
+.shadow-glow { box-shadow: 0 0 18px rgba(245, 160, 2, 0.35); }
+.shadow-xl { box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important; }
+.hover-orange:hover { color: var(--fleet-orange) !important; }
+.bg-shadow-inset { box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.4); }
+.footer-heading { text-transform: uppercase; letter-spacing: 2px; font-weight: 800; }
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border: 1px solid var(--fleet-orange);
+  border-radius: 0.5rem;
+  color: var(--fleet-orange) !important;
+  transition: all 0.3s;
+  background-color: transparent;
+}
+.social-btn:hover {
+  background-color: var(--fleet-orange);
+  color: var(--fleet-black) !important;
+}
+.safety-card {
+  background: rgba(245, 160, 2, 0.08);
+  border: 1px solid rgba(245, 160, 2, 0.25);
+  border-radius: 0.75rem;
+  padding: 1rem;
+}
+.custom-nav-link::after { display: none; }
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

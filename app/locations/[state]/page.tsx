@@ -9,6 +9,8 @@ import { keptCities, otherCities, stateName, stateCodes } from "@/lib/locations"
 import { VEHICLES } from "@/lib/fleet-data";
 import { pageMeta } from "@/lib/page-meta";
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   return stateCodes().map((state) => ({ state }));
 }

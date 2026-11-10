@@ -130,6 +130,16 @@ Updated every phase. Current status at the top.
 - Remaining checklist items are **Phase 3b CMS** features (admin-editable canonical/robots/
   schema, redirect manager, rich-text blog editor, internal linking editor) as agreed.
 
+## Staging for the SEO consultant (Nov 10)
+
+- Site committed to git (repo ready, 13.5 MB, 188 files).
+- **Staging switch built**: with `STAGING=1`, robots.txt serves exactly
+  `User-agent: * / Disallow: /` and every page sends `X-Robots-Tag: noindex, nofollow`
+  (both verified locally). Normal mode unchanged (verified).
+- `docs/STAGING_GUIDE.md` — plain-English setup + day-to-day + how to crawl staging.
+- Waiting on owner: two one-time logins (GitHub via `! npx gh auth login`,
+  Vercel via `! npx vercel login`) → then I push + deploy + verify the sandbox URL.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

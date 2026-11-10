@@ -17,6 +17,8 @@ import { pageMeta } from "@/lib/page-meta";
 
 type Props = { params: Promise<{ state: string; city: string }> };
 
+export const dynamicParams = false;
+
 export function generateStaticParams() {
   // Only kept cities have pages (Rule R4): 710 pages.
   return states().flatMap((s) => s.cities.map((c) => ({ state: s.state_code, city: c.slug })));

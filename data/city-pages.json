@@ -233,7 +233,23 @@
     ],
     "nearby": {
       "heading": "Other Areas We Serve on the Kona Coast",
-      "plainText": "Keauhou, Holualoa, Captain Cook, Waikoloa, Kohala Coast."
+      "items": [
+        {
+          "city": "Keauhou"
+        },
+        {
+          "city": "Holualoa"
+        },
+        {
+          "city": "Captain Cook"
+        },
+        {
+          "city": "Waikoloa"
+        },
+        {
+          "city": "Kohala Coast"
+        }
+      ]
     },
     "faqsHeading": "Kailua-Kona Charter Bus FAQs",
     "faqs": [
@@ -266,7 +282,8 @@
       "Hulihe'e Palace: confirm there is no bus parking and that the pier is the right drop point.",
       "IRONMAN: confirm the race is in Kona in October of the coming year before publishing this FAQ.",
       "Wedding section names no venue. Owner: add a real venue you have served if you have one.",
-      "Nearby cities: none are kept in Hawaii. Ask the SEO consultant how he wants this section handled."
+      "Nearby cities: none are kept in Hawaii. Ask the SEO consultant how he wants this section handled.",
+      "Kona nearby areas are plain-text on purpose: no other kept Hawaii city pages exist. SEO consultant to confirm the handling."
     ],
     "sourceLinks": [
       "https://airports.hawaii.gov/koa/getting-to-from/driving-directions/",
@@ -668,7 +685,28 @@
     ],
     "nearby": {
       "heading": "Charter Bus Rental Near Weirton",
-      "plainText": "Fairmont (about 95 miles, 1 hr 40 min), West Union (about 100 miles, 2 hr), Kingwood (about 105 miles, 2 hr), Shepherdstown (about 215 miles, 3 hr 30 min), Charles Town (about 225 miles, 3 hr 40 min)."
+      "items": [
+        {
+          "city": "Fairmont",
+          "miles": "about 95 miles, 1 hr 40 min"
+        },
+        {
+          "city": "West Union",
+          "miles": "about 100 miles, 2 hr"
+        },
+        {
+          "city": "Kingwood",
+          "miles": "about 105 miles, 2 hr"
+        },
+        {
+          "city": "Shepherdstown",
+          "miles": "about 215 miles, 3 hr 30 min"
+        },
+        {
+          "city": "Charles Town",
+          "miles": "about 225 miles, 3 hr 40 min"
+        }
+      ]
     },
     "faqsHeading": "Weirton Charter Bus FAQs",
     "faqs": [

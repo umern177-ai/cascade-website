@@ -3,13 +3,26 @@
 // bus tips → nearby → FAQs → CTA. Facts live in the data file with review checks
 // and sources kept for the owner's batch review (not rendered publicly).
 import Link from "next/link";
+import Image from "next/image";
 import { Phone } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import FaqAccordion from "@/components/Faq";
+import BookingProcess from "@/components/BookingProcess";
 import { VEHICLES } from "@/lib/fleet-data";
 import { keptCities, isKept, stateName } from "@/lib/locations";
 import { SITE } from "@/lib/site-data";
 import type { CityPageData } from "@/lib/city-page-data";
+
+const SERVICE_IMAGES: Record<string, string> = {
+  "corporate-transportation": "/images/services/corp.webp",
+  "wedding-transportation": "/images/services/wed.webp",
+  "school-transportation": "/images/services/school.webp",
+  "sports-team-transportation": "/images/services/sport.webp",
+  "airport-transfer": "/images/services/airport.webp",
+  "sightseeing-tour-bus": "/images/services/multi.webp",
+  "church-religious-transportation": "/images/services/school.webp",
+  "band-tour-bus": "/images/fleet/sleeper.jpg",
+};
 
 export default function StructuredCityPage({ data, state }: { data: CityPageData; state: string }) {
   const name = data.city;
@@ -90,35 +103,61 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
         <div className="container py-4">
           <h2 className="display-6 fw-bold text-dark mb-4">{data.servicesHeading}</h2>
           <div className="row g-4">
-            {data.services.map((sv) => (
-              <div className="col-md-6" key={sv.title}>
-                <div className="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white d-flex flex-column">
-                  <h3 className="h5 fw-bold text-dark mb-3">{sv.title}</h3>
-                  <p className="text-muted small flex-grow-1 mb-3">{sv.text}</p>
-                  <Link href={sv.href} className="fw-bold small text-decoration-none text-primary mt-auto">
-                    Learn More →
-                  </Link>
+            {data.services.map((sv) => {
+              const slug = sv.href.replace("/services/", "").replace("/", "");
+              const img = SERVICE_IMAGES[slug];
+              return (
+                <div className="col-md-6" key={sv.title}>
+                  <div className="card border-0 shadow-sm rounded-4 h-100 bg-white d-flex flex-column overflow-hidden">
+                    {img && (
+                      <Image
+                        src={img}
+                        alt={`${sv.title} — Cascade Charter Bus`}
+                        width={640}
+                        height={280}
+                        className="w-100 object-fit-cover"
+                        style={{ height: 150 }}
+                        sizes="(max-width: 768px) 100vw, 50vw"
+                      />
+                    )}
+                    <div className="p-4 d-flex flex-column flex-grow-1">
+                      <h3 className="h5 fw-bold text-dark mb-3">{sv.title}</h3>
+                      <p className="text-muted small flex-grow-1 mb-3">{sv.text}</p>
+                      <Link href={sv.href} className="fw-bold small text-decoration-none text-primary mt-auto">
+                        Learn More →
+                      </Link>
+                    </div>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
 
-      {/* Vehicles */}
+      {/* Fleet showcase — photos in a compact row; click opens the fleet page */}
       <section className="py-5 bg-light">
         <div className="container py-4">
           <h2 className="display-6 fw-bold text-dark mb-4">{data.vehiclesHeading}</h2>
           <div className="row g-3">
             {vehicles.map((v) => (
-              <div className="col-md-6" key={v.slug}>
+              <div className="col-lg-3 col-md-4 col-6" key={v.slug}>
                 <a className="text-decoration-none" href={`/fleet/${v.slug}/`}>
-                  <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100 bg-white">
-                    <div className="d-flex align-items-center justify-content-between">
-                      <h3 className="h6 fw-bold text-dark mb-0">{v.meta!.cardName}</h3>
-                      <span className="badge bg-dark rounded-pill px-3 py-1 small">{v.meta!.passengers}</span>
+                  <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 overflow-hidden bg-white">
+                    <Image
+                      src={v.meta!.photo}
+                      alt={`${v.meta!.cardName} — see details`}
+                      width={420}
+                      height={240}
+                      className="w-100 object-fit-cover"
+                      style={{ height: 130 }}
+                      sizes="(max-width: 768px) 50vw, 25vw"
+                    />
+                    <div className="p-3">
+                      <h3 className="h6 fw-bold text-dark mb-1">{v.meta!.cardName}</h3>
+                      <span className="badge bg-primary text-dark rounded-pill px-3 py-1 x-small-bold">{v.meta!.passengers}</span>
+                      <p className="text-muted x-small mb-0 mt-2">{v.reason}</p>
                     </div>
-                    <p className="text-muted small mb-0 mt-2">{v.reason}</p>
                   </div>
                 </a>
               </div>
@@ -161,36 +200,52 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
       <section className="py-5 bg-light">
         <div className="container py-4">
           <h2 className="display-6 fw-bold text-dark mb-4">{data.nearby.heading}</h2>
-          {data.nearby.plainText ? (
-            <p className="text-muted mb-0" style={{ maxWidth: 800 }}>
-              {data.nearby.plainText}
-            </p>
-          ) : (
             <div className="row g-3">
               {nearbyItems.map((n) => (
-                <div className="col-md-6 col-lg-4" key={n.city}>
+                <div className="col-md-4 col-6" key={n.city}>
                   {n.path ? (
                     <Link href={n.path} className="text-decoration-none">
-                      <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100">
+                      <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100 bg-white">
                         <div className="d-flex align-items-center justify-content-between">
                           <span className="fw-bold text-dark">{n.city}</span>
                           <span aria-hidden="true" className="text-muted">→</span>
                         </div>
-                        <p className="text-muted small mb-0 mt-1">{n.miles}</p>
+                        {n.miles && <p className="text-muted small mb-0 mt-1">{n.miles}</p>}
                       </div>
                     </Link>
                   ) : (
                     <div className="card border-0 rounded-4 p-3 h-100" style={{ background: "rgba(245,160,2,0.06)" }}>
                       <span className="fw-bold text-dark">{n.city}</span>
-                      <p className="text-muted small mb-0 mt-1">{n.miles}</p>
+                      {n.miles && <p className="text-muted small mb-0 mt-1">{n.miles}</p>}
                     </div>
                   )}
                 </div>
               ))}
-            </div>
-          )}
+          </div>
         </div>
       </section>
+
+      {/* City map (lazy iframe, loads when scrolled into view) */}
+      <section className="py-5">
+        <div className="container py-4">
+          <h2 className="display-6 fw-bold text-dark mb-4">{name} on the map</h2>
+          <div className="rounded-5 overflow-hidden shadow-sm border position-relative" style={{ height: 420 }}>
+            <iframe
+              title={`Map of ${name}, ${stName} and surrounding areas`}
+              src={`https://www.google.com/maps?q=${encodeURIComponent(name + ", " + state.toUpperCase())}&z=10&output=embed`}
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              allowFullScreen
+            />
+          </div>
+        </div>
+      </section>
+
+      {/* Booking process */}
+      <BookingProcess pickup={pickup} />
 
       {/* FAQs */}
       <section className="py-5">

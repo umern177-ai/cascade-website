@@ -7,7 +7,7 @@ import cityPagesJson from "@/data/city-pages.json";
 export type CityService = { title: string; text: string; href: string };
 export type CityVehicle = { slug: string; reason: string };
 export type CityDestination = { name: string; text: string; tip: string };
-export type CityNearbyItem = { city: string; miles: string };
+export type CityNearbyItem = { city: string; miles?: string };
 export type CityPageData = {
   state: string;
   slug: string;

@@ -6,6 +6,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { KeptCityButton, QuoteCityButton } from "@/components/CityButton";
 import { keptCities, otherCities, stateName, stateCodes } from "@/lib/locations";
+import { neighborStates } from "@/lib/state-neighbors";
 import { VEHICLES } from "@/lib/fleet-data";
 import { pageMeta } from "@/lib/page-meta";
 
@@ -167,6 +168,27 @@ export default async function StatePage({ params }: Props) {
                       <span className="badge bg-dark rounded-pill px-3 py-1 small">{v.passengers}</span>
                     </div>
                     <p className="text-muted small mb-0 mt-2">{v.tagline}</p>
+                  </div>
+                </a>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* Related states */}
+      <section className="py-5 bg-light border-top border-bottom">
+        <div className="container py-4">
+          <h2 className="display-6 fw-bold text-dark mb-4">Nearby States We Serve</h2>
+          <div className="row g-3">
+            {neighborStates(state, 5).map((nb) => (
+              <div className="col-md-4 col-6" key={nb}>
+                <a className="text-decoration-none" href={`/locations/${nb}/`}>
+                  <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100 bg-white">
+                    <div className="d-flex align-items-center justify-content-between">
+                      <span className="fw-bold text-dark">{stateName(nb)}</span>
+                      <span aria-hidden="true" className="text-muted">→</span>
+                    </div>
                   </div>
                 </a>
               </div>

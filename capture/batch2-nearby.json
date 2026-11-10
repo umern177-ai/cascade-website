@@ -1,0 +1,183 @@
+{
+ "ak/Juneau": [
+  "Kodiak",
+  "Palmer",
+  "Talkeetna"
+ ],
+ "al/Atmore": [
+  "Albertville",
+  "Athens",
+  "Auburn",
+  "Calera",
+  "Fairhope",
+  "Opp"
+ ],
+ "mi/Roscommon": [
+  "Adrian",
+  "Alpena",
+  "Bellaire",
+  "Benton Harbor",
+  "Boyne Falls",
+  "Bridgman"
+ ],
+ "nh/Moultonborough": [
+  "Alton",
+  "Amherst",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham"
+ ],
+ "nh/Plymouth": [
+  "Alton",
+  "Amherst",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham"
+ ],
+ "nj/Summit": [
+  "Chatham",
+  "Emerson",
+  "Flemington",
+  "Glassboro",
+  "Mahwah",
+  "Mullica Hill"
+ ],
+ "tx/Sulphur Springs": [
+  "Alpine",
+  "Austin",
+  "Brenham",
+  "Buchanan Dam",
+  "Cotulla",
+  "Cypress"
+ ],
+ "wa/Spokane": [
+  "Anacortes",
+  "Chehalis",
+  "Chelan",
+  "Cle Elum",
+  "Davenport",
+  "Ellensburg"
+ ],
+ "ca/Mammoth Lakes": [
+  "Anaheim",
+  "Arnold",
+  "Cambria",
+  "Camino",
+  "Cayucos",
+  "Dixon"
+ ],
+ "ct/Westbrook": [
+  "Bethel",
+  "Darien",
+  "Essex",
+  "Groton",
+  "Litchfield",
+  "Milford"
+ ],
+ "de/Rehoboth Beach": [],
+ "fl/Sebastian": [
+  "Alachua",
+  "Bonita Springs",
+  "Bradenton Beach",
+  "Daytona Beach",
+  "Englewood",
+  "Jacksonville"
+ ],
+ "me/Bangor": [
+  "Bar Harbor",
+  "Belfast",
+  "Bethel",
+  "Newry",
+  "Ogunquit",
+  "Portland"
+ ],
+ "pa/Hazleton": [
+  "Allentown",
+  "Beaver",
+  "Bradford",
+  "Broomall",
+  "Butler",
+  "Denver"
+ ],
+ "tn/Sevierville": [
+  "Chattanooga",
+  "Franklin",
+  "Gatlinburg",
+  "Mt. Juliet",
+  "Nashville",
+  "Paris"
+ ],
+ "va/Richmond": [
+  "Cape Charles",
+  "Chesterfield",
+  "Colonial Heights",
+  "Danville",
+  "Elkton",
+  "Fredericksburg"
+ ],
+ "fl/Port St. Joe": [
+  "Alachua",
+  "Bonita Springs",
+  "Bradenton Beach",
+  "Daytona Beach",
+  "Englewood",
+  "Jacksonville"
+ ],
+ "ga/Savannah": [
+  "Alamo",
+  "Atlanta",
+  "Barnesville",
+  "Buford",
+  "Calhoun",
+  "Cedartown"
+ ],
+ "ky/Louisville": [
+  "Ashland",
+  "Carlisle",
+  "Georgetown",
+  "Hebron",
+  "Independence"
+ ],
+ "ma/Amesbury": [
+  "Attleboro",
+  "Blackstone",
+  "Brockton",
+  "Brookline",
+  "Buzzards Bay",
+  "Chelmsford"
+ ],
+ "ma/Uxbridge": [
+  "Amesbury",
+  "Attleboro",
+  "Blackstone",
+  "Brockton",
+  "Brookline",
+  "Buzzards Bay"
+ ],
+ "mi/Alpena": [
+  "Adrian",
+  "Bellaire",
+  "Benton Harbor",
+  "Boyne Falls",
+  "Bridgman",
+  "Brimley"
+ ],
+ "mi/Boyne Falls": [
+  "Adrian",
+  "Alpena",
+  "Bellaire",
+  "Benton Harbor",
+  "Bridgman",
+  "Brimley"
+ ],
+ "mn/Minneapolis": [
+  "Alexandria",
+  "Baxter",
+  "Bemidji",
+  "Big Lake",
+  "Blackduck",
+  "Crookston"
+ ]
+}

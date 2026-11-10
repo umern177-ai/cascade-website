@@ -194,6 +194,19 @@ Updated every phase. Current status at the top.
   fleet, about, contact, faqs, sitemap, legal) — amber separators, light text on dark,
   on-theme; verified full-width and above-hero on desktop AND mobile for 12 page types.
 
+## City-page enhancement: Batch 1 DONE (Nov 10)
+
+- **27 of 710 city pages now run the full consultant structure** (the owner's 5 +
+  22 High-priority cities newly written: Angel Fire, Berlin CO? no—Berlin MD, Grand
+  Junction, Hanover, Hood River, Lac Du Flambeau, New York City, Newry, North Conway,
+  Astoria, Beacon, Benton Harbor, Crandon, Kalispell, Keene, Ludlow, Potsdam, Red Bank,
+  Shawano, Shawnee, Taos, Whitefish). Each with researched places/venues/airports/tips,
+  unique H1s and meta, Service+FAQPage+Breadcrumb schema, all reviewChecks + sources
+  kept in the data file for owner approval.
+- Batch 1 published to staging (git push → auto-deploy).
+- **Next batches**: 22 cities per batch in priority order — 678 remaining (73 Medium →
+  556 Standard → 54 Traffic). Owner reviews Batch 1 on staging before Batch 2 starts.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

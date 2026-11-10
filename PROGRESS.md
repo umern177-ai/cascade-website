@@ -187,6 +187,13 @@ Updated every phase. Current status at the top.
 - **Form advice** on city pages expanded: pickup address, pickup time & date, return time
   for round trips, destination + stops between, arrival/event end time, headcount/luggage/extras.
 
+## Breadcrumb strip sitewide (Nov 10)
+
+- Home › Locations › Connecticut › Shelton now renders as a **full-width black strip
+  directly below the header, above the hero** on every page (city, state, hub, services,
+  fleet, about, contact, faqs, sitemap, legal) — amber separators, light text on dark,
+  on-theme; verified full-width and above-hero on desktop AND mobile for 12 page types.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

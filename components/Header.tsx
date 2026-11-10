@@ -4,16 +4,29 @@
 // Bootstrap's JS is not loaded — dropdowns, collapse and toggles are small React
 // state handlers (same look and behavior, less JavaScript, brief Section 7.5b).
 import { useEffect, useRef, useState } from "react";
+import { usePathname } from "next/navigation";
 import Link from "next/link";
 import { Mail, Phone, Menu, ChevronDown } from "lucide-react";
 import { SITE, SERVICES, FLEET } from "@/lib/site-data";
 
 export default function Header() {
+  const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
   const [fleetOpen, setFleetOpen] = useState(false);
   const rootRef = useRef<HTMLElement>(null);
 
+  // Jump back to the top whenever the page changes (menu overlay was hiding it).
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: "instant" as ScrollBehavior });
+  }, [pathname]);
+
+  // close everything (mobile menu + dropdowns)
+  function closeAllNav() {
+    setOpen(false);
+    setServicesOpen(false);
+    setFleetOpen(false);
+  }
   // Close menus when clicking outside or pressing Escape
   useEffect(() => {
     function onClickAway(e: MouseEvent) {
@@ -74,7 +87,7 @@ export default function Header() {
           <div id="navContent" className={`collapse navbar-collapse ${open ? "show" : ""}`}>
             <ul className="navbar-nav mx-auto gap-1">
               <li className="nav-item">
-                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/">Home</Link>
+                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/" onClick={closeAllNav}>Home</Link>
               </li>
               <li className="nav-item dropdown">
                 <button
@@ -88,14 +101,16 @@ export default function Header() {
                 <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 mt-2 py-3 px-2 ${servicesOpen ? "show" : ""}`}>
                   {SERVICES.map((s) => (
                     <li key={s.slug}>
-                      <Link className="dropdown-item py-2 px-3 small" href={`/services/${s.slug}/`}>
+                      <Link className="dropdown-item py-2 px-3 small" href={`/services/${s.slug}/`} onClick={() => { setOpen(false); setServicesOpen(false); }}>
                         {s.name}
                       </Link>
                     </li>
                   ))}
                   <li><hr className="dropdown-divider opacity-10" /></li>
                   <li>
-                    <Link className="dropdown-item fw-bold text-primary small" href="/services/">All Services</Link>
+                    <Link className="dropdown-item fw-bold text-primary small" href="/services/" onClick={() => { setOpen(false); setServicesOpen(false); }}>
+                      All Services
+                    </Link>
                   </li>
                 </ul>
               </li>
@@ -111,29 +126,31 @@ export default function Header() {
                 <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 mt-2 py-3 px-2 ${fleetOpen ? "show" : ""}`}>
                   {FLEET.map((f) => (
                     <li key={f.slug}>
-                      <Link className="dropdown-item py-2 px-3 small" href={`/fleet/${f.slug}/`}>
+                      <Link className="dropdown-item py-2 px-3 small" href={`/fleet/${f.slug}/`} onClick={() => { setOpen(false); setFleetOpen(false); }}>
                         {f.name}
                       </Link>
                     </li>
                   ))}
                   <li><hr className="dropdown-divider opacity-10" /></li>
                   <li>
-                    <Link className="dropdown-item fw-bold text-primary small" href="/fleet/">View Entire Fleet</Link>
+                    <Link className="dropdown-item fw-bold text-primary small" href="/fleet/" onClick={() => { setOpen(false); setFleetOpen(false); }}>
+                      View Entire Fleet
+                    </Link>
                   </li>
                 </ul>
               </li>
               <li className="nav-item">
-                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/locations/">Locations</Link>
+                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/locations/" onClick={closeAllNav}>Locations</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/about/">About</Link>
+                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/about/" onClick={closeAllNav}>About</Link>
               </li>
               <li className="nav-item">
-                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/contact/">Contact</Link>
+                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/contact/" onClick={closeAllNav}>Contact</Link>
               </li>
             </ul>
             <div className="d-flex align-items-center gap-3 mt-3 mt-lg-0">
-              <Link className="btn btn-primary rounded-pill px-4 py-2 fw-bold d-flex align-items-center gap-2 shadow-sm" href="/contact/">
+              <Link className="btn btn-primary rounded-pill px-4 py-2 fw-bold d-flex align-items-center gap-2 shadow-sm" href="/contact/" onClick={closeAllNav}>
                 BOOK NOW
               </Link>
             </div>

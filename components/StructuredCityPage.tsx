@@ -114,9 +114,9 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
                         src={img}
                         alt={`${sv.title} — Cascade Charter Bus`}
                         width={640}
-                        height={280}
+                        height={420}
                         className="w-100 object-fit-cover"
-                        style={{ height: 150 }}
+                        style={{ height: 260 }}
                         sizes="(max-width: 768px) 100vw, 50vw"
                       />
                     )}

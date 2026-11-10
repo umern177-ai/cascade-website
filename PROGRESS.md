@@ -160,6 +160,22 @@ Updated every phase. Current status at the top.
 - Service + FAQPage + BreadcrumbList schema on each; unique titles/H1s per page.
 - The remaining 683 cities follow this template as their profiles get researched.
 
+## City-page structure round 2 (Nov 10, owner requests)
+
+- **3-step booking block** (shared component components/BookingProcess.tsx): Call or
+  Request Online → Custom Quote → Relax and Ride + a "fill the form with the correct
+  itinerary" checklist — on all 5 structured city pages.
+- **City map**: lazy Google Maps embed of the city + surrounding area ("{City} on the map").
+- **Related cities**: 5–6 same-state nearby cards on every city page (linked when kept,
+  amber card when not; Kona/Weirton render card lists without links).
+- **Fleet showcase**: photos row from the fleet section, short cards (photo + name +
+  capacity + local reason) clicking through to the fleet pages.
+- **Service cards now carry photos**: the 6 live-site service images downloaded from the
+  real site, converted to WebP (33–54 KB each) in public/images/services/ — used on the
+  city-page service cards.
+- **State pages**: new "Nearby States We Serve" section (4–5 linked neighbouring states,
+  lib/state-neighbors.ts).
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

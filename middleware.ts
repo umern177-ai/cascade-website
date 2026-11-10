@@ -19,13 +19,10 @@ export const config = {
 export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
 
-  // 0. STAGING deployments are never indexable (robots.txt blocks crawling;
-  //    this header keeps any discovered URL out of Google's index too).
-  if (process.env.STAGING === "1") {
-    const res = NextResponse.next();
-    res.headers.set("X-Robots-Tag", "noindex, nofollow");
-    return res;
-  }
+  // 0. STAGING flag read once: deployments with STAGING=1 are never indexable
+  //    (robots.txt blocks crawling; the header below keeps discovered URLs out
+  //    of Google's index too). The URL rules below still run on staging.
+  const isStaging = process.env.STAGING === "1";
 
   // 1. Lowercase URL policy (Section 14): mixed-case path → 301 to lowercase.
   if (/[A-Z]/.test(pathname)) {
@@ -68,7 +65,11 @@ export default function middleware(req: NextRequest) {
     }
   }
 
-  return NextResponse.next();
+  const res = NextResponse.next();
+  if (isStaging) {
+    res.headers.set("X-Robots-Tag", "noindex, nofollow");
+  }
+  return res;
 }
 
 function goneHtml(place: string): string {

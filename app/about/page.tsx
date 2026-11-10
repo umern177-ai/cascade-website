@@ -4,6 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { Check, Bus, MapPin, Award, Users, Clock, ShieldCheck } from "lucide-react";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
@@ -41,6 +42,8 @@ export default function About() {
   return (
     <main className="bg-white min-vh-100">
       {/* hero with photo */}
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About Us" }]} />
+
       <section
         className="py-5 position-relative text-white"
         style={{ paddingTop: 140, paddingBottom: 80, background: "linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.85)), url('/images/about-bus.jpg') center/cover" }}

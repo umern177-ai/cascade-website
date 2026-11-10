@@ -47,7 +47,8 @@ export default function Contact() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <section className="bg-dark text-white py-5 position-relative overflow-hidden" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
+<section className="bg-dark text-white py-5 position-relative overflow-hidden" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container py-4 text-center position-relative" style={{ zIndex: 2 }}>
           <h1 className="display-4 fw-bold mb-3">
             Professional <span className="text-primary">Charter Booking</span>
@@ -60,10 +61,7 @@ export default function Contact() {
         <div className="position-absolute top-0 start-0 w-100 h-100 opacity-10" style={{ backgroundImage: "radial-gradient(#F5A002 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
       </section>
 
-      <div className="container pt-3">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
-      </div>
-
+      
       {/* Form + cards */}
       <section className="py-5 mt-n5 position-relative" style={{ zIndex: 10 }}>
         <div className="container">

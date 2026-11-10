@@ -33,9 +33,7 @@ export default function LegalBody({ slug }: { slug: Keys }) {
           <h1 className="display-4 fw-bold mb-2">{meta.h1}</h1>
         </div>
       </section>
-      <div className="container py-3">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: meta.h1 }]} />
-      </div>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: meta.h1 }]} />
       <section className="pb-5">
         <div className="container" style={{ maxWidth: 820 }}>
           <div className="text-body">

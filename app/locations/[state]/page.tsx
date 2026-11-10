@@ -66,7 +66,8 @@ export default async function StatePage({ params }: Props) {
   return (
     <main className="bg-white min-vh-100">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(introSchema) }} />
-      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: name }]} />
+<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <h1 className="display-4 fw-bold mb-3">Charter Bus Rental in {name}</h1>
           <p className="lead opacity-75 mx-auto mb-0" style={{ maxWidth: 650 }}>
@@ -75,10 +76,7 @@ export default async function StatePage({ params }: Props) {
         </div>
       </section>
 
-      <div className="container py-3">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: name }]} />
-      </div>
-
+      
       <section className="py-5">
         <div className="container">
           {kept.length > 0 && (

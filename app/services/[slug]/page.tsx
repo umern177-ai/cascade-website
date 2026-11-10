@@ -260,7 +260,8 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
-      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services/" }, { label: meta.title }]} />
+<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <span className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 d-block">{meta.eyebrow}</span>
           <h1 className="display-4 fw-bold mb-4">{meta.h1}</h1>
@@ -275,10 +276,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         </div>
       </section>
 
-      <div className="container py-4">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services/" }, { label: meta.title }]} />
-      </div>
-
+      
       {/* 1. What this service is */}
       <section className="py-5">
         <div className="container py-4">

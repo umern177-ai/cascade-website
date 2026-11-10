@@ -164,6 +164,21 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 /* Amber brand color on WHITE fails contrast for small text: eyebrow/label
    spots use a darker amber that passes 4.5:1 while keeping the amber look */
 .services-card-text { font-size: 0.9rem; line-height: 1.65; }
+/* Breadcrumb strip: dark band right below the header, all pages */
+.breadcrumb-strip {
+  background-color: var(--fleet-black);
+  border-bottom: 1px solid rgba(245, 160, 2, 0.18);
+  padding: 0;
+}
+.breadcrumb-strip .breadcrumb-item > a,
+.breadcrumb-strip .breadcrumb-item.active {
+  color: #d8d8d8 !important;
+}
+.breadcrumb-strip .breadcrumb-item > a:hover {
+  color: var(--fleet-orange) !important;
+}
+.breadcrumb-strip .breadcrumb-item.text-primary { color: var(--fleet-orange) !important; }
+
 /* Locations hub tiles */
 .location-tile { background: #fff; }
 .location-tile .card-body { min-height: 128px; justify-content: center; }

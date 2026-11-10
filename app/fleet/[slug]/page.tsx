@@ -58,11 +58,9 @@ export default async function FleetDetail({ params }: { params: Promise<{ slug: 
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      <div className="container pt-4">
-        <Breadcrumbs
+      <Breadcrumbs
           items={[{ label: "Home", href: "/" }, { label: "Fleet", href: "/fleet/" }, { label: v.cardName }]}
         />
-      </div>
 
       {/* Hero */}
       <section className="py-5 bg-dark text-white">

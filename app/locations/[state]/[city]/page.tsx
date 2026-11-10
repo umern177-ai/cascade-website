@@ -81,7 +81,10 @@ export default async function CityPage({ params }: Props) {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
 
       {/* Hero — the local photo + city-profile line arrive in Phase 5; frame matches the theme */}
-      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <Breadcrumbs
+          items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: stName, href: `/locations/${state}/` }, { label: name }]}
+        />
+<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center" style={{ maxWidth: 900 }}>
           <span className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 d-block">Charter Bus Rental</span>
           <h1 className="display-4 fw-bold mb-3">Charter Bus Rental in {name}</h1>
@@ -98,11 +101,6 @@ export default async function CityPage({ params }: Props) {
         </div>
       </section>
 
-      <div className="container py-3">
-        <Breadcrumbs
-          items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: stName, href: `/locations/${state}/` }, { label: name }]}
-        />
-      </div>
 
       {/* Real local facts we hold (county + places real groups were picked up at) */}
       {fb && (

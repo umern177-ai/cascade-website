@@ -21,7 +21,8 @@ export default function LocationsHub() {
 
   return (
     <main className="bg-white min-vh-100">
-      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations" }]} />
+<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">Service Areas</span>
           <h1 className="display-4 fw-bold mb-3">Our Service Locations</h1>
@@ -36,10 +37,7 @@ export default function LocationsHub() {
           </div>
         </div>
       </section>
-      <div className="container py-3">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations" }]} />
-      </div>
-      <section className="pb-5">
+            <section className="pb-5">
         <div className="container">
           <p className="text-center text-muted mb-4">
             Every state below has a full page with its destinations — popular cities at the

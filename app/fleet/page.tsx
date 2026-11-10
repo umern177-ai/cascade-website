@@ -41,7 +41,8 @@ export default function FleetHub() {
   return (
     <main className="bg-white min-vh-100">
       {/* Hero */}
-      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Fleet" }]} />
+<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <span className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 d-block">CASCADE CHARTER BUS FLEET</span>
           <h1 className="display-4 fw-bold mb-4">Charter Bus &amp; Group Transportation Fleet</h1>
@@ -57,10 +58,7 @@ export default function FleetHub() {
         </div>
       </section>
 
-      <div className="container py-4">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Fleet" }]} />
-      </div>
-
+      
       {/* Vehicle cards */}
       <section className="pb-5" id="vehicles">
         <div className="container py-lg-4">

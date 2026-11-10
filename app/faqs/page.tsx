@@ -2,6 +2,7 @@
 // The live questions are kept (brief 7.11 "keep text"); the wider grouped list
 // grows in Phase 3 as more page FAQs are written. FAQPage schema included.
 import Link from "next/link";
+import Breadcrumbs from "@/components/Breadcrumbs";
 import FaqAccordion from "@/components/Faq";
 import { Site } from "@/lib/faq-data";
 import { HOME_FAQS } from "@/lib/site-data";
@@ -25,7 +26,10 @@ export default function FaqsPage() {
   return (
     <main className="bg-dark min-vh-100 text-white">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
-      <section className="text-center" style={{ paddingTop: 140, paddingBottom: 60 }}>
+      <section className="text-center" style={{ paddingTop: 40, paddingBottom: 60 }}>
+        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "FAQ&rsquo;s" }]} />
+      </section>
+      <section className="text-center" style={{ paddingBottom: 60 }}>
         <div className="container">
           <p className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 x-small-bold">Knowledge Base</p>
           <h1 className="fw-black display-5">

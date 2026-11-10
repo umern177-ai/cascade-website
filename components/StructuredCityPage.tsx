@@ -63,6 +63,15 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       {/* Hero */}
+      <Breadcrumbs
+          items={[
+            { label: "Home", href: "/" },
+            { label: "Locations", href: "/locations/" },
+            { label: stName, href: `/locations/${state}/` },
+            { label: name },
+          ]}
+        />
+
       <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container" style={{ maxWidth: 900 }}>
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">
@@ -85,17 +94,6 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
           </div>
         </div>
       </section>
-
-      <div className="container py-3">
-        <Breadcrumbs
-          items={[
-            { label: "Home", href: "/" },
-            { label: "Locations", href: "/locations/" },
-            { label: stName, href: `/locations/${state}/` },
-            { label: name },
-          ]}
-        />
-      </div>
 
       {/* Local intro */}
       <section className="py-5 pb-0">

@@ -34,9 +34,7 @@ export default function SitemapPage() {
           </p>
         </div>
       </section>
-      <div className="container py-3">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Sitemap" }]} />
-      </div>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Sitemap" }]} />
       <section className="pb-5">
         <div className="container">
           <div className="row g-5">

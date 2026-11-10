@@ -16,7 +16,8 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
     })),
   };
   return (
-    <nav aria-label="breadcrumb" className="small">
+    <nav aria-label="breadcrumb" className="breadcrumb-strip">
+  <div className="container py-2">
       <ol className="breadcrumb mb-0 align-items-center">
         {items.map((c, i) => (
           <li key={i} className={`breadcrumb-item d-flex align-items-center gap-2 ${i === items.length - 1 ? "active" : ""}`}>
@@ -30,6 +31,7 @@ export default function Breadcrumbs({ items }: { items: Crumb[] }) {
         ))}
       </ol>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />
-    </nav>
+      </div>
+</nav>
   );
 }

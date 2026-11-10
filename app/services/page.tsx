@@ -44,7 +44,8 @@ export default function ServicesHub() {
   return (
     <main className="bg-white min-vh-100">
       {/* Hero */}
-      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services" }]} />
+<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <span className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 d-block">Elite Charter Solutions</span>
           <h1 className="display-4 fw-bold mb-4">Professional Services Tailored to Your Journey</h1>
@@ -52,10 +53,7 @@ export default function ServicesHub() {
         </div>
       </section>
 
-      <div className="container py-4">
-        <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services" }]} />
-      </div>
-
+      
       {/* Service cards */}
       <section className="py-5">
         <div className="container py-lg-4">

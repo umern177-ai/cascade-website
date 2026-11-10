@@ -107,25 +107,28 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
               const slug = sv.href.replace("/services/", "").replace("/", "");
               const img = SERVICE_IMAGES[slug];
               return (
-                <div className="col-md-6" key={sv.title}>
-                  <div className="card border-0 shadow-sm rounded-4 h-100 bg-white d-flex flex-column overflow-hidden">
-                    {img && (
-                      <Image
-                        src={img}
-                        alt={`${sv.title} — Cascade Charter Bus`}
-                        width={640}
-                        height={420}
-                        className="w-100 object-fit-cover"
-                        style={{ height: 260 }}
-                        sizes="(max-width: 768px) 100vw, 50vw"
-                      />
-                    )}
-                    <div className="p-4 d-flex flex-column flex-grow-1">
-                      <h3 className="h5 fw-bold text-dark mb-3">{sv.title}</h3>
-                      <p className="text-muted small flex-grow-1 mb-3">{sv.text}</p>
-                      <Link href={sv.href} className="fw-bold small text-decoration-none text-primary mt-auto">
-                        Learn More →
-                      </Link>
+                <div className="col-12" key={sv.title}>
+                  <div className="card border-0 shadow-sm rounded-4 h-100 bg-white overflow-hidden">
+                    <div className="row g-0 h-100">
+                      <div className="col-md-7 p-4 d-flex flex-column">
+                        <h3 className="h5 fw-bold text-dark mb-3">{sv.title}</h3>
+                        <p className="text-muted services-card-text mb-3">{sv.text}</p>
+                        <Link href={sv.href} className="fw-bold small text-decoration-none text-primary mt-auto">
+                          Learn More →
+                        </Link>
+                      </div>
+                      {img && (
+                        <div className="col-md-5">
+                          <Image
+                            src={img}
+                            alt={`${sv.title} — Cascade Charter Bus`}
+                            width={520}
+                            height={360}
+                            className="w-100 h-100 object-fit-cover"
+                            sizes="(max-width: 768px) 100vw, 40vw"
+                          />
+                        </div>
+                      )}
                     </div>
                   </div>
                 </div>

@@ -163,6 +163,7 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 .bg-primary-soft { background-color: rgba(245, 160, 2, 0.12); }
 /* Amber brand color on WHITE fails contrast for small text: eyebrow/label
    spots use a darker amber that passes 4.5:1 while keeping the amber look */
+.services-card-text { font-size: 0.9rem; line-height: 1.65; }
 .text-brand-dark {
   color: #7a5600 !important;
 }

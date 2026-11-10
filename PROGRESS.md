@@ -140,6 +140,26 @@ Updated every phase. Current status at the top.
 - Waiting on owner: two one-time logins (GitHub via `! npx gh auth login`,
   Vercel via `! npx vercel login`) → then I push + deploy + verify the sandbox URL.
 
+- **STAGING IS LIVE**: https://cascade-website-rho.vercel.app (owner-deployed via Vercel,
+  GitHub auto-deploy on every push). Google blocked both ways (robots Disallow:/ + noindex
+  header — verified). URL rules verified on staging: uppercase→301, removed cities→410,
+  PR→410, kept cities→200. Full audit vs staging: reports/seo-verify-STAGING-vercel.md
+  (189/189). Handoff note for the SEO person: crawl with "ignore robots.txt" enabled;
+  canonicals point at the real domain (expected).
+
+## 5 consultant-written city pages implemented (Nov 10)
+
+- Owner supplied ALL-5-CITY-PAGES.md (Shelton CT, Kailua-Kona HI, Alexandria MN,
+  Park City UT, Weirton WV) — fully written local content. This is now the standard
+  city-page structure: hero intro → service blocks with Learn-More links → vehicle
+  cards with reasons → 5 numbered destinations with amber "Bus drop-off tip" callouts +
+  map-pin line → nearby cities (linked when kept) → 5 FAQs → CTA.
+- Data lives in data/city-pages.json (with the file's "Check before publishing" items
+  and Sources kept for owner review, NOT rendered publicly). Renderer:
+  components/StructuredCityPage.tsx; loader lib/city-page-data.ts.
+- Service + FAQPage + BreadcrumbList schema on each; unique titles/H1s per page.
+- The remaining 683 cities follow this template as their profiles get researched.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

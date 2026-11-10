@@ -12,6 +12,9 @@ import { keptCities, isKept, stateName, nearbyKept, states } from "@/lib/locatio
 import { VEHICLES } from "@/lib/fleet-data";
 import { getCityContent, getCityFallback, type CityContent } from "@/lib/city-content";
 import { variantsFor } from "@/lib/city-variants";
+import { getStructuredCityPage } from "@/lib/city-page-data";
+import StructuredCityPage from "@/components/StructuredCityPage";
+import FaqAccordion from "@/components/Faq";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
@@ -26,6 +29,14 @@ export function generateStaticParams() {
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { state, city } = await params;
+  const structured = getStructuredCityPage(state, city);
+  if (structured) {
+    return pageMeta({
+      title: structured.title,
+      description: structured.metaDescription,
+      path: `/locations/${state}/${city}/`,
+    });
+  }
   const found = keptCities(state).find((c) => c.slug === city);
   if (!found) return {};
   const stAbbr = state.toUpperCase();
@@ -41,6 +52,10 @@ export default async function CityPage({ params }: Props) {
   const found = isKept(state, city) ? keptCities(state).find((c) => c.slug === city) : undefined;
   if (!found) notFound();
 
+  const structured = getStructuredCityPage(state, city);
+  if (structured) {
+    return <StructuredCityPage data={structured} state={state} />;
+  }
   const nearby = nearbyKept(state, city, 4);
   const name = found.city;
   const stName = stateName(state);

@@ -7,7 +7,8 @@ import { SITE } from "@/lib/site-data";
 const STEPS = [
   {
     title: "Call or Request Online",
-    text: "Send the form below or call " + SITE.phoneDisplay + " — 24/7 dispatch, average reply in about 15 minutes.",
+    text: "Send the form below or call " + SITE.phoneDisplay + " — average reply in about 15 minutes.",
+    note: "24/7 dispatch",
   },
   {
     title: "Custom Quote",
@@ -39,7 +40,8 @@ export default function BookingProcess({ pickup }: { pickup: string }) {
                   {i + 1}
                 </span>
                 <h3 className="h6 fw-bold text-dark mb-2">{s.title}</h3>
-                <p className="text-muted small mb-0">{s.text}</p>
+                <p className="text-muted small mb-2">{s.text}</p>
+                {s.note && <span className="badge bg-primary-soft text-brand-dark rounded-pill px-3 x-small-bold">{s.note}</span>}
               </div>
             </div>
           ))}

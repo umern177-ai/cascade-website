@@ -83,7 +83,6 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
               <Phone size={16} className="me-2" aria-hidden="true" /> {SITE.phoneDisplay}
             </a>
           </div>
-          <p className="fs-5 opacity-90 lead mb-0 text-center mt-4">{data.heroIntro}</p>
         </div>
       </section>
 
@@ -97,6 +96,13 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
           ]}
         />
       </div>
+
+      {/* Local intro */}
+      <section className="py-5 pb-0">
+        <div className="container" style={{ maxWidth: 880 }}>
+          <p className="text-muted lead mb-0">{data.heroIntro}</p>
+        </div>
+      </section>
 
       {/* Services */}
       <section className="py-5">

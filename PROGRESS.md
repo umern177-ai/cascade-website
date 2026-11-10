@@ -176,6 +176,17 @@ Updated every phase. Current status at the top.
 - **State pages**: new "Nearby States We Serve" section (4–5 linked neighbouring states,
   lib/state-neighbors.ts).
 
+## Locations hub + state tiles + titles round (Nov 10)
+
+- **Hubs/state pages**: locations hub redesigned (icon tiles + amber VIEW CITIES pills +
+  stats chips), state-page city names in themed tiles (.city-tile) with mobile 2-col grid,
+  "Nearby States We Serve" added to all state pages.
+- **Titles site-wide**: "Charter Bus Rental in {City} | Cascade Charter Bus" (no state code);
+  the descriptive phrase (e.g. "for Offices and Events") is now the H1 heading of the intro
+  paragraph below the hero. Hero shows only eyebrow + short display text + buttons.
+- **Form advice** on city pages expanded: pickup address, pickup time & date, return time
+  for round trips, destination + stops between, arrival/event end time, headcount/luggage/extras.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

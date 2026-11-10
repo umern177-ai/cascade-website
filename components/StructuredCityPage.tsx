@@ -68,7 +68,7 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">
             Charter Bus Rental
           </span>
-          <p className="display-4 fw-bold mb-3 lh-1">{`Charter Bus Rental in ${name}`}</p>
+          <p className="city-hero-display fw-bold mb-3">{`Charter Bus Rental in ${name}`}</p>
           <div className="d-flex justify-content-center gap-3 flex-wrap mt-4">
             <a
               href="/contact/"
@@ -100,7 +100,7 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
       {/* Local intro */}
       <section className="py-5 pb-0">
         <div className="container" style={{ maxWidth: 880 }}>
-          <h1 className="h2 fw-bold text-dark mb-3">{data.h1}</h1>
+          <h1 className="city-intro-h1 fw-bold text-dark mb-3">{data.h1}</h1>
           <p className="text-muted lead mb-0">{data.heroIntro}</p>
         </div>
       </section>
@@ -150,7 +150,7 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
       <section className="py-5 bg-light">
         <div className="container py-4">
           <h2 className="display-6 fw-bold text-dark mb-4">{data.vehiclesHeading}</h2>
-          <div className="row g-3">
+          <div className="row g-3 fleet-slider">
             {vehicles.map((v) => (
               <div className="col-lg-3 col-md-4 col-6" key={v.slug}>
                 <a className="text-decoration-none" href={`/fleet/${v.slug}/`}>
@@ -184,22 +184,20 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
           <p className="text-muted small mb-4">Places on this page: {data.mapPins.join(" · ")}</p>
           <div className="vstack gap-4">
             {data.destinations.map((d, i) => (
-              <div className="card border-0 shadow-sm rounded-4 p-4 bg-white" key={d.name}>
-                <div className="d-flex align-items-start gap-3">
+              <div className="card border-0 shadow-sm rounded-4 p-3 p-md-4 bg-white" key={d.name}>
+                <h3 className="dest-name fw-bold text-dark mb-2 d-flex align-items-center gap-2">
                   <span
                     className="badge bg-primary rounded-circle d-flex align-items-center justify-content-center flex-shrink-0"
-                    style={{ width: 34, height: 34, fontSize: "0.95rem" }}
+                    style={{ width: 32, height: 32, fontSize: "0.95rem" }}
                   >
                     {i + 1}
                   </span>
-                  <div>
-                    <h3 className="h5 fw-bold text-dark mb-2">{d.name}</h3>
-                    <p className="text-muted small mb-3">{d.text}</p>
-                    <div className="d-flex align-items-start gap-2 p-3 bg-light rounded-3 border-start border-primary border-3">
-                      <span className="fw-bold small text-dark flex-shrink-0">Bus drop-off tip:</span>
-                      <span className="text-muted small">{d.tip}</span>
-                    </div>
-                  </div>
+                  {d.name}
+                </h3>
+                <p className="text-muted small mb-2">{d.text}</p>
+                <div className="d-flex align-items-start gap-2 p-2 p-md-3 bg-light rounded-3 border-start border-primary border-3">
+                  <span className="fw-bold x-small text-dark flex-shrink-0 mt-1">Bus drop-off tip:</span>
+                  <span className="text-muted x-small">{d.tip}</span>
                 </div>
               </div>
             ))}

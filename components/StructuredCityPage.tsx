@@ -85,10 +85,10 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
               return (
                 <div className="col-lg-6" key={sv.title}>
                   <div className="premium-card">
-                    {img && <Image src={img} alt={sv.title + ' — Cascade Charter Bus'} width={520} height={260} className="card-img-top-premium" sizes="(max-width:768px) 100vw, 50vw" />}
+                    {img && <Image src={img} alt={sv.title + ' — Cascade Charter Bus'} width={520} height={200} className="card-img-top-premium" sizes="(max-width:768px) 100vw, 50vw" />}
                     <div className="card-body-premium">
                       <h3 style={{fontSize:'1rem',fontWeight:700,color:'var(--fleet-black)',marginBottom:'0.5rem'}}>{sv.title}</h3>
-                      <p style={{fontSize:'0.9rem',color:'#5a5a5a',lineHeight:1.65,flexGrow:1}}>{sv.text}</p>
+                      <p style={{fontSize:'0.9rem',color:'#5a5a5a',lineHeight:1.65,flexGrow:1,paddingRight:'0.5rem'}}>{sv.text}</p>
                       <Link href={sv.href} style={{color:'var(--fleet-orange)',fontWeight:700,fontSize:'0.85rem',textDecoration:'none',marginTop:'auto',display:'flex',alignItems:'center',gap:'0.4rem'}}>
                         Learn More <ArrowRight size={14} aria-hidden="true" />
                       </Link>

@@ -4,12 +4,22 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
-**Phase 2 (theme match) — core templates built and building cleanly. Waiting on owner review.**
-**Review servers (set up Nov 9):**
-- Dev preview: http://localhost:3100
-- Production preview: http://localhost:3200
-- Restart dev yourself: `npm run dev` in this folder — if the port is busy, close the terminal
-  it started in, or ask the agent. After a code change, restart is only needed for `npm start`. 
+**Real service photos deployed to staging (Nov 11). Shelton premium page live on staging (commit 46b54bf).**
+- Owner supplied 13 photos (servicespictures/). 12 processed → public/images/services/
+  (WebP, ≤1600px, EXIF/GPS stripped, 61–254 KB) via scripts/process-service-photos.mjs;
+  originals untouched. school-trips3.jpg EXCLUDED (another operator's branding on the bus:
+  "МИДГАРД", website + phone on the side) — flagged to owner for a replacement.
+- Replaced card photos with the same filenames (corp/wed/school/sport/airport/multi.webp)
+  → all 130+ city pages incl. Shelton premium update automatically; new church.webp added
+  (church service card no longer reuses the school photo); band-tour-bus still uses the
+  fleet sleeper photo (no owner photo yet).
+- Service pages (8): new "Photos from our trips" gallery after "What this service is"
+  (3/2/1 photos per service, lazy, descriptive alt text). Services hub: photos on all 8 cards.
+- Verified: tsc/eslint clean, build 798 pages 0 errors, images render on hub + service
+  pages + Shelton (Playwright), 0 console errors. NOTE: next/image optimizer cache can
+  serve stale photos after replacing an image file — clear .next (full rebuild) after any
+  image replacement.
+- Deployed: Staging (commit follows) → Vercel auto-deploy; review on https://cascade-website-rho.vercel.app
 
 ## Owner decisions locked (Nov 9 + Nov 9 later)
 

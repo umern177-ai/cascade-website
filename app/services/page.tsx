@@ -1,6 +1,7 @@
 // Services hub — same layout as the live services hub, with the general FAQ
 // replacing the live page's wedding-only FAQ (brief 7.2).
 import Link from "next/link";
+import Image from "next/image";
 import { Check } from "lucide-react";
 import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -40,6 +41,19 @@ const SERVICES_FAQS = [
 
 const BOOKING_STEPS = ["Request", "Review", "Confirm", "Ride"];
 
+// Real service photos supplied by the owner (processed to WebP, EXIF stripped).
+// band-tour-bus uses the fleet sleeper photo (no owner service photo yet).
+const CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
+  "corporate-transportation": { src: "/images/services/corp.webp", alt: "Passengers riding a charter coach to a corporate event" },
+  "wedding-transportation": { src: "/images/services/wed.webp", alt: "Wedding couple greeting guests riding a shuttle bus" },
+  "school-transportation": { src: "/images/services/school.webp", alt: "Students boarding a yellow school bus for a field trip" },
+  "sports-team-transportation": { src: "/images/services/sport.webp", alt: "Football team walking through a stadium tunnel before a game" },
+  "airport-transfer": { src: "/images/services/airport.webp", alt: "Group shuttle bus waiting at the airport terminal" },
+  "sightseeing-tour-bus": { src: "/images/services/multi.webp", alt: "White motorcoach on a scenic mountain road" },
+  "church-religious-transportation": { src: "/images/services/church.webp", alt: "Executive minibuses parked on a city street for a group shuttle" },
+  "band-tour-bus": { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus used for band tours" },
+};
+
 export default function ServicesHub() {
   return (
     <main className="bg-white min-vh-100">
@@ -64,6 +78,11 @@ export default function ServicesHub() {
                 <div className="col-lg-4 col-md-6" key={s.slug}>
                   <Link href={`/services/${s.slug}/`} className="text-decoration-none">
                     <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 overflow-hidden">
+                      {CARD_PHOTOS[s.slug] && (
+                        <Image src={CARD_PHOTOS[s.slug].src} alt={CARD_PHOTOS[s.slug].alt} width={800} height={450}
+                          sizes="(max-width: 768px) 100vw, 33vw"
+                          style={{ width: "100%", height: 200, objectFit: "cover" }} />
+                      )}
                       <div className="bg-primary-soft p-2 rounded-3 text-primary mx-4 mt-4 mb-2 d-inline-flex align-self-start" style={{ width: "fit-content" }}>
                         <Check size={20} aria-hidden="true" />
                       </div>

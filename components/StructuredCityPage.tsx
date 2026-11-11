@@ -19,7 +19,7 @@ const SERVICE_IMAGES: Record<string, string> = {
   "sports-team-transportation": "/images/services/sport.webp",
   "airport-transfer": "/images/services/airport.webp",
   "sightseeing-tour-bus": "/images/services/multi.webp",
-  "church-religious-transportation": "/images/services/school.webp",
+  "church-religious-transportation": "/images/services/church.webp",
   "band-tour-bus": "/images/fleet/sleeper.jpg",
 };
 
@@ -99,7 +99,7 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
                       <Image src={img} alt={sv.title + ' - Cascade Charter Bus'}
                         fill={true}
                         sizes='(max-width:768px) 100vw, 38vw'
-                        style={{objectFit:'contain', width:'100%', height:'100%'}}
+                        style={{objectFit:'cover', width:'100%', height:'100%'}}
                       />
                     </div>
                   )}

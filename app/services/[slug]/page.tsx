@@ -3,6 +3,7 @@
 // works, how pricing works, why Cascade, FAQ, CTA. All numbers come from
 // lib/fleet-data.ts so hub, pages and cards can never disagree.
 import Link from "next/link";
+import Image from "next/image";
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
 import { Check, ChevronRight, Phone, ArrowLeft } from "lucide-react";
@@ -70,6 +71,41 @@ const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
 };
 
 const HOW_BOOKING = "Send the trip details (dates, headcount, luggage, route) through the form or the 24/7 line. You get a detailed quote—usually within about 15 minutes. Confirm, and the driver arrives early with the plan already set.";
+
+// Real service photos supplied by the owner (processed in
+// scripts/process-service-photos.mjs: WebP, resized, EXIF/GPS stripped).
+// band-tour-bus uses the fleet sleeper photo (no owner service photo yet).
+const SERVICE_PHOTOS: Record<string, { src: string; alt: string }[]> = {
+  "corporate-transportation": [
+    { src: "/images/services/corp.webp", alt: "Passengers riding a charter coach to a corporate event at sunset" },
+    { src: "/images/services/corp2.webp", alt: "Reclining coach seats on a corporate shuttle" },
+    { src: "/images/services/corp3.webp", alt: "Business groups arriving for a corporate meeting in a downtown street" },
+  ],
+  "wedding-transportation": [
+    { src: "/images/services/wed.webp", alt: "Wedding couple greeting guests riding a cream shuttle bus" },
+    { src: "/images/services/wed2.webp", alt: "Wedding party celebrating with confetti at the venue" },
+    { src: "/images/services/wed3.webp", alt: "Bride and groom beside a white limousine at a wedding venue" },
+  ],
+  "school-transportation": [
+    { src: "/images/services/school.webp", alt: "Students boarding a yellow school bus for a field trip" },
+    { src: "/images/services/school2.webp", alt: "District yellow school bus driving along a coastal road" },
+  ],
+  "sports-team-transportation": [
+    { src: "/images/services/sport.webp", alt: "Football players walking through a stadium tunnel before a game" },
+  ],
+  "airport-transfer": [
+    { src: "/images/services/airport.webp", alt: "Group shuttle bus waiting on the airport apron beside the terminal" },
+  ],
+  "sightseeing-tour-bus": [
+    { src: "/images/services/multi.webp", alt: "White motorcoach driving down a scenic mountain road" },
+  ],
+  "church-religious-transportation": [
+    { src: "/images/services/church.webp", alt: "Two executive minibuses parked on a city street ready for a group shuttle" },
+  ],
+  "band-tour-bus": [
+    { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus used for band tours" },
+  ],
+};
 
 
 // Per-service humanized content (unique wording per page, brief Section 12).
@@ -195,6 +231,7 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   const meta = SERVICE_META[slug];
   const faqs = SERVICE_FAQS[slug];
   if (!meta || !faqs) notFound();
+  const photos = SERVICE_PHOTOS[slug];
   const siblings = SERVICES.filter((s) => s.slug !== slug).slice(0, 6);
 
   const serviceSchema = {
@@ -282,6 +319,28 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         <div className="container py-4">
           <h2 className="display-6 fw-bold mb-3 text-dark">What this service is</h2>
           <p className="text-muted lead mb-4" style={{ fontSize: "1.1rem" }}>{meta.intro}</p>
+          {photos && (
+            <>
+              <h3 className="h4 fw-bold text-dark mb-4">Photos from our trips</h3>
+              <div className="row g-3">
+                {photos.map((p, i) => (
+                  <div className={photos.length > 1 ? "col-md-4 col-12" : "col-12 col-lg-8"} key={p.src}>
+                    <Image
+                      src={p.src}
+                      alt={p.alt}
+                      width={1200}
+                      height={800}
+                      sizes="(max-width: 768px) 100vw, 33vw"
+                      className="img-fluid w-100 rounded-4 shadow-sm"
+                      style={{ height: photos.length > 2 ? 260 : 340, objectFit: "cover" }}
+                      loading="lazy"
+                      decoding="async"
+                    />
+                  </div>
+                ))}
+              </div>
+            </>
+          )}
         </div>
       </section>
 

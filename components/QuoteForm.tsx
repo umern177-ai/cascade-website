@@ -34,6 +34,28 @@ export default function QuoteForm() {
       /* storage unavailable — form still works */
     }
   }, []);
+  // Query-param pre-fill (premium city hero forms GET /contact/:
+  // ?pickup=&destination=&date=&passengers=&source=). Only fills empty fields;
+  // without query params or JavaScript the form works exactly as before.
+  const qsRef = useRef<URLSearchParams | null>(null);
+  useEffect(() => {
+    try {
+      const qs = new URLSearchParams(window.location.search);
+      if (qs.toString()) qsRef.current = qs;
+      const fill = (id: string, param: string) => {
+        const v = qs.get(param);
+        if (!v) return;
+        const el = document.getElementById(id) as HTMLInputElement | null;
+        if (el && !el.value) el.value = v;
+      };
+      fill("pickupLocation", "pickup");
+      fill("dropoff", "destination");
+      fill("tripDate", "date");
+      fill("passengers", "passengers");
+    } catch {
+      /* no query params — form still works */
+    }
+  }, []);
 
   async function onSubmit(e: React.FormEvent<HTMLFormElement>) {
     e.preventDefault();
@@ -44,6 +66,9 @@ export default function QuoteForm() {
     // honeypot + time trap
     if ((fd.get("company") as string) || Date.now() - mountedAt.current < 2000) return;
     fd.delete("company");
+    // Page source carried through the hero form's query string, if any.
+    const src = qsRef.current?.get("source");
+    if (src) fd.set("source", src);
     setStatus("sending");
     setErrorMsg("");
     try {

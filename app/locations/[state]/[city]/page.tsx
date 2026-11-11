@@ -14,6 +14,7 @@ import { getCityContent, getCityFallback, type CityContent } from "@/lib/city-co
 import { variantsFor } from "@/lib/city-variants";
 import { getStructuredCityPage } from "@/lib/city-page-data";
 import StructuredCityPage from "@/components/StructuredCityPage"
+import PremiumCityPage from "@/components/PremiumCityPage"
 import FaqAccordion from "@/components/Faq";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
@@ -53,7 +54,9 @@ export default async function CityPage({ params }: Props) {
 
   const structured = getStructuredCityPage(state, city);
   if (structured) {
-    return <StructuredCityPage data={structured} state={state} />;
+    // Cities with the "premium" block in data/city-pages.json render the full
+    // premium design (owner-supplied HTML); the rest keep the structured layout.
+    return structured.premium ? <PremiumCityPage data={structured} state={state} /> : <StructuredCityPage data={structured} state={state} />;
   }
   const nearby = nearbyKept(state, city, 4);
   const name = found.city;

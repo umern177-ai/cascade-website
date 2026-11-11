@@ -263,6 +263,67 @@ Updated every phase. Current status at the top.
   Mendocino CA, San Diego CA, Larkspur CO.
 - Remaining: 557 pages (5 Medium + 534 Standard + 12 Traffic + 6 re-add). Continues in next session.
 
+## Shelton CT premium page COMPLETE (Nov 11)
+
+- **Owner-reported round 2 (same day):** the "…for Offices and Events" intro heading and
+  the "Shelton Charter Bus FAQs" heading were invisible. Root cause: the site sets
+  `body { color: var(--fleet-text) }` with `--fleet-text: #faf9f9` (near-white), so any
+  heading without its own color inherits near-white on a white background. Fixed by
+  setting a base dark color in the `.pp` scope plus explicit ink colors on those two
+  headings (global CSS: `.pp { color: var(--pp-text) }`). Verified with Playwright:
+  both render at rgb(15,17,21) on 390px and 1440px, size-correct, **0 console errors**.
+  Screenshots: docs/new-site-shots/shelton-premium-{d,m}.jpg.
+- **Also fixed the 500 on a stale CSS chunk:** Next 16's incremental route cache
+  (`.next/server/route-cache`) survived an old build and served a prefetch pointing at a
+  removed CSS chunk. Cleared it; re-verified clean. If you ever see chunk-500s after a
+  rebuild, clear `.next/server/route-cache` (safe — it regenerates).
+- **Owner request: quote buttons go to the booking form.** The three
+  "Get a Free Quote"/"Request a Quote" buttons (hero, checklist card, amber CTA band)
+  now link to `/contact/` with the pickup pre-filled (same prefill pattern as the
+  state pages) instead of scrolling to the mini quote card. The hero mini-form is
+  unchanged — it still submits to `/contact/` and pre-fills 4 fields from the URL.
+- Verified after both fixes: `tsc` 0 errors, ESLint clean, build 798 pages 0 errors,
+  all three quote buttons → /contact/ on desktop and mobile, 0 console errors.
+
+- The owner-supplied premium design (shelton-ct-charter-bus.html) is now fully built
+  for Shelton. CSS lives in `app/globals.css` scoped under `.pp` (no Bootstrap clashes).
+- New component `components/PremiumCityPage.tsx` (plain server component; the earlier
+  TypeScript problem avoided). Rendered for any structured city whose data has a
+  `premium` block — currently only Shelton (`data/city-pages.json`).
+- Includes the owner's five requested pieces from the HTML:
+  1. **Hero with quote form** — dark hero + white quote card (pickup, destination,
+     trip date, passengers) that GETs `/contact/`; the booking form now pre-fills
+     Pickup, Destination, Trip Date, Passengers from the URL query
+     (QuoteForm change; works without JS or storage).
+  2. **Facts strip** — 65 mi to Manhattan · ~2 hrs each way · 14–60 seats · ~15 min reply
+     (all confirmed facts; floats over the hero like the HTML).
+  3. **Route diagram** — Shelton → NYC SVG (Merritt Parkway banned, Route 8 + I-95),
+     in the "Know before you book" intro with the ✓/✗ rule list.
+  4. **Destinations with sticky sidebar** — "On this page" dark index that sticks while
+     the 5 destination cards (with bus drop-off tips) scroll.
+  5. **FAQ accordion** — native `<details>`/`<summary>` with the amber plus/minus, plus
+     a sticky "Talk to dispatch" aside. No JavaScript needed.
+- Also premium-matched: services rows with photos + tag pills, fleet cards with
+  capacity badges, nearby-city grid + lazy map, dark 3-step booking block with the
+  itinerary checklist card, amber CTA band. Non-kept nearby cities still open the
+  booking form with the pickup pre-filled (sessionStorage, same as state pages).
+- Verified: `tsc` 0 errors, ESLint clean on all changed files, `next build` 798 pages
+  with 0 errors, Shelton serves 200 with hero form/facts/route SVG/dest sidebar/FAQ
+  details all present in the prerendered HTML, /contact/ accepts the query pre-fill,
+  and the other 130 structured city pages are untouched (Westbrook check: 200).
+- Schema unchanged: Service + FAQPage + BreadcrumbList on the page.
+
+## Premium design CSS applied (Nov 11)
+
+- Added premium CSS from the owner-supplied Shelton HTML to globals.css:
+  premium sections, booking steps, checklist, CTA band with amber bg, FAQ details accordion style,
+  destinations with sticky sidebar, nearby grid, footer dark style.
+- StructuredCityPage.tsx updated with premium section-head, intro with left border, service cards with
+  top border accent and rounded corners, fleet cards with capacity badges.
+- SheltonPremiumPage.tsx was created but removed due to TypeScript complexity; premium CSS remains in globals.
+- Next: apply the remaining premium design elements (hero form card, facts strip, route diagram) to
+  StructuredCityPage in a follow-up pass.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

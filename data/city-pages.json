@@ -53,26 +53,31 @@
     "destinations": [
       {
         "name": "Jones Family Farms",
+        "meta": "White Hills, Shelton · Farm & winery",
         "text": "This 400-acre farm in Shelton's White Hills has been in the same family since 1848. Groups come for strawberries and blueberries in summer, pumpkins in the fall and cut-your-own Christmas trees in December. There is a winery on site for adult groups.",
         "tip": "October and December weekends are very busy and the farm roads are narrow. Call the farm ahead to book a group visit and ask where a bus should unload."
       },
       {
         "name": "Indian Well State Park",
+        "meta": "Lake Housatonic · State park",
         "text": "Indian Well is a wooded state park on Lake Housatonic with a 15-foot waterfall, picnic groves and a swimming beach with lifeguards in summer. It is a popular spot for camp groups and company picnics.",
         "tip": "The lot fills on hot summer weekends and the park closes its gate when it does. Arrive before 10 a.m., and check bus parking and group fees with Connecticut State Parks before you book."
       },
       {
         "name": "Sports Center of Connecticut",
+        "meta": "River Road · Family entertainment",
         "text": "This family entertainment centre on River Road has double-decker ice rinks, mini golf, bowling, laser tag and a driving range. Youth hockey teams, birthday groups and school reward trips all end up here, often in winter when outdoor options are few.",
         "tip": "The centre has a large lot right off Route 110. The bus unloads at the main entrance, and the driver parks on site until your group is ready to leave."
       },
       {
         "name": "Veterans Memorial Park and the Riverwalk",
+        "meta": "Downtown Shelton · Riverfront",
         "text": "Downtown Shelton's riverfront park hosts summer concerts, food trucks and the city's fireworks, with a Saturday farmers' market next door in spring and summer. The old factory buildings around it now hold restaurants, which makes it an easy dinner stop for a group.",
         "tip": "Streets near the river are tight and some close on event nights. We set a drop point a block or two back and agree a pickup time before the crowd leaves."
       },
       {
         "name": "New York City",
+        "meta": "~65 miles · Broadway, museums, holiday trips",
         "text": "Shelton groups head to Manhattan for Broadway shows, museum days and holiday trips. The drive is roughly 65 miles. Because buses are banned from the Merritt Parkway, the trip runs on I-95, which is slower in rush hour than a car's map suggests.",
         "tip": "Leave before 7 a.m. or after 9:30 a.m. to miss the worst traffic. Buses in Manhattan may only stop at marked bus zones, so we pick the drop-off nearest your first stop."
       }
@@ -140,6 +145,27 @@
       }
     ],
     "ctaHeading": "Ready to Book Your Shelton Charter Bus?",
+    "premium": {
+      "heroLead": "Charter buses, minibuses, school buses and Sprinter vans for office shuttles on Bridgeport Avenue, wedding guests at the Courtyard Shelton, field trips to Jones Family Farms and group days in New York City. We plan the route a bus is allowed to drive before we quote it.",
+      "facts": [
+        { "dt": "Shelton to Midtown Manhattan", "dd": "65", "unit": "mi" },
+        { "dt": "Drive time each way to NYC", "dd": "~2", "unit": "hrs" },
+        { "dt": "Vehicle sizes available", "dd": "14–60", "unit": "seats" },
+        { "dt": "Average quote reply time", "dd": "15", "unit": "min" }
+      ],
+      "rules": [
+        { "kind": "no", "title": "Merritt Parkway (Route 15)", "text": "No buses allowed — a car's map will send you this way." },
+        { "kind": "yes", "title": "Route 8 → I-95", "text": "Our standard bus route south to Stamford and Manhattan." }
+      ],
+      "tags": [
+        ["Best fit: Minibus", "Metro-North connections", "All-day loops"],
+        ["Best fit: School bus or coach", "Lowest cost per seat"],
+        ["Hotel ↔ venue loops", "Driveway checked in advance"],
+        ["Best fit: Charter bus", "Route 8 + I-95", "~2 hrs each way"]
+      ],
+      "routing": true,
+      "alsoCovered": "Courtyard Shelton · Hubbell HQ, Waterview Drive · Bridgeport & Stratford Metro-North stations"
+    },
     "source": "ALL-5-CITY-PAGES.md #1",
     "reviewChecks": [
       "Nearby-city miles and drive times are estimates. Replace with real routed distances before publish.",

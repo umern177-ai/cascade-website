@@ -6,8 +6,18 @@ import cityPagesJson from "@/data/city-pages.json";
 
 export type CityService = { title: string; text: string; href: string };
 export type CityVehicle = { slug: string; reason: string };
-export type CityDestination = { name: string; text: string; tip: string };
+export type CityDestination = { name: string; text: string; tip: string; meta?: string };
 export type CityNearbyItem = { city: string; miles?: string };
+// Premium design extras (owner-supplied Shelton premium HTML). Present only on
+// cities marked premium; everything else falls back to the structured layout.
+export type CityPremium = {
+  heroLead?: string;
+  facts?: { dt: string; dd: string; unit?: string }[];
+  rules?: { kind: "no" | "yes"; title: string; text: string }[];
+  tags?: string[][];
+  routing?: boolean;
+  alsoCovered?: string;
+};
 export type CityPageData = {
   state: string;
   slug: string;
@@ -30,6 +40,7 @@ export type CityPageData = {
   source: string;
   reviewChecks: string[];
   sourceLinks: string[];
+  premium?: CityPremium;
 };
 
 const DATA = cityPagesJson as unknown as CityPageData[];

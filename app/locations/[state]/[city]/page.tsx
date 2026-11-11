@@ -13,7 +13,7 @@ import { VEHICLES } from "@/lib/fleet-data";
 import { getCityContent, getCityFallback, type CityContent } from "@/lib/city-content";
 import { variantsFor } from "@/lib/city-variants";
 import { getStructuredCityPage } from "@/lib/city-page-data";
-import StructuredCityPage from "@/components/StructuredCityPage";
+import StructuredCityPage from "@/components/StructuredCityPage"
 import FaqAccordion from "@/components/Faq";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";

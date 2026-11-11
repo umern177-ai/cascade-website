@@ -248,6 +248,21 @@ Updated every phase. Current status at the top.
 - Batch 5: Ontario OR, Walterboro SC, Granbury TX, Tappahannock VA, Wytheville VA, West Dover VT, Monroe WI, Athens AL, Evergreen CO, Englewood FL, Buford GA, Eagle ID, Carbondale IL, Florence IN, Marion IN, Saugus MA, Westford MA.
 - Remaining: 600 pages. Owner: continue without waiting for SEO feedback.
 
+## City enhancement: Batches 1-6 DONE (Nov 10) - 131 of 710 pages
+
+- 131 city pages now run the full consultant structure. Shelton CT approved by SEO.
+- Batches 1-5: 110 pages. Batch 6: 21 more (Oxford MS dropped due to data corruption, will re-add).
+- Remaining: 579 pages. Owner instruction: continue without waiting for SEO feedback.
+
+## City enhancement: Batches 1-7 DONE (Nov 10-11) - 153 of 710 pages
+
+- 153 city pages now run the full consultant structure. Shelton CT  approved by SEO.
+- Batch 7: Oxford MS, Yemassee SC, Sewanee TN, Union City TN, Wharton TX, Manchester Center VT,
+  Tokeland WA, Amherst WI, Danbury WI, Reedsburg WI, Kodiak AK, Palmer AK, Talkeetna AK,
+  Albertville AL, Selma AL, Cayucos CA, Emeryville CA, Granada Hills CA, Los Angeles CA,
+  Mendocino CA, San Diego CA, Larkspur CO.
+- Remaining: 557 pages (5 Medium + 534 Standard + 12 Traffic + 6 re-add). Continues in next session.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

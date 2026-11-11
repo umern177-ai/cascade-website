@@ -1,0 +1,168 @@
+{
+ "ms/Oxford": [
+  "Columbus",
+  "Greenville",
+  "Greenwood",
+  "Ridgeland",
+  "Ruth",
+  "Tylertown"
+ ],
+ "sc/Yemassee": [
+  "Belton",
+  "Bishopville",
+  "Bluffton",
+  "Clemson",
+  "Columbia",
+  "Conway"
+ ],
+ "tn/Sewanee": [
+  "Chattanooga",
+  "Franklin",
+  "Gatlinburg",
+  "Mt. Juliet",
+  "Nashville",
+  "Paris"
+ ],
+ "tn/Union City": [
+  "Chattanooga",
+  "Franklin",
+  "Gatlinburg",
+  "Mt. Juliet",
+  "Nashville",
+  "Paris"
+ ],
+ "tx/Wharton": [
+  "Alpine",
+  "Austin",
+  "Brenham",
+  "Buchanan Dam",
+  "Cotulla",
+  "Cypress"
+ ],
+ "vt/Manchester Center": [
+  "Brattleboro",
+  "Ludlow",
+  "Middletown Springs",
+  "Rutland",
+  "West Dover"
+ ],
+ "wa/Tokeland": [
+  "Anacortes",
+  "Chehalis",
+  "Chelan",
+  "Cle Elum",
+  "Davenport",
+  "Ellensburg"
+ ],
+ "wi/Amherst": [
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable",
+  "Cassville"
+ ],
+ "wi/Danbury": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "wi/Reedsburg": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "ak/Kodiak": [
+  "Juneau",
+  "Palmer",
+  "Talkeetna"
+ ],
+ "ak/Palmer": [
+  "Juneau",
+  "Kodiak",
+  "Talkeetna"
+ ],
+ "ak/Talkeetna": [
+  "Juneau",
+  "Kodiak",
+  "Palmer"
+ ],
+ "al/Albertville": [
+  "Athens",
+  "Atmore",
+  "Auburn",
+  "Calera",
+  "Fairhope",
+  "Opp"
+ ],
+ "al/Selma": [
+  "Albertville",
+  "Athens",
+  "Atmore",
+  "Auburn",
+  "Calera",
+  "Fairhope"
+ ],
+ "ca/Cayucos": [
+  "Anaheim",
+  "Arnold",
+  "Cambria",
+  "Camino",
+  "Dixon",
+  "Emeryville"
+ ],
+ "ca/Emeryville": [
+  "Anaheim",
+  "Arnold",
+  "Cambria",
+  "Camino",
+  "Cayucos",
+  "Dixon"
+ ],
+ "ca/Granada Hills": [
+  "Anaheim",
+  "Arnold",
+  "Cambria",
+  "Camino",
+  "Cayucos",
+  "Dixon"
+ ],
+ "ca/Los Angeles": [
+  "Anaheim",
+  "Arnold",
+  "Cambria",
+  "Camino",
+  "Cayucos",
+  "Dixon"
+ ],
+ "ca/Mendocino": [
+  "Anaheim",
+  "Arnold",
+  "Cambria",
+  "Camino",
+  "Cayucos",
+  "Dixon"
+ ],
+ "ca/San Diego": [
+  "Anaheim",
+  "Arnold",
+  "Cambria",
+  "Camino",
+  "Cayucos",
+  "Dixon"
+ ],
+ "co/Larkspur": [
+  "Avon",
+  "Bayfield",
+  "Denver",
+  "Evergreen",
+  "Glenwood Springs",
+  "Golden"
+ ]
+}

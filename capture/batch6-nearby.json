@@ -1,0 +1,176 @@
+{
+ "mi/Charlevoix": [
+  "Adrian",
+  "Alpena",
+  "Bellaire",
+  "Benton Harbor",
+  "Boyne Falls",
+  "Bridgman"
+ ],
+ "mi/St. Joseph": [
+  "Adrian",
+  "Alpena",
+  "Bellaire",
+  "Benton Harbor",
+  "Boyne Falls",
+  "Bridgman"
+ ],
+ "mo/Bethany": [
+  "Belton",
+  "Branson",
+  "Hannibal",
+  "Independence",
+  "Joplin",
+  "Mount Vernon"
+ ],
+ "ms/Oxford": [
+  "Columbus",
+  "Greenville",
+  "Greenwood",
+  "Ridgeland",
+  "Ruth",
+  "Tylertown"
+ ],
+ "mt/Great Falls": [
+  "Big Sky",
+  "Bozeman",
+  "Dillon",
+  "Emigrant",
+  "Kalispell",
+  "Livingston"
+ ],
+ "nc/Beaufort": [
+  "Asheboro",
+  "Avon",
+  "Charlotte",
+  "Clemmons",
+  "Clinton",
+  "Corolla"
+ ],
+ "nc/Clinton": [
+  "Asheboro",
+  "Avon",
+  "Beaufort",
+  "Charlotte",
+  "Clemmons",
+  "Corolla"
+ ],
+ "nc/Marion": [
+  "Asheboro",
+  "Avon",
+  "Beaufort",
+  "Charlotte",
+  "Clemmons",
+  "Clinton"
+ ],
+ "nh/Amherst": [
+  "Alton",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham",
+  "Hampton"
+ ],
+ "nh/Laconia": [
+  "Alton",
+  "Amherst",
+  "Berlin",
+  "Concord",
+  "Exeter",
+  "Gorham"
+ ],
+ "nj/Wildwood": [
+  "Chatham",
+  "Emerson",
+  "Flemington",
+  "Glassboro",
+  "Mahwah",
+  "Mullica Hill"
+ ],
+ "ny/Geneseo": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "ny/Lake Placid": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "ny/Stone Ridge": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "ny/Suffern": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "ny/Webster": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "oh/Sidney": [
+  "Akron",
+  "Beachwood",
+  "Bellaire",
+  "Cadiz",
+  "Carroll",
+  "Chillicothe"
+ ],
+ "ok/Sapulpa": [
+  "McAlester",
+  "Shawnee",
+  "Smithville",
+  "Stillwater"
+ ],
+ "or/Newport": [
+  "Astoria",
+  "Brookings",
+  "Damascus",
+  "Eugene",
+  "Hood River",
+  "Klamath Falls"
+ ],
+ "pa/Bradford": [
+  "Allentown",
+  "Beaver",
+  "Broomall",
+  "Butler",
+  "Denver",
+  "East Greenville"
+ ],
+ "pa/Selinsgrove": [
+  "Allentown",
+  "Beaver",
+  "Bradford",
+  "Broomall",
+  "Butler",
+  "Denver"
+ ],
+ "sc/Port Royal": [
+  "Belton",
+  "Bishopville",
+  "Bluffton",
+  "Clemson",
+  "Columbia",
+  "Conway"
+ ]
+}

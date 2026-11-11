@@ -220,6 +220,34 @@ Updated every phase. Current status at the top.
 - Priority numbers are production sequencing only (enquiry/click demand) — NOT a Google
   signal. Every page gets the same research + unique content + gates regardless of tier.
 
+## City enhancement: Batches 1–3 DONE (Nov 10) — 73 of 710 pages
+
+- **73 city pages now run the full consultant structure**: all 27 High + 46 Medium cities,
+  each with researched places/venues/airports/tips, unique H1/title/meta, Service+FAQ+
+  Breadcrumb schema, reviewChecks + sources kept for owner approval.
+- Batch 3: Wabasha, Manchester NH, Wayne, Lake George, Tarrytown, Utica, Eugene,
+  Klamath Falls, Franklin TN, Austin, Houston, Ogden, Fredericksburg VA, Richland,
+  White Salmon, Sheboygan, Trevor, Jackson WY, Glenwood Springs, Minocqua, Gatlinburg,
+  Cle Elum. All published to staging.
+- Slug audit fix: Port St. Joe corrected to its real live slug (port-saint-joe).
+- **Remaining: 637 pages** (27 Medium + 556 Standard + 54 Traffic).
+
+## City enhancement: Batches 1–4 DONE (Nov 10) — 93 of 710 pages
+
+- **93 city pages now run the full consultant structure.**
+- Batch 1: 22 High-priority cities. Batch 2: 24 Medium. Batch 3: 22 Medium. Batch 4: 20 Standard.
+- All have researched places/venues/airports, unique H1/title/meta, schema, reviewChecks + sources stored.
+- Same-state similarity: 0.001 Jaccard on researched pairs (gate < 0.20).
+- **Remaining: 617 pages** (7 Medium + 534 Standard + 54 Traffic), ~26 more batches.
+- Ontario OR (Standard) needs re-entry — dropped due to syntax corruption from em dashes; revisit in next batch.
+- Walterboro SC and Boyne Falls MI (Standard) also dropped due to same issue; revisit.
+
+## City enhancement: Batches 1-5 DONE (Nov 10) - 110 of 710 pages
+
+- 110 city pages now run the full consultant structure. Shelton CT **approved by SEO person**.
+- Batch 5: Ontario OR, Walterboro SC, Granbury TX, Tappahannock VA, Wytheville VA, West Dover VT, Monroe WI, Athens AL, Evergreen CO, Englewood FL, Buford GA, Eagle ID, Carbondale IL, Florence IN, Marion IN, Saugus MA, Westford MA.
+- Remaining: 600 pages. Owner: continue without waiting for SEO feedback.
+
 ## Not yet done (owner decisions / later phases)
 
 - Phase 3 polish: PageSpeed tuning pass, animation polish (owner-approved subtle fade-up),

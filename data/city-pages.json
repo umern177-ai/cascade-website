@@ -13300,5 +13300,2316 @@
     "sourceLinks": [
       "https://www.westfordma.gov"
     ]
+  },
+  {
+    "state": "mi",
+    "slug": "charlevoix",
+    "city": "Charlevoix",
+    "title": "Charter Bus Rental in Charlevoix | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Charlevoix, MI for Castle Farms, Lake Michigan beaches, mushroom houses & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Charlevoix, MI for Castle and Lake Days",
+    "heroIntro": "Charlevoix sits on Lake Michigan's Torch Bay where Round Lake cuts the marina through town—Earl Young's mushroom houses line the shore, Castle Farms hosts the weddings, and the Venetian Festival fills the summer calendar. Groups arrive from Traverse City, Grand Rapids and Chicago for castle tours, lake weddings and golf outings.",
+    "servicesHeading": "Group Transportation Services in Charlevoix",
+    "services": [
+      {
+        "title": "Castle Farms and Wedding Shuttles",
+        "text": "The 1918 castle's stone banquet halls run concerts, weddings and garden tours from May to October. A shuttle between the hotels, the castle and the airport solves the venue-lane problem.",
+        "href": "/services/wedding-transportation/"
+      },
+      {
+        "title": "Golf Outings and Resort Days",
+        "text": "The Charlevoix Golf Club, the Bel Lago vineyard tastings and the Lake Michigan beach walks run the group afternoon itineraries; the vehicle stays available.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Traverse City Airport Transfers",
+        "text": "Traverse City Regional (TVC) sits forty-five minutes south with twelve direct routes; Chicago is a five-hour drive by coach.",
+        "href": "/services/airport-transfer/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Charlevoix Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Castle tours, weddings and local loops."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Estate lanes and small venue stops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Chicago and Grand Rapids delegations."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Charlevoix",
+    "destinations": [
+      {
+        "name": "Castle Farms",
+        "text": "The 1918 stone castle's grand hall, the courtyard gardens and the summer concert series—Charlevoix's signature wedding and event venue.",
+        "tip": "Castle Farms books group tours and weddings in advance; the shuttle arrives inside the event's parking window."
+      },
+      {
+        "name": "Earl Young Mushroom Houses",
+        "text": "The boulder-lined mushroom houses built from 1918 to the 1950s—a walking tour of Charlevoix's unique architecture along the lake streets.",
+        "tip": "The mushroom houses are residential; the shuttle drops at the Bridge Street corner and the group walks the tour on the sidewalk."
+      },
+      {
+        "name": "Fisherman's Island State Park",
+        "text": "Six miles of undeveloped Lake Michigan shoreline south of town—picnic groves, dune views and the beach accesses for family groups.",
+        "tip": "The park's beach lots are limited; the shuttle stages at the entrance and the group walks the trail to the water."
+      }
+    ],
+    "mapPins": [
+      "Castle Farms, Charlevoix",
+      "Earl Young Mushroom Houses",
+      "Fisherman's Island State Park",
+      "Charlevoix Marina and Round Lake"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Charlevoix",
+      "items": [
+        {
+          "city": "Adrian"
+        },
+        {
+          "city": "Alpena"
+        },
+        {
+          "city": "Bellaire"
+        },
+        {
+          "city": "Benton Harbor"
+        },
+        {
+          "city": "Boyne Falls"
+        },
+        {
+          "city": "Bridgman"
+        }
+      ]
+    },
+    "faqsHeading": "Charlevoix Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Charlevoix from Chicago?",
+        "a": "About five hours north—the long drive is the reason groups book a coach with a restroom for the trip."
+      },
+      {
+        "q": "When is the Venetian Festival?",
+        "a": "Late July annually with the fireworks over Round Lake; the village fills for four days and the shuttle loop runs from the outskirts."
+      },
+      {
+        "q": "Can a bus reach Castle Farms?",
+        "a": "Yes, the castle's lot handles a minibus with coach staging on US-31; the group walks the stone path into the courtyard."
+      },
+      {
+        "q": "Do you handle castle weddings?",
+        "a": "Yes, Castle Farms and the lake venues book shuttle packages for the wedding weekends; the plan includes the late ride."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Charlevoix Charter Bus?",
+    "reviewChecks": [
+      "Confirm Castle Farms group-parking arrangements with the venue.",
+      "Owner: add one real Charlevoix job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.castlefarms.com"
+    ]
+  },
+  {
+    "state": "mi",
+    "slug": "saint-joseph",
+    "city": "St. Joseph",
+    "title": "Charter Bus Rental in St. Joseph | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in St. Joseph, MI for Silver Beach, winery tours, Whirlpool corporate shuttles & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in St. Joseph, MI for Silver Beach and Wine Days",
+    "heroIntro": "St. Joseph sits on Lake Michigan at the mouth of the St. Joseph River—the Silver Beach carousel, the lighthouses at the pier, and the vineyards climbing the Bluffs behind the city. Groups arrive from Chicago two hours south for the corporate days at Whirlpool, the wine-trail tastings and the lakefront weddings.",
+    "servicesHeading": "Group Transportation Services in St. Joseph",
+    "services": [
+      {
+        "title": "Silver Beach and Lakefront Days",
+        "text": "The Silver Beach carousel, the lighthouse pier and the downtown shops run the family-day itineraries; groups shuttle from Chicago's suburbs to the beach and walk the pier.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Wine Trail Tastings",
+        "text": "The Lake Michigan Shore Wine Trail's tasting rooms run south of town; one Sprinter van handles the loop with the driver as the designated stop holder.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Corporate and Whirlpool Transfers",
+        "text": "Whirlpool's corporate campus keeps visitor groups arriving at SDF and O'Hare for supplier meetings; the shuttle handles the transfers.",
+        "href": "/services/corporate-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for St. Joseph Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Beach days, wine trails and corporate shuttles."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small tasting parties and executive transfers."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Chicago and Detroit delegations."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in St. Joseph",
+    "destinations": [
+      {
+        "name": "Silver Beach Carousel and Pier",
+        "text": "The 1910 carousel's hand-carved horses, the lighthouse pier and the boardwalk shops—a family-day anchor on the lake walk.",
+        "tip": "The beach lots are seasonal; the shuttle stages at the city lot and the group walks the boardwalk path."
+      },
+      {
+        "name": "Lake Michigan Shore Wine Trail",
+        "text": "The tasting rooms south of the city run the wine-trail loops; guests arrive by coach from Chicago's bars.",
+        "tip": "Trail lots are small; Sprinters fit the lanes and the coach stages at the St. Joseph depot."
+      },
+      {
+        "name": "Krasl Art Center and the Downtown",
+        "text": "The art center's sculpture garden and the downtown's galleries run the shopping-and-art itineraries for visiting groups.",
+        "tip": "The center's lot handles a minibus; the coach stages at the regional transit lot two blocks east."
+      }
+    ],
+    "mapPins": [
+      "Silver Beach Carousel, St. Joseph",
+      "Lake Michigan Shore Wine Trail",
+      "Krasl Art Center, St. Joseph"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near St. Joseph",
+      "items": [
+        {
+          "city": "Adrian"
+        },
+        {
+          "city": "Alpena"
+        },
+        {
+          "city": "Bellaire"
+        },
+        {
+          "city": "Benton Harbor"
+        },
+        {
+          "city": "Boyne Falls"
+        },
+        {
+          "city": "Bridgman"
+        }
+      ]
+    },
+    "faqsHeading": "St. Joseph Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is St. Joseph from Chicago?",
+        "a": "About two hours east on I-94—the wine-trail and beach-day shuttle legs are routine with the metro traffic timing built in."
+      },
+      {
+        "q": "Can a coach reach the wine trail?",
+        "a": "The trail lots take Sprinter vans best; the coach stages at the St. Joseph depot and a minibus runs the tasting loop."
+      },
+      {
+        "q": "Do you handle corporate days at Whirlpool?",
+        "a": "Yes, visitor groups book the airport-to-campus shuttle loops for supplier meetings; one contract covers the visit."
+      },
+      {
+        "q": "Where does the bus wait for a lakefront wedding?",
+        "a": "The venue's lot or the carousel area; confirmed per venue, with the last ride after the send-off."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your St. Joseph Charter Bus?",
+    "reviewChecks": [
+      "Confirm Silver Beach seasonal parking rules with the city.",
+      "Owner: add one real St. Joseph job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.sjtoday.org"
+    ]
+  },
+  {
+    "state": "mo",
+    "slug": "bethany",
+    "city": "Bethany",
+    "title": "Charter Bus Rental in Bethany | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Bethany, MO for Harrison County lakes, school trips, Kansas City transfers & rural weddings. Free quote, 24/7.",
+    "h1": "Charter Bus Rental in Bethany, MO for Harrison County Days",
+    "heroIntro": "Bethany is the Harrison County seat in north Missouri—the Bethany Falls lake, the fairgrounds rodeo and the church-network events that cross the county. Groups arrive from Kansas City ninety minutes south for school trips, family reunions and the rural weddings. Cascade Charter Bus arranges charter buses, minibuses and school buses here—KC transfers at the lowest seat cost.",
+    "servicesHeading": "Group Transportation Services in Bethany",
+    "services": [
+      {
+        "title": "KC Airport Transfers",
+        "text": "Kansas City International is ninety minutes south—groups arrive for the county's events, weddings and retreats. One vehicle covers the trip at the lowest per-seat rate.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "County Fair and Church Trips",
+        "text": "The Harrison County Fair, the rodeo and the church-network retreats book recurring shuttle contracts; a school bus handles the local legs.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Lake Weddings",
+        "text": "The lake venues, the barn lawns and the church halls host weddings April through October with the shuttle loops priced flat.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Bethany Groups",
+    "vehicles": [
+      {
+        "slug": "school-bus",
+        "reason": "Local loops and county events at the lowest per-seat cost."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Wedding loops and airport transfers."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "KC delegations and long-distance church trips."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Bethany",
+    "destinations": [
+      {
+        "name": "Harrison County Courthouse and Lake",
+        "text": "The courthouse square and the county lake's fishing runs—the town's postcard and the family-day anchor.",
+        "tip": "The lake's public lot takes a minibus; the coach stages at the courthouse square."
+      },
+      {
+        "name": "Bethany Memorial Chapel and the Fairgrounds",
+        "text": "The chapel's history and the fairground's rodeo—county event stops for visiting school and family groups.",
+        "tip": "The fairground's lot takes buses; the shuttle runs for the fair's grandstand events."
+      }
+    ],
+    "mapPins": [
+      "Harrison County Courthouse, Bethany",
+      "Bethany lake/fairgrounds"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Bethany",
+      "items": [
+        {
+          "city": "Belton"
+        },
+        {
+          "city": "Branson"
+        },
+        {
+          "city": "Hannibal"
+        },
+        {
+          "city": "Independence"
+        },
+        {
+          "city": "Joplin"
+        },
+        {
+          "city": "Mount Vernon"
+        }
+      ]
+    },
+    "faqsHeading": "Bethany Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Bethany from Kansas City?",
+        "a": "About ninety minutes north on I-35—the standard airport and event shuttle leg with metro traffic built into the pickup timing."
+      },
+      {
+        "q": "Do you run school-trip shuttles for Harrison County?",
+        "a": "Yes—the fair trips and lake outings are routine; the school bus covers the local legs at the lowest cost per seat."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Bethany Charter Bus?",
+    "reviewChecks": [
+      "Owner: add one real Bethany job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.bethanymo.org"
+    ]
+  },
+  {
+    "state": "mt",
+    "slug": "great-falls",
+    "city": "Great Falls",
+    "title": "Charter Bus Rental in Great Falls | Cascade Charter Bus",
+    "metaDescription": "Charter bus and van service in Great Falls, MT for Lewis & Clark interpretation, Giant Springs tours & Malmstrom events. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Great Falls, MT for Lewis and Clark Days",
+    "heroIntro": "Great Falls is Lewis and Clark's portage town on the Missouri River—the five falls the expedition climbed around, the interpretive center that tells the story, and the Malmstrom Air Force Base on the plains. Groups arrive from Billings and Missoula for the Lewis and Clark interpretation, the Giant Springs park days and the military events. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Great Falls",
+    "services": [
+      {
+        "title": "Lewis and Clark Interpretive Center Tours",
+        "text": "The center's exhibits portray the expedition's portage around the Great Falls of the Missouri; school groups arrive by coach with the ranger-led program inside the tour window.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Giant Springs and the River Walk",
+        "text": "The springs' state park, the Roe River and the fish hatchery run the family outings; one vehicle covers the park, the hatchery and the museum in a half-day.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Malmstrom and Corporate Transfers",
+        "text": "The military base's visiting groups and the regional corporate arrivals book the event and airport shuttles.",
+        "href": "/services/corporate-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Great Falls Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Park days, museum tours and event shuttles."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Corporate delegations and school programs."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small tours and venue stops."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Great Falls",
+    "destinations": [
+      {
+        "name": "Lewis and Clark Interpretive Center",
+        "text": "The center's exhibits portray the portage around the five falls; the school programs run inside the ranger's calendar.",
+        "tip": "The center's lot handles a minibus; the school groups confirm the tour window with the rangers before the departure."
+      },
+      {
+        "name": "Giant Springs State Park",
+        "text": "The springs' state park, the Roe River (shortest river in America) and the fish hatchery—an easy half-day visit for family and school groups.",
+        "tip": "The park's lot handles buses; the shuttle stages there and the visit runs the springs, the hatchery and the Roe observation deck."
+      }
+    ],
+    "mapPins": [
+      "Lewis and Clark Interpretive Center",
+      "Giant Springs State Park",
+      "Great Falls of the Missouri"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Great Falls",
+      "items": [
+        {
+          "city": "Big Sky"
+        },
+        {
+          "city": "Bozeman"
+        },
+        {
+          "city": "Dillon"
+        },
+        {
+          "city": "Emigrant"
+        },
+        {
+          "city": "Kalispell"
+        },
+        {
+          "city": "Livingston"
+        }
+      ]
+    },
+    "faqsHeading": "Great Falls Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airport for Great Falls groups?",
+        "a": "Great Falls International (GTF) ten minutes from downtown with Seattle, Denver and Salt Lake flights."
+      },
+      {
+        "q": "Do you handle school trips to the interpretive center?",
+        "a": "Yes—the Lewis and Clark programs run inside the ranger's schedule; the shuttle arrives inside the tour window."
+      },
+      {
+        "q": "Can we visit Giant Springs on the same trip?",
+        "a": "Yes—the springs, the hatchery and the Roe River are minutes from the center; one shuttle covers the half-day."
+      },
+      {
+        "q": "Do you handle Malmstrom events?",
+        "a": "Yes—the base's visiting groups use the shuttle for the base tours and the local hotel transfers."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Great Falls Charter Bus?",
+    "reviewChecks": [
+      "Confirm Lewis and Clark Interpretive Center school program times.",
+      "Owner: add one real Great Falls job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.visitgreatfallsmontana.org"
+    ]
+  },
+  {
+    "state": "nc",
+    "slug": "beaufort",
+    "city": "Beaufort",
+    "title": "Charter Bus Rental in Beaufort | Cascade Charter Bus",
+    "metaDescription": "Charter bus and van service in Beaufort, NC for the North Carolina Maritime Museum, Blackbeard history & coastal trips. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Beaufort, NC for the Maritime History",
+    "heroIntro": "Beaufort sits on North Carolina's Crystal Coast, the third-oldest town in the state with the Blackbeard shipwreck excavation, the North Carolina Maritime Museum, and the wild horses on the Shackleford Banks. Groups arrive for the museum tours, Cape Lookout lighthouse trips and the coastal weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Beaufort",
+    "services": [
+      {
+        "title": "Maritime Museum and Blackbeard Tours",
+        "text": "The North Carolina Maritime Museum's Blackbeard shipwreck exhibits (Queen Anne's Revenge) run the school history days; the Cape Lookout lighthouse ferry runs from the adjacent dock.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Cape Lookout and Wild-Horse Tours",
+        "text": "The Cape Lookout National Seashore's lighthouse and the Shackleford Banks' wild horses run the boat-and-walking tours; groups shuttle to the docks and ride the ferry.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Beaufort Wedding Shuttles",
+        "text": "The waterfront venues, Fort Macon's state park backdrop and the coastal bed-and-breakfasts run the wedding loops; guests arrive at Coastal Carolina Regional Airport (EWN) in New Bern.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Beaufort Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Museum tours, lighthouse visits and weddings."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Raleigh and New Bern school programs."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Coastal lanes and small venue stops."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Beaufort",
+    "destinations": [
+      {
+        "name": "North Carolina Maritime Museum",
+        "text": "The Blackbeard artifacts (Queen Anne's Revenge), the hurricane-sunk ships and the coastal trade exhibits—Beaufort's identity in the museum's halls.",
+        "tip": "The museum's lot handles a minibus; school groups confirm the exhibit tour times with the museum."
+      },
+      {
+        "name": "Fort Macon State Park",
+        "text": "The 1834 fort's garrison tours, the beaches and the inlet's wildlife runs the school-day trips and the lighthouse-park loops.",
+        "tip": "The park's lot handles a coach; the ranger-led fort tours are timed for groups and the shuttle aligns."
+      },
+      {
+        "name": "Shackleford Banks Wild Horses",
+        "text": "The wild horses that roam Shackleford Banks—descendants of Spanish mustangs—swim-shuttle tours from the Beaufort docks.",
+        "tip": "The wild-horse tour boats run on scheduled times; groups book the boat first and the shuttle aligns to the sailing."
+      }
+    ],
+    "mapPins": [
+      "NC Maritime Museum, Beaufort",
+      "Fort Macon State Park",
+      "Shackleford Banks wild horses"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Beaufort",
+      "items": [
+        {
+          "city": "Asheboro"
+        },
+        {
+          "city": "Avon"
+        },
+        {
+          "city": "Charlotte"
+        },
+        {
+          "city": "Clemmons"
+        },
+        {
+          "city": "Clinton"
+        },
+        {
+          "city": "Corolla"
+        }
+      ]
+    },
+    "faqsHeading": "Beaufort NC Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airport for Beaufort groups?",
+        "a": "Coastal Carolina Regional (EWN) in New Bern is forty-five minutes; Jacksonville NC (OAJ) an hour west—both handle regional carriers."
+      },
+      {
+        "q": "When can we see the wild horses?",
+        "a": "Year-round on Shackleford Banks—the boat tours run daily from spring through fall; the winter is quieter for the walk-on trips."
+      },
+      {
+        "q": "Do you handle school trips to the Maritime Museum?",
+        "a": "Yes, the museum's Blackbeard exhibits and the fort tours run the school calendar; the shuttle arrives inside the museum's booked window."
+      },
+      {
+        "q": "Where does the bus wait during a waterfront wedding?",
+        "a": "The venue's lot on Front Street; the coach stages at the Beaufort port lot and the loop runs from the guest inns as standard."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Beaufort NC Charter Bus?",
+    "reviewChecks": [
+      "Confirm Maritime Museum group-visit windows (ncmaritimemuseums.org).",
+      "Owner: add one real Beaufort NC job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.visitbeaufortnc.com"
+    ]
+  },
+  {
+    "state": "nc",
+    "slug": "clinton",
+    "city": "Clinton",
+    "title": "Charter Bus Rental in Clinton | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Clinton, NC for Sampson County history, Raleigh transfers & rural weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Clinton, NC for Sampson County Days",
+    "heroIntro": "Clinton is the Sampson County seat and the home of the county's agriculture—the sweet-potato capital of America and the courthouse-square town that hosts the festival. Groups arrive from Raleigh an hour southeast for school trips and the rural weddings. Cascade Charter Bus arranges charter buses, minibuses and school buses here—Raleigh transfers and the local legs.",
+    "servicesHeading": "Group Transportation Services in Clinton",
+    "services": [
+      {
+        "title": "Raleigh Transfers",
+        "text": "Raleigh-Durham International is an hour north—the standard shuttle leg for visiting corporate and wedding guests, with the airport's terminals and the district's venues covered in one contract.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "School History and Agriculture Trips",
+        "text": "The Sampson County History Museum, the sweet-potato farming tours and the rural heritage sites run the school-day calendar.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Rural Wedding Shuttles",
+        "text": "The barn venues, the country churches and the farm lawns in Sampson County run weddings April to October; the loop and the late ride are included.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Clinton Groups",
+    "vehicles": [
+      {
+        "slug": "school-bus",
+        "reason": "Local school trips and county events."
+      },
+      {
+        "slug": "minibus",
+        "reason": "Rural weddings and Raleigh transfers."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Raleigh delegations and big family reunions."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Clinton",
+    "destinations": [
+      {
+        "name": "Sampson County History Museum",
+        "text": "The museum's agricultural exhibits and the county's rail history, with the courthouse square's shops run the group itineraries.",
+        "tip": "The museum's lot takes a minibus; the coach stages at the courthouse square and the class walks the museum block."
+      },
+      {
+        "name": "Sampson County Exposition Center",
+        "text": "The expo center's farm shows, rodeo and community events run the county's group calendar.",
+        "tip": "The expo center's lot takes buses; the shuttle runs for the fair and grandstand events."
+      }
+    ],
+    "mapPins": [
+      "Sampson County History Museum, Clinton",
+      "Sampson County Exposition Center"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Clinton",
+      "items": [
+        {
+          "city": "Asheboro"
+        },
+        {
+          "city": "Avon"
+        },
+        {
+          "city": "Beaufort"
+        },
+        {
+          "city": "Charlotte"
+        },
+        {
+          "city": "Clemmons"
+        },
+        {
+          "city": "Corolla"
+        }
+      ]
+    },
+    "faqsHeading": "Clinton NC Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Clinton from Raleigh?",
+        "a": "About an hour southeast on I-40, the standard airport and event shuttle leg."
+      },
+      {
+        "q": "When is the county fair?",
+        "a": "October; confirm the current year's dates with the fair committee, then book the shuttle around the grandstand events."
+      },
+      {
+        "q": "Do you handle school agricultural trips?",
+        "a": "Yes, the sweet-potato season and the rural heritage tours run the school calendar; the class arrives by coach with the buckets in the bays."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Clinton Charter Bus?",
+    "reviewChecks": [
+      "Owner: add one real Clinton NC job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.clintonnc.com"
+    ]
+  },
+  {
+    "state": "nc",
+    "slug": "marion",
+    "city": "Marion",
+    "title": "Charter Bus Rental in Marion | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Marion, NC for Linville Gorge trips, Blue Ridge drives & McDowell county events. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Marion, NC for Linville and Blue Ridge Days",
+    "heroIntro": "Marion sits between the Blue Ridge Parkway and Lake James—Linville Gorge's cliffs, Marion's Depot Street and McDowell County's mining heritage. Groups arrive from Charlotte an hour east for the gorge trips, school history days and the mountain weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Marion",
+    "services": [
+      {
+        "title": "Linville Gorge and Lake James Tours",
+        "text": "The gorge's cliffs, the Linville Falls trailheads and Lake James's beaches run the school and family trips; the mountain roads carry the margin for the drive through.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Mountain Weddings",
+        "text": "The Catawba riverlawns and the Marion event halls host weddings through the seasons with guests flying into Charlotte.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Marion Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Gorge days, weddings and local loops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Charlotte delegations and school trips."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Trailhead and mountain-lane stops."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Marion",
+    "destinations": [
+      {
+        "name": "Linville Falls and Gorge",
+        "text": "The Linville Falls' 90-foot drops and the gorge's Grand Canyon-of-the-East trails are the Blue Ridge's signature itinerary from Charlotte.",
+        "tip": "The falls trailhead lot is small; the minibus drop takes the gate and the class walks the trail with the ranger."
+      },
+      {
+        "name": "Lake James State Park",
+        "text": "The lake's beaches—Linville Access and Canal Bridge—run the swimming and kayak legs for school and family groups.",
+        "tip": "The park's entry runs per vehicle with a bus rate; confirm the group rate with the park office."
+      }
+    ],
+    "mapPins": [
+      "Linville Falls",
+      "Lake James State Park",
+      "Downtown Marion NC"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Marion",
+      "items": [
+        {
+          "city": "Asheboro"
+        },
+        {
+          "city": "Avon"
+        },
+        {
+          "city": "Beaufort"
+        },
+        {
+          "city": "Charlotte"
+        },
+        {
+          "city": "Clemmons"
+        },
+        {
+          "city": "Clinton"
+        }
+      ]
+    },
+    "faqsHeading": "Marion NC Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Marion from Charlotte?",
+        "a": "About an hour and fifteen minutes east on I-40/the Blue Ridge corridor, the standard school and airport shuttle leg."
+      },
+      {
+        "q": "When is Linville Falls best?",
+        "a": "Spring's high water and October's foliage are the peaks; the trailhead lot fills early on Saturday mornings in season."
+      },
+      {
+        "q": "Can we pair Linville Gorge with a lake day?",
+        "a": "Yes—Linville in the morning and Lake James in the afternoon is a standard one-day plan with one vehicle and one driver."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Marion Charter Bus?",
+    "reviewChecks": [
+      "Confirm Linville Falls trailhead bus parking with the park service.",
+      "Owner: add one real Marion NC job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.mountaincounties.org"
+    ]
+  },
+  {
+    "state": "nh",
+    "slug": "amherst",
+    "city": "Amherst",
+    "title": "Charter Bus Rental in Amherst | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Amherst, NH for Boston transfers, school trips & New England weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Amherst, NH for New England Days",
+    "heroIntro": "Amherst is the Monadnock Region's New Hampshire porch on the Nashua River—the village green's meetinghouse, the Boston ski-run gateway, and the weddings that book the Meeting House. Groups arrive from Boston forty-five minutes south for school trips, corporate retreats and the wedding weekends. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here—the Boston-to-mountain corridor runs through town.",
+    "servicesHeading": "Group Transportation Services in Amherst",
+    "services": [
+      {
+        "title": "Boston Transfers",
+        "text": "Boston Logan is forty-five minutes south—corporate arrivals, school trips and wedding guests ride one vehicle with luggage bays.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Corporate and School Days",
+        "text": "The corporate parks along Route 101 and the school trips book the corporate loops and trip days, with one contract covering the runs.",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "The Meeting House, the barn venues and the Amherst Country Club host weddings May through October; the shuttle loop runs from the guest hotels and the last ride waits for the send-off.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Amherst Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "School trips, weddings and corporate loops."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Executive transfers and small parties."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Boston delegations and big family groups."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Amherst",
+    "destinations": [
+      {
+        "name": "Amherst Village Green and the Meeting House",
+        "text": "The 1771 meetinghouse, the village green and the common's oaks—the town's colonial postcard for visiting weddings and school groups.",
+        "tip": "The Green's parking is permit-based; the shuttle stages at the country-club lot and the walk to the Green is two minutes."
+      },
+      {
+        "name": "Otter Brook Farm and the Nashua River",
+        "text": "The Nashua River's paddling runs and the conservation-land trails run the school ecology and the corporate wellness walks.",
+        "tip": "The river's access lots are small; the Sprinter van drops at the river path and the coach stages on Route 101."
+      }
+    ],
+    "mapPins": [
+      "Amherst Village Green, NH",
+      "Nashua River trails"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Amherst",
+      "items": [
+        {
+          "city": "Alton"
+        },
+        {
+          "city": "Berlin"
+        },
+        {
+          "city": "Concord"
+        },
+        {
+          "city": "Exeter"
+        },
+        {
+          "city": "Gorham"
+        },
+        {
+          "city": "Hampton"
+        }
+      ]
+    },
+    "faqsHeading": "Amherst NH Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Amherst from Boston?",
+        "a": "Forty-five minutes south on Route 3—the standard Boston airport and event shuttle leg with the Route 3 traffic factored in."
+      },
+      {
+        "q": "When do weddings book shuttles here?",
+        "a": "The Meeting House and the barn venues book May through October; the shuttle plans start when the venue's date is set."
+      },
+      {
+        "q": "Can we run school trips from Boston?",
+        "a": "Yes, the nature and history trips run the school calendar with the coach arriving inside the school's pickup windows."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Amherst Charter Bus?",
+    "reviewChecks": [
+      "Owner: add one real Amherst job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.amherstnh.gov"
+    ]
+  },
+  {
+    "state": "nh",
+    "slug": "laconia",
+    "city": "Laconia",
+    "title": "Charter Bus Rental in Laconia | Cascade Charter Bus",
+    "metaDescription": "Charter bus and van service in Laconia, NH for Weirs Beach, Bike Week events, Lake Winnipesaukee trips & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Laconia, NH for Weirs Beach Days",
+    "heroIntro": "Laconia sits on Lake Winnipesaukee's Paugus Bay—the Weirs Beach boardwalk, Bike Week's June motorcycle rally, the MS and the lakeside events that fill the calendar from Memorial Day to Labor Day. Groups arrive for Bike Week, lake tours, school trips and the lakeside weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Laconia",
+    "services": [
+      {
+        "title": "Bike Week and Weirs Beach Shuttles",
+        "text": "Laconia's Motorcycle Week in June fills the city for nine days—the shuttle loops run from the outskirt campgrounds and hotels to the boardwalk; the shuttle is the only practical plan when 300,000 riders fill the streets.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Lake Winnipesaukee Cruises",
+        "text": "The MS Mount Washington's cruise from Weirs Beach runs the day trips; groups ride the shuttle from the hotels to the dock.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Lakeside Wedding Shuttles",
+        "text": "The Weirs Beach venues and the lake's lakefront restaurants host weddings May through September; guests arrive at Boston Logan and the loop between city, boardwalk and venue runs on schedule.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Laconia Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Boardwalk loops, cruises and wedding shuttles."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Boston delegations and Bike Week runs."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small parties and lakeside venues."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Laconia",
+    "destinations": [
+      {
+        "name": "Weirs Beach Boardwalk",
+        "text": "The boardwalk's arcades, the docks and the MS Mount Washington's departure dock run the summer's group days.",
+        "tip": "Weirs Beach closes lakeside streets on cruise nights; the shuttle drops at the north end and the walk is three minutes."
+      },
+      {
+        "name": "MS Mount Washington Cruises",
+        "text": "The historic cruise boat's day and sunset sails run the whole lake for visiting groups and wedding parties.",
+        "tip": "Cruises need reservations; book the sailing first and the shuttle plan follows."
+      }
+    ],
+    "mapPins": [
+      "Weirs Beach, Laconia",
+      "MS Mount Washington cruise",
+      "Laconia Motorcycle Week grounds"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Laconia",
+      "items": [
+        {
+          "city": "Alton"
+        },
+        {
+          "city": "Amherst"
+        },
+        {
+          "city": "Berlin"
+        },
+        {
+          "city": "Concord"
+        },
+        {
+          "city": "Exeter"
+        },
+        {
+          "city": "Gorham"
+        }
+      ]
+    },
+    "faqsHeading": "Laconia Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "When is Bike Week?",
+        "a": "Mid-June annually for nine days—the event fills the city; the shuttle loops from the outskirt campgrounds run as the only practical plan."
+      },
+      {
+        "q": "How far is Laconia from Boston?",
+        "a": "About two hours north on I-93; the standard airport and event shuttle leg with the summer lake traffic added."
+      },
+      {
+        "q": "Can we ride the MS Mount Washington with a group?",
+        "a": "Yes—the cruises run group bookings on the day and sunset sailings; the shuttle handles the dock timing."
+      },
+      {
+        "q": "Where does the bus wait for a Weirs Wedding?",
+        "a": "The venue's lot on the lakeside; the shuttle loop runs from the lake's inns with the last ride after the dance floor closes."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Laconia Charter Bus?",
+    "reviewChecks": [
+      "Confirm MS Mount Washington cruise group bookings for the season.",
+      "Owner: add one real Laconia job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.laconianh.gov"
+    ]
+  },
+  {
+    "state": "nj",
+    "slug": "wildwood",
+    "city": "Wildwood",
+    "title": "Charter Bus Rental in Wildwood | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Wildwood, NJ for the boardwalk, conventions, beach weeks & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Wildwood, NJ for Boardwalk and Convention Days",
+    "heroIntro": "Wildwood is the Jersey Shore's doo-wop capital—four miles of free boardwalk, the convention center, the beach weeks and the 1950s neon architecture. Groups arrive by bus from Philadelphia and New York for beach weeks, conventions and the shore weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Wildwood",
+    "services": [
+      {
+        "title": "Beach-Week and Boardwalk Shuttles",
+        "text": "Wildwood's four-mile boardwalk runs the summer—student groups, family reunions and convention guests shuttle the loop between the motel row and the pier.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Convention Center Transfers",
+        "text": "The Wildwoods Convention Center hosts trade shows and community events through the season; groups shuttle from Philadelphia and New York.",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "The beachfront venues and the doo-wop hotels host weddings April through November; the shuttle loop runs from the guest hotels with the last ride after the reception.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Wildwood Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Boardwalk loops, conventions and weddings."
+      },
+      {
+        "slug": "school-bus",
+        "reason": "Beach-week student groups at the lowest cost."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Philadelphia and NYC delegations."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Wildwood",
+    "destinations": [
+      {
+        "name": "Wildwood Boardwalk",
+        "text": "The four-mile boardwalk's amusement rides, the water parks and the food stands—the group anchor for every visiting tour.",
+        "tip": "The boardwalk's entrance lots fill by mid-morning in summer; the shuttle stages at the Wildwood Crest lot and the walk is two minutes."
+      },
+      {
+        "name": "Wildwoods Convention Center",
+        "text": "The convention center's oceanfront halls run the trade shows and community events on the boardwalk's east end.",
+        "tip": "The convention center's lot handles a coach; the shuttle drops at the center's door and the walk is under a minute."
+      },
+      {
+        "name": "Hereford Inlet Lighthouse",
+        "text": "The 1874 lighthouse's Gothic-revival cottage with gardens meeting the inlet—the shore tour's photo stop for visiting groups.",
+        "tip": "The lighthouse's small lot fits a minibus; the coach stages at the North Wildwood lot and the walk-in is two minutes."
+      }
+    ],
+    "mapPins": [
+      "Wildwood Boardwalk",
+      "Wildwoods Convention Center",
+      "Hereford Inlet Lighthouse"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Wildwood",
+      "items": [
+        {
+          "city": "Chatham"
+        },
+        {
+          "city": "Emerson"
+        },
+        {
+          "city": "Flemington"
+        },
+        {
+          "city": "Glassboro"
+        },
+        {
+          "city": "Mahwah"
+        },
+        {
+          "city": "Mullica Hill"
+        }
+      ]
+    },
+    "faqsHeading": "Wildwood Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Wildwood from Philadelphia?",
+        "a": "About ninety minutes south on the Atlantic City Expressway—the shore-trip shuttle legs run from Philly through the season."
+      },
+      {
+        "q": "When is the best season?",
+        "a": "Memorial Day to Labor Day; beach weeks book the June season and the boardwalk's autumn weekend runs continue through September."
+      },
+      {
+        "q": "Do you handle student beach weeks?",
+        "a": "Yes—June is the school-group season with the shuttle loops running between the motels and the boardwalk at the lowest per-seat cost."
+      },
+      {
+        "q": "Where does the bus wait for a boardwalk wedding?",
+        "a": "The convention center's lot or the motel-row staging; the loop runs from the guest hotels with the late ride included."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Wildwood Charter Bus?",
+    "reviewChecks": [
+      "Confirm Wildwoods Convention Center group parking.",
+      "Owner: add one real Wildwood job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.wildwoodsnj.com"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "geneseo",
+    "city": "Geneseo",
+    "title": "Charter Bus Rental in Geneseo | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Geneseo, NY for SUNY Geneseo visits, Letchworth trips & Rochester transfers. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Geneseo, NY for SUNY and Letchworth Days",
+    "heroIntro": "Geneseo sits on the Genesee River valley south of Rochester—SUNY Geneseo's campus, Letchworth State Park's gorge and the village's National Historic Register Main Street. Groups arrive for campus visits, the park trips and the school days. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here—Rochester transfers, Letchworth trips and the campus loops.",
+    "servicesHeading": "Group Transportation Services in Geneseo",
+    "services": [
+      {
+        "title": "SUNY Geneseo Campus Visits",
+        "text": "The campus's visit days, the family weekends and the athletics events bring families from Rochester and Buffalo; the shuttle covers the visit day.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Letchworth State Park Tours",
+        "text": "The park's three waterfalls and the gorge's cliff walls—a canyon called the Grand Canyon of the East—runs the school and family group days.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Rochester Transfers",
+        "text": "Rochester is thirty minutes north with the regional airport; the shuttle handles the airport and the campus loop.",
+        "href": "/services/airport-transfer/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Geneseo Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Campus visits, park trips and local loops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Rochester school programs and delegations."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Gorge trailheads and small venue stops."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Geneseo",
+    "destinations": [
+      {
+        "name": "Letchworth State Park",
+        "text": "The 14,000-acre park's three waterfalls, the gorge and the Mount Morris Dam—the Grand Canyon of the East for school trips and visitor itineraries.",
+        "tip": "The park's entry is per vehicle; the shuttle stages at the Mount Morris entrance with the group walking the gorge overlooks."
+      },
+      {
+        "name": "SUNY Geneseo",
+        "text": "The college's campus on Main Street runs the accepted-student days and family weekends with the theater productions.",
+        "tip": "Campus lots run managed parking; the shuttle drops at the visitor corner and the family walks the campus green."
+      }
+    ],
+    "mapPins": [
+      "Letchworth State Park",
+      "SUNY Geneseo campus",
+      "Downtown Geneseo Main Street"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Geneseo",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Beacon"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        }
+      ]
+    },
+    "faqsHeading": "Geneseo Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Geneseo from Rochester?",
+        "a": "Thirty minutes south on Route 390—the standard airport and campus shuttle leg."
+      },
+      {
+        "q": "When is Letchworth's best season?",
+        "a": "October's foliage and the spring's high water run the park's peaks; October weekends fill the lot early."
+      },
+      {
+        "q": "Do you handle campus visits?",
+        "a": "Yes, the visit days and accepted-student weekends are scheduled events; the shuttle runs the campus loop on the university's calendar."
+      },
+      {
+        "q": "Where does the bus wait for a Main Street event?",
+        "a": "The village's lots run by the courthouse; the shuttle stages there and the walk to the Main Street is two minutes."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Geneseo Charter Bus?",
+    "reviewChecks": [
+      "Confirm Letchworth State Park entry rates with the park office.",
+      "Owner: add one real Geneseo job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.geneseo.edu"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "lake-placid",
+    "city": "Lake Placid",
+    "title": "Charter Bus Rental in Lake Placid | Cascade Charter Bus",
+    "metaDescription": "Charter bus and van service in Lake Placid, NY for Olympic sites, Whiteface trips, ski weeks & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Lake Placid, NY for Olympic Legacy and Ski Days",
+    "heroIntro": "Lake Placid hosted the 1932 and 1980 Winter Olympics—the Olympic Center's rinks, Whiteface Mountain's 4,380-foot skiing, and the Mirror Lake's Ironman finish line. Groups arrive from Albany and New York for ski weeks, the Olympic tours and the mountain weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Lake Placid",
+    "services": [
+      {
+        "title": "Olympic Sites and Whiteface Transfers",
+        "text": "The Olympic Jumping Complex, the Olympic Museum and Whiteface Mountain's lifts run the group itineraries; the shuttle connects the village's hotels with the venues.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Ski Week Transfers",
+        "text": "Whiteface's ski weeks from Boston and Montreal; the vehicle runs Thursday-evening in, Sunday-morning out with gear under the floor.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "The mirror-lake venues, the Lake Placid Lodge and the mountain-view properties host weddings June through September; the shuttle runs the loop.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Lake Placid Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Olympic sites, ski runs and wedding shuttles."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Whiteface gondola base and small venue stops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Albany and New York delegations."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Lake Placid",
+    "destinations": [
+      {
+        "name": "Whiteface Mountain",
+        "text": "The fifth-highest peak in New York with the highest lift-served skiing east of the Rockies—the gondola and the summit road reach the peak.",
+        "tip": "The Veterans' Memorial Highway toll road to the summit closes in winter; groups ride the lifts from the base area."
+      },
+      {
+        "name": "Olympic Center and Museum",
+        "text": "The 1980 Miracle on Ice rink, the Olympic Museum and the Jumping Complex—the town's Olympic identity for school and visitor groups.",
+        "tip": "The Olympic Center's lot handles a minibus; school groups confirm the museum tour time and the shuttle aligns."
+      },
+      {
+        "name": "Mirror Lake and Main Street",
+        "text": "The lake's beach, the Ironman finish line and Main Street's shops run the evenings for visiting groups.",
+        "tip": "Main Street is walkable from the Mirror Lake Inn; the shuttle stages at the park-and-ride on the north end."
+      }
+    ],
+    "mapPins": [
+      "Whiteface Mountain",
+      "Olympic Center, Lake Placid",
+      "Mirror Lake and Main Street"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Lake Placid",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Beacon"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        }
+      ]
+    },
+    "faqsHeading": "Lake Placid Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airport for Lake Placid groups?",
+        "a": "Adirondack Regional (SLK) is forty-five minutes west; Albany International is two hours south with more carriers. Both are standard shuttle legs."
+      },
+      {
+        "q": "When is ski season?",
+        "a": "December to early April at Whiteface; the Christmas weeks and the February break fill the resort first—corporate blocks book by autumn."
+      },
+      {
+        "q": "Do you handle Olympic-site school tours?",
+        "a": "Yes—the Olympic Center and the Jumping Complex run the school visits; the shuttle arrives inside the museum's booked window."
+      },
+      {
+        "q": "Where does the bus wait for a Mirror Lake wedding?",
+        "a": "The village's lakeside lots; the coach stages at the Olympic Center and the loop runs from the guest hotels with the late ride included."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Lake Placid Charter Bus?",
+    "reviewChecks": [
+      "Confirm Whiteface lift season and Olympic museum tour times.",
+      "Owner: add one real Lake Placid job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.lakeplacid.com"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "stone-ridge",
+    "city": "Stone Ridge",
+    "title": "Charter Bus Rental in Stone Ridge | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Stone Ridge, NY for the Rondout valley, Mohonk trips & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Stone Ridge, NY for the Rondout Valley",
+    "heroIntro": "Stone Ridge sits on the Rondout Creek between the Shawangunk Ridge and the Catskills—Mohonk's cliff trails, the fruit farms and the barn weddings of the valley. Groups arrive from New York and Albany for the Gunks weekends, school nature trips and the valley weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Stone Ridge",
+    "services": [
+      {
+        "title": "Mohonk Preserve and Gunks Trips",
+        "text": "The Mohonk Preserve's cliff trails and the Minnewaska's lake walks run the school and climbing-group itineraries; the class arrives by coach and the preserve's rangers meet the bus.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "The Valley's Fruit Farms and Tasting Days",
+        "text": "The fruit farms and the cideries run the tasting loops; the vehicle covers the loop and the driver holds the farm-lane lots.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Barn Wedding Shuttles",
+        "text": "The valley's barn venues and the farm lawns host weddings May through October; guests arrive from Manhattan by train and bus.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Stone Ridge Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Mohonk trips, farm loops and weddings."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Farm lanes and preserve trailhead stops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "New York school programs with gear."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Stone Ridge",
+    "destinations": [
+      {
+        "name": "Mohonk Preserve and the Gunks",
+        "text": "The 8,000-acre preserve's cliff trails, the carriage roads and the climbing walls—America's most-climbed cliffs and the school trip destination.",
+        "tip": "The preserve's trailhead lots require day passes; the shuttle stages at the visitor center and the class walks the carriage-road loop."
+      },
+      {
+        "name": "Davenport Farms and the Fruit Stands",
+        "text": "The valley's fruit stands, cideries and pick-your-own farms run the seasonal group itineraries.",
+        "tip": "Farms are valley-lane; Sprinter vans fit the drives and the coach stages at the visitor center."
+      },
+      {
+        "name": "Minnewaska State Park",
+        "text": "The Minnewaska's cliff lakes, hiking trails and the swimming beaches at Lake Awosting—school trips and hiker groups walk the trails.",
+        "tip": "The park's entry is per vehicle; the shuttle stages at the main lot and the class walks the carriage road to the lake."
+      }
+    ],
+    "mapPins": [
+      "Mohonk Preserve",
+      "Davenport Farms, Stone Ridge",
+      "Minnewaska State Park Preserve"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Stone Ridge",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Beacon"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        }
+      ]
+    },
+    "faqsHeading": "Stone Ridge Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Stone Ridge from New York?",
+        "a": "About two hours north on Route 44/55—the standard shuttle leg from the city and the Metro-North connection via Poughkeepsie."
+      },
+      {
+        "q": "When is the Gunks climbing season?",
+        "a": "Spring through fall with the October leaves as the peak; the preserve's permits book early in the season for the weekend groups."
+      },
+      {
+        "q": "Do you handle school trips to the Mohonk Preserve?",
+        "a": "Yes—the preserve's ranger programs run the school calendar; the shuttle arrives inside the booked program window."
+      },
+      {
+        "q": "Where does the bus wait for a barn wedding?",
+        "a": "The farm's lane fits a Sprinter; the coach stages on the state road and the loop runs from the guest hotels with the late ride included."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Stone Ridge Charter Bus?",
+    "reviewChecks": [
+      "Confirm Mohonk Preserve day-pass and ranger program rules.",
+      "Owner: add one real Stone Ridge job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.mohonkpreserve.org"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "suffern",
+    "city": "Suffern",
+    "title": "Charter Bus Rental in Suffern | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Suffern, NY for Harriman park trips, Ramapo valley tours & NYC transfers. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Suffern, NY for the Ramapo Valley",
+    "heroIntro": "Suffern sits at the Ramapo Pass on the New York/New Jersey line—Harriman State Park's trails, the Ramapo Valley's county reservation and the Metro-North that reaches Manhattan in an hour. Groups arrive from the city for the corporate retreats, school trips and the riverside weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Suffern",
+    "services": [
+      {
+        "title": "Harriman Park and Ramapo Valley Trips",
+        "text": "Harriman's 200 miles of trails, the Ramapo Valley Reservation's lake walks and the county's historic sites run the school and corporate itineraries.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "NYC Transfers",
+        "text": "Manhattan is an hour south—corporate transfers, show nights and the museum trips run weekly from Suffern's hotels.",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "The Ramapo's inn venues and the county's event halls host weddings April through November; the loop runs from the guest hotels with the late ride included.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Suffern Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Park trips, weddings and corporate loops."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Executive transfers and small venue stops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "NYC delegations and school programs."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Suffern",
+    "destinations": [
+      {
+        "name": "Harriman State Park",
+        "text": "The 47,500-acre park's lakes, trails and the Appalachian Trail crossings—the second-largest state park in New York with school and corporate itineraries.",
+        "tip": "The park's entrance lots are small; the minibus fits and the coach stages at the Suffern commuter lot."
+      },
+      {
+        "name": "Ramapo Valley County Reservation",
+        "text": "The Bergen County reservation's lakes and the mac-berry trails across the border—the school ecology trips cross into New Jersey for the lake loop.",
+        "tip": "The reservation's lot takes a minibus; the coach stages at the Suffern Metro-North station."
+      },
+      {
+        "name": "Lafayette Theatre",
+        "text": "The 1924 movie palace runs the restored marquee and the events—Suffern's evening entertainment stop for visiting groups.",
+        "tip": "The theatre's lot is downtown-limited; the shuttle stages at the commuter lot two blocks away."
+      }
+    ],
+    "mapPins": [
+      "Harriman State Park",
+      "Ramapo Valley County Reservation",
+      "Lafayette Theatre, Suffern"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Suffern",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Beacon"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        }
+      ]
+    },
+    "faqsHeading": "Suffern Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Suffern from Manhattan?",
+        "a": "About an hour south on the Thruway—the corporate and show-night shuttle legs run weekly from Suffern's hotels."
+      },
+      {
+        "q": "Can we hike Harriman Park with a bus drop-off?",
+        "a": "Yes—the park's lots accept minibuses; coaches stage at the Suffern commuter lot and shuttling runs the trailhead legs."
+      },
+      {
+        "q": "Do you handle corporate days?",
+        "a": "Yes, the midtown and Wall Street runs are routine; the shuttle covers the full day with the return after the dinner."
+      },
+      {
+        "q": "Where does the bus wait for a Ramapo wedding?",
+        "a": "The venue's lot or the county reservation area; confirmed per venue with the late ride after the send-off."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Suffern Charter Bus?",
+    "reviewChecks": [
+      "Confirm Harriman State Park lot rules with the Palisades Interstate Park Commission.",
+      "Owner: add one real Suffern job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.suffernvillage.com"
+    ]
+  },
+  {
+    "state": "ny",
+    "slug": "webster",
+    "city": "Webster",
+    "title": "Charter Bus Rental in Webster | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Webster, NY for Webster Park days, Rochester transfers & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Webster, NY for the Rochester East Side",
+    "heroIntro": "Webster sits east of Rochester on Lake Ontario's bay—Webster Park's trails, the Golf and the lakeside restaurants and the farms running the harvest weeks. Groups arrive from Rochester fifteen minutes west. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here—Rochester transfers, school trips and the county weddings.",
+    "servicesHeading": "Group Transportation Services in Webster",
+    "services": [
+      {
+        "title": "Webster Park and School Days",
+        "text": "Webster Park's trails, the Lake Ontario's shoreline and the arboretum run the school trips and family itineraries; the class arrives by coach with the ecology program in the park.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Rochester Transfers",
+        "text": "Rochester is fifteen minutes west—corporate arrivals, college visits and the airport runs use one shuttle with the itinerary written.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "Webster's barn venues, the golf-club lawns and the lakeside restaurants host weddings May through October; the shuttle loop runs from the guest hotels.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Webster Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "School trips, weddings and park days."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Rochester corporate delegations."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Executive transfers and small venue runs."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Webster",
+    "destinations": [
+      {
+        "name": "Webster Park and the Arboretum",
+        "text": "The Monroe County park's trails, the arboretum and the beach run the school-day ecology trips and the park itineraries.",
+        "tip": "The park's lot handles a coach; the class walks the arboretum loop with the rangers who meet the bus."
+      },
+      {
+        "name": "Cherry Ridge and the Webster Farms",
+        "text": "The farm stands, the apple-picking rows and the cider houses run the fall harvest itineraries for school and family groups.",
+        "tip": "The farm lanes are gravel; Sprinter vans fit and the coach stages at the farm's larger lot on the county road."
+      },
+      {
+        "name": "Rochester's Museums (transfer leg)",
+        "text": "Fifteen minutes west, the Strong Museum's exhibits and the Rochester Museum and Science Center run the add-on school day for Webster's groups.",
+        "tip": "The Strong museum's lot runs a dedicated bus bay; the shuttle arrives inside the museum's booked window."
+      }
+    ],
+    "mapPins": [
+      "Webster Park & Arboretum",
+      "Cherry Ridge Farms, Webster",
+      "Strong Museum Rochester"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Webster",
+      "items": [
+        {
+          "city": "Alexandria Bay"
+        },
+        {
+          "city": "Auburn"
+        },
+        {
+          "city": "Beacon"
+        },
+        {
+          "city": "Boonville"
+        },
+        {
+          "city": "Canandaigua"
+        },
+        {
+          "city": "Central Valley"
+        }
+      ]
+    },
+    "faqsHeading": "Webster NY Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Webster from Rochester?",
+        "a": "Fifteen minutes east on Route 404—the corporate and museum shuttle legs run on the county's itinerary with the school trips."
+      },
+      {
+        "q": "When is the apple-picking season?",
+        "a": "September through October; the harvest itineraries run from the farm's U-pick windows and the cider house's opening days."
+      },
+      {
+        "q": "Do you handle school ecology trips?",
+        "a": "Yes, the park's arboretum programs run the school calendar; the coach drops at the park entrance and the class walks the trail with the rangers."
+      },
+      {
+        "q": "Where does the bus wait for a barn wedding?",
+        "a": "The farm's lane fits a Sprinter; the coach stages at the Webster park lot and the shuttle runs the hotel-venue loop."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Webster Charter Bus?",
+    "reviewChecks": [
+      "Confirm Webster Park group access with Monroe County Parks.",
+      "Owner: add one real Webster job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.cityofwebsterny.us"
+    ]
+  },
+  {
+    "state": "oh",
+    "slug": "sidney",
+    "city": "Sidney",
+    "title": "Charter Bus Rental in Sidney | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Sidney, OH for Shelby County history, Dayton transfers & weddings. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Sidney, OH for Shelby County Days",
+    "heroIntro": "Sidney sits in the Shelby County seat north of Dayton—the courthouse's Second Empire dome, the Big Four rail bridge and the county's manufacturing base. Groups arrive from Dayton and Columbus for the campus visits, school trips and the corporate transfers. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here—the Dayton and Columbus runs are standard shuttle legs.",
+    "servicesHeading": "Group Transportation Services in Sidney",
+    "services": [
+      {
+        "title": "Dayton and Columbus Transfers",
+        "text": "Dayton International forty minutes south; Columbus two hours east. Corporate arrivals, wedding guests and school groups ride one vehicle.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "School History and Manufacturing Tours",
+        "text": "The Shelby County Historical Society's tours, the Amos Memorial's exhibits and the district's manufacturing run the school trips.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "County Wedding Shuttles",
+        "text": "The courthouse-square churches and the county barns host weddings April through October; the shuttle loop and the late ride are planned before the quote.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Sidney Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Campus visits, history days and wedding loops."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Dayton and Columbus delegations."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Small venue and courthouse-lane stops."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Sidney",
+    "destinations": [
+      {
+        "name": "The Shelby County Courthouse",
+        "text": "The 1883 courthouse's Second Empire dome and the square's fountain—Sidney's historic anchor for visiting school and wedding groups.",
+        "tip": "The square's parking is wide; festival days close the west side and the shuttle stages at the courthouse lot."
+      },
+      {
+        "name": "Big Four Railroad Bridge",
+        "text": "The rail bridge turned pedestrian crossing over the Great Miami River—Sidney's postcard and the walking stop for any visiting group.",
+        "tip": "The bridge's pedestrian lane is walkable from downtown; the shuttle stages at the courthouse square."
+      }
+    ],
+    "mapPins": [
+      "Shelby County Courthouse, Sidney",
+      "Big Four Railroad Bridge, Sidney"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Sidney",
+      "items": [
+        {
+          "city": "Akron"
+        },
+        {
+          "city": "Beachwood"
+        },
+        {
+          "city": "Bellaire"
+        },
+        {
+          "city": "Cadiz"
+        },
+        {
+          "city": "Carroll"
+        },
+        {
+          "city": "Chillicothe"
+        }
+      ]
+    },
+    "faqsHeading": "Sidney Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Sidney from Dayton?",
+        "a": "About forty minutes south on I-75—the standard airport and event shuttle leg."
+      },
+      {
+        "q": "Do you handle school history trips?",
+        "a": "Yes—the courthouse, the bridge and the county museum's tours run the school calendar with coach arrival on the day."
+      },
+      {
+        "q": "Can we combine Sidney with a Dayton museum day?",
+        "a": "Yes—the courthouse morning and the Dayton museum afternoon is a standard one-day plan; one vehicle covers the round trip."
+      },
+      {
+        "q": "Where does the bus wait for a county wedding?",
+        "a": "The venue's lot or the church's lane; confirmed per venue and the late ride leaves after the send-off."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Sidney Charter Bus?",
+    "reviewChecks": [
+      "Owner: add one real Sidney job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.cityofsidney.org"
+    ]
+  },
+  {
+    "state": "ok",
+    "slug": "sapulpa",
+    "city": "Sapulpa",
+    "title": "Charter Bus Rental in Sapulpa | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Sapulpa, OK for Route 66, Tulsa transfers & creek-nation events. Free final quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Sapulpa, OK for Route 66 Days",
+    "heroIntro": "Sapulpa sits on Route 66, fifteen minutes west of Tulsa—the Mother Road's history, the Creek Nation's tribal grounds and the Bristow's heritage runs. Groups arrive from Tulsa for Route 66 events, corporate days and the tribal weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Sapulpa",
+    "services": [
+      {
+        "title": "Route 66 and Tulsa Transfers",
+        "text": "Route 66's museum stops and Tulsa's art deco downtown run the school and visitor itineraries; the shuttle runs the loop from Sapulpa's Route 66 landmarks.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Tulsa Corporate Transfers",
+        "text": "Tulsa's corporate parks and the airport twenty minutes east—corporate arrivals and delegations use one vehicle",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Tribal Event Shuttles",
+        "text": "The Muscogee Nation's tribal grounds and the Creek County's event halls host events year-round.",
+        "href": "/services/school-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Sapulpa Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Route 66 events, corporate loops and tribal events."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Tulsa delegations."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Executive transfers."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Sapulpa",
+    "destinations": [
+      {
+        "name": "Route 66 Historical Village",
+        "text": "The historical village's vintage gas stations, the 66-themed diner and the Route 66 history centers run the school and visitor itinerary.",
+        "tip": "The village's lot handles a minibus; the Route 66 museum tours run on the booked window and the shuttle aligns."
+      }
+    ],
+    "mapPins": [
+      "Route 66 Historical Village",
+      "Downtown Sapulpa",
+      "Tulsa Golden Driller"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Sapulpa",
+      "items": [
+        {
+          "city": "McAlester"
+        },
+        {
+          "city": "Shawnee"
+        },
+        {
+          "city": "Smithville"
+        },
+        {
+          "city": "Stillwater"
+        }
+      ]
+    },
+    "faqsHeading": "Sapulpa Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Sapulpa from Tulsa?",
+        "a": "Fifteen minutes east on OK-66—the standard corporate and airport shuttle leg with the Route 66 landmarks along the drive."
+      },
+      {
+        "q": "When is the Route 66 festival?",
+        "a": "The Route 66 Village hosts events through the year; confirm the dates and book the shuttle around them."
+      },
+      {
+        "q": "Where does the bus wait for a tribal event?",
+        "a": "The Nation's event lots are managed centrally; the shuttle runs the loop from Tulsa or the local hotels."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Sapulpa Charter Bus?",
+    "reviewChecks": [
+      "Owner: add one real Sapulpa job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.cityofsapulpa.net"
+    ]
+  },
+  {
+    "state": "or",
+    "slug": "newport",
+    "city": "Newport",
+    "title": "Charter Bus Rental in Newport | Cascade Charter Bus",
+    "metaDescription": "Charter bus and shuttle service in Newport, OR for the aquarium, Yaquina Head lighthouse, jetty crabbing & coast weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Newport, OR for the Aquarium Coast",
+    "heroIntro": "Newport sits on the Oregon Coast with the Yaquina Bay lighthouse, the Oregon Coast Aquarium's marine programs and the crab-docks and fish markets. Groups arrive from Portland two hours west for school marine trips, the aquarium and the coastal weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Newport",
+    "services": [
+      {
+        "title": "Aquarium and School Marine Trips",
+        "text": "The Oregon Coast Aquarium's tunnels and tidal pools run the school science trips from Portland and Eugene; the class arrives by coach and the marine programs run inside the visit.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Yaquina Head Lighthouse and Bay Tours",
+        "text": "The lighthouse's visitor center, the tide pools below and the crab-docks run the coastal-day itineraries.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "The bay-front venues and the coastal churches host weddings year-round with guests at Eugene and Portland airports. The shuttle loop between hotels, ceremony and reception is scheduled.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Newport Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Aquarium days, lighthouse tours and weddings."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Portland and Eugene school programs."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Coastal lanes and small party transfers."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Newport",
+    "destinations": [
+      {
+        "name": "Oregon Coast Aquarium",
+        "text": "The aquarium's Passages of the Deep tunnel, the sea-otter and jellyfish exhibits—the marine science center for school groups.",
+        "tip": "The aquarium's lot handles a coach; groups should confirm the education-program window with the aquarium first."
+      },
+      {
+        "name": "Yaquina Head Outstanding Natural Area",
+        "text": "The lighthouse's 93-foot tower, the tide pools below and the whale watching from the head—the coastal stop for any itineraries.",
+        "tip": "The head's lot is managed by the Bureau of Land Management; a minibus drop at the entrance works and the walk is short."
+      },
+      {
+        "name": "Newport's Bayfront and Crab Docks",
+        "text": "The working bayfront, crab cooks and the sea-lion docks—dinner with the sea lions after the day's touring.",
+        "tip": "The bayfront streets are narrow; the Sprinter drop takes the front row and the coach stages at the South Beach marina."
+      }
+    ],
+    "mapPins": [
+      "Oregon Coast Aquarium, Newport",
+      "Yaquina Head Lighthouse",
+      "Newport Bayfront and crab docks"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Newport",
+      "items": [
+        {
+          "city": "Astoria"
+        },
+        {
+          "city": "Brookings"
+        },
+        {
+          "city": "Damascus"
+        },
+        {
+          "city": "Eugene"
+        },
+        {
+          "city": "Hood River"
+        },
+        {
+          "city": "Klamath Falls"
+        }
+      ]
+    },
+    "faqsHeading": "Newport OR Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Newport from Portland?",
+        "a": "About two and a half hours west on Highway 99W and 20—the standard Portland school and corporate shuttle leg."
+      },
+      {
+        "q": "When is the aquarium best for school groups?",
+        "a": "Year-round indoors; the Passages of the Deep tunnel runs the booked education programs. Confirm the group visit with the aquarium."
+      },
+      {
+        "q": "Where does the bus wait for a bay-front wedding?",
+        "a": "The bay-front venue lots; the shuttle stages at the port's marina area and the loop runs from the guest hotels with the late ride included."
+      },
+      {
+        "q": "Can a bus drive Yaquina Head?",
+        "a": "The head's entrance is walk-in; the bus drops at the entrance lot and the group follows the trail to the lighthouse."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Newport Charter Bus?",
+    "reviewChecks": [
+      "Confirm Oregon Coast Aquarium group visit bookings.",
+      "Owner: add one real Newport OR job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.aquarium.org"
+    ]
+  },
+  {
+    "state": "pa",
+    "slug": "bradford",
+    "city": "Bradford",
+    "title": "Charter Bus Rental in Bradford | Cascade Charter Bus",
+    "metaDescription": "Charter bus and van service in Bradford, PA for the Allegheny National Forest, Kinzua Bridge & Zippo/Case museum. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Bradford, PA for the Allegheny Forest",
+    "heroIntro": "Bradford sits in the Allegheny National Forest—Kinzua Bridge's 301-foot skywalk collapsed-tower trail, the Zippo and Case visitors' center, and the oil-heritage sites of the valley. Groups arrive from Pittsburgh and Buffalo for the forest trips, school history days and the Kinzua visits. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Bradford",
+    "services": [
+      {
+        "title": "Kinzua Bridge and Forest Tours",
+        "text": "The Kinzua Skywalk's collapsed towers, the viaduct valley views and the Allegheny forest's trails run the school and visitor itineraries from Pittsburgh and Buffalo.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "Zippo and Oil Heritage Tours",
+        "text": "The Zippo and Case visitors' center, thePenn-Brad oil museum and the Bradford's oil-heritage downtown run the school and fan-club itineraries.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Allegheny Wedding Shuttles",
+        "text": "The forest lodges and the Kinzua-area venues host weddings May through October; guests arrive from Pittsburgh and Buffalo. The shuttle runs the loop.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Bradford Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Forest trips, Kinzua visits and weddings."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Pittsburgh school delegations."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Forest roads and small venue stops."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Bradford",
+    "destinations": [
+      {
+        "name": "Kinzua Bridge State Park",
+        "text": "The viaduct's fallen towers, the 301-foot skywalk and the forest canyon views—Pennsylvania's engineering-icon state park for school groups.",
+        "tip": "The park's lot handles a coach; the skywalk walk is under ten minutes and the visitor center's exhibit is inside the visit."
+      },
+      {
+        "name": "Zippo/Case Visitors' Center",
+        "text": "The Zippo lighters and Case knives' museum runs the branded-heritage tours for collectors and school groups.",
+        "tip": "The center's lot handles a minibus; the group confirms the tour time and the shuttle arrives inside the window."
+      }
+    ],
+    "mapPins": [
+      "Kinzua Bridge State Park",
+      "Zippo/Case Visitors Center, Bradford PA",
+      "Allegheny National Forest"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Bradford",
+      "items": [
+        {
+          "city": "Allentown"
+        },
+        {
+          "city": "Beaver"
+        },
+        {
+          "city": "Broomall"
+        },
+        {
+          "city": "Butler"
+        },
+        {
+          "city": "Denver"
+        },
+        {
+          "city": "East Greenville"
+        }
+      ]
+    },
+    "faqsHeading": "Bradford Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Bradford from Pittsburgh?",
+        "a": "About three hours northeast on the Allegheny National Forest corridor—the standard school and visitor shuttle leg with forest roads factored in."
+      },
+      {
+        "q": "When is Kinzua Bridge open?",
+        "a": "The skywalk runs year-round with the fall colors and winter snow both attracting visitors; the visitor center runs on seasonal hours."
+      },
+      {
+        "q": "Do you handle school trips to the Zippo museum?",
+        "a": "Yes—the visitors' center runs booked group tours; the shuttle arrives inside the window with the class in seats."
+      },
+      {
+        "q": "Where does the bus wait for a forest wedding?",
+        "a": "The lodge's lot or the forest's venue lane; confirmed per venue with the late ride included."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Bradford Charter Bus?",
+    "reviewChecks": [
+      "Confirm Kinzua Bridge State Park skywalk hours for the season.",
+      "Owner: add one real Bradford job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.visitpa.com"
+    ]
+  },
+  {
+    "state": "pa",
+    "slug": "selinsgrove",
+    "city": "Selinsgrove",
+    "title": "Charter Bus Rental in Selinsgrove | Cascade Charter Bus",
+    "metaDescription": "Charter bus and van service in Selinsgrove, PA for Susquehanna University visits, Bucknell trips & river valley weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Selinsgrove, PA for Susquehanna Valley Days",
+    "heroIntro": "Selinsgrove sits on the Susquehanna River's west branch—Susquehanna University's campus, the Bucknell's campus ten minutes south, and the river valley's covered bridges. Groups arrive from Harrisburg and State College for campus visits and the school's river days. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here.",
+    "servicesHeading": "Group Transportation Services in Selinsgrove",
+    "services": [
+      {
+        "title": "Susquehanna University Campus Visits",
+        "text": "Susquehanna's visit days, the RiverHawks' athletics and the family-weekend visits bring families from Harrisburg and Philadelphia.",
+        "href": "/services/airport-transfer/"
+      },
+      {
+        "title": "Bucknell and Campus Transfers",
+        "text": "Bucknell's campus sits fifteen minutes south in Lewisburg; campus visits and tour groups shuttle between the two on a single contract.",
+        "href": "/services/school-transportation/"
+      },
+      {
+        "title": "River Wedding Shuttles",
+        "text": "The riverfront venues, the barn lawns and the Susquehanna's valley properties host weddings through the seasons; the loop runs on schedule.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Selinsgrove Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Campus loops, river days and weddings."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Harrisburg and Philadelphia delegations."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "River venue and campus-lane stops."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Selinsgrove",
+    "destinations": [
+      {
+        "name": "Susquehanna University",
+        "text": "The campus's green quads and the performing-arts center—Selinsgrove's anchor for visiting families.",
+        "tip": "Campus event days run managed parking; the shuttle drops at the visit hall and the family walks the quad."
+      },
+      {
+        "name": "Bucknell University, Lewisburg",
+        "text": "Fifteen minutes south in Lewisburg with the Market Street's downtown and the campus's arts center—the twin campus pairing for visit days.",
+        "tip": "Lewisburg's Market Street is walkable; the shuttle stages at the public lot and the family walks the campus gate."
+      },
+      {
+        "name": "Packer's Ferry and the River Wall",
+        "text": "The Susquehanna's ferry history and the river-wall's heritage trail run the history stops for school groups.",
+        "tip": "The river park's lot is large enough for a coach; the river-wall trail runs from the parking lot."
+      }
+    ],
+    "mapPins": [
+      "Susquehanna University",
+      "Bucknell University, Lewisburg",
+      "Susquehanna River Heritage Trail"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Selinsgrove",
+      "items": [
+        {
+          "city": "Allentown"
+        },
+        {
+          "city": "Beaver"
+        },
+        {
+          "city": "Bradford"
+        },
+        {
+          "city": "Broomall"
+        },
+        {
+          "city": "Butler"
+        },
+        {
+          "city": "Denver"
+        }
+      ]
+    },
+    "faqsHeading": "Selinsgrove Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "Which airport for Selinsgrove groups?",
+        "a": "Harrisburg International (MDT) forty-five minutes south; Williamsport (IPT) forty minutes west. Both are standard shuttle legs for the visiting families."
+      },
+      {
+        "q": "When do campus visits happen?",
+        "a": "Fall and spring visit days, with the spring's accepted-student sessions drawing the largest groups; the shuttle books around the university's calendar."
+      },
+      {
+        "q": "Can we visit both Susquehanna and Bucknell in one day?",
+        "a": "Yes—two campuses, fifteen minutes apart; one vehicle covers the pair on a single contract."
+      },
+      {
+        "q": "Where does the bus wait for a river wedding?",
+        "a": "The venue's lane; the riverfront properties' driveways fit Sprinters and the coach stages at the town's public lot."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Selinsgrove Charter Bus?",
+    "reviewChecks": [
+      "Confirm Susquehanna University visit-day calendar.",
+      "Owner: add one real Selinsgrove job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.selinsgrove.org"
+    ]
+  },
+  {
+    "state": "sc",
+    "slug": "port-royal",
+    "city": "Port Royal",
+    "title": "Charter Bus Rental in Port Royal | Cascade Charter Bus",
+    "metaDescription": "Charter bus and van service in Port Royal, SC for Port Royal Sound, Sands Beach, Paris Island marine trips & weddings. Free quote, 24/7 dispatch.",
+    "h1": "Charter Bus Rental in Port Royal, SC for the Port Royal Sound",
+    "heroIntro": "Port Royal sits on the Port Royal Sound between Beaufort and Parris Island—the Sands Beach boardwalk, the Marine Corps Recruit Depot's graduations and the Sound's crab docks. Groups arrive for the Marine Corps family-graduation weekends, the beach days and the Sound-side weddings. Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans here—Paris Island transfers and the Sound's destinations.",
+    "servicesHeading": "Group Transportation Services in Port Royal",
+    "services": [
+      {
+        "title": "Paris Island Graduation Shuttles",
+        "text": "The Marine Corps Recruit Depot's Friday-graduation ceremonies bring families from across the country—the shuttle runs the airport, hotel and the depot loop with the itinerary built around the graduation schedule.",
+        "href": "/services/corporate-transportation/"
+      },
+      {
+        "title": "Sands Beach and Sound Trips",
+        "text": "The Sands Beach boardwalk, the Sound's fishing pier and the port's crab docks run the beach-day and family-group afternoons.",
+        "href": "/services/sightseeing-tour-bus/"
+      },
+      {
+        "title": "Wedding Shuttles",
+        "text": "The sound-side venues and the Port Royal area bed-and-breakfasts host weddings April through November; the shuttle runs the loop from the guest lodges.",
+        "href": "/services/wedding-transportation/"
+      }
+    ],
+    "vehiclesHeading": "Vehicles for Port Royal Groups",
+    "vehicles": [
+      {
+        "slug": "minibus",
+        "reason": "Paris Island transfers, beach days and weddings."
+      },
+      {
+        "slug": "charter-bus",
+        "reason": "Charleston and Savannah delegations."
+      },
+      {
+        "slug": "sprinter-van",
+        "reason": "Sound-side venue lanes and small parties."
+      }
+    ],
+    "destinationsHeading": "Top Charter Bus Destinations in Port Royal",
+    "destinations": [
+      {
+        "name": "Paris Island Marine Corps Recruit Depot",
+        "text": "The Marine Corps' recruit-training depot runs graduation ceremonies and family-visit days; the shuttle runs the Charleston airport-to-Paris-Island loop routinely for the families.",
+        "tip": "The depot's visitor center controls access and parking—groups register through the base's visitor center, and the shuttle arrives with the booked pass."
+      },
+      {
+        "name": "Sands Beach and the Port Royal Sound",
+        "text": "The boardwalk, the crab docks and the Sound's waterside trail run the beach and fishery days for visiting family and school groups.",
+        "tip": "The Sands Beach lot is walk-in from the boardwalk entrance; the shuttle stages there and the last ride runs after the beach afternoon."
+      }
+    ],
+    "mapPins": [
+      "Marine Corps Recruit Depot, Paris Island",
+      "Sands Beach, Port Royal"
+    ],
+    "nearby": {
+      "heading": "Charter Bus Rental Near Port Royal",
+      "items": [
+        {
+          "city": "Belton"
+        },
+        {
+          "city": "Bishopville"
+        },
+        {
+          "city": "Bluffton"
+        },
+        {
+          "city": "Clemson"
+        },
+        {
+          "city": "Columbia"
+        },
+        {
+          "city": "Conway"
+        }
+      ]
+    },
+    "faqsHeading": "Port Royal Charter Bus FAQs",
+    "faqs": [
+      {
+        "q": "How far is Port Royal from Charleston?",
+        "a": "About seventy minutes north on I-95—the Charleston airport and the Paris Island legs run the same corridor with the base gates timed."
+      },
+      {
+        "q": "Do you handle graduation-weekend shuttles?",
+        "a": "Yes—the Marine Corps graduation weekends are scheduled events; the shuttle runs the Charleston airport, hotel and depot loop with the base pass arranged."
+      },
+      {
+        "q": "Can we visit the Sands Beach?",
+        "a": "Yes—the boardwalk and the beach are open to the public with parking managed at the lot; the shuttle stages and the group walks the Sound walk."
+      },
+      {
+        "q": "Where does the bus wait for a Sound-side wedding?",
+        "a": "The venue's lane or the Sands parking—we confirm per venue and the last ride leaves after the send-off."
+      }
+    ],
+    "ctaHeading": "Ready to Book Your Port Royal Charter Bus?",
+    "reviewChecks": [
+      "Confirm Paris Island visitor-center registration and shuttle-parking rules.",
+      "Owner: add one real Port Royal job in your own words (1 enquiry came from here)."
+    ],
+    "sourceLinks": [
+      "https://www.portroyal.org"
+    ]
   }
 ]

@@ -1,0 +1,176 @@
+{
+ "ri/Block Island": [
+  "Bristol",
+  "Exeter",
+  "Newport",
+  "Warwick"
+ ],
+ "wa/Chelan": [
+  "Anacortes",
+  "Chehalis",
+  "Cle Elum",
+  "Davenport",
+  "Ellensburg",
+  "Forks"
+ ],
+ "wi/Menomonie": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "wi/River Falls": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "in/Seymour": [
+  "Bloomington",
+  "Chesterton",
+  "Columbus",
+  "Culver",
+  "Florence",
+  "Goshen"
+ ],
+ "ma/Salisbury": [
+  "Amesbury",
+  "Attleboro",
+  "Blackstone",
+  "Brockton",
+  "Brookline",
+  "Buzzards Bay"
+ ],
+ "nj/Flemington": [
+  "Chatham",
+  "Emerson",
+  "Glassboro",
+  "Mahwah",
+  "Mullica Hill",
+  "Ocean City"
+ ],
+ "ny/Himrod": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "sc/Pawleys Island": [
+  "Belton",
+  "Bishopville",
+  "Bluffton",
+  "Clemson",
+  "Columbia",
+  "Conway"
+ ],
+ "sc/Ridgeland": [
+  "Belton",
+  "Bishopville",
+  "Bluffton",
+  "Clemson",
+  "Columbia",
+  "Conway"
+ ],
+ "ct/Darien": [
+  "Bethel",
+  "Essex",
+  "Groton",
+  "Litchfield",
+  "Milford",
+  "New Haven"
+ ],
+ "ga/Cleveland": [
+  "Alamo",
+  "Atlanta",
+  "Barnesville",
+  "Buford",
+  "Calhoun",
+  "Cedartown"
+ ],
+ "ga/Greensboro": [
+  "Alamo",
+  "Atlanta",
+  "Barnesville",
+  "Buford",
+  "Calhoun",
+  "Cedartown"
+ ],
+ "ga/Statesboro": [
+  "Alamo",
+  "Atlanta",
+  "Barnesville",
+  "Buford",
+  "Calhoun",
+  "Cedartown"
+ ],
+ "ma/Littleton": [
+  "Amesbury",
+  "Attleboro",
+  "Blackstone",
+  "Brockton",
+  "Brookline",
+  "Buzzards Bay"
+ ],
+ "ms/Columbus": [
+  "Greenville",
+  "Greenwood",
+  "Oxford",
+  "Ridgeland",
+  "Ruth",
+  "Tylertown"
+ ],
+ "nc/Laurinburg": [
+  "Asheboro",
+  "Avon",
+  "Beaufort",
+  "Charlotte",
+  "Clemmons",
+  "Clinton"
+ ],
+ "ny/Alexandria Bay": [
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley",
+  "Clayton"
+ ],
+ "ny/Canandaigua": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Central Valley",
+  "Clayton"
+ ],
+ "ny/Monticello": [
+  "Alexandria Bay",
+  "Auburn",
+  "Beacon",
+  "Boonville",
+  "Canandaigua",
+  "Central Valley"
+ ],
+ "or/Ontario": [
+  "Astoria",
+  "Brookings",
+  "Damascus",
+  "Eugene",
+  "Hood River",
+  "Klamath Falls"
+ ],
+ "sc/Walterboro": [
+  "Belton",
+  "Bishopville",
+  "Bluffton",
+  "Clemson",
+  "Columbia",
+  "Conway"
+ ]
+}

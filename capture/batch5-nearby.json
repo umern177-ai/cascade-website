@@ -1,0 +1,177 @@
+{
+ "or/Ontario": [
+  "Astoria",
+  "Brookings",
+  "Damascus",
+  "Eugene",
+  "Hood River",
+  "Klamath Falls"
+ ],
+ "sc/Walterboro": [
+  "Belton",
+  "Bishopville",
+  "Bluffton",
+  "Clemson",
+  "Columbia",
+  "Conway"
+ ],
+ "tx/Granbury": [
+  "Alpine",
+  "Austin",
+  "Brenham",
+  "Buchanan Dam",
+  "Cotulla",
+  "Cypress"
+ ],
+ "va/Tappahannock": [
+  "Cape Charles",
+  "Chesterfield",
+  "Colonial Heights",
+  "Danville",
+  "Elkton",
+  "Fredericksburg"
+ ],
+ "va/Wytheville": [
+  "Cape Charles",
+  "Chesterfield",
+  "Colonial Heights",
+  "Danville",
+  "Elkton",
+  "Fredericksburg"
+ ],
+ "vt/West Dover": [
+  "Brattleboro",
+  "Ludlow",
+  "Manchester Center",
+  "Middletown Springs",
+  "Rutland"
+ ],
+ "wi/Monroe": [
+  "Amherst",
+  "Antigo",
+  "Ashland",
+  "Avoca",
+  "Barron",
+  "Cable"
+ ],
+ "al/Athens": [
+  "Albertville",
+  "Atmore",
+  "Auburn",
+  "Calera",
+  "Fairhope",
+  "Opp"
+ ],
+ "co/Evergreen": [
+  "Avon",
+  "Bayfield",
+  "Denver",
+  "Glenwood Springs",
+  "Golden",
+  "Grand Junction"
+ ],
+ "fl/Englewood": [
+  "Alachua",
+  "Bonita Springs",
+  "Bradenton Beach",
+  "Daytona Beach",
+  "Jacksonville",
+  "Jensen Beach"
+ ],
+ "ga/Buford": [
+  "Alamo",
+  "Atlanta",
+  "Barnesville",
+  "Calhoun",
+  "Cedartown",
+  "Claxton"
+ ],
+ "id/Eagle": [
+  "Boise",
+  "Fairfield",
+  "Hailey",
+  "Ketchum",
+  "McCall",
+  "Moscow"
+ ],
+ "il/Carbondale": [
+  "East St. Louis",
+  "Edwardsville",
+  "Elgin",
+  "Lake Zurich",
+  "Machesney Park",
+  "Olympia Fields"
+ ],
+ "in/Florence": [
+  "Bloomington",
+  "Chesterton",
+  "Columbus",
+  "Culver",
+  "Goshen",
+  "Granger"
+ ],
+ "in/Marion": [
+  "Bloomington",
+  "Chesterton",
+  "Columbus",
+  "Culver",
+  "Florence",
+  "Goshen"
+ ],
+ "ma/Saugus": [
+  "Amesbury",
+  "Attleboro",
+  "Blackstone",
+  "Brockton",
+  "Brookline",
+  "Buzzards Bay"
+ ],
+ "ma/Westford": [
+  "Amesbury",
+  "Attleboro",
+  "Blackstone",
+  "Brockton",
+  "Brookline",
+  "Buzzards Bay"
+ ],
+ "mi/Charlevoix": [
+  "Adrian",
+  "Alpena",
+  "Bellaire",
+  "Benton Harbor",
+  "Boyne Falls",
+  "Bridgman"
+ ],
+ "mi/St. Joseph": [
+  "Adrian",
+  "Alpena",
+  "Bellaire",
+  "Benton Harbor",
+  "Boyne Falls",
+  "Bridgman"
+ ],
+ "mo/Bethany": [
+  "Belton",
+  "Branson",
+  "Hannibal",
+  "Independence",
+  "Joplin",
+  "Mount Vernon"
+ ],
+ "ms/Oxford": [
+  "Columbus",
+  "Greenville",
+  "Greenwood",
+  "Ridgeland",
+  "Ruth",
+  "Tylertown"
+ ],
+ "mt/Great Falls": [
+  "Big Sky",
+  "Bozeman",
+  "Dillon",
+  "Emigrant",
+  "Kalispell",
+  "Livingston"
+ ]
+}

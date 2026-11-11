@@ -14,7 +14,7 @@ import type { CityPageData } from "@/lib/city-page-data";
 
 const SERVICE_IMAGES: Record<string, string> = {
   "corporate-transportation": "/images/services/corp.webp",
-  "wedding-transportation": "/images/services/wed.webp",
+  "wedding-transportation": "/images/services/wed2.webp",
   "school-transportation": "/images/services/school.webp",
   "sports-team-transportation": "/images/services/sport.webp",
   "airport-transfer": "/images/services/airport.webp",

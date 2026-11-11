@@ -78,21 +78,41 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
             <h2 className="fw-bold" style={{fontSize:'clamp(1.5rem,3.5vw,2rem)',color:'var(--fleet-black)'}}>{data.servicesHeading}</h2>
             <div style={{width:'48px',height:'3px',background:'var(--fleet-orange)',margin:'0.75rem auto 0',borderRadius:'2px'}} />
           </div>
-          <div className="row g-4">
+          <div className="vstack gap-4">
             {data.services.map((sv) => {
               const slug = sv.href.replace('/services/','').replace('/','');
               const img = SERVICE_IMAGES[slug];
               return (
-                <div className="col-lg-6" key={sv.title}>
-                  <div className="premium-card">
-                    {img && <Image src={img} alt={sv.title + ' — Cascade Charter Bus'} width={520} height={200} className="card-img-top-premium" style={{width:'100%',maxHeight:'220px',minHeight:'180px',objectFit:'cover',objectPosition:'center 35%'}} sizes="(max-width:768px) 100vw, 50vw" />}
-                    <div className="card-body-premium" style={{padding:'1.5rem 1.75rem 1.5rem 1.75rem',display:'flex',flexDirection:'column',flexGrow:1,position:'relative'}}>
-                      <h3 style={{fontSize:'1rem',fontWeight:700,color:'var(--fleet-black)',marginBottom:'0.5rem'}}>{sv.title}</h3>
-                      <p style={{fontSize:'0.9rem',color:'#5a5a5a',lineHeight:1.65,flexGrow:1,paddingRight:'0.5rem'}}>{sv.text}</p>
-                      <Link href={sv.href} style={{color:'var(--fleet-orange)',fontWeight:700,fontSize:'0.85rem',textDecoration:'none',marginTop:'auto',display:'flex',alignItems:'center',gap:'0.4rem'}}>
-                        Learn More <ArrowRight size={14} aria-hidden="true" />
-                      </Link>
+                <div key={sv.title} style={{
+                  display:'flex', flexDirection:'row', alignItems:'stretch',
+                  borderRadius:'1rem', overflow:'hidden',
+                  boxShadow:'0 2px 10px rgba(0,0,0,0.07)', background:'#fff',
+                  minHeight:'260px',
+                }}>
+                  {img && (
+                    <div style={{
+                      flex:'0 0 38%',
+                      position:'relative',
+                      overflow:'hidden',
+                      minWidth:'220px'
+                    }}>
+                      <Image src={img} alt={sv.title + ' - Cascade Charter Bus'}
+                        fill={true}
+                        sizes='(max-width:768px) 100vw, 38vw'
+                        style={{objectFit:'contain', width:'100%', height:'100%'}}
+                      />
                     </div>
+                  )}
+                  <div style={{
+                    flex:'1 1 62%',
+                    padding:'1.5rem 2rem',
+                    display:'flex', flexDirection:'column', justifyContent:'center'
+                  }}>
+                    <h3 style={{fontSize:'1.05rem',fontWeight:700,color:'var(--fleet-black)',marginBottom:'0.6rem'}}>{sv.title}</h3>
+                    <p style={{fontSize:'0.9rem',color:'#5a5a5a',lineHeight:1.7,marginBottom:'0.75rem'}}>{sv.text}</p>
+                    <Link href={sv.href} style={{color:'var(--fleet-orange)',fontWeight:700,fontSize:'0.85rem',textDecoration:'none',display:'inline-flex',alignItems:'center',gap:'0.35rem'}}>
+                      Learn More <ArrowRight size={13} aria-hidden="true" />
+                    </Link>
                   </div>
                 </div>
               );

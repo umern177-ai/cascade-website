@@ -5,12 +5,35 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Mail, Phone, Menu, ChevronDown, Star, Shield, Users, Clock, Briefcase, Check,
-  Bus, MapPin, ArrowRight, Award,
+  Star, Shield, Users, Clock, Briefcase,
+  ArrowLeftRight, RefreshCw, Repeat2, CalendarDays, Award,
 } from "lucide-react";
 import FaqAccordion from "@/components/Faq";
+import { VEHICLES } from "@/lib/fleet-data";
+import { SERVICES } from "@/lib/site-data";
 import { SITE, HOME_FAQS, TESTIMONIALS, TRUSTPILOT_REVIEWS } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
+
+// Real service photos (owner-supplied, processed to WebP) — same files the
+// services hub uses.
+const SERVICE_CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
+  "corporate-transportation": { src: "/images/services/corp.webp", alt: "Passengers riding a charter coach to a corporate event" },
+  "wedding-transportation": { src: "/images/services/wed.webp", alt: "Wedding couple greeting guests riding a shuttle bus" },
+  "school-transportation": { src: "/images/services/school.webp", alt: "Students boarding a yellow school bus" },
+  "sports-team-transportation": { src: "/images/services/sport.webp", alt: "Football team heading to a stadium" },
+  "airport-transfer": { src: "/images/services/airport.webp", alt: "Group shuttle bus at the airport terminal" },
+  "sightseeing-tour-bus": { src: "/images/services/multi.webp", alt: "Motorcoach on a scenic tour route" },
+  "church-religious-transportation": { src: "/images/services/church.webp", alt: "Minibuses ready for a group shuttle" },
+  "band-tour-bus": { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus" },
+};
+
+// The four booking shapes (owner request, Nov 12).
+const TRIP_STYLES = [
+  { icon: ArrowLeftRight, title: "One-Way Transfer", text: "One pickup, one drop-off, one ride between them. You give us both addresses and a time, and we quote the single journey door to door.", best: "airport runs, event drop-offs, point-to-point moves" },
+  { icon: RefreshCw, title: "Round Trip", text: "Out and back in one booking. The same vehicle returns on your schedule, so the return leg is already priced and reserved when you leave.", best: "day trips, game days, evenings out" },
+  { icon: Repeat2, title: "Shuttle Loop", text: "A repeat run between two points on a fixed timetable. Your guests step on and off all day while the same driver keeps the loop moving.", best: "weddings, conferences, hotel-to-venue days" },
+  { icon: CalendarDays, title: "Multi-Day Charter", text: "The same coach and driver travel with your group for the whole run, routing each day's plan and staying available between stops.", best: "tours, band runs, camps, multi-city trips" },
+];
 
 const ADVANTAGE = [
   {
@@ -35,15 +58,6 @@ const ADVANTAGE = [
   },
 ];
 
-const JOURNEYS = [
-  { title: "Corporate Events", text: "Get your team there on-time, sharp, relaxed, and stress-free." },
-  { title: "Weddings", text: "Guest shuttle bus loops between hotels, ceremony and reception—one less thing to worry about on the biggest day." },
-  { title: "Sports Teams", text: "Reliable routing because the game starts whether the bus is late or not." },
-  { title: "School & University Bus Rentals", text: "Field trip buses and campus shuttles—the trust of a hundred parents, carried carefully, with strict safety protocols." },
-  { title: "Airport Transfers", text: "Shuttle bus service door-to-terminal, with no missed flights and no scramble for airport parking." },
-  { title: "Band Tours & Motorcoach Charters", text: "Sleeper coaches, tour buses and multi-day motorcoach charters for touring groups and band itineraries." },
-];
-
 function Stars() {
   return (
     <div className="d-flex text-warning mb-3" role="img" aria-label="5 out of 5 stars">
@@ -55,9 +69,9 @@ function Stars() {
 }
 
 export const metadata = pageMeta({
-  title: "Charter Bus Rental Nationwide | Cascade Charter Bus",
+  title: "Charter Bus Rental | Cascade Charter Bus",
   description:
-    "Nationwide charter bus rental, coast to coast from New York to Los Angeles. Premium motorcoaches, shuttles, and executive group transportation with DOT-certified drivers.",
+    "Charter bus rental for group trips of every size—from weddings and field trips to corporate events and band tours. All 50 states, 24/7 dispatch, final quotes.",
   path: "/",
 });
 
@@ -73,7 +87,7 @@ export default function Home() {
           <div className="row">
             <div className="col-lg-8">
               <span className="badge bg-primary text-dark px-3 py-2 rounded-pill text-uppercase tracking-widest mb-3 fw-bold">
-                Premium Nationwide Service
+                Premium Group Transportation
               </span>
               <h1 className="display-1 fw-bold mb-3 lh-1">
                 Group Travel, <br />
@@ -85,9 +99,8 @@ export default function Home() {
                 corporate conference.
               </p>
               <p className="mb-5 text-light opacity-75 fs-6">
-                Nationwide charter bus rentals coast to coast from New York to Los Angeles.
-                Enjoy comfortable, secure, and on-time travel with our professional,
-                DOT-certified drivers. Because your safety is everything.
+                From a 7-seat SUV to a full 56-seat motorcoach—modern vehicles for every size
+                of group, with professional, DOT-certified drivers. Because your safety is everything.
               </p>
               <div className="d-flex flex-wrap gap-3">
                 <Link className="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold hover-lift shadow-lg" href="/contact/">
@@ -120,33 +133,18 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 3. Our Heritage */}
-      <section className="py-5 my-5">
-        <div className="container py-lg-4">
-          <div className="row align-items-center g-5">
+      {/* 3. Our Heritage (compact, owner request) */}
+      <section className="py-5 my-2">
+        <div className="container">
+          <div className="row align-items-center g-4">
             <div className="col-lg-6">
               <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Our Heritage</span>
-              <h2 className="display-5 fw-bold text-dark mt-2 mb-4">Built on Punctuality, Honesty, and Hard Work</h2>
-              <p className="text-muted lead mb-4">
-                Cascade Charter Bus started with just one vehicle, a small garage, and a lot
-                of hard work. There was no big investment and no fleet waiting in the wings.
-                We started with one core belief: that punctuality and honesty are the
-                fundamental principles of every journey we take.
-              </p>
-              <p className="text-muted mb-4">
-                We didn’t become a nationwide company overnight. We’ve grown little by
-                little—one trip, one customer, one referral at a time. Every early pickup and
-                late drop-off taught us something we carried into the next trip. That is why
-                reliability is not something that we just advertise; it is something we built
-                the company around.
-              </p>
-              <p className="text-muted mb-4">
-                What started as a small local operation has grown into a charter bus service
-                serving groups across the country. We’ve helped thousands of people reach
-                their destination safely—whether that’s guests attending a wedding, students
-                going on a field trip, teams heading to championship games, coworkers
-                traveling for corporate events, families gathering for reunions, or friends
-                setting off together.
+              <h2 className="fw-bold text-dark mt-2 mb-3" style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)" }}>Built on Punctuality, Honesty, and Hard Work</h2>
+              <p className="text-muted mb-3" style={{ fontSize: "1rem" }}>
+                Cascade Charter Bus started with one vehicle, a small garage, and a core
+                belief: punctuality and honesty come first on every journey. We didn&apos;t
+                become a company with routes in all 50 states overnight—we grew one trip,
+                one customer, one referral at a time.
               </p>
               <div className="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border-start border-primary border-4">
                 <Award size={32} className="text-primary flex-shrink-0" aria-hidden="true" />
@@ -157,15 +155,47 @@ export default function Home() {
             </div>
             <div className="col-lg-6">
               <div className="position-relative">
-                <div className="rounded-5 overflow-hidden shadow-lg border border-2 border-white">
-                  <Image src="/images/fleet/charter.jpg" alt="Cascade Charter Bus Fleet" width={800} height={600} priority sizes="(max-width: 992px) 100vw, 50vw" className="w-100 h-100 object-fit-cover" style={{ minHeight: 400 }} />
+                <div className="rounded-4 overflow-hidden shadow border border-2 border-white">
+                  <Image src="/images/fleet/charter.jpg" alt="Cascade Charter Bus Fleet" width={800} height={600} priority sizes="(max-width: 992px) 100vw, 50vw" className="w-100 h-100 object-fit-cover" style={{ minHeight: 300 }} />
                 </div>
-                <div className="position-absolute bottom-0 end-0 bg-primary text-white p-4 rounded-4 shadow-lg mb-n3 me-n3 d-none d-md-block">
+                <div className="position-absolute bottom-0 end-0 bg-primary text-white p-3 rounded-4 shadow mb-n3 me-n3 d-none d-md-block">
                   <h3 className="display-6 fw-bold mb-0">5+</h3>
                   <p className="mb-0 text-uppercase small fw-bold">Years of Service</p>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* 3b. Fleet showcase — all seven vehicles (owner request, like the Shelton CT page) */}
+      <section className="py-5" id="fleet-showcase">
+        <div className="container py-lg-3">
+          <div className="text-center mb-5">
+            <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Our Fleet</span>
+            <h2 className="display-5 fw-bold text-dark mt-1">A Vehicle for Every Group and Every Trip</h2>
+            <p className="text-muted mt-2 mb-0">Pick by headcount and trip length — or tell us both and we&apos;ll match the vehicle for you.</p>
+            <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
+          </div>
+          <div className="row g-4 fleet-slider-m">
+            {VEHICLES.map((v) => (
+              <div className="col-lg-3 col-md-4 col-6" key={v.slug}>
+                <Link href={`/fleet/${v.slug}/`} className="text-decoration-none h-100 d-block">
+                  <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 overflow-hidden bg-white">
+                    <div className="position-relative">
+                      <Image src={v.photo} alt={`${v.cardName} rental for ${v.passengers}`} width={480} height={270} sizes="(max-width: 768px) 76vw, 25vw" style={{ width: "100%", height: 170, objectFit: "cover" }} />
+                      <span className="badge rounded-pill px-3 py-2" style={{ position: "absolute", left: 12, bottom: 12, background: "rgba(15,17,21,0.86)", color: "#fff", fontWeight: 700, fontSize: "0.78rem" }}>
+                        <Users size={13} className="me-1" aria-hidden="true" />{v.passengers}
+                      </span>
+                    </div>
+                    <div className="card-body p-3">
+                      <h3 className="h6 fw-bold text-dark mb-1">{v.cardName}</h3>
+                      <p className="text-muted mb-0" style={{ fontSize: "0.82rem" }}>{v.tagline}</p>
+                    </div>
+                  </div>
+                </Link>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -252,45 +282,72 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 6. Tailored Transportation */}
-      <section className="py-5 bg-light">
-        <div className="container py-4">
-          <div className="row align-items-center g-5">
-            <div className="col-lg-6">
-              <span className="text-brand-dark fw-bold text-uppercase">Tailored Transportation</span>
-              <h2 className="display-6 fw-bold mb-4 text-dark">The Journeys We Serve Nationwide</h2>
-              <p className="text-muted mb-4 lead">
-                Whether you’re planning a corporate transfer or a group trip, the same high
-                standard of service comes with every vehicle we send.
-              </p>
-              <div className="vstack gap-4">
-                {JOURNEYS.map((j) => (
-                  <div className="d-flex align-items-start gap-3" key={j.title}>
-                    <div className="p-2 bg-primary bg-opacity-10 rounded-circle text-primary mt-1">
-                      <Check size={20} aria-hidden="true" />
+      {/* 6. Service tiles — all 8 services, compact (owner request; replaces the
+          Tailored Transportation journeys list) + slim custom-quote CTA */}
+      <section className="py-5 bg-light" id="services-showcase">
+        <div className="container py-lg-3">
+          <div className="text-center mb-4">
+            <span className="text-brand-dark fw-bold text-uppercase tracking-wider">What We Do</span>
+            <h2 className="display-5 fw-bold text-dark mt-1">Charter Bus Services</h2>
+            <p className="text-muted mt-2 mb-0">Eight services, one booking team—matched vehicle and driver for every kind of trip.</p>
+            <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
+          </div>
+          <div className="row g-3 g-lg-4">
+            {SERVICES.map((s) => {
+              const img = SERVICE_CARD_PHOTOS[s.slug];
+              return (
+                <div className="col-lg-3 col-md-4 col-6" key={s.slug}>
+                  <Link href={`/services/${s.slug}/`} className="text-decoration-none h-100 d-block">
+                    <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 overflow-hidden bg-white">
+                      {img && (
+                        <Image src={img.src} alt={img.alt} width={480} height={270} sizes="(max-width: 768px) 50vw, 25vw" style={{ width: "100%", height: 130, objectFit: "cover" }} />
+                      )}
+                      <div className="card-body p-3 text-center d-flex flex-column">
+                        <h3 className="h6 fw-bold text-dark mb-3" style={{ fontSize: "0.9rem", flexGrow: 1 }}>{s.name}</h3>
+                        <span className="btn btn-sm rounded-pill px-3 py-1 fw-bold btn-outline-dark align-self-center" style={{ fontSize: "0.72rem" }}>VIEW DETAILS</span>
+                      </div>
                     </div>
-                    <div>
-                      <h3 className="h6 fw-bold text-dark mb-1">{j.title}</h3>
-                      <p className="text-muted small mb-0">{j.text}</p>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
-            <div className="col-lg-6">
-              <div className="bg-dark p-2 shadow-lg rounded-5 overflow-hidden">
-                <div className="bg-dark p-5 text-white rounded-5 text-center shadow-sm border border-secondary">
-                  <Bus size={48} className="text-primary mb-3" aria-hidden="true" />
-                  <h3 className="fw-bold mb-3">Plan Your Custom Journey Today</h3>
-                  <p className="opacity-75 mb-4 small">
-                    Enter your destination details and group requirements to receive a custom quote from our 24/7 logistics team.
-                  </p>
-                  <Link className="btn btn-primary btn-lg rounded-pill px-5 fw-bold w-100 py-3" href="/contact/">
-                    REQUEST A CUSTOM QUOTE
                   </Link>
                 </div>
-              </div>
+              );
+            })}
+          </div>
+          <div className="d-flex align-items-center justify-content-between gap-3 flex-wrap bg-dark rounded-4 p-4 mt-4">
+            <div>
+              <h3 className="fw-bold text-white mb-1" style={{ fontSize: "1.15rem" }}>Plan Your Custom Journey Today</h3>
+              <p className="text-white-50 mb-0" style={{ fontSize: "0.9rem" }}>Enter your destination details and group requirements — a custom quote from our 24/7 logistics team.</p>
             </div>
+            <Link className="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow-sm" href="/contact/">
+              REQUEST A CUSTOM QUOTE
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* 6b. Plan your charter — the four booking shapes (owner request) */}
+      <section className="py-5 my-2" id="plan-your-charter">
+        <div className="container py-lg-3">
+          <div className="text-center mb-5">
+            <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Plan Your Charter</span>
+            <h2 className="display-5 fw-bold text-dark mt-1">Four Ways to Book a Charter Bus</h2>
+            <p className="text-muted mt-2 mb-0">Every booking is one of these four shapes. Tell us which fits your trip and we&apos;ll quote it as one plan.</p>
+            <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
+          </div>
+          <div className="row g-4">
+            {TRIP_STYLES.map((t) => (
+              <div className="col-lg-3 col-md-6" key={t.title}>
+                <div className="card border-0 shadow-sm rounded-4 h-100 p-4 hover-lift">
+                  <div className="d-flex align-items-center gap-3 mb-3">
+                    <div className="p-2 bg-primary bg-opacity-10 rounded-circle text-primary d-flex align-items-center justify-content-center" style={{ width: 52, height: 52, flexShrink: 0 }}>
+                      <t.icon size={24} aria-hidden="true" />
+                    </div>
+                    <h3 className="h6 fw-bold text-dark mb-0">{t.title}</h3>
+                  </div>
+                  <p className="text-muted mb-3 lh-base">{t.text}</p>
+                  <p className="mb-0 small"><strong className="text-dark">Best for:</strong> {t.best}</p>
+                </div>
+              </div>
+            ))}
           </div>
         </div>
       </section>
@@ -310,25 +367,6 @@ export default function Home() {
             <div className="col-lg-10">
               <FaqAccordion faqs={HOME_FAQS} idPrefix="home-faq" />
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 8. Locations */}
-      <section className="py-5 bg-light border-top border-bottom">
-        <div className="container py-4 text-center">
-          <MapPin size={40} className="text-primary mb-3" aria-hidden="true" />
-          <h2 className="fw-bold mb-3 text-dark">Serving Every Major City &amp; Region in the USA</h2>
-          <p className="text-muted mb-4 mx-auto" style={{ maxWidth: 680 }}>
-            From coast to coast—New York, Los Angeles, Chicago, Houston, Atlanta, and everywhere in between. Browse our directory to find charter bus solutions in your region.
-          </p>
-          <div className="d-flex justify-content-center gap-3 flex-wrap">
-            <Link className="btn btn-primary rounded-pill px-5 fw-bold py-3 hover-lift shadow-sm" href="/locations/">
-              BROWSE ALL LOCATIONS <ArrowRight size={18} className="ms-2" aria-hidden="true" />
-            </Link>
-            <Link className="btn btn-outline-dark rounded-pill px-5 fw-bold py-3 hover-lift" href="/fleet/">
-              EXPLORE OUR FLEET
-            </Link>
           </div>
         </div>
       </section>

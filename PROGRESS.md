@@ -4,22 +4,24 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
-**Real service photos deployed to staging (Nov 11). Shelton premium page live on staging (commit 46b54bf).**
-- Owner supplied 13 photos (servicespictures/). 12 processed → public/images/services/
-  (WebP, ≤1600px, EXIF/GPS stripped, 61–254 KB) via scripts/process-service-photos.mjs;
-  originals untouched. school-trips3.jpg EXCLUDED (another operator's branding on the bus:
-  "МИДГАРД", website + phone on the side) — flagged to owner for a replacement.
-- Replaced card photos with the same filenames (corp/wed/school/sport/airport/multi.webp)
-  → all 130+ city pages incl. Shelton premium update automatically; new church.webp added
-  (church service card no longer reuses the school photo); band-tour-bus still uses the
-  fleet sleeper photo (no owner photo yet).
-- Service pages (8): new "Photos from our trips" gallery after "What this service is"
-  (3/2/1 photos per service, lazy, descriptive alt text). Services hub: photos on all 8 cards.
-- Verified: tsc/eslint clean, build 798 pages 0 errors, images render on hub + service
-  pages + Shelton (Playwright), 0 console errors. NOTE: next/image optimizer cache can
-  serve stale photos after replacing an image file — clear .next (full rebuild) after any
-  image replacement.
-- Deployed: Staging (commit follows) → Vercel auto-deploy; review on https://cascade-website-rho.vercel.app
+**Homepage rework live on staging (Nov 12).** Owner requests applied to /:
+- Our Heritage compacted (2 short paragraphs, smaller type, tighter paddings).
+- NEW fleet showcase after Heritage: all 7 vehicles with photos + capacity badges
+  (same data source lib/fleet-data.ts), linking to fleet pages.
+- Tailored Transportation replaced with 8 compact service tiles (owner photo +
+  VIEW DETAILS, rounded cards) + a slim dark "Plan Your Custom Journey Today"
+  CTA banner. Decision made: tiles beat the old journeys list (photos, direct
+  links, less space); journeys content still covered by the service pages.
+- "Serving Every Major City & Region" section REMOVED; the word "nationwide"
+  removed from the home page (hero badge, hero copy, heritage, title, meta
+  description). NOTE: the site-wide footer blurb still says "Nationwide group
+  transportation…" — owner to confirm if that should change too.
+- NEW "Plan Your Charter — Four Ways to Book a Charter Bus": One-Way Transfer,
+  Round Trip, Shuttle Loop, Multi-Day Charter (icon tiles with details + best-for).
+- Verified: tsc/eslint clean, build 798 pages 0 errors, sections + photos render
+  desktop + mobile, 0 console errors, no "nationwide" text left on the home page.
+- Commits today: 950a219 (photos), 1648276 (wedding card), f69f6f0 (footer
+  underlines), 7ebb4cd (hero grid lines), + this homepage rework.
 
 ## Owner decisions locked (Nov 9 + Nov 9 later)
 

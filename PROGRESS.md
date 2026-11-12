@@ -4,7 +4,20 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
-**Homepage rework live on staging (Nov 12).** Owner requests applied to /:
+**Shelton page human-voice rewrite pushed (Nov 12, after homepage rework).**
+- Rewrote the page copy so it reads like a dispatcher wrote it, not a template:
+  killed the repeated "we plan the route a bus is allowed to drive" line (now
+  appears exactly once), varied sentence rhythm across sections, contractions
+  ("it's", "you'll..."), varied tip openers (not every card opens "The ..."),
+  fixed British "centre" → "center", tightened service paragraphs and tips.
+- Facts unchanged: 65 mi/~2 hrs, Merritt ban, Route 8+I-95, farm since 1848,
+  Route 110, Courtyard Shelton, Hubbell Waterview Dr, Metro-North stations,
+  48-h accessibility notice. Route intro paragraphs moved from the component
+  into data (premium.routingIntro) so future premium cities are data-driven.
+- Verified: JSON/tsc/eslint clean, build 798 pages 0 errors, renders with 0
+  console errors; promise line now appears once; no "nationwide"/"centre".
+
+## Homepage rework live on staging (Nov 12). Owner requests applied to /:
 - Our Heritage compacted (2 short paragraphs, smaller type, tighter paddings).
 - NEW fleet showcase after Heritage: all 7 vehicles with photos + capacity badges
   (same data source lib/fleet-data.ts), linking to fleet pages.

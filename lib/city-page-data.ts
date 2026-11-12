@@ -16,6 +16,7 @@ export type CityPremium = {
   rules?: { kind: "no" | "yes"; title: string; text: string }[];
   tags?: string[][];
   routing?: boolean;
+  routingIntro?: string[]; // paragraphs under the intro H2 when routing is on
   alsoCovered?: string;
 };
 export type CityPageData = {

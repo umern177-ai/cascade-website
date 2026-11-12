@@ -11,22 +11,22 @@
     "services": [
       {
         "title": "Corporate and Employee Shuttles",
-        "text": "Shelton is an office town. Hubbell has its headquarters on Waterview Drive, and the corporate parks along Bridgeport Avenue hold thousands of desks. Most of our Shelton work is for companies: daily shuttles between an office and the Metro-North stations in Bridgeport or Stratford, transport for off-site meetings, and client groups coming up from New York. For a loop that runs all day, a minibus usually beats a coach. It is easier to stage outside an office building and costs less per hour.",
+        "text": "Shelton is an office town. Hubbell runs its headquarters from Waterview Drive, and the business parks along Bridgeport Avenue hold thousands of desks. Most of our work here is for companies: daily shuttles between an office and the Bridgeport or Stratford train stations, rides to off-site meetings, and client groups coming up from New York. An all-day loop usually books as a minibus — it stages more easily outside a building and goes easier on the hourly rate.",
         "href": "/services/corporate-transportation/"
       },
       {
         "title": "School and Field Trips",
-        "text": "Two Shelton places fill up with school groups every year. Jones Family Farms, a 400-acre farm in the White Hills that dates to 1848, takes classes for berry picking in summer and pumpkins in October. The Sports Center of Connecticut on River Road has ice rinks, mini golf, bowling and laser tag under one roof. For a short local run like these, a school bus is the lowest cost per seat. For a longer day out, a coach adds a restroom and luggage space.",
+        "text": "Two places in Shelton fill with school groups every year. Jones Family Farms — a 400-acre farm in the White Hills, worked by the same family since 1848 — takes classes for berries in summer and pumpkins in October. The Sports Center of Connecticut on River Road packs ice rinks, mini golf, bowling and laser tag under one roof. A school bus is the cheapest seat in town for short local runs; on a long day out, a coach buys you a restroom and luggage space.",
         "href": "/services/school-transportation/"
       },
       {
         "title": "Wedding Shuttles",
-        "text": "Wedding guests in Shelton usually stay in the hotels on Bridgeport Avenue, including the Courtyard Shelton, and the venue is a drive away in the hills or along the Housatonic River. A shuttle loop between the hotel and the venue means nobody has to find the place in the dark or drive home afterwards. Give us the venue's address and the reception end time. We check the driveway on a map, pick a vehicle that fits it, and schedule the last run.",
+        "text": "Wedding guests usually stay at the hotels along Bridgeport Avenue — the Courtyard Shelton among them — while the venue tends to sit out in the hills or along the Housatonic. A loop between hotel and venue means nobody hunts for the place in the dark, and nobody drives after the reception. Send us the venue address and the time the reception ends. We check the driveway on a map, pick a vehicle that fits it, and plan the last run around that.",
         "href": "/services/wedding-transportation/"
       },
       {
         "title": "New York City Day Trips",
-        "text": "Midtown Manhattan is roughly 65 miles from Shelton. A car's map will send you down the Merritt Parkway, but a bus can't use it, so we route on Route 8 and I-95. Allow about two hours each way, more on a weekday morning. For theater groups, school trips and company outings, one coach means one drop-off and one pickup point in the city. We agree both with you before the trip, since buses in Manhattan can only stop in set places.",
+        "text": "Midtown sits about 65 miles from Shelton. A car's map runs you down the Merritt Parkway; buses can't take it, so the trip moves to Route 8 and I-95 instead. Figure about two hours each way, longer on a weekday morning. One coach also means one meeting point in the city whichever way you're headed — and in Manhattan a bus may only stop in marked bus zones, so we agree on the drop-off well before the trip.",
         "href": "/services/sightseeing-tour-bus/"
       }
     ],
@@ -34,19 +34,19 @@
     "vehicles": [
       {
         "slug": "minibus",
-        "reason": "Office-park shuttles and wedding loops."
+        "reason": "Stages easily outside office parks and venues; softer hourly rate than a coach."
       },
       {
         "slug": "charter-bus",
-        "reason": "New York trips and anything long-distance."
+        "reason": "Restroom, reclining seats and luggage bays — our pick for New York."
       },
       {
         "slug": "school-bus",
-        "reason": "Lowest cost per seat for local field trips."
+        "reason": "Cheapest seat for a short local run."
       },
       {
         "slug": "sprinter-van",
-        "reason": "Executive transfers and small airport runs."
+        "reason": "Executive transfers and small airport pickups."
       }
     ],
     "destinationsHeading": "Top Charter Bus Destinations in Shelton",
@@ -54,32 +54,32 @@
       {
         "name": "Jones Family Farms",
         "meta": "White Hills, Shelton · Farm & winery",
-        "text": "This 400-acre farm in Shelton's White Hills has been in the same family since 1848. Groups come for strawberries and blueberries in summer, pumpkins in the fall and cut-your-own Christmas trees in December. There is a winery on site for adult groups.",
-        "tip": "October and December weekends are very busy and the farm roads are narrow. Call the farm ahead to book a group visit and ask where a bus should unload."
+        "text": "A 400-acre farm in the White Hills, worked by the same family since 1848. Groups come for strawberries and blueberries in summer, pumpkins in the fall and cut-your-own trees in December, and there's a winery on site for adult groups.",
+        "tip": "October and December weekends jam the farm roads, and they're narrow to begin with. Book the group visit with the farm ahead of time and ask where a bus should unload."
       },
       {
         "name": "Indian Well State Park",
         "meta": "Lake Housatonic · State park",
-        "text": "Indian Well is a wooded state park on Lake Housatonic with a 15-foot waterfall, picnic groves and a swimming beach with lifeguards in summer. It is a popular spot for camp groups and company picnics.",
-        "tip": "The lot fills on hot summer weekends and the park closes its gate when it does. Arrive before 10 a.m., and check bus parking and group fees with Connecticut State Parks before you book."
+        "text": "A wooded state park on Lake Housatonic with a 15-foot waterfall, picnic groves and a lifeguarded beach in summer. Camp groups and company picnics claim it all season.",
+        "tip": "On hot summer weekends the lot fills and the park shuts its gate behind the last car. Get there before 10 a.m., and check bus parking and group fees with Connecticut State Parks before you commit."
       },
       {
         "name": "Sports Center of Connecticut",
         "meta": "River Road · Family entertainment",
-        "text": "This family entertainment centre on River Road has double-decker ice rinks, mini golf, bowling, laser tag and a driving range. Youth hockey teams, birthday groups and school reward trips all end up here, often in winter when outdoor options are few.",
-        "tip": "The centre has a large lot right off Route 110. The bus unloads at the main entrance, and the driver parks on site until your group is ready to leave."
+        "text": "The family entertainment center on River Road: double-decker ice rinks, mini golf, bowling, laser tag and a driving range. Youth hockey teams, birthday parties and school reward trips land here, especially in winter.",
+        "tip": "Big lot right off Route 110. The bus unloads at the main entrance and the driver parks on site until your group is ready to go."
       },
       {
         "name": "Veterans Memorial Park and the Riverwalk",
         "meta": "Downtown Shelton · Riverfront",
-        "text": "Downtown Shelton's riverfront park hosts summer concerts, food trucks and the city's fireworks, with a Saturday farmers' market next door in spring and summer. The old factory buildings around it now hold restaurants, which makes it an easy dinner stop for a group.",
-        "tip": "Streets near the river are tight and some close on event nights. We set a drop point a block or two back and agree a pickup time before the crowd leaves."
+        "text": "Downtown's riverfront park draws summer concerts, food trucks and the city fireworks, with a Saturday farmers' market next door in the warm months. The old factory buildings around it now hold restaurants, an easy dinner stop for a group.",
+        "tip": "Streets near the river are tight, and some close on event nights. We drop a block or two back and set the pickup time before the crowd lets out."
       },
       {
         "name": "New York City",
         "meta": "~65 miles · Broadway, museums, holiday trips",
-        "text": "Shelton groups head to Manhattan for Broadway shows, museum days and holiday trips. The drive is roughly 65 miles. Because buses are banned from the Merritt Parkway, the trip runs on I-95, which is slower in rush hour than a car's map suggests.",
-        "tip": "Leave before 7 a.m. or after 9:30 a.m. to miss the worst traffic. Buses in Manhattan may only stop at marked bus zones, so we pick the drop-off nearest your first stop."
+        "text": "Groups head into Manhattan for Broadway, museum days and holiday trips. It's about 65 miles by road, on I-95 once the Merritt ban bumps you off the parkway. Rush hour makes the drive longer than a car's map suggests.",
+        "tip": "Leave before 7 a.m. or after 9:30 a.m. to miss the worst I-95 traffic. Buses in Manhattan may only stop in marked bus zones, so we set the drop-off nearest your first stop."
       }
     ],
     "mapPins": [
@@ -125,28 +125,28 @@
     "faqs": [
       {
         "q": "Can a charter bus use the Merritt Parkway?",
-        "a": "No. Connecticut bans buses from the Merritt Parkway and the Wilbur Cross Parkway. Trips from Shelton toward Stamford, Westchester or New York City run on I-95 instead."
+        "a": "No. Connecticut bans buses from both the Merritt and Wilbur Cross parkways. Any trip from Shelton toward Stamford, Westchester or New York City runs on I-95 instead."
       },
       {
         "q": "How long does a bus take from Shelton to New York City?",
-        "a": "About two hours to Midtown in normal traffic, on Route 8 and I-95. Weekday mornings can take longer, so we suggest leaving before 7 a.m. or after 9:30 a.m."
+        "a": "About two hours to Midtown in normal traffic, on Route 8 and I-95. Weekday mornings stretch that, which is why we usually aim to leave before 7 a.m. or after 9:30 a.m."
       },
       {
         "q": "Can you run a daily shuttle for our Shelton office?",
-        "a": "Yes. We set up recurring shuttles on a fixed schedule, such as loops between an office park and the Bridgeport or Stratford train stations, with one invoice for the business."
+        "a": "Yes. Recurring loops on a fixed schedule are normal work for us — an office park to the Bridgeport or Stratford train station, say, with one invoice for the business."
       },
       {
         "q": "Which vehicle is best for a field trip to Jones Family Farms?",
-        "a": "A school bus for most classes. It is the cheapest per seat for a short local trip. Book the farm visit first and ask where the bus should unload."
+        "a": "A school bus, for most classes — it's the cheapest seat for a short local trip. Two things to do first: book the farm visit, and ask where a bus should unload."
       },
       {
         "q": "Is a wheelchair-accessible vehicle available?",
-        "a": "Yes, on request. Please tell us when you ask for the quote. Accessible vehicles need advance notice, usually at least 48 hours, and more is better."
+        "a": "Yes, on request. Accessible vehicles need advance notice, usually at least 48 hours, so mention it when you ask for the quote and we'll confirm the vehicle before anything is booked."
       }
     ],
     "ctaHeading": "Ready to Book Your Shelton Charter Bus?",
     "premium": {
-      "heroLead": "Charter buses, minibuses, school buses and Sprinter vans for office shuttles on Bridgeport Avenue, wedding guests at the Courtyard Shelton, field trips to Jones Family Farms and group days in New York City. We plan the route a bus is allowed to drive before we quote it.",
+      "heroLead": "Charter buses, minibuses, school buses and Sprinter vans for Shelton groups: office shuttles on Bridgeport Avenue, wedding loops from the Courtyard Shelton, pumpkin-season trips to Jones Family Farms and days out in New York City. We check which roads a bus is legally allowed to use before we ever quote the trip.",
       "facts": [
         { "dt": "Shelton to Midtown Manhattan", "dd": "65", "unit": "mi" },
         { "dt": "Drive time each way to NYC", "dd": "~2", "unit": "hrs" },
@@ -154,8 +154,13 @@
         { "dt": "Average quote reply time", "dd": "15", "unit": "min" }
       ],
       "rules": [
-        { "kind": "no", "title": "Merritt Parkway (Route 15)", "text": "No buses allowed — a car's map will send you this way." },
-        { "kind": "yes", "title": "Route 8 → I-95", "text": "Our standard bus route south to Stamford and Manhattan." }
+        { "kind": "no", "title": "Merritt Parkway (Route 15)", "text": "No buses allowed. A car's map app will keep trying to send you this way." },
+        { "kind": "yes", "title": "Route 8 → I-95", "text": "Our standard route south to Stamford and Manhattan." }
+      ],
+      "routing": true,
+      "routingIntro": [
+        "Shelton sits on Route 8, a few miles north of the Merritt Parkway — and that parkway is the first thing anyone planning group travel here should know. Connecticut bans buses from it. A car's map says Route 15; a bus takes I-95, and the drive time changes accordingly.",
+        "Most of our Shelton work is shuttles and day trips: offices along Bridgeport Avenue, weddings whose guests stay there, schools headed for the farm, and groups going into Manhattan. Every quote is priced on the road a bus is actually allowed to drive."
       ],
       "tags": [
         ["Best fit: Minibus", "Metro-North connections", "All-day loops"],
@@ -163,7 +168,6 @@
         ["Hotel ↔ venue loops", "Driveway checked in advance"],
         ["Best fit: Charter bus", "Route 8 + I-95", "~2 hrs each way"]
       ],
-      "routing": true,
       "alsoCovered": "Courtyard Shelton · Hubbell HQ, Waterview Drive · Bridgeport & Stratford Metro-North stations"
     },
     "source": "ALL-5-CITY-PAGES.md #1",

@@ -149,8 +149,9 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
             <h2>{data.h1}</h2>
             {premium.routing ? (
               <>
-                <p>Shelton sits on Route 8, a few miles north of the Merritt Parkway, and that parkway is the first thing to know about moving a group here. <strong>Connecticut bans buses from it.</strong> Any trip toward Stamford or New York City runs on I-95 instead, and that changes the drive time.</p>
-                <p>Cascade Charter Bus arranges charter buses, minibuses and Sprinter vans in Shelton for office shuttles, weddings, school outings and group days in New York — always on a route a bus can legally drive.</p>
+                {(premium.routingIntro || []).map((par) => (
+                  <p key={par.slice(0, 24)}>{par}</p>
+                ))}
                 <ul className="pp-rule-list">
                   {(premium.rules || []).map((r) => (
                     <li key={r.title}>

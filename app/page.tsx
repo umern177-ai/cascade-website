@@ -6,7 +6,7 @@ import Image from "next/image";
 import Link from "next/link";
 import {
   Star, Shield, Users, Clock, Briefcase,
-  ArrowLeftRight, RefreshCw, Repeat2, CalendarDays, Award,
+  ArrowLeftRight, ArrowRight, RefreshCw, Repeat2, CalendarDays, Award,
 } from "lucide-react";
 import FaqAccordion from "@/components/Faq";
 import { VEHICLES } from "@/lib/fleet-data";
@@ -348,6 +348,40 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 6c. How to book in 4 steps (owner request) */}
+      <section className="py-5 bg-light" id="how-to-book">
+        <div className="container py-lg-3">
+          <div className="text-center mb-5">
+            <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Simple Process</span>
+            <h2 className="display-5 fw-bold text-dark mt-1">How to Book a Charter Bus in 4 Steps</h2>
+            <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
+          </div>
+          <div className="row g-4">
+            {[
+              { t: "Share Your Trip", d: "Send pickup, destination, date, times and headcount by form or phone, day or night." },
+              { t: "Get a Final Quote", d: "In about 15 minutes you get the vehicle, schedule and one all-inclusive price." },
+              { t: "Confirm in Writing", d: "Approve the itinerary. Changes to stops or times are confirmed with one message." },
+              { t: "Relax and Ride", d: "Your driver arrives early, and dispatch stays reachable for the whole trip." },
+            ].map((s, i) => (
+              <div className="col-lg-3 col-md-6" key={s.t}>
+                <div className="card border-0 shadow-sm rounded-4 h-100 p-4 hover-lift">
+                  <div className="d-flex align-items-center gap-3 mb-3">
+                    <span className="badge rounded-circle d-flex align-items-center justify-content-center" style={{ width: 46, height: 46, fontSize: "1.15rem", background: "var(--fleet-orange)", color: "var(--fleet-black)", fontWeight: 800 }}>{i + 1}</span>
+                    <h3 className="h6 fw-bold text-dark mb-0">{s.t}</h3>
+                  </div>
+                  <p className="text-muted mb-0 lh-base">{s.d}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="text-center mt-4">
+            <Link className="btn btn-primary rounded-pill px-5 py-3 fw-bold shadow-sm" href="/contact/">
+              START YOUR BOOKING <ArrowRight size={18} className="ms-2" aria-hidden="true" />
+            </Link>
           </div>
         </div>
       </section>

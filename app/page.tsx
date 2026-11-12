@@ -11,7 +11,7 @@ import {
 import FaqAccordion from "@/components/Faq";
 import { VEHICLES } from "@/lib/fleet-data";
 import { SERVICES } from "@/lib/site-data";
-import { SITE, HOME_FAQS, TESTIMONIALS, TRUSTPILOT_REVIEWS } from "@/lib/site-data";
+import { SITE, HOME_FAQS, TRUSTPILOT_REVIEWS } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
 // Real service photos (owner-supplied, processed to WebP) — same files the
@@ -228,40 +228,25 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 5. Testimonials (3, kept with owner permission) + real Trustpilot reviews */}
+      {/* 5. Reviews — owner-pasted, verified on the Trustpilot profile (word for word).
+          The 3 first-row testimonials were removed at the owner's request (Nov 12). */}
       <section className="py-5 my-5">
         <div className="container py-lg-4">
           <div className="text-center mb-5">
-            <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Testimonials</span>
+            <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Reviews</span>
             <h2 className="display-5 fw-bold text-dark mt-2">What Groups Say About Cascade Charter Bus</h2>
             <p className="text-muted max-w-2xl mx-auto mt-2">
-              Real feedback from event planners, tour managers, and group leaders who count on us for reliable trips across the nation.
+              Verified reviews from event planners, tour managers, and group leaders who count on us for reliable trips across the nation.
             </p>
             <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
           </div>
-          <div className="row g-4">
-            {TESTIMONIALS.map((t) => (
-              <div className="col-lg-4 col-md-6" key={t.name}>
-                <div className="card border-0 shadow-sm rounded-4 p-4 h-100 bg-white d-flex flex-column justify-content-between">
-                  <div>
-                    <Stars />
-                    <p className="text-muted mb-4 fst-italic">“{t.quote}”</p>
-                  </div>
-                  <div className="pt-3 border-top">
-                    <h3 className="h6 fw-bold text-dark mb-0">{t.name}</h3>
-                    <span className="text-muted small">{t.role}</span>
-                  </div>
-                </div>
-              </div>
-            ))}
-          </div>
 
           {/* Verified reviews collected on our Trustpilot profile (owner-approved, verbatim). */}
-          <div className="mt-5">
+          <div>
             <p className="text-center small text-muted mb-4">
-              Also read our verified reviews on{" "}
+              All reviews below are verified on our{" "}
               <a href={SITE.trustpilotProfile} target="_blank" rel="noopener noreferrer" className="text-decoration-none fw-semibold">
-                Trustpilot
+                Trustpilot profile
               </a>
             </p>
             <div className="row g-4">

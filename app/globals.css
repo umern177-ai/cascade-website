@@ -269,6 +269,16 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 }
 .custom-nav-link::after { display: none; }
 
+/* Split nav triggers (Services / Fleet): white like the other menu items,
+   amber on hover. Bootstrap ships no .text-inherit in this build, so the
+   label links must carry their own color. */
+.navbar .nav-link .nav-label-link { color: #fff !important; }
+.navbar .nav-link:hover .nav-label-link,
+.navbar .nav-link .nav-label-link:hover { color: var(--fleet-orange) !important; }
+/* Dropdown hangs flush under the trigger so the pointer never crosses a
+   empty gap on the way down (the gap made the menu close mid-hover). */
+.navbar .dropdown-menu { margin-top: 0 !important; }
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

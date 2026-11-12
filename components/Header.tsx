@@ -97,7 +97,7 @@ export default function Header() {
                 {/* Split trigger: the label navigates to the services page, the
                     chevron toggles the dropdown (owner request, Nov 12). */}
                 <span className="nav-link px-3 text-uppercase x-small-bold d-flex align-items-center gap-1">
-                  <Link className="text-decoration-none x-small-bold text-inherit" href="/services/" onClick={closeAllNav}>
+                  <Link className="nav-label-link text-decoration-none x-small-bold text-inherit" href="/services/" onClick={closeAllNav}>
                     Services
                   </Link>
                   <button
@@ -110,7 +110,7 @@ export default function Header() {
                     <ChevronDown size={14} aria-hidden="true" />
                   </button>
                 </span>
-                <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 mt-2 py-3 px-2 ${servicesOpen ? "show" : ""}`}>
+                <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 py-3 px-2 ${servicesOpen ? "show" : ""}`}>
                   <li>
                     <Link className="dropdown-item fw-bold text-primary small py-2 px-3" href="/services/" onClick={() => { setOpen(false); setServicesOpen(false); }}>
                       All Services
@@ -132,7 +132,7 @@ export default function Header() {
                 onMouseLeave={() => setFleetOpen(false)}
               >
                 <span className="nav-link px-3 text-uppercase x-small-bold d-flex align-items-center gap-1">
-                  <Link className="text-decoration-none x-small-bold text-inherit" href="/fleet/" onClick={closeAllNav}>
+                  <Link className="nav-label-link text-decoration-none x-small-bold text-inherit" href="/fleet/" onClick={closeAllNav}>
                     Fleet
                   </Link>
                   <button
@@ -145,7 +145,7 @@ export default function Header() {
                     <ChevronDown size={14} aria-hidden="true" />
                   </button>
                 </span>
-                <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 mt-2 py-3 px-2 ${fleetOpen ? "show" : ""}`}>
+                <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 py-3 px-2 ${fleetOpen ? "show" : ""}`}>
                   <li>
                     <Link className="dropdown-item fw-bold text-primary small py-2 px-3" href="/fleet/" onClick={() => { setOpen(false); setFleetOpen(false); }}>
                       View Entire Fleet

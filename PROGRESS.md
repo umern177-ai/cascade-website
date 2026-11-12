@@ -4,7 +4,20 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
-**Shelton page human-voice rewrite pushed (Nov 12, after homepage rework).**
+**4 new service pages built and pushed to staging (Nov 12, commit 4e28398, owner-approved).**
+/services/winery-tour-bus-rental/ · /services/military-group-transportation/ ·
+/services/government-transportation/ · /services/casino-bus-trips/ — same template as the
+existing services (data-driven), auto-wired into header dropdown, footer, services hub,
+homepage tiles, sitemap-services.xml. Spec held: no prices/rates/years/ratings/banned words
+(verified programmatically), FAQPage schema matches visible FAQs word-for-word, Service +
+Breadcrumb schema, self-canonicals, "Last updated: November 2026" in hero, real-example boxes
+only where real (casino review verbatim; military trip pending-owner confirmed Nov 12 example).
+Owner confirmations applied: 10% military discount (H2 + FAQ), W-9 + operator COI paperwork.
+Contextual links: sightseeing/wedding→winery, corporate→government, airport→military,
+church→casino+military; each new page links 2 related services. City pages untouched.
+TODOs left: agency invoicing FAQ not added (invoicing terms not confirmed).
+
+## Shelton page human-voice rewrite pushed (Nov 12, after homepage rework)
 - Rewrote the page copy so it reads like a dispatcher wrote it, not a template:
   killed the repeated "we plan the route a bus is allowed to drive" line (now
   appears exactly once), varied sentence rhythm across sections, contractions

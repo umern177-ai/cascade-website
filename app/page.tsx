@@ -5,7 +5,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Star, Shield, Users, Clock, Briefcase,
+  Star, Shield, Users, Clock, Briefcase, Phone,
   ArrowLeftRight, ArrowRight, RefreshCw, Repeat2, CalendarDays, Award,
 } from "lucide-react";
 import FaqAccordion from "@/components/Faq";
@@ -405,21 +405,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 9. Closing CTA */}
-      <section className="py-5 bg-dark text-white text-center position-relative">
-        <div className="container py-5">
-          <div className="row justify-content-center">
-            <div className="col-lg-8">
-              <h2 className="display-5 fw-bold mb-3">Your Journey Starts With One Call</h2>
-              <p className="lead opacity-75 mb-4">
-                One promise that hasn’t changed since day one: get your group there safely and on time. Tell us where you’re going—we’ll build the trip around you.
-              </p>
-              <div className="d-flex justify-content-center gap-3 flex-wrap mt-4">
-                <Link className="btn btn-primary btn-lg rounded-pill px-5 py-3 fw-bold shadow-lg" href="/contact/">
-                  GET STARTED
-                </Link>
-              </div>
-            </div>
+      {/* 9. Closing CTA — amber band, same as the premium city pages (owner request) */}
+      <section className="pp pp-cta-band" aria-labelledby="home-cta-title">
+        <div className="container pp-cta-inner">
+          <div>
+            <h2 id="home-cta-title">Ready to Book Your Charter Bus?</h2>
+            <p>Fast, final quote. Gratuity, tolls and taxes included. Dispatch answers around the clock.</p>
+          </div>
+          <div className="pp-cta-actions">
+            <a className="pp-btn pp-btn-dark" href="/contact/" data-source="home-cta" rel="nofollow">
+              Get a Free Quote <ArrowRight aria-hidden="true" />
+            </a>
+            <a className="pp-btn pp-btn-outline-dark" href={`tel:${SITE.phoneTel}`}>
+              <Phone aria-hidden="true" />
+              {`Call ${SITE.phoneDisplay}`}
+            </a>
           </div>
         </div>
       </section>

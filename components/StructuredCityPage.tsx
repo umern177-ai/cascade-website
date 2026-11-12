@@ -31,7 +31,13 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
 
   const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@type": "LocalBusiness", name: SITE.name, url: SITE.url, telephone: SITE.phoneDisplay } };
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: data.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
-  const vehicles = data.vehicles.map((v) => ({ ...v, meta: VEHICLES.find((x) => x.slug === v.slug) })).filter((v) => v.meta);
+  // Every city page shows 5 vehicles: the entry's list plus the sleeper
+  // when it isn't already there (owner request, Nov 12).
+  const vehiclesBase = data.vehicles.map((v) => ({ ...v, meta: VEHICLES.find((x) => x.slug === v.slug) })).filter((v) => v.meta);
+  const sleeperMeta = VEHICLES.find((x) => x.slug === "sleeper");
+  const vehicles = vehiclesBase.some((v) => v.slug === "sleeper") || !sleeperMeta
+    ? vehiclesBase
+    : [...vehiclesBase, { slug: "sleeper", reason: "Bunk beds, restroom and shower — built for overnight band tours and long runs.", meta: sleeperMeta }];
   const nearbyItems = (data.nearby.items || []).map((n) => {
     const kept = keptCities(state).find((c) => c.city.toLowerCase() === n.city.toLowerCase()) || keptCities(state).find((c) => c.city.startsWith(n.city));
     return { ...n, path: kept && isKept(state, kept.slug) ? `/locations/${state}/${kept.slug}/` : null };
@@ -128,9 +134,9 @@ export default function StructuredCityPage({ data, state }: { data: CityPageData
             <h2 className="fw-bold" style={{fontSize:'clamp(1.5rem,3.5vw,2rem)',color:'var(--fleet-black)'}}>{data.vehiclesHeading}</h2>
             <div style={{width:'48px',height:'3px',background:'var(--fleet-orange)',margin:'0.75rem auto 0',borderRadius:'2px'}} />
           </div>
-          <div className="row g-3 fleet-slider-m">
+          <div className="row g-3 row-cols-2 row-cols-md-3 row-cols-lg-5 fleet-slider-m">
             {vehicles.map((v) => (
-              <div className="col-lg-3 col-md-4 col-6" key={v.slug}>
+              <div key={v.slug}>
                 <a href={`/fleet/${v.slug}/`} style={{textDecoration:'none',display:'flex',flexDirection:'column',height:'100%',borderRadius:'0.875rem',overflow:'hidden',background:'#fff',boxShadow:'0 2px 8px rgba(0,0,0,0.06)',transition:'transform 0.3s,box-shadow 0.3s'}} className="hover-lift">
                   <Image src={v.meta!.photo} alt={v.meta!.cardName} width={420} height={240} style={{width:'100%',height:'160px',objectFit:'cover',transition:'transform 0.4s'}} sizes="(max-width:768px) 76vw, 25vw" />
                   <div style={{padding:'0.875rem 1rem 1rem',flexGrow:1,display:'flex',flexDirection:'column'}}>

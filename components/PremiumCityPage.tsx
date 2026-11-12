@@ -49,7 +49,13 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
 
   const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@type": "LocalBusiness", name: SITE.name, url: SITE.url, telephone: SITE.phoneDisplay } };
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: data.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
-  const vehicles = data.vehicles.map((v) => ({ ...v, meta: VEHICLES.find((x) => x.slug === v.slug) })).filter((v) => v.meta);
+  // Every city page shows 5 vehicles: the entry's list plus the sleeper
+  // when it isn't already there (owner request, Nov 12).
+  const vehiclesBase = data.vehicles.map((v) => ({ ...v, meta: VEHICLES.find((x) => x.slug === v.slug) })).filter((v) => v.meta);
+  const sleeperMeta = VEHICLES.find((x) => x.slug === "sleeper");
+  const vehicles = vehiclesBase.some((v) => v.slug === "sleeper") || !sleeperMeta
+    ? vehiclesBase
+    : [...vehiclesBase, { slug: "sleeper", reason: "Bunk beds, restroom and shower — built for overnight band tours and long runs.", meta: sleeperMeta }];
   const nearbyItems = (data.nearby.items || []).map((n) => {
     const kept = keptCities(state).find((c) => c.city.toLowerCase() === n.city.toLowerCase()) || keptCities(state).find((c) => c.city.startsWith(n.city));
     return { ...n, path: kept && isKept(state, kept.slug) ? `/locations/${state}/${kept.slug}/` : null };

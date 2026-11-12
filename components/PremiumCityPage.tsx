@@ -49,13 +49,26 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
 
   const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@type": "LocalBusiness", name: SITE.name, url: SITE.url, telephone: SITE.phoneDisplay } };
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: data.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
-  // Every city page shows 5 vehicles: the entry's list plus the sleeper
-  // when it isn't already there (owner request, Nov 12).
+  // Every city page shows 5 vehicles (owner request: the standard four plus
+  // the sleeper). Any of the standard five missing from the city's data is
+  // added with a true, generic reason from the fleet data.
   const vehiclesBase = data.vehicles.map((v) => ({ ...v, meta: VEHICLES.find((x) => x.slug === v.slug) })).filter((v) => v.meta);
-  const sleeperMeta = VEHICLES.find((x) => x.slug === "sleeper");
-  const vehicles = vehiclesBase.some((v) => v.slug === "sleeper") || !sleeperMeta
-    ? vehiclesBase
-    : [...vehiclesBase, { slug: "sleeper", reason: "Bunk beds, restroom and shower — built for overnight band tours and long runs.", meta: sleeperMeta }];
+  const STANDARD_EQUIP: [string, string][] = [
+    ["minibus", "Easy to stage outside venues; softer hourly rate than a coach."],
+    ["charter-bus", "Restroom, reclining seats and luggage bays for long days."],
+    ["school-bus", "Lowest cost per seat for short local runs."],
+    ["sprinter-van", "Small groups, airport runs and executive transfers."],
+    ["sleeper", "Bunk beds, restroom and shower — built for overnight band tours and long runs."],
+  ];
+  const bySlug = new Map(vehiclesBase.map((v) => [v.slug, v]));
+  for (const [slug, reason] of STANDARD_EQUIP) {
+    if (!bySlug.has(slug)) {
+      const meta = VEHICLES.find((x) => x.slug === slug);
+      if (meta) bySlug.set(slug, { slug, reason, meta });
+    }
+  }
+  const vehicles = [...bySlug.values()];
+  const destinations = data.destinations.filter((d) => d && typeof d.name === "string" && d.name.trim());
   const nearbyItems = (data.nearby.items || []).map((n) => {
     const kept = keptCities(state).find((c) => c.city.toLowerCase() === n.city.toLowerCase()) || keptCities(state).find((c) => c.city.startsWith(n.city));
     return { ...n, path: kept && isKept(state, kept.slug) ? `/locations/${state}/${kept.slug}/` : null };
@@ -84,7 +97,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
               <h1>
                 Charter Bus Rental in <em>{`${name}, ${stAbbr}`}</em>
               </h1>
-              <p className="pp-lead">{premium.heroLead}</p>
+              {premium.heroLead && <p className="pp-lead">{premium.heroLead}</p>}
               <div className="pp-hero-ctas">
                 <a className="pp-btn pp-btn-amber" href="/contact/" data-pickup={pickup} data-source={`city-hero:${state}:${data.slug}`} rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>
                 <a className="pp-btn pp-btn-ghost" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" /> {SITE.phoneDisplay}</a>
@@ -132,9 +145,9 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
       </section>
 
       {/* ===== facts strip ===== */}
-      <section className="pp-facts" aria-label={`${name} charter bus key facts`}>
-        <div className="container">
-          {premium.facts && premium.facts.length > 0 && (
+      {premium.facts && premium.facts.length > 0 && (
+        <section className="pp-facts" aria-label={`${name} charter bus key facts`}>
+          <div className="container">
             <dl className="pp-facts-grid">
               {premium.facts.map((f) => (
                 <div className="pp-fact" key={f.dt}>
@@ -143,16 +156,17 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
                 </div>
               ))}
             </dl>
-          )}
-        </div>
-      </section>
+          </div>
+        </section>
+      )}
 
       {/* ===== intro / routing + route diagram ===== */}
-      <section className="pp-sec" id="routing">
-        <div className="container pp-intro-grid">
-          <div className="pp-intro-copy">
-            <p className="pp-eyebrow">Know before you book</p>
-            <h2>{data.h1}</h2>
+      {(premium.routing || data.heroIntro) && (
+        <section className="pp-sec" id="routing">
+          <div className="container pp-intro-grid">
+            <div className="pp-intro-copy">
+              <p className="pp-eyebrow">Know before you book</p>
+              <h2>{data.h1}</h2>
             {premium.routing ? (
               <>
                 {(premium.routingIntro || []).map((par) => (
@@ -173,7 +187,6 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
               <p>{data.heroIntro}</p>
             )}
           </div>
-
           {premium.routing && (
             <figure className="pp-route-card">
               <figcaption>{`${name} → New York City`}<span>Bus routing</span></figcaption>
@@ -225,6 +238,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
           )}
         </div>
       </section>
+      )}
 
       {/* ===== services ===== */}
       <section className="pp-sec pp-bg-white" id="services">
@@ -302,14 +316,14 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
             <aside className="pp-dest-index" aria-label="Destinations on this page">
               <h3>On this page</h3>
               <ol>
-                {data.destinations.map((d) => (
+                {destinations.map((d) => (
                   <li key={d.name}><a href={`#${slugId(d.name)}`}>{d.name}</a></li>
                 ))}
               </ol>
               <p className="pp-also">{`Also covered: ${also}`}</p>
             </aside>
             <div className="pp-dest-list">
-              {data.destinations.map((d, i) => (
+              {destinations.map((d, i) => (
                 <article className="pp-dest" id={slugId(d.name)} key={d.name}>
                   <div className="pp-dest-head">
                     <span className="pp-dest-num" aria-hidden="true">{i + 1}</span>

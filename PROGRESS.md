@@ -4,6 +4,33 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
+**Premium design rolled out to EVERY city page (Nov 12, owner request "start building").**
+- Route dispatch: structured cities (131, data/city-pages.json) → PremiumCityPage
+  (Shelton frame; premium extras appear as data provides); all other kept cities
+  → NEW GenericPremiumCity: premium frame from real held data (county, pickup
+  venues from real inquiries, researched places/airports/wineries, hero quote
+  form GETting /contact/ with pre-fill, facts strip with site facts, wedding
+  section, destinations, airport transfers, map, 5 vehicles, nearby kept
+  cities, dark booking + checklist, amber CTA).
+- City pages now always show the 5 standard vehicles (minibus, charter, school,
+  sprinter + sleeper) even when data lists fewer — missing ones get true
+  generic reasons from fleet data. Fixed a data typo (Trevor WI: "city" →
+  "name" on a destination) + added a render guard for malformed entries.
+- All SEO kept: self-canonicals, titles/descriptions, Service+Breadcrumb schema,
+  breadcrumbs strip. FAQ blocks render where structured data provides them
+  (structured cities); generic cities have no FAQ until researched (no
+  invented FAQs).
+- NOTE: the ~580 non-researched generic pages still share scaffold copy apart
+  from intro/venues — they remain publishable only as research fills their
+  profiles (city-content/city-pages), same as before; this rollout upgraded
+  the DESIGN without weakening the content rules.
+- Verified: tsc/eslint clean, build 802 pages 0 errors; Shelton, Park City
+  (structured), Trevor (fixed data), Opp AL (generic) all render the premium
+  frame with 5 vehicles, 0 console errors.
+- Next: research batches continue filling city-pages.json per city — each
+  researched city then also gains hero lead, facts strip, route copy, service
+  tags and FAQs automatically.
+
 **4 new service pages built and pushed to staging (Nov 12, commit 4e28398, owner-approved).**
 /services/winery-tour-bus-rental/ · /services/military-group-transportation/ ·
 /services/government-transportation/ · /services/casino-bus-trips/ — same template as the

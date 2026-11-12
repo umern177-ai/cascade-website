@@ -92,6 +92,8 @@ body {
 }
 .vanguard-footer a,
 .vanguard-footer .footer-link,
+.footer-modern a,
+.footer-modern .footer-link,
 .footer-icon {
   font-weight: 500;
   text-decoration: none;
@@ -100,6 +102,8 @@ body {
 }
 .vanguard-footer a:hover,
 .vanguard-footer .footer-link:hover,
+.footer-modern a:hover,
+.footer-modern .footer-link:hover,
 .footer-icon:hover {
   padding-left: 5px;
   color: #d4d4d4 !important;

@@ -52,9 +52,9 @@ const CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
   "sightseeing-tour-bus": { src: "/images/services/multi.webp", alt: "White motorcoach on a scenic mountain road" },
   "church-religious-transportation": { src: "/images/services/church.webp", alt: "Executive minibuses parked on a city street for a group shuttle" },
   "band-tour-bus": { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus used for band tours" },
-  "winery-tour-bus-rental": { src: "/images/fleet/limo.jpg", alt: "Party bus hired for winery tours" },
-  "military-group-transportation": { src: "/images/fleet/charter.jpg", alt: "Charter bus used for military group moves" },
-  "government-transportation": { src: "/images/fleet/mini.jpg", alt: "Minibus shuttle for a government agency" },
+  "winery-tour-bus-rental": { src: "/images/services/winery.webp", alt: "Vineyard rows in wine country" },
+  "military-group-transportation": { src: "/images/services/military.webp", alt: "The American flag against a blue sky" },
+  "government-transportation": { src: "/images/services/government.webp", alt: "The United States Capitol building" },
   "casino-bus-trips": { src: "/images/fleet/sprinter.jpg", alt: "Sprinter van for casino day trips" },
 };
 

@@ -138,16 +138,17 @@ const SERVICE_PHOTOS: Record<string, { src: string; alt: string }[]> = {
     { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus used for band tours" },
   ],
   "winery-tour-bus-rental": [
-    { src: "/images/fleet/limo.jpg", alt: "Limo and party bus used for winery tours" },
-    { src: "/images/fleet/sprinter.jpg", alt: "Sprinter van for small wine-tasting groups" },
+    { src: "/images/services/winery.webp", alt: "Vineyard rows in wine country" },
+    { src: "/images/services/winery2.webp", alt: "Friends toasting with wine glasses among the vines" },
+    { src: "/images/services/winery3.webp", alt: "A group tasting wine in a winery cellar" },
   ],
   "military-group-transportation": [
+    { src: "/images/services/military.webp", alt: "The American flag against a blue sky" },
     { src: "/images/fleet/charter.jpg", alt: "Charter bus used for military group transportation" },
-    { src: "/images/fleet/school.jpg", alt: "School bus hired for a military unit move" },
   ],
   "government-transportation": [
+    { src: "/images/services/government.webp", alt: "The United States Capitol building" },
     { src: "/images/fleet/mini.jpg", alt: "Minibus shuttle for a government agency" },
-    { src: "/images/fleet/sprinter.jpg", alt: "Sprinter van for a visiting delegation" },
   ],
   "casino-bus-trips": [
     { src: "/images/fleet/limo.jpg", alt: "Party bus hired for a casino night out" },

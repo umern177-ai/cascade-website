@@ -23,6 +23,11 @@ const MAP = {
   "airport.jpg": "airport.webp",
   "Sightseeing.jpg": "multi.webp",
   "church-groups.jpg": "church.webp",
+  "winery.jpg": "winery.webp",
+  "winery2.jpg": "winery2.webp",
+  "winery3.jpg": "winery3.webp",
+  "military.jpg": "military.webp",
+  "government.jpg": "government.webp",
   // excluded on purpose: school-trips3.jpg (other operator's branding on the bus)
 };
 

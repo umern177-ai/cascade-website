@@ -4,7 +4,23 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
-**Routing cards live on every researched city page (Nov 12) + Batch 8 pushed (10 NY cities, 163/710 structured).**
+**Batch 9 done: 16 more NY cities researched (179 of 710 structured). Same-state gate PASS.**
+- Batch 9: Clayton, Cobleskill, Cornwallville, Eldred, Elka Park, Ellicottville,
+  Endicott, Fallsburg, Geneva, Hunter, Interlaken, Lawrence, Medina, Middle
+  Village, Middletown, Mt Kisco (slug mount-kisco, live spelling). Famous
+  routes: Clayton-to-Boldt Castle, Oneonta/Cooperstown pattern extended -
+  every new page carries a route card + researched places/FAQs/venues.
+- Similarity differentiation fixes applied (Hunter/Eldred/Ellicottville/Elka
+  Park/Middletown); worst NY Jaccard 0.199 (< 0.20 PASS) across 26 pages.
+- RouteDiagram chain now on every researched city: explicit route > famous
+  place > structured top destination > airport.
+- Remaining: 531 pages (~505 Standard + 12 Traffic + more). Next batch:
+  Olean, Penn Yan, Port Jefferson Station, Port Jervis, Poughkeepsie, Quogue,
+  Roxbury, Rye, Saugerties, Schroon Lake, Wainscott, West Point, Woodbourne,
+  Plattsburgh, Clymer (rest of NY), then other states in demand order.
+- Owner flow: batches of ~10-16 per pass on request ("keep going").
+
+## Routing cards live on every researched city page (Nov 12) + Batch 8 pushed (10 NY cities, 163/710 structured).**
 - RouteDiagram generalized: every city with data gets the "City -> Destination" bus routing
   card. Chain: explicit premium.route > researched famous place/venue > top structured
   destination > researched airport. Shelton's card now data-driven (NYC, 65 mi, Route 8 + I-95,

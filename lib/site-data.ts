@@ -37,6 +37,10 @@ export const SERVICES = [
   { slug: "sightseeing-tour-bus", name: "Sightseeing & Tour Bus Rental" },
   { slug: "church-religious-transportation", name: "Church & Religious Group Transportation" },
   { slug: "band-tour-bus", name: "Band Tour Bus" },
+  { slug: "winery-tour-bus-rental", name: "Winery Tour Bus Rental" },
+  { slug: "military-group-transportation", name: "Military Group Transportation" },
+  { slug: "government-transportation", name: "Government Transportation" },
+  { slug: "casino-bus-trips", name: "Casino Bus Trips" },
 ] as const;
 
 export const FLEET = [

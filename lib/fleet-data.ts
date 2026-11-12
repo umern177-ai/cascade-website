@@ -400,7 +400,7 @@ export function getVehicle(slug: string): Vehicle | undefined {
 
 export const SERVICE_META: Record<
   string,
-  { name: string; title: string; eyebrow: string; h1: string; intro: string; metaTitle: string; metaDescription: string }
+  { name: string; title: string; eyebrow: string; h1: string; intro: string; metaTitle: string; metaDescription: string; lastUpdated?: string }
 > = {
   "corporate-transportation": {
     name: "Corporate Event Transportation",
@@ -481,6 +481,50 @@ export const SERVICE_META: Record<
     metaTitle: "Band Tour Bus Rental | Sleeper Coaches With Bunks & Shower",
     metaDescription:
       "Band tour bus rental with sleeper coaches (up to 15 bunks, restroom and shower on board), lounges and gear storage. Nationwide routing with 24/7 dispatch.",
+  },
+  "winery-tour-bus-rental": {
+    name: "Winery Tour Bus Rental",
+    title: "Winery Tour Bus Rental",
+    eyebrow: "Designated Driver Included",
+    h1: "Winery Tour Bus Rental With a Driver",
+    intro: "A winery tour bus rental gives your group a professional driver for the whole day: you pick the wineries, and we handle the driving, parking and timing between tastings. It suits bachelorette parties, birthday groups, couples' weekends and wine-club outings in the country's wine regions, from Napa and Sonoma to the Finger Lakes and Temecula. Send the trip details and a written quote goes out the same day.",
+    metaTitle: "Winery Tour Bus Rental | Cascade Charter Bus",
+    metaDescription:
+      "Rent a minibus, Sprinter van or party bus with a driver for winery tours. Plan your stops, nobody drives after tastings. Same-day quotes.",
+    lastUpdated: "November 2026",
+  },
+  "military-group-transportation": {
+    name: "Military Group Transportation",
+    title: "Military Group Transportation",
+    eyebrow: "Early Pickups, 24/7 Dispatch",
+    h1: "Military Group Transportation for Units, Bases and Veterans",
+    intro: "Military moves run on tight windows, which is why dispatch answers at any hour and drivers arrive before the scheduled pickup. We arrange charter buses, minibuses and school buses for base-to-airport transfers, training moves, ceremonies, graduations, unit events and veteran group trips across the United States. A written quote goes out the same day you send the itinerary.",
+    metaTitle: "Military Group Transportation | Cascade Charter Bus",
+    metaDescription:
+      "Charter buses, minibuses and school buses for military units, bases, reunions and ceremonies. Early pickups, 24/7 dispatch, same-day quotes.",
+    lastUpdated: "November 2026",
+  },
+  "government-transportation": {
+    name: "Government Transportation",
+    title: "Government Transportation",
+    eyebrow: "Written Quotes, Real Plans",
+    h1: "Charter Bus Rental for Government Agencies",
+    intro: "Government groups need buses that show up on schedule and paperwork that holds up. We arrange charter buses, minibuses and vans for federal, state and city work: staff and conference shuttles, visiting delegations, public events, emergency support moves and multi-site field visits. Every quote comes in writing the same day, with the vehicle, schedule and one contact for the whole trip.",
+    metaTitle: "Government Charter Bus Rental | Cascade Charter Bus",
+    metaDescription:
+      "Charter buses and vans for federal, state and city agencies: staff shuttles, delegations, events and emergency moves. Same-day written quotes.",
+    lastUpdated: "November 2026",
+  },
+  "casino-bus-trips": {
+    name: "Casino Bus Trips",
+    title: "Casino Bus Trips",
+    eyebrow: "Groups, Clubs & Birthdays",
+    h1: "Casino Bus Trips for Groups",
+    intro: "A casino day trip works best when nobody has to draw straws for the drive home. We arrange charter buses, minibuses and party buses with a driver for casino outings of every size—senior centers, social clubs, birthday groups and corporate nights out—to any casino in the United States. Send the date and headcount and a written quote goes out the same day, any hour.",
+    metaTitle: "Casino Bus Trips & Charter Rental | Cascade Charter Bus",
+    metaDescription:
+      "Plan a casino day trip with a charter bus, minibus or party bus and a driver. Great for clubs, seniors and birthdays. Same-day quotes, 24/7.",
+    lastUpdated: "November 2026",
   },
 };
 

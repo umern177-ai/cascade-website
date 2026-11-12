@@ -68,6 +68,38 @@ const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
     { q: "Can the bus pull a trailer for gear?", a: "Trailer options depend on the specific coach and route. Tell us what gear you're moving and dispatch confirms what's available for your dates." },
     { q: "How do driver hours work on overnight runs?", a: "Drivers work to federal hours-of-service rules. Long overnight routes are scheduled with relief drivers or timed rest stops so the tour stays legal and safe." },
   ],
+  "winery-tour-bus-rental": [
+    { q: "How far ahead should we book a winery tour?", a: "The earlier the better for spring and fall weekends, when tasting rooms fill first. Mid-week plans can often be quoted the same day the trip details come in." },
+    { q: "Can the bus wait at every stop?", a: "Yes—your group keeps the same bus and driver all day. The driver waits at each winery in the nearest legal parking spot, so nothing gets left behind and nobody is ever waiting for a different vehicle to arrive." },
+    { q: "Can you pick up from several hotels?", a: "Yes. Give us the addresses and the group splits across the pickup points you set. Multi-pickup routing is confirmed in the written quote before anything is booked." },
+    { q: "What if a winery is down a narrow or dirt road?", a: "Tell us when you send the stop list. We match a vehicle that fits the road and the driver knows it before travel day, so the plan never depends on a driveway a bus cannot use." },
+    { q: "Can we bring snacks or a cooler on board?", a: "Ask when you request the quote—rules vary by vehicle and by the licensed operators in our network. If a cooler is fine, tell us the size so the storage is planned around it." },
+    { q: "Do you do winery trips for bachelorette and birthday groups?", a: "Yes, and a party bus is a popular pick for those nights. Book the tastings first so the schedule is built around the reservations, and tell us the vibe—you may want more driving music than a quiet club outing." },
+  ],
+  "military-group-transportation": [
+    { q: "Can you move a whole unit with several buses on one booking?", a: "Yes. Several vehicles book as one move—shared arrival windows, a convoy order and one coordinator—priced as a single itinerary rather than separate orders." },
+    { q: "Can you pick up at the base gate or a specific building?", a: "Yes. Give us the gate, building number or lot and it goes into the driver's plan. Where visitor rules limit access, the pickup moves to the closest legal point and the walking distance is kept short." },
+    { q: "Can the driver wait during a ceremony?", a: "Yes. The driver waits on-site or returns at an agreed time. Long ceremonies are scheduled with federal driver-hours limits in mind, so the wait does not knock the return off plan." },
+    { q: "Do you handle trips for veteran groups and reunions?", a: "Yes, including multi-day reunions, memorial trips and museum visits. Luggage help at the vehicle is arranged on request, and pickup points are set with the group's walking distances in mind." },
+    { q: "How far ahead should we book?", a: "As early as you can, especially for large moves and weekend dates. Short-notice requests are welcome—dispatch answers around the clock, and quotes for urgent work go out the same day." },
+    { q: "Do you offer a military discount?", a: "Yes. A 10% military discount applies to military group bookings. Mention it when you request the quote, and dispatch includes it in the final price." },
+    { q: "What paperwork can you provide?", a: "A written quote, a W-9 and the operator's certificate of insurance (COI). The operator's USDOT number and vehicle details go in the quote too, so base gate staff have what they need." },
+  ],
+  "government-transportation": [
+    { q: "Do you provide the operator's USDOT number?", a: "Yes. The trip is run by licensed operators in our network, and the operator's USDOT number and vehicle details are provided with the quote, including what gate staff may need." },
+    { q: "Can you run daily shuttles for a set period?", a: "Yes. Shuttle programs run on fixed timetables for weeks or months at a stretch, with the same vehicle and driver where schedules allow, and one contact who manages the pattern." },
+    { q: "Do you offer wheelchair-accessible vehicles?", a: "Yes, on request. A suitable wheelchair-accessible vehicle is confirmed in writing before the booking is final, so give as much notice as the timeline allows." },
+    { q: "Can you cover trips in more than one state?", a: "Yes. Trips are booked across all 50 states, so a route that crosses state lines is planned and quoted as one itinerary with the same contact from start to finish." },
+    { q: "What paperwork can you provide?", a: "A written quote, a W-9 and the operator's certificate of insurance (COI). The operator's USDOT number and vehicle details are included with the quote where an agency needs them for gate access." },
+  ],
+  "casino-bus-trips": [
+    { q: "Can the bus wait all day at the casino?", a: "Yes. The usual setup is the driver waiting on site until your set return time, or the group choosing an earlier departure. Long waits sit within federal driver-hours limits, and the quote states exactly how the day is planned." },
+    { q: "Can we stop for food on the way?", a: "Yes. Named stops go into the route when you send the itinerary, timed so the food break does not eat into your floor time." },
+    { q: "Is there a minimum group size?", a: "No fixed minimum. Small groups often take a Sprinter van (up to 14), while bigger outings split across a minibus or coach—priced as one booking either way." },
+    { q: "Do you do overnight casino trips?", a: "Yes. Two-day and overnight plans are common for distant casinos. The coach stays with the group, and the plan includes the hotel stop and day-two timings." },
+    { q: "Can we drink on the bus?", a: "That depends on state law and the licensed operators in our network, and it is confirmed before booking rather than promised. Ask when you request the quote and we confirm for your route." },
+    { q: "Can you pick up from more than one location?", a: "Yes. Send the addresses and the route is built around them, with pickup windows confirmed in the written quote before anything is booked." },
+  ],
 };
 
 const HOW_BOOKING = "Send the trip details (dates, headcount, luggage, route) through the form or the 24/7 line. You get a detailed quote—usually within about 15 minutes. Confirm, and the driver arrives early with the plan already set.";
@@ -104,6 +136,22 @@ const SERVICE_PHOTOS: Record<string, { src: string; alt: string }[]> = {
   ],
   "band-tour-bus": [
     { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus used for band tours" },
+  ],
+  "winery-tour-bus-rental": [
+    { src: "/images/fleet/limo.jpg", alt: "Limo and party bus used for winery tours" },
+    { src: "/images/fleet/sprinter.jpg", alt: "Sprinter van for small wine-tasting groups" },
+  ],
+  "military-group-transportation": [
+    { src: "/images/fleet/charter.jpg", alt: "Charter bus used for military group transportation" },
+    { src: "/images/fleet/school.jpg", alt: "School bus hired for a military unit move" },
+  ],
+  "government-transportation": [
+    { src: "/images/fleet/mini.jpg", alt: "Minibus shuttle for a government agency" },
+    { src: "/images/fleet/sprinter.jpg", alt: "Sprinter van for a visiting delegation" },
+  ],
+  "casino-bus-trips": [
+    { src: "/images/fleet/limo.jpg", alt: "Party bus hired for a casino night out" },
+    { src: "/images/fleet/charter.jpg", alt: "Charter coach waiting for a casino group" },
   ],
 };
 
@@ -158,10 +206,162 @@ const SERVICE_STORY: Record<string, { step: string; text: string }[]> = {
     { step: "Confirm the tour block", text: "One final quote for the full run, including gear storage and any day-leg vehicles." },
     { step: "On the road", text: "Dispatch stays available around the clock. When a show runs long, the plan moves with you." },
   ],
+  "winery-tour-bus-rental": [
+    { step: "Share your trip", text: "Send the winery list, date, headcount and pickup addresses by form or phone. Tasting reservations in hand are even better." },
+    { step: "Get a written quote", text: "Same day: the vehicle, the stop order and one final price." },
+    { step: "Confirm in writing", text: "Approve the itinerary. Later changes to stops or times are confirmed with one message." },
+    { step: "Ride", text: "The driver arrives early and holds the plan through tastings and parking." },
+  ],
+  "military-group-transportation": [
+    { step: "Share your trip", text: "Send the move details: pickup point, destination, times and headcount, by form or phone at any hour." },
+    { step: "Get a written quote", text: "Same day: vehicles, schedule and one all-inclusive price." },
+    { step: "Confirm in writing", text: "Approve the itinerary. Changes to stops or times are confirmed with one message." },
+    { step: "Ride", text: "The driver arrives ahead of the pickup time, and dispatch stays reachable for the whole trip." },
+  ],
+  "government-transportation": [
+    { step: "Share your trip", text: "Send the requirement: sites, dates, headcount and any gate or paperwork details the agency needs." },
+    { step: "Get a written quote", text: "Same day, in writing: vehicle, schedule, operator details and one final price." },
+    { step: "Confirm in writing", text: "Approve the itinerary. Schedule changes are confirmed with one message." },
+    { step: "Ride", text: "One contact for the whole trip, with dispatch reachable around the clock." },
+  ],
+  "casino-bus-trips": [
+    { step: "Share your trip", text: "Tell us the casino, the date, the group size and any stops on the way home." },
+    { step: "Get a written quote", text: "Same day: the vehicle, the day's shape—including wait or return times—and one final price." },
+    { step: "Confirm in writing", text: "Approve the itinerary. Changes are confirmed with one message." },
+    { step: "Ride", text: "The driver arrives early, waits where it makes sense, and brings everyone home." },
+  ],
 };
 
-const SERVICE_TRIP_EXAMPLES: Record<string, string[]> = {
+// Question-style H2 sections (answer-first), for the newer service pages.
+const SERVICE_QUESTIONS: Record<string, { h2: string; text: string }[]> = {
+  "winery-tour-bus-rental": [
+    {
+      h2: "Which vehicle works best for a winery tour?",
+      text: "Smaller vehicles fit narrow and unpaved vineyard roads better than a 45-foot coach. A Sprinter van (up to 14), a minibus (20–32) or a limo-party bus (14–40) covers most wine groups, and a charter bus (52–56) works for large club trips to a winery with a proper entrance. The quote proposes the vehicle against your stop list, so tight driveways are handled before travel day.",
+    },
+    {
+      h2: "How many wineries can you visit in one day?",
+      text: "Three or four is a realistic number. Tastings often run about an hour each, plus the drive between stops, so the day is sequenced around your tasting reservations rather than hoped-for openings. Send us the list and we will help line up an order that keeps the group moving without a rushed schedule.",
+    },
+    {
+      h2: "Do wineries accept bus groups?",
+      text: "Many do, but some ask groups to reserve tastings ahead and a few cap group size on busy weekends. Book the tastings first; the bus schedule is built around those reservations so the driver can drop, park and reload without friction. If a winery cannot take a group that day, the plan shifts to one that can.",
+    },
+    {
+      h2: "Can you drink on the bus?",
+      text: "That depends on state law and the licensed operators in our network, and it is confirmed before booking rather than promised. Ask when you request the quote and we confirm the rule for your route and dates. Where the law does not allow it, open containers stay off the bus.",
+    },
+  ],
+  "military-group-transportation": [
+    {
+      h2: "What military trips can we book?",
+      text: "Base-to-airport moves, training transfers between installations, ceremonies and graduations, unit events and family days, reunions for veteran groups, and trips that mix several of these across a few days. Several vehicles run as one move on one booking: shared arrival times, a convoy order and one coordinator, priced as a single itinerary.",
+    },
+    {
+      h2: "What does a bus need to get onto a base?",
+      text: "Bases may ask for driver and vehicle details ahead of time, and gate staff may inspect the vehicle before it enters. The trip is operated by licensed operators in our network, and we send the details the base asks for—driver name, operator USDOT number, vehicle description—when the base requests them. For installations with visitor rules, the pickup moves to the closest legal point and the walking distance is kept short.",
+    },
+    {
+      h2: "Can you handle very early or last-minute pickups?",
+      text: "Yes. Dispatch answers around the clock, so pickups are taken at any hour, including pre-dawn formations and late returns. Drivers are briefed to arrive ahead of the pickup time, and if a window moves, the plan moves with it.",
+    },
+    {
+      h2: "Do you offer a military discount?",
+      text: "Yes. A 10% military discount applies to group bookings—mention it when you request the quote and dispatch includes it before the final price goes out. It covers active-duty and veteran group travel, on one booking or several vehicles.",
+    },
+  ],
+  "government-transportation": [
+    {
+      h2: "What government trips do we cover?",
+      text: "Staff and conference shuttles on set schedules, visiting delegations met at the airport, public meetings and events, election-season staff moves, multi-site field visits, and emergency support moves when an agency has to relocate people quickly. Several vehicles run as one booking with shared arrival windows.",
+    },
+    {
+      h2: "What paperwork can we provide?",
+      text: "Every quote comes in writing the same day, with the vehicle, the schedule and the operator who will run the trip. We provide a W-9 and the operator's certificate of insurance (COI), and the operator's USDOT number plus vehicle details for gate access where needed. If your agency uses a specific form, mention it with the itinerary and dispatch confirms what can be supplied.",
+    },
+    {
+      h2: "Can you move a large group on short notice?",
+      text: "Often, yes. Dispatch stays reachable around the clock, several vehicles can be booked as one move, and quotes for urgent work go out the same day. Availability depends on the date, so the earlier you call, the wider the options.",
+    },
+    {
+      h2: "Who is our contact during the trip?",
+      text: "One point of contact for the booking, plus 24/7 dispatch reachable by phone for the whole trip. When an itinerary spans several days or sites, the same contact carries over so nothing is re-explained at each stop.",
+    },
+  ],
+  "casino-bus-trips": [
+    {
+      h2: "Which casinos can we take you to?",
+      text: "Any casino in the United States. Popular destinations include Mohegan Sun and Foxwoods in Connecticut, Atlantic City in New Jersey, the Las Vegas Strip, and Resorts World Catskills in New York—plus the regional casino nearest you. The trip is quoted as one day or an overnight, with the pickup and return times set around your group.",
+    },
+    {
+      h2: "Which bus fits a casino group?",
+      text: "It comes down to size and ride length. A charter bus (52–56) is the usual pick for a long day with a restroom on board, a minibus (20–32) suits most club and senior-center outings, and a party bus (14–40) turns a birthday or bachelor run into part of the evening. Small groups do the trip in a Sprinter van (up to 14).",
+    },
+    {
+      h2: "How long does a casino day trip take?",
+      text: "Most groups run a full day: arrive late morning, leave at a set evening time, or the bus waits and leaves whenever the group is done. Federal driver hour limits apply on long days, so for distant casinos we plan a return time or a relief option rather than promising an open-ended wait. The quote states the exact plan, including wait time.",
+    },
+    {
+      h2: "Does the casino offer perks for bus groups?",
+      text: "Some casinos run group visit programs, but the details sit with the casino, not with us. Ask the casino's group sales desk about current offers, and tell us the arrival window they give you. The bus schedule has room for it; we just do not promise a perk we do not control.",
+    },
+  ],
+};
+
+// Real-booking example boxes — ONLY where a real example exists. Nothing invented.
+const SERVICE_EXAMPLE: Record<string, { title: string; text: string; quote?: { text: string; name: string } }> = {
+  // TODO (owner): confirm this unnamed congregational trip before publishing.
+  "military-group-transportation": {
+    title: "An example we priced this way",
+    text: "A church congregation made up mostly of retired service members had a small budget for a group outing, so the trip was built around two school buses instead of one coach—it kept the cost down while keeping the group together.",
+  },
+  "casino-bus-trips": {
+    title: "A real trip",
+    text: "A private group booked a coach from the Connecticut River Museum to Mohegan Sun. Here is the review the organizer left, word for word:",
+    quote: {
+      text: "Thank you for helping us coordinate and secure a bus for 8/15 from the Connecticut River Museum to Mohegan Sun. A huge thank you to Eric, our driver, who was exceedingly friendly, kind, and helpful.",
+      name: "Ben Brancati",
+    },
+  },
+};
+
+// Contextual cross-links (one natural sentence each) shown before the FAQ.
+const CROSS_LINKS: Record<string, { href: string; anchor: string; lead: string }[]> = {
+  "sightseeing-tour-bus": [
+    { href: "/services/winery-tour-bus-rental/", anchor: "winery tour bus rental", lead: "Planning a wine country day trip? The same planning goes into our" },
+  ],
+  "wedding-transportation": [
+    { href: "/services/winery-tour-bus-rental/", anchor: "winery tour bus rental", lead: "Bachelorette weekends and wine-country hen parties are booked through our" },
+  ],
   "corporate-transportation": [
+    { href: "/services/government-transportation/", anchor: "government charter bus rental", lead: "Agencies and public-sector work are handled on our" },
+  ],
+  "airport-transfer": [
+    { href: "/services/military-group-transportation/", anchor: "military group transportation", lead: "Base-to-airport moves sit under our" },
+  ],
+  "church-religious-transportation": [
+    { href: "/services/casino-bus-trips/", anchor: "casino bus trips", lead: "Senior and club groups often book our" },
+    { href: "/services/military-group-transportation/", anchor: "military group transportation", lead: "For veterans' organizations, see our" },
+  ],
+  "winery-tour-bus-rental": [
+    { href: "/services/sightseeing-tour-bus/", anchor: "sightseeing & tour bus rental", lead: "Multi-day wine regions pair well with our" },
+    { href: "/services/wedding-transportation/", anchor: "wedding shuttle bus rental", lead: "Wedding-party weekends start on our" },
+  ],
+  "military-group-transportation": [
+    { href: "/services/airport-transfer/", anchor: "group airport shuttle", lead: "Terminals and arrival runs are covered on our" },
+    { href: "/services/government-transportation/", anchor: "government transportation", lead: "Public-sector side trips belong on our" },
+  ],
+  "government-transportation": [
+    { href: "/services/corporate-transportation/", anchor: "corporate event transportation", lead: "Staff-facing events borrow from our" },
+    { href: "/services/military-group-transportation/", anchor: "military group transportation", lead: "Ceremonial group moves are detailed on our" },
+  ],
+  "casino-bus-trips": [
+    { href: "/services/sightseeing-tour-bus/", anchor: "sightseeing & tour bus rental", lead: "Longer touring itineraries sit on our" },
+    { href: "/services/church-religious-transportation/", anchor: "church group transportation", lead: "Congregation and club outings start on our" },
+  ],
+};
+
+const SERVICE_TRIP_EXAMPLES: Record<string, string[]> = {  "corporate-transportation": [
     "A 40-person hotel-to-venue loop for an awards dinner",
     "A daily employee shuttle with the same driver all quarter",
     "An offsite move for a 120-person firm, with two coaches in convoy",
@@ -209,6 +409,30 @@ const SERVICE_TRIP_EXAMPLES: Record<string, string[]> = {
     "A day-leg charter for the acoustic dates",
     "A Sprinter for load-in runs between venue and hotel",
   ],
+  "winery-tour-bus-rental": [
+    "A three-stop tasting afternoon with pickups from two hotels",
+    "A wine-club weekend with the same driver on both days",
+    "A bachelorette run with a party bus and a late hotel return",
+    "A club outing through a valley wine trail, cooler space requested",
+  ],
+  "military-group-transportation": [
+    "A pre-dawn base-to-airport run with a headcount roster",
+    "A graduation day pickup at the visitor center, timed to the ceremony",
+    "A training transfer with two vehicles in convoy",
+    "A veterans' reunion with pickup help arranged at the hotel",
+  ],
+  "government-transportation": [
+    "A conference shuttle loop between two halls all week",
+    "A delegation arrivals met at the terminal with a Sprinter",
+    "Election-day staff runs on a fixed timetable",
+    "A multi-site field visit with one contact holding the plan",
+  ],
+  "casino-bus-trips": [
+    "An evening run to a regional casino with a set return time",
+    "A senior-center day trip with a minibus and step-free boarding",
+    "A birthday night out with a party bus and a food stop en route",
+    "An overnight two-day trip with the same coach and driver",
+  ],
 };
 
 export function generateStaticParams() {
@@ -232,6 +456,8 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   const faqs = SERVICE_FAQS[slug];
   if (!meta || !faqs) notFound();
   const photos = SERVICE_PHOTOS[slug];
+  const example = SERVICE_EXAMPLE[slug];
+  const questions = SERVICE_QUESTIONS[slug] || [];
   const siblings = SERVICES.filter((s) => s.slug !== slug).slice(0, 6);
 
   const serviceSchema = {
@@ -289,6 +515,30 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
       { slug: "charter-bus", why: "Day legs and heavy gear in under-bus bays" },
       { slug: "sprinter-van", why: "Local dates and load-in runs" },
     ],
+    "winery-tour-bus-rental": [
+      { slug: "sprinter-van", why: "Up to 14 guests; fits narrow vineyard lanes" },
+      { slug: "minibus", why: "20–32 guests; the everyday wine tour vehicle" },
+      { slug: "party-bus", why: "14–40 guests; bachelorette and birthday outings" },
+      { slug: "charter-bus", why: "52–56 guests for large club trips with big entrances" },
+    ],
+    "military-group-transportation": [
+      { slug: "charter-bus", why: "52–56 seats for unit moves and long legs" },
+      { slug: "school-bus", why: "28–60 seats; economical base-to-base transfers" },
+      { slug: "minibus", why: "20–32 guests for ceremonies and staff runs" },
+      { slug: "sprinter-van", why: "Up to 14 for small details and airport pickups" },
+    ],
+    "government-transportation": [
+      { slug: "charter-bus", why: "52–56 seats for delegations and events" },
+      { slug: "minibus", why: "20–32 guests for recurring staff shuttles" },
+      { slug: "sprinter-van", why: "Up to 14 for visiting officials and site visits" },
+      { slug: "school-bus", why: "28–60 seats when the budget matters most" },
+    ],
+    "casino-bus-trips": [
+      { slug: "charter-bus", why: "52–56 seats with a restroom for long rides" },
+      { slug: "minibus", why: "20–32 guests; the standard club outing" },
+      { slug: "party-bus", why: "14–40 guests for birthdays and nights out" },
+      { slug: "sprinter-van", why: "Up to 14 for small groups and quick runs" },
+    ],
   };
 
   return (
@@ -310,6 +560,9 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
               GET A QUOTE
             </Link>
           </div>
+          {meta.lastUpdated && (
+            <p className="small opacity-75 mb-0 mt-3">Last updated: {meta.lastUpdated}</p>
+          )}
         </div>
       </section>
 
@@ -403,6 +656,34 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
         </div>
       </section>
 
+      {/* 2b. Question-style H2 sections (answer-first), used on the newer service pages */}
+      {questions.map((q) => (
+        <section className="py-5" key={q.h2}>
+          <div className="container py-2">
+            <h2 className="display-6 fw-bold mb-3 text-dark">{q.h2}</h2>
+            <p className="text-muted mb-0" style={{ maxWidth: 820, fontSize: "1.05rem", lineHeight: 1.9 }}>{q.text}</p>
+          </div>
+        </section>
+      ))}
+
+      {/* 2c. Real example box — only rendered where a real example exists */}
+      {example && (
+        <section className="py-5">
+          <div className="container py-2">
+            <div className="p-4 p-md-5 rounded-4 mx-auto" style={{ maxWidth: 880, background: "rgba(245,160,2,0.07)", border: "1px solid rgba(245,160,2,0.35)" }}>
+              <h2 className="h5 fw-bold text-dark mb-2">{example.title}</h2>
+              <p className="text-muted mb-0 lh-relaxed">{example.text}</p>
+              {example.quote && (
+                <blockquote className="mb-0 mt-3 ps-3 border-start border-4" style={{ borderColor: "var(--fleet-orange) !important" }}>
+                  <p className="fst-italic text-dark mb-2">“{example.quote.text}”</p>
+                  <footer className="small text-muted">— {example.quote.name}</footer>
+                </blockquote>
+              )}
+            </div>
+          </div>
+        </section>
+      )}
+
       {/* 3. How booking works + 4. How pricing works */}
       <section className="py-5">
         <div className="container py-4">
@@ -489,6 +770,21 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
           </div>
         </div>
       </section>
+
+      {/* 5b. Contextual cross-links (natural one-liners) */}
+      {(CROSS_LINKS[slug] || []).length > 0 && (
+        <section className="py-4">
+          <div className="container">
+            <p className="text-center text-muted mb-0" style={{ maxWidth: 820, margin: "0 auto" }}>
+              {(CROSS_LINKS[slug] || []).map((l) => (
+                <span className="d-block d-sm-inline" key={l.href + l.anchor}>
+                  {l.lead} <Link href={l.href} className="fw-semibold text-dark text-decoration-none">{l.anchor}</Link> page.{" "}
+                </span>
+              ))}
+            </p>
+          </div>
+        </section>
+      )}
 
       {/* 6. FAQ */}
       <section className="py-5">

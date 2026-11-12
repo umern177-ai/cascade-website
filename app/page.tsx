@@ -21,14 +21,14 @@ const SERVICE_CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
   "wedding-transportation": { src: "/images/services/wed.webp", alt: "Wedding couple greeting guests riding a shuttle bus" },
   "school-transportation": { src: "/images/services/school.webp", alt: "Students boarding a yellow school bus" },
   "sports-team-transportation": { src: "/images/services/sport.webp", alt: "Football team heading to a stadium" },
-  "airport-transfer": { src: "/images/services/airport.webp", alt: "Group shuttle bus at the airport terminal" },
+  "airport-transfer": { src: "/images/fleet/sprinter.jpg", alt: "Black Sprinter van parked beside aircraft on an airport apron" },
   "sightseeing-tour-bus": { src: "/images/services/multi.webp", alt: "Motorcoach on a scenic tour route" },
   "church-religious-transportation": { src: "/images/services/church.webp", alt: "Minibuses ready for a group shuttle" },
   "band-tour-bus": { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus" },
   "winery-tour-bus-rental": { src: "/images/services/winery.webp", alt: "Vineyard rows in wine country" },
   "military-group-transportation": { src: "/images/services/military.webp", alt: "The American flag against a blue sky" },
   "government-transportation": { src: "/images/services/government.webp", alt: "The United States Capitol building" },
-  "casino-bus-trips": { src: "/images/fleet/sprinter.jpg", alt: "Sprinter van for casino day trips" },
+  "casino-bus-trips": { src: "/images/fleet/limo.jpg", alt: "Party bus hired for a casino night out" },
 };
 
 // The four booking shapes (owner request, Nov 12).

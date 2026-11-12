@@ -127,6 +127,7 @@ const SERVICE_PHOTOS: Record<string, { src: string; alt: string }[]> = {
   ],
   "airport-transfer": [
     { src: "/images/services/airport.webp", alt: "Group shuttle bus waiting on the airport apron beside the terminal" },
+    { src: "/images/fleet/sprinter.jpg", alt: "Black Sprinter van parked beside aircraft on an airport apron" },
   ],
   "sightseeing-tour-bus": [
     { src: "/images/services/multi.webp", alt: "White motorcoach driving down a scenic mountain road" },

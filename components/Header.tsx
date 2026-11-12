@@ -9,6 +9,18 @@ import Link from "next/link";
 import { Mail, Phone, Menu, ChevronDown } from "lucide-react";
 import { SITE, SERVICES, FLEET } from "@/lib/site-data";
 
+// Small capacity chips for the Fleet mega dropdown (kept local so the big
+// fleet data file stays out of the header's client bundle).
+const FLEET_CAP: Record<string, string> = {
+  "charter-bus": "52–56",
+  sleeper: "Up to 15 bunks",
+  minibus: "20–32",
+  "school-bus": "28–60",
+  "sprinter-van": "Up to 14",
+  "party-bus": "14–40",
+  "suv-sedan": "Up to 7",
+};
+
 export default function Header() {
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
@@ -110,13 +122,13 @@ export default function Header() {
                     <ChevronDown size={14} aria-hidden="true" />
                   </button>
                 </span>
-                <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 py-3 px-2 ${servicesOpen ? "show" : ""}`}>
-                  <li>
+                <ul className={`dropdown-menu dropdown-menu-dark mega border-0 shadow-xl rounded-0 py-3 px-2 ${servicesOpen ? "show" : ""}`}>
+                  <li className="mega-full">
                     <Link className="dropdown-item fw-bold text-primary small py-2 px-3" href="/services/" onClick={() => { setOpen(false); setServicesOpen(false); }}>
                       All Services
                     </Link>
                   </li>
-                  <li><hr className="dropdown-divider opacity-10" /></li>
+                  <li className="mega-full"><hr className="dropdown-divider opacity-10" /></li>
                   {SERVICES.map((s) => (
                     <li key={s.slug}>
                       <Link className="dropdown-item py-2 px-3 small" href={`/services/${s.slug}/`} onClick={() => { setOpen(false); setServicesOpen(false); }}>
@@ -145,17 +157,18 @@ export default function Header() {
                     <ChevronDown size={14} aria-hidden="true" />
                   </button>
                 </span>
-                <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 py-3 px-2 ${fleetOpen ? "show" : ""}`}>
-                  <li>
+                <ul className={`dropdown-menu dropdown-menu-dark mega border-0 shadow-xl rounded-0 py-3 px-2 ${fleetOpen ? "show" : ""}`}>
+                  <li className="mega-full">
                     <Link className="dropdown-item fw-bold text-primary small py-2 px-3" href="/fleet/" onClick={() => { setOpen(false); setFleetOpen(false); }}>
                       View Entire Fleet
                     </Link>
                   </li>
-                  <li><hr className="dropdown-divider opacity-10" /></li>
+                  <li className="mega-full"><hr className="dropdown-divider opacity-10" /></li>
                   {FLEET.map((f) => (
                     <li key={f.slug}>
                       <Link className="dropdown-item py-2 px-3 small" href={`/fleet/${f.slug}/`} onClick={() => { setOpen(false); setFleetOpen(false); }}>
                         {f.name}
+                        {FLEET_CAP[f.slug] && <span className="mega-cap">{FLEET_CAP[f.slug]}</span>}
                       </Link>
                     </li>
                   ))}

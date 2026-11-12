@@ -1,10 +1,10 @@
-// Locations hub — same structure as the live hub: H1, intro, one block per
-// state with a VIEW CITIES button, A–Z. Fixes: true count of state areas,
-// state names as H2 (same look as the live H5), breadcrumb + intro line.
+// Locations hub — same structure as the live hub: H1, one tile per state with
+// a VIEW CITIES button, A–Z. True count of state areas, breadcrumb + intro,
+// per-state city counts, consistent theme (Nov 12 polish).
 import Link from "next/link";
-import { MapPin } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
-import { stateCodes, stateName } from "@/lib/locations";
+import { MapPin } from "lucide-react";
+import { stateCodes, stateName, keptCities, otherCities } from "@/lib/locations";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
@@ -16,13 +16,18 @@ export const metadata = pageMeta({
 
 export default function LocationsHub() {
   const codes = [...stateCodes()].sort((a, b) => a.localeCompare(b));
-  const areas = codes.map((c) => ({ code: c, name: stateName(c) }));
+  const areas = codes.map((code) => {
+    const kept = keptCities(code).length;
+    const others = otherCities(code).length;
+    return { code, name: stateName(code), kept, others, total: kept + others };
+  });
   const count = areas.length;
+  const cityPages = areas.reduce((n, a) => n + a.kept, 0);
 
   return (
     <main className="bg-white min-vh-100">
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations" }]} />
-<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">Service Areas</span>
           <h1 className="display-4 fw-bold mb-3">Our Service Locations</h1>
@@ -32,31 +37,37 @@ export default function LocationsHub() {
           </p>
           <div className="d-flex justify-content-center flex-wrap gap-3">
             <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{count} States + DC</span>
-            <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">710 City Pages</span>
+            <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">{cityPages} City Pages</span>
             <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">24/7 Dispatch</span>
           </div>
         </div>
       </section>
-            <section className="pb-5">
-        <div className="container">
-          <p className="text-center text-muted mb-4">
-            Every state below has a full page with its destinations — popular cities at the
-            top, every other town one click away through the quote form.
-          </p>
+
+      <section className="py-5">
+        <div className="container py-lg-3">
+          <div className="text-center mb-5">
+            <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Browse by State</span>
+            <h2 className="display-5 fw-bold text-dark mt-1">Pick a State</h2>
+            <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
+          </div>
           <div className="row g-3 g-md-4">
-            {areas.map((a, i) => (
+            {areas.map((a) => (
               <div className="col-lg-3 col-sm-6 col-6" key={a.code}>
                 <Link href={`/locations/${a.code}/`} className="text-decoration-none">
                   <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 location-tile">
                     <div className="card-body p-3 p-md-4 d-flex flex-column align-items-center text-center">
-                      <span className="bg-primary-soft text-primary rounded-circle mb-2 mb-md-3" style={{ width: 46, height: 46 }} aria-hidden="true">
-                        <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" style={{ marginTop: 8 }}>
+                      <span className="bg-primary-soft text-primary rounded-circle mb-2 d-flex align-items-center justify-content-center" style={{ width: 46, height: 46 }} aria-hidden="true">
+                        <svg xmlns="http://www.w3.org/2000/svg" width={20} height={20} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round">
                           <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
                           <circle cx="12" cy="10" r="3" />
                         </svg>
                       </span>
                       <h2 className="h5 fw-bold mb-1 mt-1 text-dark lh-sm">{a.name}</h2>
-                      <span className="badge bg-primary text-dark rounded-pill px-3 mb-2 mt-2">VIEW CITIES</span>
+                      <p className="text-muted mb-2" style={{ fontSize: "0.8rem" }}>
+                        {a.kept > 0 ? a.kept + " featured " + (a.kept === 1 ? "city" : "cities") : "Quote-ready"}
+                        {a.others > 0 ? " · " + a.others + " more towns" : ""}
+                      </p>
+                      <span className="badge bg-primary text-dark rounded-pill px-3 mt-auto">VIEW CITIES</span>
                     </div>
                   </div>
                 </Link>
@@ -65,6 +76,7 @@ export default function LocationsHub() {
           </div>
         </div>
       </section>
+
       <section className="py-5 bg-light border-top border-bottom">
         <div className="container py-4 text-center">
           <MapPin size={40} className="text-primary mb-3" aria-hidden="true" />

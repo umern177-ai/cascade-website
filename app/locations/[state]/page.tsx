@@ -1,6 +1,7 @@
 // State page (brief Section 7.7): still shows a button for EVERY city, with
 // kept cities on top (link to their page) and all other cities below as
-// booking-form buttons. Real 200 pages; cities without pages never get URLs.
+// booking-form buttons. Structured layout (Nov 12): hero with real counts,
+// consistent section heads (eyebrow + accent line), themed section rhythm.
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -18,7 +19,7 @@ export function generateStaticParams() {
 
 type Props = { params: Promise<{ state: string }> };
 
-// State FAQ: short, specific-ish but true for every state (no state-false facts).
+// State FAQ: true for every state (no state-false facts).
 function stateFaqs(stateNameStr: string) {
   return [
     {
@@ -27,13 +28,25 @@ function stateFaqs(stateNameStr: string) {
     },
     {
       q: `What if my ${stateNameStr} city is not on this list?`,
-      a: "It&apos;s still bookable. Open the quote form and type your city in the Pick-Up Location—the dispatch team plans routes anywhere in the country.",
+      a: `It's still bookable. Open the quote form and type your city in the Pick-Up Location—the dispatch team plans routes anywhere in the country.`,
     },
     {
       q: "How do I know which bus to choose?",
       a: "Tell us the headcount, luggage and route. As a guide: up to 14—sprinter van, 20–32—minibus, 52–56—charter bus, overnight—sleeper bus with up to 15 bunks.",
     },
   ];
+}
+
+// Consistent section head: small uppercase eyebrow + H2 + amber accent line.
+function SectionHead({ eyebrow, title, sub }: { eyebrow: string; title: string; sub?: string }) {
+  return (
+    <div className="text-center mb-5">
+      <span className="text-brand-dark fw-bold text-uppercase tracking-wider">{eyebrow}</span>
+      <h2 className="display-5 fw-bold text-dark mt-1">{title}</h2>
+      {sub && <p className="text-muted mt-2 mb-0">{sub}</p>}
+      <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
+    </div>
+  );
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -67,73 +80,71 @@ export default async function StatePage({ params }: Props) {
     <main className="bg-white min-vh-100">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(introSchema) }} />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: name }]} />
-<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
+
+      {/* Hero */}
+      <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
-          <h1 className="display-4 fw-bold mb-3">Charter Bus Rental in {name}</h1>
-          <p className="lead opacity-75 mx-auto mb-0" style={{ maxWidth: 650 }}>
+          <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">{`Charter Bus Rental · ${name}`}</span>
+          <h1 className="display-4 fw-bold mb-3">{`Charter Bus Rental in ${name}`}</h1>
+          <p className="lead opacity-75 mx-auto mb-4" style={{ maxWidth: 650 }}>
             Select a city below to explore local group transportation services and fleet options.
           </p>
+          <div className="d-flex justify-content-center flex-wrap gap-3">
+            {kept.length > 0 && (
+              <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{`${kept.length} featured ${kept.length === 1 ? "city" : "cities"}`}</span>
+            )}
+            <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">
+              {others.length + kept.length} cities served
+            </span>
+            <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">24/7 Dispatch</span>
+          </div>
         </div>
       </section>
 
-      
-      <section className="py-5">
-        <div className="container">
-          {kept.length > 0 && (
-            <>
-              <div className="row g-3 mb-5">
-                <div className="col-12">
-                  <h2 className="h4 fw-bold text-dark mb-4">Popular {name} Charter Bus Locations</h2>
+      {/* Group 1 — cities with their own pages */}
+      {kept.length > 0 && (
+        <section className="py-5">
+          <div className="container">
+            <SectionHead
+              eyebrow="Featured Destinations"
+              title={`Popular ${name} Charter Bus Locations`}
+              sub="These cities have their own page — open one to see local services, vehicles and drop-off tips."
+            />
+            <div className="row g-3">
+              {kept.map((c) => (
+                <div className="col-6 col-lg-4 col-md-4" key={c.slug}>
+                  <KeptCityButton stateCode={state} city={c.city} slug={c.slug} />
                 </div>
-                {kept.map((c) => (
-                  <div className="col-6 col-lg-4 col-md-4" key={c.slug}>
-                    <KeptCityButton stateCode={state} city={c.city} slug={c.slug} />
-                  </div>
-                ))}
-              </div>
-            </>
-          )}
+              ))}
+            </div>
+          </div>
+        </section>
+      )}
 
+      {/* Group 2 — every other city as a booking-form button */}
+      <section className="pb-5">
+        <div className="container">
           <div className="row g-3" style={{ contentVisibility: "auto", containIntrinsicSize: "auto 50000px" }}>
             <div className="col-12">
-              <h2 className="h4 fw-bold text-dark mb-2">More Cities We Serve in {name}</h2>
-              <p className="text-muted mb-4">Don&apos;t see a page for your city? Pick it below and we&apos;ll start your quote.</p>
+              <SectionHead
+                eyebrow="Everywhere Else"
+                title={`More Cities We Serve in ${name}`}
+                sub={others.length > 0 ? "Don't see a page for your city? Pick it below and we'll start your quote." : "All cities in " + name + " have their own pages above."}
+              />
             </div>
             {others.map((c) => (
               <div className="col-6 col-lg-4 col-md-4" key={c.slug}>
                 <QuoteCityButton city={c.city} stateCode={state} />
               </div>
             ))}
-            {others.length === 0 && (
-              <p className="text-muted">All cities in {name} have their own pages above.</p>
-            )}
           </div>
         </div>
       </section>
 
-      {/* Reliable Transportation Across {State} */}
+      {/* How booking works in {State} */}
       <section className="py-5 bg-light">
         <div className="container py-4">
-          <h2 className="display-6 fw-bold text-dark mb-3">Reliable Transportation Across {name}</h2>
-          <p className="text-muted" style={{ maxWidth: 820 }}>
-            Cascade Charter Bus runs group transportation in {name} and all 50 states: coach
-            tours, sports travel, wedding shuttles, airport transfers and school trips. Tell
-            dispatch where your group starts and ends—the route is planned for you, with the
-            driver arriving early and a final quote before you commit.
-          </p>
-          <p className="text-muted mb-0" style={{ maxWidth: 820 }}>
-            Trips in {name} usually need one of two things: a schedule that holds, or a load
-            that fits. We plan both. Pickup times are built backwards from your arrival time,
-            and the vehicle is matched to your headcount and luggage, so the bus that shows up
-            is the one your trip actually needs.
-          </p>
-        </div>
-      </section>
-
-      {/* How booking works in {State} */}
-      <section className="py-5">
-        <div className="container py-4">
-          <h2 className="display-6 fw-bold text-dark mb-4">How booking works in {name}</h2>
+          <SectionHead eyebrow="Simple Process" title={`How booking works in ${name}`} />
           <div className="row g-4">
             {[
               { step: "Pick your city or open the form", text: "Cities with their own page are linked above. Everyone else can pick from the list below, or just open the booking form and type an address." },
@@ -153,14 +164,14 @@ export default async function StatePage({ params }: Props) {
       </section>
 
       {/* Vehicles ready in {State} */}
-      <section className="py-5 pt-0">
+      <section className="py-5">
         <div className="container">
-          <h2 className="display-6 fw-bold text-dark mb-4">Vehicles available in {name}</h2>
+          <SectionHead eyebrow="Our Fleet" title={`Vehicles available in ${name}`} sub="Matched to your headcount, luggage and route. Click a vehicle for full specs." />
           <div className="row g-3">
             {VEHICLES.map((v) => (
               <div className="col-md-6 col-lg-4" key={v.slug}>
                 <a className="text-decoration-none" href={`/fleet/${v.slug}/`}>
-                  <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100">
+                  <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100 bg-white">
                     <div className="d-flex align-items-center justify-content-between">
                       <h3 className="h6 fw-bold text-dark mb-0">{v.cardName}</h3>
                       <span className="badge bg-dark rounded-pill px-3 py-1 small">{v.passengers}</span>
@@ -174,10 +185,37 @@ export default async function StatePage({ params }: Props) {
         </div>
       </section>
 
-      {/* Related states */}
+      {/* Reliable Transportation Across {State} */}
       <section className="py-5 bg-light border-top border-bottom">
         <div className="container py-4">
-          <h2 className="display-6 fw-bold text-dark mb-4">Nearby States We Serve</h2>
+          <div className="row justify-content-center">
+            <div className="col-lg-9">
+              <div className="text-center mb-4">
+                <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Why Cascade</span>
+                <h2 className="display-5 fw-bold text-dark mt-1">Reliable Transportation Across {name}</h2>
+                <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
+              </div>
+              <p className="text-muted">
+                Cascade Charter Bus runs group transportation in {name} and all 50 states: coach
+                tours, sports travel, wedding shuttles, airport transfers and school trips. Tell
+                dispatch where your group starts and ends—the route is planned for you, with the
+                driver arriving early and a final quote before you commit.
+              </p>
+              <p className="text-muted mb-0">
+                Trips in {name} usually need one of two things: a schedule that holds, or a load
+                that fits. We plan both. Pickup times are built backwards from your arrival time,
+                and the vehicle is matched to your headcount and luggage, so the bus that shows up
+                is the one your trip actually needs.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Related states */}
+      <section className="py-5">
+        <div className="container">
+          <SectionHead eyebrow="Next Door" title={`Nearby States We Serve`} />
           <div className="row g-3">
             {neighborStates(state, 5).map((nb) => (
               <div className="col-md-4 col-6" key={nb}>
@@ -196,11 +234,12 @@ export default async function StatePage({ params }: Props) {
       </section>
 
       {/* FAQ */}
-      <section className="py-5">
+      <section className="py-5 bg-light border-top">
         <div className="container py-4">
+          <SectionHead eyebrow="FAQ" title={`${name} Charter Bus Questions`} />
           <div className="row justify-content-center">
             <div className="col-lg-9">
-              <div className="accordion accordion-flush shadow-sm rounded-4 overflow-hidden border">
+              <div className="accordion accordion-flush shadow-sm rounded-4 overflow-hidden border bg-white">
                 {stateFaqs(name).map((f, i) => (
                   <details className="accordion-item border-bottom" key={i} open={i === 0}>
                     <summary className="accordion-button fw-bold text-dark py-3 px-4" style={{ display: "flex", cursor: "pointer" }}>
@@ -217,4 +256,3 @@ export default async function StatePage({ params }: Props) {
     </main>
   );
 }
-

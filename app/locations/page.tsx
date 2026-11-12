@@ -62,11 +62,7 @@ export default function LocationsHub() {
                           <circle cx="12" cy="10" r="3" />
                         </svg>
                       </span>
-                      <h2 className="h5 fw-bold mb-1 mt-1 text-dark lh-sm">{a.name}</h2>
-                      <p className="text-muted mb-2" style={{ fontSize: "0.8rem" }}>
-                        {a.kept > 0 ? a.kept + " featured " + (a.kept === 1 ? "city" : "cities") : "Quote-ready"}
-                        {a.others > 0 ? " · " + a.others + " more towns" : ""}
-                      </p>
+                      <h2 className="h5 fw-bold mb-3 mt-1 text-dark lh-sm">{a.name}</h2>
                       <span className="badge bg-primary text-dark rounded-pill px-3 mt-auto">VIEW CITIES</span>
                     </div>
                   </div>

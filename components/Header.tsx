@@ -89,16 +89,34 @@ export default function Header() {
               <li className="nav-item">
                 <Link className="nav-link px-3 text-uppercase x-small-bold" href="/" onClick={closeAllNav}>Home</Link>
               </li>
-              <li className="nav-item dropdown">
-                <button
-                  type="button"
-                  className="nav-link px-3 text-uppercase x-small-bold d-flex align-items-center gap-1 dropdown-toggle custom-nav-link bg-transparent border-0"
-                  aria-expanded={servicesOpen}
-                  onClick={() => { setServicesOpen(!servicesOpen); setFleetOpen(false); }}
-                >
-                  Services <ChevronDown size={14} aria-hidden="true" />
-                </button>
+              <li
+                className="nav-item dropdown"
+                onMouseEnter={() => { if (window.matchMedia("(min-width: 992px)").matches) { setServicesOpen(true); setFleetOpen(false); } }}
+                onMouseLeave={() => setServicesOpen(false)}
+              >
+                {/* Split trigger: the label navigates to the services page, the
+                    chevron toggles the dropdown (owner request, Nov 12). */}
+                <span className="nav-link px-3 text-uppercase x-small-bold d-flex align-items-center gap-1">
+                  <Link className="text-decoration-none x-small-bold text-inherit" href="/services/" onClick={closeAllNav}>
+                    Services
+                  </Link>
+                  <button
+                    type="button"
+                    className="custom-nav-link bg-transparent border-0 p-0 m-0 d-flex"
+                    aria-label="Open Services menu"
+                    aria-expanded={servicesOpen}
+                    onClick={() => { setServicesOpen(!servicesOpen); setFleetOpen(false); }}
+                  >
+                    <ChevronDown size={14} aria-hidden="true" />
+                  </button>
+                </span>
                 <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 mt-2 py-3 px-2 ${servicesOpen ? "show" : ""}`}>
+                  <li>
+                    <Link className="dropdown-item fw-bold text-primary small py-2 px-3" href="/services/" onClick={() => { setOpen(false); setServicesOpen(false); }}>
+                      All Services
+                    </Link>
+                  </li>
+                  <li><hr className="dropdown-divider opacity-10" /></li>
                   {SERVICES.map((s) => (
                     <li key={s.slug}>
                       <Link className="dropdown-item py-2 px-3 small" href={`/services/${s.slug}/`} onClick={() => { setOpen(false); setServicesOpen(false); }}>
@@ -106,24 +124,34 @@ export default function Header() {
                       </Link>
                     </li>
                   ))}
-                  <li><hr className="dropdown-divider opacity-10" /></li>
-                  <li>
-                    <Link className="dropdown-item fw-bold text-primary small" href="/services/" onClick={() => { setOpen(false); setServicesOpen(false); }}>
-                      All Services
-                    </Link>
-                  </li>
                 </ul>
               </li>
-              <li className="nav-item dropdown">
-                <button
-                  type="button"
-                  className="nav-link px-3 text-uppercase x-small-bold d-flex align-items-center gap-1 dropdown-toggle custom-nav-link bg-transparent border-0"
-                  aria-expanded={fleetOpen}
-                  onClick={() => { setFleetOpen(!fleetOpen); setServicesOpen(false); }}
-                >
-                  Fleet <ChevronDown size={14} aria-hidden="true" />
-                </button>
+              <li
+                className="nav-item dropdown"
+                onMouseEnter={() => { if (window.matchMedia("(min-width: 992px)").matches) { setFleetOpen(true); setServicesOpen(false); } }}
+                onMouseLeave={() => setFleetOpen(false)}
+              >
+                <span className="nav-link px-3 text-uppercase x-small-bold d-flex align-items-center gap-1">
+                  <Link className="text-decoration-none x-small-bold text-inherit" href="/fleet/" onClick={closeAllNav}>
+                    Fleet
+                  </Link>
+                  <button
+                    type="button"
+                    className="custom-nav-link bg-transparent border-0 p-0 m-0 d-flex"
+                    aria-label="Open Fleet menu"
+                    aria-expanded={fleetOpen}
+                    onClick={() => { setFleetOpen(!fleetOpen); setServicesOpen(false); }}
+                  >
+                    <ChevronDown size={14} aria-hidden="true" />
+                  </button>
+                </span>
                 <ul className={`dropdown-menu dropdown-menu-dark border-0 shadow-xl rounded-0 mt-2 py-3 px-2 ${fleetOpen ? "show" : ""}`}>
+                  <li>
+                    <Link className="dropdown-item fw-bold text-primary small py-2 px-3" href="/fleet/" onClick={() => { setOpen(false); setFleetOpen(false); }}>
+                      View Entire Fleet
+                    </Link>
+                  </li>
+                  <li><hr className="dropdown-divider opacity-10" /></li>
                   {FLEET.map((f) => (
                     <li key={f.slug}>
                       <Link className="dropdown-item py-2 px-3 small" href={`/fleet/${f.slug}/`} onClick={() => { setOpen(false); setFleetOpen(false); }}>
@@ -131,12 +159,6 @@ export default function Header() {
                       </Link>
                     </li>
                   ))}
-                  <li><hr className="dropdown-divider opacity-10" /></li>
-                  <li>
-                    <Link className="dropdown-item fw-bold text-primary small" href="/fleet/" onClick={() => { setOpen(false); setFleetOpen(false); }}>
-                      View Entire Fleet
-                    </Link>
-                  </li>
                 </ul>
               </li>
               <li className="nav-item">

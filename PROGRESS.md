@@ -4,6 +4,22 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
+**Routing cards live on every researched city page (Nov 12) + Batch 8 pushed (10 NY cities, 163/710 structured).**
+- RouteDiagram generalized: every city with data gets the "City -> Destination" bus routing
+  card. Chain: explicit premium.route > researched famous place/venue > top structured
+  destination > researched airport. Shelton's card now data-driven (NYC, 65 mi, Route 8 + I-95,
+  Merritt ban line). Park City routes to Historic Main Street, Oneonta to the Baseball Hall of
+  Fame, Oxford to the Grove, etc. Generic cities without research get one when research lands.
+- **Batch 8 done (10 NY cities researched end-to-end)**: Auburn, Larchmont, Lowville, Mayfield,
+  Oneonta, Rock Tavern, Warwick, Windham, Boonville, Central Valley. Each: researched
+  places/venues/airports (SYR, HPN, ALB, SWF, with miles/times), 3 city-specific services,
+  3-4 destinations with tips, 4 FAQs, source links, route cards with verified miles/times.
+- Gates: same-state Jaccard worst 0.196 (< 0.20 PASS), word counts 866-986, 0 banned words,
+  0 console errors, build 802 pages 0 errors.
+- Remaining: ~547 pages (0 Medium + ~534 Standard + 12 Traffic), next cities in demand order:
+  Auburn done; continue with more NY Standard cities (Oneonta done; next: Cobleskill, Cornwallville,
+  Eldred, Elka Park, Ellicottville, Endicott, Fallsburg, Geneva, Hunter, Interlaken, Lawrence,
+  Medina, Middle Village...) then other states in demand order. Batches of ~10.
 **Premium design rolled out to EVERY city page (Nov 12, owner request "start building").**
 - Route dispatch: structured cities (131, data/city-pages.json) → PremiumCityPage
   (Shelton frame; premium extras appear as data provides); all other kept cities

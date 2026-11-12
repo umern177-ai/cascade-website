@@ -303,6 +303,22 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
   .navbar .dropdown-menu.mega .mega-cap { display: none; }
 }
 
+/* HTML sitemap page /sitemap/ */
+.sitemap-link { color: #212529; text-decoration: none; }
+.sitemap-link:hover { color: var(--fleet-orange); }
+.sitemap-chip {
+  display: inline-block; background: #f8f9fa; border: 1px solid #dee2e6; border-radius: 50rem;
+  padding: 2px 10px; margin: 0 6px 6px 0; font-size: 0.78rem; color: #212529; text-decoration: none;
+  transition: border-color 0.15s, background 0.15s, color 0.15s;
+}
+.sitemap-chip:hover { border-color: var(--fleet-orange); background: #fff7e6; color: #7a4e00; }
+.sitemap-letter { display: inline-flex; align-items: center; justify-content: center;
+  width: 2.5rem; height: 2.5rem; border-radius: 0.75rem; background: var(--fleet-orange);
+  color: var(--fleet-black); font-weight: 800; font-size: 1.05rem; }
+@media (prefers-reduced-motion: reduce) {
+  .sitemap-chip { transition: none; }
+}
+
 @media (prefers-reduced-motion: reduce) {
   *,
   *::before,

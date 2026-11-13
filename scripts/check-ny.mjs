@@ -1,7 +1,7 @@
 // Same-state similarity check for the Batch 8 NY cities (brief 8.7: Jaccard < 0.20).
 import { chromium } from "playwright";
 const BASE = "http://localhost:3100";
-const pages = ["auburn", "larchmont", "lowville", "mayfield", "oneonta", "rock-tavern", "warwick", "windham", "boonville", "central-valley", "clayton", "cobleskill", "cornwallville", "eldred", "elka-park", "ellicottville", "endicott", "fallsburg", "geneva", "hunter", "interlaken", "lawrence", "medina", "middle-village", "middletown", "mount-kisco"];
+const pages = ["auburn", "larchmont", "lowville", "mayfield", "oneonta", "rock-tavern", "warwick", "windham", "boonville", "central-valley", "clayton", "cobleskill", "cornwallville", "eldred", "elka-park", "ellicottville", "endicott", "fallsburg", "geneva", "hunter", "interlaken", "lawrence", "medina", "middle-village", "middletown", "mount-kisco", "olean", "penn-yan", "port-jefferson-station", "port-jervis", "poughkeepsie", "quogue", "roxbury", "rye", "saugerties", "schroon-lake", "wainscott", "west-point", "woodbourne", "plattsburgh", "clymer"];
 function shingles(text, n = 5) {
   const words = text.toLowerCase().split(/\s+/).filter(Boolean);
   const s = new Set();

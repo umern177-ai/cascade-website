@@ -119,8 +119,8 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
 
   const bookingSteps = [
     { t: "Call or Request Online", d: <span>Send the quote form or call <a href={`tel:${SITE.phoneTel}`} style={{ color: "#fff" }}>{SITE.phoneDisplay}</a>. Average reply in about 15 minutes.</span>, badge: "24/7 Dispatch" },
-    { t: "Custom Quote", d: "You receive an itinerary-specific quote: vehicle, pickup times and one final price — gratuity, tolls and taxes included.", badge: null },
-    { t: "Relax and Ride", d: "Your driver arrives before the pickup time. Dispatch stays reachable for the whole trip, day or night.", badge: null },
+    { t: "Custom Quote", d: `You receive an itinerary-specific quote for your ${name} trip: vehicle, pickup times and one final price — gratuity, tolls and taxes included.`, badge: null },
+    { t: "Relax and Ride", d: `Your driver arrives before the pickup time in ${name}, and dispatch stays reachable for the whole trip, day or night.`, badge: null },
   ];
 
   return (
@@ -412,11 +412,11 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
 
           <div className="pp-checklist-card">
             <div>
-              <h3>Send the right itinerary and your quote comes back final</h3>
+              <h3>{`Send the right ${name} itinerary and your quote comes back final`}</h3>
               <p className="pp-checklist-lead">Dispatch prices exactly what you send, so the more precise your details, the more exact the price. Include these five things:</p>
               <ul className="pp-checklist">
                 {[
-                  <span key="1"><strong>Pickup address</strong> — hotel, venue, office or home</span>,
+                  <span key="1"><strong>Pickup address in {name}</strong> — hotel, venue, office or home</span>,
                   <span key="2"><strong>Pickup time and date</strong> (plus return time for round trips)</span>,
                   <span key="3"><strong>Destination</strong>, plus every stop in between</span>,
                   <span key="4"><strong>Arrival or event end time</strong>, so timing fits your plan</span>,

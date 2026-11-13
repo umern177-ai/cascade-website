@@ -4,6 +4,19 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
+**Batch 10 done: 15 more NY cities (194 of 710 structured, whole state of New York complete).**
+- New York remaining cities researched: Olean, Penn Yan, Port Jefferson Station,
+  Port Jervis, Poughkeepsie, Quogue, Roxbury, Rye, Saugerties, Schroon Lake,
+  Wainscott, West Point, Woodbourne, Plattsburgh, Clymer. NY = 100% structured!
+- Route cards: City -> famous anchor (Rock City, Crispin Hill, Walkway Over
+  the Hudson, Playland, Peek'n Peak, Bethel Woods...). Booking block now
+  carries the city name (which also cut shared shingles on every page).
+- Similarity differentiation fixes: Hamptons pair, Penn Yan, Woodbourne,
+  Interlaken, Wainscott, Roxbury. Worst NY Jaccard 0.190 < 0.20 PASS over
+  41 structured NY cities; word counts 806-992 unique; 0 console errors.
+- Remaining: 516 pages in other states. Next batches by demand order.
+- Owner flow continues: "keep going" per batch.
+
 **Retrofit DONE (Nov 13): all 179 structured city pages now render full Shelton-level premium.**
 - PremiumCityPage auto-derives the Shelton extras from data each structured
   page already holds: hero lead = opening of the approved intro (remainder

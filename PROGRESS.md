@@ -4,6 +4,21 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
+**Retrofit DONE (Nov 13): all 179 structured city pages now render full Shelton-level premium.**
+- PremiumCityPage auto-derives the Shelton extras from data each structured
+  page already holds: hero lead = opening of the approved intro (remainder
+  shown in the intro section, no duplication), facts strip from the routing
+  distance + site-true facts, route cards chained (explicit ~ famous place ~
+  structured destination ~ airport).
+- Explicit premium data still wins (Shelton, Batch 8/9 pages unaffected).
+- Verified: Oxford + Park City (retrofit) both show lead/facts/route with 0
+  duplication and 0 console errors; NY similarity gate 0.198 PASS.
+- **Numbers: 179 of 710 fully Shelton-level (with routes/cards); remaining
+  531 reach full level when their research batch lands (design frame already
+  live on all 710).** Tag pills stay explicit-only for now.
+- Next: research batches continue (~10-16 per pass; next up: rest of NY, then
+  demand-ordered states).
+
 **Batch 9 done: 16 more NY cities researched (179 of 710 structured). Same-state gate PASS.**
 - Batch 9: Clayton, Cobleskill, Cornwallville, Eldred, Elka Park, Ellicottville,
   Endicott, Fallsburg, Geneva, Hunter, Interlaken, Lawrence, Medina, Middle

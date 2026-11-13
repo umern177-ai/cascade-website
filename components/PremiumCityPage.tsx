@@ -19,10 +19,12 @@ const SERVICE_LINKS: Record<string, string> = {
   "band-tour-bus": "Band tour bus rental",
 };
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RouteDiagram, { etaText } from "@/components/RouteDiagram";
 import { VEHICLES } from "@/lib/fleet-data";
 import { keptCities, isKept, stateName } from "@/lib/locations";
 import { SITE } from "@/lib/site-data";
-import type { CityPageData } from "@/lib/city-page-data";
+import { getCityContent } from "@/lib/city-content";
+import type { CityPageData, CityRoute, CityRule } from "@/lib/city-page-data";
 
 const SERVICE_IMAGES: Record<string, string> = {
   "corporate-transportation": "/images/services/corp.webp",
@@ -74,6 +76,46 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
     return { ...n, path: kept && isKept(state, kept.slug) ? `/locations/${state}/${kept.slug}/` : null };
   });
   const also = premium.alsoCovered || data.mapPins.join(" · ");
+  // Routing for EVERY city (owner request): explicit data route first, then the
+  // researched famous place/venue, then the researched airport.
+  const cc = getCityContent(state, data.slug);
+  const route: CityRoute | null = premium.route ??
+    (cc?.places?.length
+      ? { to: cc.places[0].name, toNote: "Famous destination" }
+      : data.destinations.find((d) => d && d.name)
+        ? { to: data.destinations.find((d) => d && d.name)!.name, toNote: "Top destination" }
+        : cc?.airports?.length
+          ? { to: `${cc.airports[0].name} (${cc.airports[0].code})`, toNote: "Airport", miles: `~${Math.round(cc.airports[0].miles)} mi`, time: etaText(cc.airports[0].miles) }
+          : null);
+  const routingRules: CityRule[] = premium.rules ?? [];
+
+  // Auto retrofit (owner request: make every structured page Shelton-level):
+  // hero lead = the opening of the approved intro, facts strip = the routing
+  // distance when we hold one, plus the site-true facts. No copy invented.
+  let heroLead = premium.heroLead ?? "";
+  let introRemainder = "";
+  if (!premium.routing && !premium.heroLead && data.heroIntro) {
+    const sentences = data.heroIntro.match(/[^.!?]+[.!?]+(?:["']|\)|])?\s*/g) ?? [data.heroIntro];
+    if (sentences.length >= 3) {
+      heroLead = sentences.slice(0, 2).join(" ").trim();
+      introRemainder = sentences.slice(2).join(" ").trim();
+    }
+  }
+  const autoFacts = premium.facts ??
+    (route?.miles
+      ? [
+          { dt: `Drive from ${name}`, dd: route.miles.replace("~", "").replace(/\s*mi$/, ""), unit: "mi" },
+          { dt: "Quote reply time", dd: "15", unit: "min" },
+          { dt: "Dispatch support", dd: "24/7", unit: "" },
+          { dt: "Vehicle types", dd: "7", unit: "" },
+        ]
+      : [
+          { dt: "Quote reply time", dd: "15", unit: "min" },
+          { dt: "Dispatch support", dd: "24/7", unit: "" },
+          { dt: "States covered", dd: "50", unit: "" },
+          { dt: "Vehicle types", dd: "7", unit: "" },
+        ]);
+  const showIntro = premium.routing ? true : introRemainder.length > 40 || !!premium.heroLead;
 
   const bookingSteps = [
     { t: "Call or Request Online", d: <span>Send the quote form or call <a href={`tel:${SITE.phoneTel}`} style={{ color: "#fff" }}>{SITE.phoneDisplay}</a>. Average reply in about 15 minutes.</span>, badge: "24/7 Dispatch" },
@@ -97,7 +139,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
               <h1>
                 Charter Bus Rental in <em>{`${name}, ${stAbbr}`}</em>
               </h1>
-              {premium.heroLead && <p className="pp-lead">{premium.heroLead}</p>}
+              {heroLead && <p className="pp-lead">{heroLead}</p>}
               <div className="pp-hero-ctas">
                 <a className="pp-btn pp-btn-amber" href="/contact/" data-pickup={pickup} data-source={`city-hero:${state}:${data.slug}`} rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>
                 <a className="pp-btn pp-btn-ghost" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" /> {SITE.phoneDisplay}</a>
@@ -145,11 +187,11 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
       </section>
 
       {/* ===== facts strip ===== */}
-      {premium.facts && premium.facts.length > 0 && (
+      {autoFacts.length > 0 && (
         <section className="pp-facts" aria-label={`${name} charter bus key facts`}>
           <div className="container">
             <dl className="pp-facts-grid">
-              {premium.facts.map((f) => (
+              {autoFacts.map((f) => (
                 <div className="pp-fact" key={f.dt}>
                   <dt>{f.dt}</dt>
                   <dd>{f.dd}<small>{f.unit}</small></dd>
@@ -161,7 +203,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
       )}
 
       {/* ===== intro / routing + route diagram ===== */}
-      {(premium.routing || data.heroIntro) && (
+      {showIntro && (
         <section className="pp-sec" id="routing">
           <div className="container pp-intro-grid">
             <div className="pp-intro-copy">
@@ -184,60 +226,33 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
                 </ul>
               </>
             ) : (
-              <p>{data.heroIntro}</p>
+              introRemainder.length > 40 ? <p>{introRemainder}</p> : <p>{data.heroIntro}</p>
             )}
           </div>
           {premium.routing && (
-            <figure className="pp-route-card">
-              <figcaption>{`${name} → New York City`}<span>Bus routing</span></figcaption>
-              {/* Owner-approved Shelton→NYC bus routing diagram (Merritt Parkway ban) */}
-              <svg viewBox="0 0 560 380" role="img" aria-labelledby="pp-map-t pp-map-d">
-                <title id="pp-map-t">Bus route from Shelton, CT to New York City</title>
-                <desc id="pp-map-d">Diagram showing buses travel south from Shelton on Route 8 to I-95, then southwest along I-95 to New York City, because buses are banned from the Merritt Parkway.</desc>
-                <rect width="560" height="380" fill="#121A2E" />
-                <path d="M0 330 C90 300 150 318 220 296 C300 270 360 262 440 236 C490 220 530 214 560 204 L560 380 L0 380Z" fill="#1A2B45" />
-                <text x="380" y="318" fill="#4C6A93" fontSize="13" fontStyle="italic" letterSpacing="2">LONG ISLAND SOUND</text>
-                <path d="M432 92 C360 130 280 150 200 190 C150 215 110 240 78 262" fill="none" stroke="#D64545" strokeWidth="4" strokeDasharray="9 8" opacity=".9" />
-                <g transform="translate(262 160)">
-                  <circle r="17" fill="#D64545" />
-                  <path d="M-6 -6 6 6M6 -6 -6 6" stroke="#fff" strokeWidth="3" strokeLinecap="round" />
-                </g>
-                <text x="232" y="207" fill="#F08A8A" fontSize="13" fontWeight="700">Merritt Pkwy · no buses</text>
-                <path d="M432 92 C438 140 436 180 428 222" fill="none" stroke="#F5A002" strokeWidth="6" strokeLinecap="round" />
-                <path d="M428 222 C360 240 300 252 230 272 C170 289 120 292 78 262" fill="none" stroke="#F5A002" strokeWidth="6" strokeLinecap="round" />
-                <g fontWeight="800" fontSize="12" textAnchor="middle">
-                  <rect x="446" y="140" width="34" height="22" rx="5" fill="#fff" />
-                  <text x="463" y="155" fill="#0F1115">CT 8</text>
-                  <path d="M300 236 h40 v16 a20 10 0 0 1 -40 0z" fill="#2D5BD1" />
-                  <text x="320" y="252" fill="#fff">I-95</text>
-                </g>
-                <g fontSize="12.5" fill="#A9B0C2">
-                  <circle cx="428" cy="222" r="4" fill="#A9B0C2" />
-                  <text x="440" y="226">Bridgeport</text>
-                  <circle cx="300" cy="262" r="3.5" fill="#A9B0C2" />
-                  <text x="270" y="290">Norwalk</text>
-                  <circle cx="190" cy="282" r="3.5" fill="#A9B0C2" />
-                  <text x="176" y="270">Stamford</text>
-                </g>
-                <g fontWeight="800">
-                  <circle cx="432" cy="92" r="13" fill="#F5A002" />
-                  <circle cx="432" cy="92" r="5" fill="#0F1115" />
-                  <text x="452" y="88" fill="#fff" fontSize="18">Shelton</text>
-                  <text x="452" y="106" fill="#A9B0C2" fontSize="11.5" fontWeight="600">Pickup</text>
-                  <circle cx="78" cy="262" r="13" fill="#fff" />
-                  <circle cx="78" cy="262" r="5" fill="#0F1115" />
-                  <text x="40" y="298" fill="#fff" fontSize="18">New York City</text>
-                  <text x="40" y="315" fill="#A9B0C2" fontSize="11.5" fontWeight="600">~65 mi · ~2 hrs</text>
-                </g>
-              </svg>
-              <div className="pp-legend">
-                <span><i style={{ background: "#F5A002" }} />Bus route (Route 8 + I-95)</span>
-                <span><i style={{ background: "repeating-linear-gradient(90deg,#D64545 0 6px,transparent 6px 10px)" }} />Merritt Parkway — banned for buses</span>
-              </div>
-            </figure>
+            <RouteDiagram from={name} route={route ?? { to: "New York City" }} />
           )}
         </div>
       </section>
+      )}
+
+      {/* ===== routing diagram =========================
+          Every city gets its famous routing (owner request): the researched
+          route (city-routes.json) first, then the researched famous place
+          or venue, then the researched airport. Shelton's geography-specific
+          card lives in its data entry. */}
+      {route && !premium.routing && (
+        <section className="pp-sec pp-bg-white" id="route">
+          <div className="container">
+            <header className="pp-sec-head">
+              <p className="pp-eyebrow">Bus Routing</p>
+              <h2>{`How the trip runs from ${name}`}</h2>
+            </header>
+            <div style={{ maxWidth: 760, margin: "0 auto" }}>
+              <RouteDiagram from={name} route={route} />
+            </div>
+          </div>
+        </section>
       )}
 
       {/* ===== services ===== */}

@@ -18,8 +18,9 @@ export function pageMeta(opts: {
   const img = image && image.startsWith("http") ? image : `${SITE.url}${image ?? "/hero-bus.jpg"}`;
   const brand = " | Cascade Charter Bus";
   return {
-    // absolute when the page title already carries the brand (never doubled)
-    title: title.endsWith(brand) ? { absolute: title } : title,
+    // absolute when the page title already carries the brand anywhere
+    // ("About Cascade Charter Bus" too) - never let the template double it
+    title: title.includes("Cascade Charter Bus") ? { absolute: title } : title,
     description,
     robots: {
       index,

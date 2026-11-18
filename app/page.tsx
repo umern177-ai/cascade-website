@@ -5,7 +5,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import {
-  Star, Shield, Users, Clock, Briefcase, Phone,
+  Star, Shield, Users, Clock, Briefcase, Phone, ShieldCheck, Tag, Headset,
   ArrowLeftRight, ArrowRight, RefreshCw, Repeat2, CalendarDays, Award,
 } from "lucide-react";
 import FaqAccordion from "@/components/Faq";
@@ -81,59 +81,58 @@ export const metadata = pageMeta({
 
 export default function Home() {
   return (
-    <main>
-      {/* 1. Hero */}
+    <main className="pp pp-svc">
+      {/* 1. Hero — pp-frame (Nov 18): the facts strip overlap now lands in
+          reserved hero space, matching the city/service/contact pages. */}
       <section
-        className="vh-100 d-flex align-items-center text-white position-relative"
-        style={{ background: "linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.85)), url('/hero-bus.webp') center/cover" }}
+        className="pp-hero"
+        style={{
+          backgroundImage:
+            "linear-gradient(rgba(12, 16, 28, 0.8), rgba(12, 16, 28, 0.88)), url('/hero-bus.webp')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+        }}
       >
-        <div className="container mt-5">
-          <div className="row">
-            <div className="col-lg-8">
-              <span className="badge bg-primary text-dark px-3 py-2 rounded-pill text-uppercase tracking-widest mb-3 fw-bold">
-                Premium Group Transportation
-              </span>
-              <h1 className="display-1 fw-bold mb-3 lh-1">
-                Group Travel, <br />
-                <span className="text-primary">Elevated.</span>
-              </h1>
-              <p className="lead mb-4 w-100 opacity-90 fs-4">
-                Some trips are more than just travel. Cascade Charter Bus knows the value of
-                your gatherings—whether it’s a wedding, group excursion, winery tour, or
-                corporate conference.
-              </p>
-              <p className="mb-5 text-light opacity-75 fs-6">
-                From a 7-seat SUV to a full 56-seat motorcoach—modern vehicles for every size
-                of group, with professional, DOT-certified drivers. Because your safety is everything.
-              </p>
-              <div className="d-flex flex-wrap gap-3">
-                <Link className="btn btn-primary btn-lg px-5 py-3 rounded-pill fw-bold hover-lift shadow-lg" href="/contact/">
-                  REQUEST A QUOTE
-                </Link>
-                <Link className="btn btn-outline-light btn-lg px-5 py-3 rounded-pill fw-bold hover-lift" href="/fleet/">
-                  VIEW OUR FLEET
-                </Link>
-              </div>
+        <div className="container">
+          <div style={{ maxWidth: 820, padding: "5rem 0 7rem" }}>
+            <p className="pp-eyebrow">Premium Group Transportation</p>
+            <h1>
+              Charter Bus Travel, <br />
+              <em>Elevated.</em>
+            </h1>
+            <p className="pp-lead">
+              Some trips are more than just travel. Cascade Charter Bus knows the value of
+              your gatherings—whether it&apos;s a wedding, group excursion, winery tour, or
+              corporate conference.
+            </p>
+            <p className="mb-0" style={{ color: "#c9cfdc", fontSize: "0.98rem", maxWidth: 620 }}>
+              From a 7-seat SUV to a full 56-seat motorcoach—modern vehicles for every size
+              of group, with professional, DOT-certified drivers. Because your safety is everything.
+            </p>
+            <div className="pp-hero-ctas">
+              <Link className="pp-btn pp-btn-amber" href="/contact/" data-source="home-hero" rel="nofollow">
+                Request a Quote <ArrowRight aria-hidden="true" />
+              </Link>
+              <Link className="pp-btn pp-btn-ghost" href="/fleet/">View Our Fleet</Link>
             </div>
+            <ul className="pp-trust">
+              <li><ShieldCheck aria-hidden="true" />DOT-compliant fleet</li>
+              <li><Tag aria-hidden="true" />Gratuity, tolls &amp; taxes included</li>
+              <li><Headset aria-hidden="true" />24/7 dispatch</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* 2. Stats bar — confirmed facts only (brief 7.1: removed 4.9/5 and 500+). */}
-      <section className="py-4 bg-white shadow-sm position-relative z-index-10 mt-n4 mx-auto rounded-4 container border">
-        <div className="row text-center g-4 align-items-center">
-          <div className="col-md-3 col-6 border-end">
-            <p className="fw-bold mb-0 text-dark text-uppercase small">{SITE.years}</p>
-          </div>
-          <div className="col-md-3 col-6 border-end">
-            <p className="fw-bold mb-0 text-dark text-uppercase small">{SITE.coverage}</p>
-          </div>
-          <div className="col-md-3 col-6 border-end">
-            <p className="fw-bold mb-0 text-dark text-uppercase small">24/7 Logistics Team</p>
-          </div>
-          <div className="col-md-3 col-6">
-            <p className="fw-bold mb-0 text-dark text-uppercase small">Multiple Vehicle Types</p>
-          </div>
+      {/* 2. Stats bar — pp-facts strip, same as every other page */}
+      <section className="pp-facts" aria-label="Cascade Charter Bus key facts">
+        <div className="container">
+          <dl className="pp-facts-grid">
+            <div className="pp-fact"><dt>Quote reply time</dt><dd>15<small>min</small></dd></div>
+            <div className="pp-fact"><dt>Gratuity, tolls &amp; taxes</dt><dd>Included</dd></div>
+            <div className="pp-fact"><dt>Dispatch support</dt><dd>24/7</dd></div>
+            <div className="pp-fact"><dt>States covered</dt><dd>50</dd></div>
+          </dl>
         </div>
       </section>
 

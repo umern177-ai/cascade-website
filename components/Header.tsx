@@ -178,6 +178,9 @@ export default function Header() {
                 <Link className="nav-link px-3 text-uppercase x-small-bold" href="/locations/" onClick={closeAllNav}>Locations</Link>
               </li>
               <li className="nav-item">
+                <Link className="nav-link px-3 text-uppercase x-small-bold" href="/blog/" onClick={closeAllNav}>Blog</Link>
+              </li>
+              <li className="nav-item">
                 <Link className="nav-link px-3 text-uppercase x-small-bold" href="/about/" onClick={closeAllNav}>About</Link>
               </li>
               <li className="nav-item">

@@ -19,11 +19,11 @@ const inter = Inter({
 export const metadata: Metadata = {
   metadataBase: new URL(SITE.url),
   title: {
-    default: "Charter Bus Rental Nationwide | Cascade Charter Bus",
+    default: "Group Charter Bus Rental | Cascade Charter Bus",
     template: "%s | Cascade Charter Bus",
   },
   description:
-    "Nationwide charter bus rental, coast to coast from New York to Los Angeles. Premium motorcoaches, shuttles, and executive group transportation with DOT-certified drivers.",
+    "Charter bus rental across the United States, coast to coast from New York to Los Angeles. Premium motorcoaches, shuttles, and executive group transportation with DOT-certified drivers.",
   robots: {
     index: true,
     follow: true,
@@ -86,7 +86,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <head>
         {/* LCP: hero photo preloaded like the live site (brief Section 11) */}
-        <link rel="preload" as="image" href="/hero-bus.webp" />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
       <body className={inter.className}>

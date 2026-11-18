@@ -14,6 +14,8 @@ reports/lh-*.json
 .next/dev*.log
 .next/start3200*.log
 next-env.d.ts
+shot/
+servicespictures/
 
 # environment / secrets
 .env

@@ -13,6 +13,7 @@ import GenericPremiumCity from "@/components/GenericPremiumCity";
 import { keptCities, isKept, stateName, nearbyKept, states } from "@/lib/locations";
 import { getStructuredCityPage } from "@/lib/city-page-data";
 import { getCityContent, getCityFallback } from "@/lib/city-content";
+import { pageMeta } from "@/lib/page-meta";
 
 type Props = { params: Promise<{ state: string; city: string }> };
 
@@ -27,24 +28,28 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { state, city } = await params;
   const structured = getStructuredCityPage(state, city);
   if (structured) {
-    return {
-      title: structured.title,
+    // SEO fix (Nov 18 audit): (a) append the state to the title so same-named
+    // cities in different states don't share identical <title> strings —
+    // e.g. Columbus OH vs Columbus MS vs Columbus IN; (b) route through
+    // pageMeta so every city page carries og:image / og:type / og:site_name
+    // and twitter tags (they were missing → social shares had no image).
+    const stAbbr = state.toUpperCase();
+    const title = structured.title.includes(`, ${stAbbr}`)
+      ? structured.title
+      : structured.title.replace(" | Cascade Charter Bus", `, ${stAbbr} | Cascade Charter Bus`);
+    return pageMeta({
+      title, // pageMeta's includes-brand guard makes it absolute
       description: structured.metaDescription,
-      alternates: { canonical: `https://cascadecharterbus.com/locations/${state}/${city}/` },
-      openGraph: {
-        title: structured.title,
-        description: structured.metaDescription,
-        url: `https://cascadecharterbus.com/locations/${state}/${city}/`,
-      },
-    };
+      path: `/locations/${state}/${city}/`,
+    });
   }
   const found = keptCities(state).find((c) => c.slug === city);
   if (!found) return {};
-  return {
-    title: `Charter Bus Rental in ${found.city} | Cascade Charter Bus`,
+  return pageMeta({
+    title: `Charter Bus Rental in ${found.city}, ${state.toUpperCase()} | Cascade Charter Bus`,
     description: `Charter bus rental in ${found.city}, ${stateName(state)} for weddings, school trips, sports travel and corporate events. DOT-certified drivers, 24/7 dispatch, final quotes.`,
-    alternates: { canonical: `https://cascadecharterbus.com/locations/${state}/${city}/` },
-  };
+    path: `/locations/${state}/${city}/`,
+  });
 }
 
 export default async function CityPage({ params }: Props) {
@@ -67,6 +72,7 @@ export default async function CityPage({ params }: Props) {
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: stateName(state), href: `/locations/${state}/` }, { label: found.city }]} />
       <GenericPremiumCity
         name={found.city}
+        citySlug={city}
         state={state}
         stName={stateName(state)}
         county={fb?.county ?? null}

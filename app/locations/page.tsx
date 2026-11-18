@@ -8,9 +8,9 @@ import { stateCodes, stateName, keptCities, otherCities } from "@/lib/locations"
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Charter Bus Service Locations | All 50 States",
+  title: "Charter Bus Service Locations | 48 States + DC",
   description:
-    "Our service locations: charter bus rental in 50 states and Washington DC. Browse cities and regions for local group transportation and fleet options.",
+    "Our service locations: charter bus rental across 48 states plus Washington DC. Browse cities and regions for local group transportation and fleet options.",
   path: "/locations/",
 });
 

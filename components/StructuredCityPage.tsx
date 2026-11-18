@@ -17,7 +17,7 @@ const SERVICE_IMAGES: Record<string, string> = {
   "wedding-transportation": "/images/services/wed2.webp",
   "school-transportation": "/images/services/school.webp",
   "sports-team-transportation": "/images/services/sport.webp",
-  "airport-transfer": "/images/services/airport.webp",
+  "airport-transfer": "/images/fleet/sprinter.jpg",
   "sightseeing-tour-bus": "/images/services/multi.webp",
   "church-religious-transportation": "/images/services/church.webp",
   "band-tour-bus": "/images/fleet/sleeper.jpg",

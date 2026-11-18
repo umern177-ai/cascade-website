@@ -5,6 +5,7 @@
 import { states } from "@/lib/locations";
 import { SERVICES, FLEET } from "@/lib/site-data";
 import { VEHICLES } from "@/lib/fleet-data";
+import { POSTS } from "@/lib/blog-data";
 
 const BASE = "https://cascadecharterbus.com";
 
@@ -23,6 +24,10 @@ function today(): string {
   return new Date().toISOString();
 }
 
+function postDate(date: string): string {
+  return new Date(date).toISOString();
+}
+
 export type Child = { name: string; xml: () => string };
 
 export const SITEMAP_CHILDREN: Child[] = [
@@ -31,7 +36,7 @@ export const SITEMAP_CHILDREN: Child[] = [
     xml: () =>
       build({
         path: "pages",
-        locs: [["/", today()], ["/about/", today()], ["/contact/", today()], ["/faqs/", today()], ["/privacy-policy/", today()], ["/termsandconditions/", today()], ["/cancellation-policy/", today()]],
+        locs: [["/", today()], ["/about/", today()], ["/contact/", today()], ["/faqs/", today()], ["/blog/", today()], ...POSTS.map((p) => [`/blog/${p.slug}/`, today()] as [string, string]), ["/sitemap/", today()], ["/privacy-policy/", today()], ["/termsandconditions/", today()], ["/cancellation-policy/", today()]],
       }),
   },
   {
@@ -50,6 +55,7 @@ export const SITEMAP_CHILDREN: Child[] = [
         locs: [["/fleet/", today()], ...VEHICLES.map((v) => [`/fleet/${v.slug}/`, today()] as [string, string])],
       }),
   },
+
   {
     name: "sitemap-locations-states.xml",
     xml: () =>

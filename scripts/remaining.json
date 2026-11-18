@@ -1,0 +1,183 @@
+{
+ "ca": [
+  "Anaheim|anaheim|inq:1",
+  "Arnold|arnold|inq:1",
+  "Cambria|cambria|inq:1",
+  "Camino|camino|inq:1",
+  "Dixon|dixon|inq:1",
+  "Fallbrook|fallbrook|inq:1",
+  "Folsom|folsom|inq:1",
+  "Fort Bragg|fort-bragg|inq:1",
+  "Jamestown|jamestown|inq:1",
+  "Monterey|monterey|inq:1",
+  "Nevada City|nevada-city|inq:1",
+  "Northridge|northridge|inq:1",
+  "Sacramento|sacramento|inq:1",
+  "Santa Ynez|santa-ynez|inq:1",
+  "Trinidad|trinidad|inq:1",
+  "Van Nuys|van-nuys|inq:1"
+ ],
+ "or": [
+  "Rockaway Beach|rockaway-beach|inq:1",
+  "Damascus|damascus|inq:1",
+  "Otter Rock|otter-rock|inq:1",
+  "Pacific City|pacific-city|inq:1",
+  "McMinnville|mcminnville|inq:0",
+  "Brookings|brookings|inq:0",
+  "Tillamook|tillamook|inq:0"
+ ],
+ "ut": [
+  "Kamas|kamas|inq:1",
+  "Richfield|richfield|inq:1",
+  "Draper|draper|inq:1",
+  "Jensen|jensen|inq:1",
+  "Moab|moab|inq:1"
+ ],
+ "co": [
+  "Nederland|nederland|inq:1",
+  "Salida|salida|inq:1",
+  "Avon|avon|inq:1",
+  "Bayfield|bayfield|inq:1",
+  "Denver|denver|inq:1",
+  "Golden|golden|inq:1",
+  "Vail|vail|inq:1",
+  "Woodland Park|woodland-park|inq:1",
+  "Westcliffe|westcliffe|inq:0"
+ ],
+ "mt": [
+  "Big Sky|big-sky|inq:1",
+  "Livingston|livingston|inq:1",
+  "Troy|troy|inq:1",
+  "Bozeman|bozeman|inq:1",
+  "Emigrant|emigrant|inq:1",
+  "Marion|marion|inq:1",
+  "Plentywood|plentywood|inq:1",
+  "Shelby|shelby|inq:1",
+  "Dillon|dillon|inq:0"
+ ],
+ "tn": [
+  "Paris|paris|inq:1",
+  "Chattanooga|chattanooga|inq:1",
+  "Mt. Juliet|mount-juliet|inq:1",
+  "Nashville|nashville|inq:1",
+  "Pulaski|pulaski|inq:1",
+  "Shelbyville|shelbyville|inq:1",
+  "Pigeon Forge|pigeon-forge|inq:0"
+ ],
+ "me": [
+  "Belfast|belfast|inq:1",
+  "Rockland|rockland|inq:1",
+  "Bethel|bethel|inq:1",
+  "Ogunquit|ogunquit|inq:1",
+  "Portland|portland|inq:1",
+  "Sanford|sanford|inq:1",
+  "York|york|inq:1",
+  "Bar Harbor|bar-harbor|inq:0"
+ ],
+ "wv": [
+  "Fairmont|fairmont|inq:1",
+  "Kingwood|kingwood|inq:1",
+  "Shepherdstown|shepherdstown|inq:1",
+  "White Sulphur Springs|white-sulphur-springs|inq:1",
+  "Charles Town|charles-town|inq:1",
+  "Lesage|lesage|inq:1",
+  "Princeton|princeton|inq:1",
+  "West Union|west-union|inq:1"
+ ],
+ "al": [
+  "Auburn|auburn|inq:1",
+  "Calera|calera|inq:1",
+  "Fairhope|fairhope|inq:1",
+  "Opp|opp|inq:1",
+  "Pinson|pinson|inq:1",
+  "Troy|troy|inq:0"
+ ],
+ "il": [
+  "Edwardsville|edwardsville|inq:1",
+  "Olympia Fields|olympia-fields|inq:1",
+  "Woodstock|woodstock|inq:1",
+  "East St. Louis|east-saint-louis|inq:1",
+  "Elgin|elgin|inq:1",
+  "Lake Zurich|lake-zurich|inq:1",
+  "Machesney Park|machesney-park|inq:1",
+  "South Beloit|south-beloit|inq:1",
+  "Taylor Ridge|taylor-ridge|inq:1"
+ ],
+ "mo": [
+  "Belton|belton|inq:1",
+  "Branson|branson|inq:1",
+  "Independence|independence|inq:1",
+  "Joplin|joplin|inq:1",
+  "Mount Vernon|mount-vernon|inq:1",
+  "Springfield|springfield|inq:1",
+  "Wellsville|wellsville|inq:1",
+  "Hannibal|hannibal|inq:0"
+ ],
+ "az": [
+  "Bellemont|bellemont|inq:1",
+  "Bullhead City|bullhead-city|inq:1",
+  "Glendale|glendale|inq:1",
+  "Goodyear|goodyear|inq:1",
+  "Pinetop|pinetop|inq:1",
+  "Prescott|prescott|inq:1",
+  "Prescott Valley|prescott-valley|inq:1",
+  "Sierra Vista|sierra-vista|inq:1",
+  "Show Low|show-low|inq:0"
+ ],
+ "wy": [
+  "Alpine|alpine|inq:1",
+  "Buffalo|buffalo|inq:1",
+  "Dubois|dubois|inq:1",
+  "Cheyenne|cheyenne|inq:1",
+  "Cora|cora|inq:1",
+  "Sheridan|sheridan|inq:0"
+ ],
+ "vt": [
+  "Brattleboro|brattleboro|inq:1",
+  "Middletown Springs|middletown-springs|inq:1",
+  "Rutland|rutland|inq:1"
+ ],
+ "ok": [
+  "McAlester|mcalester|inq:1",
+  "Smithville|smithville|inq:1",
+  "Stillwater|stillwater|inq:1"
+ ],
+ "ms": [
+  "Ridgeland|ridgeland|inq:1",
+  "Ruth|ruth|inq:1",
+  "Tylertown|tylertown|inq:1",
+  "Waveland|waveland|inq:1",
+  "Greenwood|greenwood|inq:0",
+  "Greenville|greenville|inq:0"
+ ],
+ "ri": [
+  "Bristol|bristol|inq:1",
+  "Exeter|exeter|inq:1",
+  "Newport|newport|inq:1",
+  "Warwick|warwick|inq:1"
+ ],
+ "ks": [
+  "Atchison|atchison|inq:1",
+  "Hays|hays|inq:1",
+  "Leawood|leawood|inq:1",
+  "Wichita|wichita|inq:1"
+ ],
+ "la": [
+  "Covington|covington|inq:1",
+  "Hammond|hammond|inq:1",
+  "Jennings|jennings|inq:1",
+  "Ruston|ruston|inq:1"
+ ],
+ "sd": [
+  "Deadwood|deadwood|inq:0"
+ ],
+ "ar": [
+  "Benton|benton|inq:0"
+ ],
+ "ia": [
+  "Muscatine|muscatine|inq:0"
+ ],
+ "ne": [
+  "Sidney|sidney|inq:0"
+ ]
+}

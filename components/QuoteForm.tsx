@@ -132,7 +132,7 @@ export default function QuoteForm() {
           </div>
         </div>
 
-        <div className="row g-3 mb-4">
+        <div className="row gy-3 gx-1 mb-4">
           <div className="col-md-4">
             <label htmlFor="fullName" className="form-label small fw-bold text-muted">FULL NAME</label>
             <input id="fullName" name="fullName" type="text" className="form-control bg-light border-0 py-3" required autoComplete="name" />

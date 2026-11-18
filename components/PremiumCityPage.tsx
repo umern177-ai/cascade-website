@@ -31,7 +31,7 @@ const SERVICE_IMAGES: Record<string, string> = {
   "wedding-transportation": "/images/services/wed2.webp",
   "school-transportation": "/images/services/school.webp",
   "sports-team-transportation": "/images/services/sport.webp",
-  "airport-transfer": "/images/services/airport.webp",
+  "airport-transfer": "/images/fleet/sprinter.jpg",
   "sightseeing-tour-bus": "/images/services/multi.webp",
   "church-religious-transportation": "/images/services/church.webp",
   "band-tour-bus": "/images/fleet/sleeper.jpg",
@@ -203,6 +203,9 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
       )}
 
       {/* ===== intro / routing + route diagram ===== */}
+      {/* Pilot (owner review Nov 17): /ct/essex/ shows the map beside the
+          intro paragraph, like Shelton's layout. If approved, roll the same
+          split to the city pages that carry a route diagram. */}
       {showIntro && (
         <section className="pp-sec" id="routing">
           <div className="container pp-intro-grid">
@@ -229,31 +232,16 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
               introRemainder.length > 40 ? <p>{introRemainder}</p> : <p>{data.heroIntro}</p>
             )}
           </div>
-          {premium.routing && (
+          {(premium.routing || route) && (
             <RouteDiagram from={name} route={route ?? { to: "New York City" }} />
           )}
         </div>
       </section>
       )}
 
-      {/* ===== routing diagram =========================
-          Every city gets its famous routing (owner request): the researched
-          route (city-routes.json) first, then the researched famous place
-          or venue, then the researched airport. Shelton's geography-specific
-          card lives in its data entry. */}
-      {route && !premium.routing && (
-        <section className="pp-sec pp-bg-white" id="route">
-          <div className="container">
-            <header className="pp-sec-head">
-              <p className="pp-eyebrow">Bus Routing</p>
-              <h2>{`How the trip runs from ${name}`}</h2>
-            </header>
-            <div style={{ maxWidth: 760, margin: "0 auto" }}>
-              <RouteDiagram from={name} route={route} />
-            </div>
-          </div>
-        </section>
-      )}
+      {/* ===== routing diagram — rolled out Nov 17 (owner approved): the map
+          sits beside the intro paragraph on every city page (same split grid
+          as Shelton). No stacked section below anymore. */}
 
       {/* ===== services ===== */}
       <section className="pp-sec pp-bg-white" id="services">
@@ -364,8 +352,9 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
           <header className="pp-sec-head">
             <p className="pp-eyebrow">Service area</p>
             <h2>{data.nearby.heading}</h2>
-            <p>We serve the whole area around {name}. Pickups in these towns are a short drive from {name}.</p>
+            {data.nearby.plainText ? <p style={{ maxWidth: 820, margin: "0 auto" }}>{data.nearby.plainText}</p> : <p>We serve the whole area around {name}. Pickups in these towns are a short drive from {name}.</p>}
           </header>
+          {!data.nearby.plainText && (
           <div className="pp-near-grid">
             <ul className="pp-cities">
               {nearbyItems.map((n) => (
@@ -388,6 +377,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
               <iframe title={`Map of ${name}, ${stName}`} src={`https://www.google.com/maps?q=${encodeURIComponent(`${name}, ${stAbbr}`)}&z=11&output=embed`} loading="lazy" referrerPolicy="no-referrer-when-downgrade" allowFullScreen />
             </div>
           </div>
+          )}
         </div>
       </section>
 

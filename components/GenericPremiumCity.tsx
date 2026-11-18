@@ -6,6 +6,8 @@
 import Image from "next/image";
 import { Phone, MapPin, Users, Check, Plane, Award } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import RouteDiagram, { etaText } from "@/components/RouteDiagram";
+import { getCityContent } from "@/lib/city-content";
 import { VEHICLES, type Vehicle } from "@/lib/fleet-data";
 import { SITE } from "@/lib/site-data";
 import type { Place, Airport } from "@/lib/city-content";
@@ -34,6 +36,7 @@ const CHECKLIST = [
 
 type Props = {
   name: string;
+  citySlug: string;
   state: string;
   stName: string;
   county: string | null;
@@ -46,7 +49,7 @@ type Props = {
   nearby: { city: string; slug: string; path: string }[];
 };
 
-export default function GenericPremiumCity({ name, state, stName, county, venues, weddingVenues, weddingIntro, places, airports, wineries, nearby }: Props) {
+export default function GenericPremiumCity({ name, citySlug, state, stName, county, venues, weddingVenues, weddingIntro, places, airports, wineries, nearby }: Props) {
   const stAbbr = state.toUpperCase();
   const pickup = `${name}, ${stAbbr}`;
   const minDate = new Date().toISOString().slice(0, 10);
@@ -55,6 +58,15 @@ export default function GenericPremiumCity({ name, state, stName, county, venues
   const intro = `${name} sits in ${county ? `${county}, ` : ""}${stName}. When real groups traveled from ${name}, pickup was at ${
     venues.length > 0 ? venues.join(", ") : "spots agreed with the organizer"
   }, and the trip was planned the same way we'd plan yours: one vehicle matched to the headcount and luggage, one final quote before anyone commits.`;
+
+  // Routing for every city (owner request): the researched famous place first,
+  // then the researched airport.
+  const cc = getCityContent(state, citySlug);
+  const route = cc?.places?.length
+    ? { to: cc.places[0].name, toNote: "Famous destination" }
+    : cc?.airports?.length
+      ? { to: `${cc.airports[0].name} (${cc.airports[0].code})`, toNote: "Airport", miles: `~${Math.round(cc.airports[0].miles)} mi`, time: etaText(cc.airports[0].miles) }
+      : null;
 
   return (
     <main className="pp bg-white" style={{ fontSize: "inherit" }}>
@@ -142,6 +154,21 @@ export default function GenericPremiumCity({ name, state, stName, county, venues
           </div>
         </div>
       </section>
+
+      {/* ===== routing (famous place / venue / airport) ===== */}
+      {route && (
+        <section className="pp-sec pp-bg-white" id="route">
+          <div className="container">
+            <header className="pp-sec-head">
+              <p className="pp-eyebrow">Bus Routing</p>
+              <h2>{`How the trip runs from ${name}`}</h2>
+            </header>
+            <div style={{ maxWidth: 760, margin: "0 auto" }}>
+              <RouteDiagram from={name} route={route} />
+            </div>
+          </div>
+        </section>
+      )}
 
       {/* ===== wedding priority (owner: ~70% of inquiries) ===== */}
       <section className="pp-sec pp-bg-white" id="wedding">

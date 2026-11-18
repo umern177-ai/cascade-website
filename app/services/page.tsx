@@ -1,16 +1,19 @@
-// Services hub — same layout as the live services hub, with the general FAQ
-// replacing the live page's wedding-only FAQ (brief 7.2).
+// Services hub — premium pp-* design (Nov 17): matches the city-page frame.
+// Dark hero + quote form, facts strip, all 12 service cards with real photos,
+// dark process band, FAQ, amber CTA band. Same real data as before, nothing
+// invented.
 import Link from "next/link";
 import Image from "next/image";
-import { Check } from "lucide-react";
+import { ArrowRight, Check, ChevronRight, Phone, ShieldCheck, Tag, Headset, Quote } from "lucide-react";
 import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SERVICES } from "@/lib/site-data";
 import { getService } from "@/lib/fleet-data";
+import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Professional Services Tailored to Your Journey",
+  title: "Charter Bus Services for Groups & Events",
   description:
     "Charter bus services for corporate events, weddings, schools, sports teams, airport transfers, sightseeing tours, church groups and band tours—nationwide.",
   path: "/services/",
@@ -39,7 +42,12 @@ const SERVICES_FAQS = [
   },
 ];
 
-const BOOKING_STEPS = ["Request", "Review", "Confirm", "Ride"];
+const HUB_STEPS = [
+  { step: "Request", text: "Send your trip details and schedule by form or the 24/7 line." },
+  { step: "Review", text: "Get a detailed, final quote—usually in about 15 minutes." },
+  { step: "Confirm", text: "Confirm dates with one call or email; changes go in writing." },
+  { step: "Ride", text: "Drivers arrive early; dispatch stays reachable the whole trip." },
+];
 
 // Real service photos supplied by the owner (processed to WebP, EXIF stripped).
 // band-tour-bus uses the fleet sleeper photo (no owner service photo yet).
@@ -58,100 +66,182 @@ const CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
   "casino-bus-trips": { src: "/images/fleet/limo.jpg", alt: "Party bus hired for a casino night out" },
 };
 
+const FACTS = [
+  { dt: "Quote reply time", dd: "15", unit: "min" },
+  { dt: "Gratuity, tolls & taxes", dd: "Included", unit: "" },
+  { dt: "Dispatch support", dd: "24/7", unit: "" },
+  { dt: "States covered", dd: "50", unit: "" },
+];
+
 export default function ServicesHub() {
+  const serviceSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    itemListElement: SERVICES.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.name, url: `${SITE.url}/services/${s.slug}/` })),
+  };
   return (
-    <main className="bg-white min-vh-100">
-      {/* Hero */}
+    <main className="pp bg-white pp-svc" style={{ fontSize: "inherit" }}>
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services" }]} />
-<section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
-        <div className="container text-center">
-          <span className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 d-block">Elite Charter Solutions</span>
-          <h1 className="display-4 fw-bold mb-4">Professional Services Tailored to Your Journey</h1>
-          <Link className="btn btn-primary rounded-pill px-4 py-2 fw-bold shadow-sm" href="/contact/">BOOK NOW</Link>
+
+      {/* ===== hero + quote form (same frame as city/service pages) ===== */}
+      <section className="pp-hero">
+        <div className="container">
+          <div className="pp-hero-grid">
+            <div>
+              <p className="pp-eyebrow">Charter Services · Every Kind of Group</p>
+              <h1>
+                Charter Bus Services for <em>Every Kind of Group</em>
+              </h1>
+              <p className="pp-lead">
+                Weddings, conferences, school trips, teams, tours and unit moves—planned,
+                quoted and run the same disciplined way, across all 50 states.
+              </p>
+              <div className="pp-hero-ctas">
+                <a className="pp-btn pp-btn-amber" href="/contact/" data-source="services-hero" rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>
+                <a className="pp-btn pp-btn-ghost" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" /> {SITE.phoneDisplay}</a>
+              </div>
+              <ul className="pp-trust">
+                <li><ShieldCheck aria-hidden="true" />DOT-compliant fleet</li>
+                <li><Tag aria-hidden="true" />Gratuity, tolls &amp; taxes included</li>
+                <li><Headset aria-hidden="true" />24/7 dispatch</li>
+              </ul>
+            </div>
+
+            {/* Field names match the full booking form, so submitting lands on
+                /contact/ with pickup, date and passengers already in place. */}
+            <form className="pp-quote" id="quote" action="/contact/" method="get" aria-labelledby="hub-quote-title">
+              <h2 id="hub-quote-title">Plan any group trip</h2>
+              <p className="pp-sub-note">One final price. Average reply in about 15 minutes.</p>
+              <input type="hidden" name="source" value="services:hub" />
+              <div className="pp-field">
+                <label htmlFor="hub-q-pickup">Pickup location</label>
+                <input id="hub-q-pickup" name="pickup" type="text" placeholder="Hotel, office, venue or home" autoComplete="street-address" />
+              </div>
+              <div className="pp-field">
+                <label htmlFor="hub-q-dest">Destination</label>
+                <input id="hub-q-dest" name="destination" type="text" placeholder="Where the group is going" />
+              </div>
+              <div className="pp-field-row">
+                <div className="pp-field">
+                  <label htmlFor="hub-q-date">Trip date</label>
+                  <input id="hub-q-date" name="date" type="date" />
+                </div>
+                <div className="pp-field">
+                  <label htmlFor="hub-q-pax">Passengers</label>
+                  <select id="hub-q-pax" name="passengers" defaultValue="">
+                    <option value="">Select</option>
+                    <option value="14">1–14 (Sprinter)</option>
+                    <option value="32">15–32 (Minibus)</option>
+                    <option value="60">33–60 (Coach / School bus)</option>
+                    <option value="60-plus">60+ (Multiple vehicles)</option>
+                  </select>
+                </div>
+              </div>
+              <button className="pp-btn pp-btn-amber" type="submit" data-source="services:hub">See the Full Booking Form <ArrowRight aria-hidden="true" /></button>
+              <p className="pp-fine"><Check aria-hidden="true" />No obligation · No hidden fees</p>
+            </form>
+          </div>
         </div>
       </section>
 
-      
-      {/* Service cards */}
-      <section className="py-5">
-        <div className="container py-lg-4">
-          <div className="row g-4">
-            {SERVICES.map((s) => {
+      {/* ===== facts strip ===== */}
+      <section className="pp-facts" aria-label="Cascade Charter Bus key facts">
+        <div className="container">
+          <dl className="pp-facts-grid">
+            {FACTS.map((f) => (
+              <div className="pp-fact" key={f.dt}>
+                <dt>{f.dt}</dt>
+                <dd>{f.dd}<small>{f.unit}</small></dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* ===== all services ===== */}
+      <section className="pp-sec" id="services">
+        <div className="container">
+          <header className="pp-sec-head">
+            <p className="pp-eyebrow">What we run</p>
+            <h2>Pick your service—same discipline behind all of them</h2>
+            <p>Each card opens a page sized to that group: the vehicles that fit, the process, the pricing and the answers organizers actually ask for.</p>
+          </header>
+          <div className="pp-service-gallery">
+            {SERVICES.map((s, i) => {
               const meta = getService(s.slug);
+              const ph = CARD_PHOTOS[s.slug];
               return (
-                <div className="col-lg-4 col-md-6" key={s.slug}>
-                  <Link href={`/services/${s.slug}/`} className="text-decoration-none">
-                    <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 overflow-hidden">
-                      {CARD_PHOTOS[s.slug] && (
-                        <Image src={CARD_PHOTOS[s.slug].src} alt={CARD_PHOTOS[s.slug].alt} width={800} height={450}
-                          sizes="(max-width: 768px) 100vw, 33vw"
-                          style={{ width: "100%", height: 200, objectFit: "cover" }} />
-                      )}
-                      <div className="bg-primary-soft p-2 rounded-3 text-primary mx-4 mt-4 mb-2 d-inline-flex align-self-start" style={{ width: "fit-content" }}>
-                        <Check size={20} aria-hidden="true" />
-                      </div>
-                      <div className="card-body p-4">
-                        <h2 className="h5 fw-bold text-dark mb-1">{s.name}</h2>
-                        <p className="text-muted small mb-3">{meta?.eyebrow}</p>
-                        <span className="btn btn-sm rounded-pill px-3 py-2 fw-bold btn-outline-dark">View Details</span>
-                      </div>
-                    </div>
-                  </Link>
-                </div>
+                <Link key={s.slug} href={`/services/${s.slug}/`} className="pp-hub-card" aria-label={`${s.name} details`}>
+                  <div className="pp-hub-media">
+                    <span className="pp-num" aria-hidden="true">{`0${i + 1}`}</span>
+                    {ph && <Image src={ph.src} alt={ph.alt} fill sizes="(max-width: 800px) 100vw, 33vw" style={{ objectFit: "cover" }} />}
+                  </div>
+                  <div className="pp-hub-body">
+                    <span className="pp-badge">{meta?.eyebrow}</span>
+                    <h2 className="pp-hub-name">{s.name}</h2>
+                    <span className="pp-link-arrow">View details <ChevronRight size={14} style={{ verticalAlign: "-2px" }} aria-hidden="true" /></span>
+                  </div>
+                </Link>
               );
             })}
           </div>
         </div>
       </section>
 
-      {/* Booking Made Simple */}
-      <section className="py-5 bg-light">
-        <div className="container py-4">
-          <div className="text-center mb-5">
-            <h2 className="display-6 fw-bold text-dark">Booking Made Simple</h2>
-            <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
-          </div>
-          <div className="row g-4 text-center">
-            {BOOKING_STEPS.map((s, i) => (
-              <div className="col-md-3 col-6" key={s}>
-                <div className="p-4 h-100 border-0 card rounded-4 shadow-sm">
-                  <span className="badge bg-primary rounded-circle mx-auto mb-3 d-flex align-items-center justify-content-center" style={{ width: 48, height: 48, fontSize: "1.2rem" }}>
-                    {i + 1}
-                  </span>
-                  <h3 className="h6 fw-bold text-dark mb-1">{s}</h3>
-                  <p className="text-muted small mb-0">
-                    {i === 0 && "Send your trip details and schedule."}
-                    {i === 1 && "Get a detailed, final quote—usually in ~15 minutes."}
-                    {i === 2 && "Confirm dates with one call or email."}
-                    {i === 3 && "Drivers arrive early; dispatch stays reachable."}
-                  </p>
-                </div>
-              </div>
+      {/* ===== booking process (dark band) ===== */}
+      <section className="pp-sec pp-bg-ink on-dark" id="how">
+        <div className="container">
+          <header className="pp-sec-head mx-auto text-center" style={{ maxWidth: 760 }}>
+            <p className="pp-eyebrow" style={{ color: "var(--pp-amber)" }}>Booking made simple</p>
+            <h2 style={{ color: "#fff" }}>Four steps from message to ride</h2>
+            <p style={{ color: "#a9b0c2" }}>The same process runs behind every service, from a two-van airport run to a four-coach wedding weekend.</p>
+          </header>
+          <ol className="pp-steps">
+            {HUB_STEPS.map((st, i) => (
+              <li className="pp-step" key={st.step}>
+                <div className="pp-step-num" aria-hidden="true">{i + 1}</div>
+                <h3>{st.step}</h3>
+                <p>{st.text}</p>
+              </li>
             ))}
+          </ol>
+          <div className="pp-final-card">
+            <Quote aria-hidden="true" size={26} style={{ color: "var(--pp-amber)" }} />
+            <h3 className="mb-2">The quote you receive is final.</h3>
+            <p className="pp-checklist-lead mb-0">Gratuity included. No hidden fuel surcharges or driver fees. Average reply in about 15 minutes.</p>
           </div>
         </div>
       </section>
 
-      {/* FAQ (general, not wedding-only) */}
-      <section className="py-5">
-        <div className="container py-4">
-          <div className="text-center mb-5">
-            <h2 className="display-6 fw-bold text-dark">Frequently Asked Questions</h2>
-          </div>
+      {/* ===== FAQ ===== */}
+      <section className="pp-sec pp-bg-white" id="faq">
+        <div className="container">
+          <header className="pp-sec-head">
+            <p className="pp-eyebrow">FAQ</p>
+            <h2>Questions organizers ask first</h2>
+            <p>The short answers—each service page carries the deeper ones.</p>
+          </header>
           <div className="row justify-content-center">
-            <div className="col-lg-9">
+            <div className="col-lg-10">
               <FaqAccordion faqs={SERVICES_FAQS} idPrefix="services-hub" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-5 bg-dark text-white text-center">
-        <div className="container py-4">
-          <h2 className="display-6 fw-bold mb-3">Ready To Plan Your Trip?</h2>
-          <p className="text-white-50 mb-4">Tell us where you&apos;re going—get a final quote fast.</p>
-          <Link className="btn btn-primary rounded-pill px-5 py-3 fw-bold btn-lg" href="/contact/">GET A FREE QUOTE</Link>
+      {/* ===== final CTA (amber band) ===== */}
+      <section className="pp-cta-band">
+        <div className="container pp-cta-inner">
+          <div>
+            <h2>Ready to plan your trip?</h2>
+            <p>Share the trip and group count—get one final quote, usually in about 15 minutes.</p>
+          </div>
+          <div className="pp-cta-actions">
+            <a className="pp-btn pp-btn-dark" href="/contact/" data-source="services-cta" rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>
+            <a className="pp-btn pp-btn-outline-dark" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" />{`Call ${SITE.phoneDisplay}`}</a>
+          </div>
         </div>
       </section>
     </main>

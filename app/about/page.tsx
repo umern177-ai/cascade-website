@@ -1,17 +1,19 @@
-// About page — same layout as live; facts corrected per brief 7.5b:
-// "5+ years of service" (no 10+/15+), no invented trips/drivers/rating numbers,
-// WiFi claim reflects the fleet data (on most motorcoaches), no invented team.
+// About page — premium pp-* design (Nov 17), same facts as before, corrected
+// per brief 7.5b: "5+ years of service" (no 10+/15+), no invented trips,
+// drivers or rating numbers. One real testimonial from SITE data.
 import Link from "next/link";
 import Image from "next/image";
-import { Check, Bus, MapPin, Award, Users, Clock, ShieldCheck } from "lucide-react";
+import { ArrowRight, Check, Phone, ShieldCheck, Bus, MapPin, Clock, Tag, Headset, Quote } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
+  // absolute: "About Cascade Charter Bus" would otherwise get the brand
+  // appended again by the root template (brand must appear exactly once).
   title: "About Cascade Charter Bus",
   description:
-    "About Cascade Charter Bus: nationwide group transportation with DOT-certified drivers, 24/7 dispatch, 5+ years of service and coverage in all 50 states.",
+    "About Cascade Charter Bus: group transportation across the US with DOT-certified drivers, 24/7 dispatch, 5+ years of service and coverage in all 50 states.",
   path: "/about/",
 });
 
@@ -38,85 +40,96 @@ const STANDARDS = [
   },
 ];
 
+// Real testimonial — one real review in site data, used word for word.
+const TESTIMONIAL = {
+  text: "Pardon the tardy email, but I wanted to extend a sincere thank you! Thank you for helping us coordinate and secure a bus for 8/15 from the Connecticut River Museum to Mohegan Sun. A huge thank you to Eric, our driver, who was exceedingly friendly, kind, and helpful. We had an outstanding experience with Cascade thanks to Eric and your entire planning and dispatch team.",
+  name: "Ben Brancati",
+};
+
+const FACTS = [
+  { dd: "5+", dt: "Years of Service" },
+  { dd: "50", dt: "States Covered" },
+  { dd: "24/7", dt: "Dispatch Team" },
+  { dd: "7", dt: "Vehicle Types" },
+];
+
 export default function About() {
   return (
-    <main className="bg-white min-vh-100">
-      {/* hero with photo */}
+    <main className="pp bg-white pp-svc" style={{ fontSize: "inherit" }}>
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "About Us" }]} />
 
-      <section
-        className="py-5 position-relative text-white"
-        style={{ paddingTop: 140, paddingBottom: 80, background: "linear-gradient(rgba(15,23,42,0.8), rgba(15,23,42,0.85)), url('/images/about-bus.jpg') center/cover" }}
-      >
-        <div className="container text-center">
-          <span className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 d-block">About Cascade Charter</span>
-          <h1 className="display-4 fw-bold mb-3">Redefining Group Travel</h1>
-          <p className="lead opacity-75 mx-auto mb-0" style={{ maxWidth: 650 }}>
-            Providing nationwide transportation infrastructure with a commitment to safety, comfort, and reliability.
-          </p>
-        </div>
-      </section>
-
-      {/* stats — confirmed facts only */}
-      <section className="py-4 bg-white shadow-sm position-relative z-index-10 mt-n4 mx-auto rounded-4 container border">
-        <div className="row text-center g-4">
-          <div className="col-md-3 col-6 border-end">
-            <p className="h3 fw-bold text-primary mb-1">5+</p>
-            <p className="mb-0 x-small-bold text-dark">Years of Service</p>
-          </div>
-          <div className="col-md-3 col-6 border-end">
-            <p className="h3 fw-bold text-primary mb-1">50</p>
-            <p className="mb-0 x-small-bold text-dark">States Covered</p>
-          </div>
-          <div className="col-md-3 col-6 border-end">
-            <p className="h3 fw-bold text-primary mb-1">24/7</p>
-            <p className="mb-0 x-small-bold text-dark">Logistics Team</p>
-          </div>
-          <div className="col-md-3 col-6">
-            <p className="h3 fw-bold text-primary mb-1">7</p>
-            <p className="mb-0 x-small-bold text-dark">Vehicle Types</p>
+      {/* ===== hero (dark band, matching the site frame) ===== */}
+      <section className="pp-hero">
+        <div className="container">
+          <div className="pp-hero-solo">
+            <p className="pp-eyebrow">About Cascade Charter Bus</p>
+            <h1>
+              A Fleet Built for <em>Every Kind of Group</em>
+            </h1>
+            <p className="pp-lead">
+              Nationwide transportation with a commitment to safety, comfort and
+              reliability—one standard everywhere, from New York to Los Angeles.
+            </p>
+            <div className="pp-hero-ctas">
+              <Link className="pp-btn pp-btn-amber" href="/contact/" data-source="about-hero" rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></Link>
+              <a className="pp-btn pp-btn-ghost" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" /> {SITE.phoneDisplay}</a>
+            </div>
+            <ul className="pp-trust">
+              <li><ShieldCheck aria-hidden="true" />DOT-compliant fleet</li>
+              <li><Tag aria-hidden="true" />Gratuity, tolls &amp; taxes included</li>
+              <li><Headset aria-hidden="true" />24/7 dispatch</li>
+            </ul>
           </div>
         </div>
       </section>
 
-      {/* Driving Excellence */}
-      <section className="py-5 my-5">
-        <div className="container py-lg-4">
-          <div className="row align-items-center g-5">
+      {/* ===== facts strip (confirmed facts only) ===== */}
+      <section className="pp-facts" aria-label="Cascade Charter Bus key facts">
+        <div className="container">
+          <dl className="pp-facts-grid">
+            {FACTS.map((f) => (
+              <div className="pp-fact" key={f.dt}>
+                <dt>{f.dt}</dt>
+                <dd>{f.dd}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* ===== driving excellence: copy + media band ===== */}
+      <section className="pp-sec" id="story">
+        <div className="container">
+          <header className="pp-sec-head">
+            <p className="pp-eyebrow">Our story</p>
+            <h2>Driving excellence across the nation</h2>
+            <p>Cascade Charter was founded to bridge the gap between local transport and nationwide reliability.</p>
+          </header>
+          <div className="row g-4 g-lg-5 align-items-center">
             <div className="col-lg-6">
-              <h2 className="display-5 fw-bold text-dark mb-4">Driving Excellence Across the Nation</h2>
-              <p className="text-muted lead mb-4">
-                Cascade Charter was founded to bridge the gap between local transport and nationwide reliability.
-              </p>
-              <p className="text-muted mb-4">
+              <p style={{ color: "var(--pp-muted)", fontSize: "1.05rem", lineHeight: 1.75 }}>
                 What started with a focus on local corporate shuttles has evolved into a{" "}
-                <strong>premier nationwide network</strong>. We specialize in complex
-                logistics, ensuring that whether you are booking in New York or Los Angeles,
+                <strong style={{ color: "var(--pp-ink)" }}>premier nationwide network</strong>. We specialize in
+                complex logistics, ensuring that whether you are booking in New York or Los Angeles,
                 the quality remains consistent.
               </p>
-              <ul className="list-unstyled mb-4">
-                <li className="mb-2 d-flex align-items-center gap-2">
-                  <Check size={18} className="text-primary" aria-hidden="true" />
-                  <span className="text-dark">Real-time Tracking</span>
-                </li>
-                <li className="mb-2 d-flex align-items-center gap-2">
-                  <Check size={18} className="text-primary" aria-hidden="true" />
-                  <span className="text-dark">24/7 Logistics Support</span>
-                </li>
+              <ul className="pp-checklist" style={{ marginTop: "1.4rem" }}>
+                <li><Check aria-hidden="true" /><span>Real-time tracking on the road</span></li>
+                <li><Check aria-hidden="true" /><span>24/7 logistics support before and during the trip</span></li>
               </ul>
-              <div className="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border-start border-primary border-4">
-                <Award size={32} className="text-primary flex-shrink-0" aria-hidden="true" />
-                <p className="mb-0 small fw-medium text-dark">
+              <div className="d-flex align-items-start gap-3 p-3 mt-4" style={{ borderLeft: "4px solid var(--pp-amber)", borderRadius: 12, background: "rgba(245,160,2,0.07)" }}>
+                <Check size={20} style={{ color: "var(--pp-amber)", flexShrink: 0, marginTop: 2 }} aria-hidden="true" />
+                <p className="mb-0 small fw-medium" style={{ color: "var(--pp-ink)" }}>
                   One standard everywhere: on-time, safe, and ready before the group arrives.
                 </p>
               </div>
             </div>
             <div className="col-lg-6">
-              <div className="rounded-5 overflow-hidden shadow-lg border border-2 border-white position-relative">
-                <Image src="/images/fleet/charter.jpg" alt="Cascade Charter Bus" width={800} height={560} style={{ objectFit: "cover", width: "100%" }} sizes="(max-width: 992px) 100vw, 50vw" />
-                <div className="position-absolute bottom-0 end-0 bg-primary text-white p-4 rounded-4 shadow-lg mb-n3 me-n3 d-none d-md-block">
-                  <p className="display-6 fw-bold mb-0">5+</p>
-                  <p className="mb-0 text-uppercase small fw-bold">Years of Service</p>
+              <div className="pp-vhero" style={{ minHeight: 380 }}>
+                <Image src="/images/fleet/charter.jpg" alt="Cascade Charter Bus motorcoach" fill sizes="(max-width: 992px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+                <div className="pp-vhero-chips">
+                  <span className="pp-spec pp-spec-dark"><Quote size={13} aria-hidden="true" />5+ years of service</span>
+                  <span className="pp-spec pp-spec-dark">50 states covered</span>
                 </div>
               </div>
             </div>
@@ -124,22 +137,21 @@ export default function About() {
         </div>
       </section>
 
-      {/* Operating Standards */}
-      <section className="py-5 bg-light">
-        <div className="container py-lg-4">
-          <div className="text-center mb-5">
-            <h2 className="display-5 fw-bold text-dark">Our Operating Standards</h2>
-            <div className="mx-auto bg-primary mt-3" style={{ width: 60, height: 4 }} />
-          </div>
-          <div className="row g-4">
+      {/* ===== operating standards ===== */}
+      <section className="pp-sec pp-bg-white" id="standards">
+        <div className="container">
+          <header className="pp-sec-head">
+            <p className="pp-eyebrow">How we run</p>
+            <h2>Our operating standards</h2>
+            <p>The four disciplines behind every quote, every vehicle and every dispatch hour.</p>
+          </header>
+          <div className="pp-steps" style={{ gridTemplateColumns: "repeat(2, 1fr)" }}>
             {STANDARDS.map((s) => (
-              <div className="col-lg-3 col-md-6" key={s.title}>
-                <div className="card border-0 shadow-sm h-100 p-4 rounded-4">
-                  <div className="text-primary mb-3">
-                    <s.icon size={36} aria-hidden="true" />
-                  </div>
-                  <h3 className="h6 fw-bold text-dark mb-2">{s.title}</h3>
-                  <p className="text-muted small mb-0">{s.text}</p>
+              <div className="pp-step" key={s.title}>
+                <s.icon size={30} style={{ color: "var(--pp-amber)", flexShrink: 0 }} aria-hidden="true" />
+                <div>
+                  <h3>{s.title}</h3>
+                  <p>{s.text}</p>
                 </div>
               </div>
             ))}
@@ -147,13 +159,32 @@ export default function About() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="py-5 bg-dark text-white text-center">
-        <div className="container py-4">
-          <Users size={40} className="text-primary mb-3" aria-hidden="true" />
-          <h2 className="display-6 fw-bold mb-3">Travel With a Team That Plans Ahead</h2>
-          <p className="text-white-50 mb-4">Tell us your itinerary and get a final quote—usually in about 15 minutes.</p>
-          <Link className="btn btn-primary rounded-pill px-5 py-3 fw-bold btn-lg shadow-lg" href="/contact/">GET A QUOTE</Link>
+      {/* ===== real testimonial ===== */}
+      <section className="pp-sec" id="testimonial">
+        <div className="container">
+          <header className="pp-sec-head">
+            <p className="pp-eyebrow">From an organizer</p>
+            <h2>What a real trip looked like</h2>
+          </header>
+          <div className="pp-final-card" style={{ maxWidth: 980 }}>
+            <Quote size={28} style={{ color: "var(--pp-amber)" }} aria-hidden="true" />
+            <p className="mt-3" style={{ fontStyle: "italic" }}>{`“${TESTIMONIAL.text}”`}</p>
+            <p style={{ color: "var(--pp-ink)", fontWeight: 700, marginTop: 14, marginBottom: 0 }}>— {TESTIMONIAL.name}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* ===== final CTA (amber band) ===== */}
+      <section className="pp-cta-band">
+        <div className="container pp-cta-inner">
+          <div>
+            <h2>Travel with a team that plans ahead</h2>
+            <p>Share the itinerary—get a final quote, usually in about 15 minutes.</p>
+          </div>
+          <div className="pp-cta-actions">
+            <a className="pp-btn pp-btn-dark" href="/contact/" data-source="about-cta" rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>
+            <a className="pp-btn pp-btn-outline-dark" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" />{`Call ${SITE.phoneDisplay}`}</a>
+          </div>
         </div>
       </section>
     </main>

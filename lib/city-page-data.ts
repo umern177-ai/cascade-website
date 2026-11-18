@@ -8,15 +8,27 @@ export type CityService = { title: string; text: string; href: string };
 export type CityVehicle = { slug: string; reason: string };
 export type CityDestination = { name: string; text: string; tip: string; meta?: string };
 export type CityNearbyItem = { city: string; miles?: string };
+// Route card data (the "A -> B" routing diagram on premium city pages).
+// Generic cities auto-derive it from their researched airport when present.
+export type CityRoute = {
+  to: string;
+  toNote?: string;
+  miles?: string;
+  time?: string;
+  via?: string;
+  banned?: { road: string; label: string };
+};
 // Premium design extras (owner-supplied Shelton premium HTML). Present only on
 // cities marked premium; everything else falls back to the structured layout.
+export type CityRule = { kind: "no" | "yes"; title: string; text: string };
 export type CityPremium = {
   heroLead?: string;
   facts?: { dt: string; dd: string; unit?: string }[];
-  rules?: { kind: "no" | "yes"; title: string; text: string }[];
+  rules?: CityRule[];
   tags?: string[][];
   routing?: boolean;
   routingIntro?: string[]; // paragraphs under the intro H2 when routing is on
+  route?: CityRoute;
   alsoCovered?: string;
 };
 export type CityPageData = {

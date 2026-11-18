@@ -1,8 +1,8 @@
-// Contact / booking page — rebuilt from docs/live-reference/html/contact-booking-form.html.
-// Layout, fields and look identical; hidden fixes per brief 7.9: correct headings
-// (Quick Contact not an H5), amber dot pattern (was non-brand blue #0047AB),
-// lazy Google Map with a title, FAQ block, phone/email links as links.
-import { Phone, Mail, ShieldCheck } from "lucide-react";
+// Contact / booking page — premium pp-* frame (Nov 17) around the WORKING
+// QuoteForm: dark hero with trust chips, facts strip, form + quick-contact
+// cards aligned, FAQ, coverage map. No functional form changes.
+import MapEmbed from "@/components/MapEmbed";
+import { Phone, Mail, ShieldCheck, Tag, Headset } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
 import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
@@ -35,6 +35,13 @@ const CONTACT_FAQS = [
   },
 ];
 
+const FACTS = [
+  { dt: "Quote reply time", dd: "15", unit: "min" },
+  { dt: "Gratuity, tolls & taxes", dd: "Included", unit: "" },
+  { dt: "Dispatch support", dd: "24/7", unit: "" },
+  { dt: "States covered", dd: "50", unit: "" },
+];
+
 export default function Contact() {
   const faqSchema = {
     "@context": "https://schema.org",
@@ -43,103 +50,114 @@ export default function Contact() {
   };
 
   return (
-    <main className="bg-light min-vh-100">
+    <main className="pp bg-white pp-svc" style={{ fontSize: "inherit" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
-      {/* Hero */}
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
-<section className="bg-dark text-white py-5 position-relative overflow-hidden" style={{ paddingTop: 140, paddingBottom: 80 }}>
-        <div className="container py-4 text-center position-relative" style={{ zIndex: 2 }}>
-          <h1 className="display-4 fw-bold mb-3">
-            Professional <span className="text-primary">Charter Booking</span>
-          </h1>
-          <p className="lead opacity-75 mx-auto mb-0" style={{ maxWidth: 650 }}>
-            Complete the form below for a detailed itinerary quote. Average response: 15 minutes.
-          </p>
+
+      {/* ===== hero (dark band, matching the site frame) ===== */}
+      <section className="pp-hero">
+        <div className="container">
+          <div className="pp-hero-solo">
+            <p className="pp-eyebrow">Booking &amp; free quote</p>
+            <h1>
+              Book Your <em>Group Transportation</em>
+            </h1>
+            <p className="pp-lead">
+              Complete the form below for a detailed itinerary quote. Average
+              response time: about 15 minutes, any hour of the day.
+            </p>
+            <ul className="pp-trust">
+              <li><ShieldCheck aria-hidden="true" />DOT-compliant fleet</li>
+              <li><Tag aria-hidden="true" />Gratuity, tolls &amp; taxes included</li>
+              <li><Headset aria-hidden="true" />24/7 dispatch</li>
+            </ul>
+          </div>
         </div>
-        {/* dot pattern — brand amber at low strength (was non-brand blue) */}
-        <div className="position-absolute top-0 start-0 w-100 h-100 opacity-10" style={{ backgroundImage: "radial-gradient(#F5A002 1px, transparent 1px)", backgroundSize: "30px 30px" }} />
       </section>
 
-      
-      {/* Form + cards */}
-      <section className="py-5 mt-n5 position-relative" style={{ zIndex: 10 }}>
+      {/* ===== facts strip ===== */}
+      <section className="pp-facts" aria-label="Cascade Charter Bus key facts">
         <div className="container">
-          <div className="row g-4 justify-content-center">
-            <div className="col-lg-8">
-              <div className="card border-0 shadow-lg rounded-5 overflow-hidden">
-                <QuoteForm />
+          <dl className="pp-facts-grid">
+            {FACTS.map((f) => (
+              <div className="pp-fact" key={f.dt}>
+                <dt>{f.dt}</dt>
+                <dd>{f.dd}<small>{f.unit}</small></dd>
               </div>
+            ))}
+          </dl>
+        </div>
+      </section>
+
+      {/* ===== form + quick contact (aligned grid) ===== */}
+      <section className="pp-sec" id="quote">
+        <div className="container">
+          <div className="pp-form-grid">
+            <div className="pp-form-holder">
+              <QuoteForm />
             </div>
-            <div className="col-lg-4">
-              <div className="card border-0 shadow-sm rounded-4 p-4 mb-4 bg-white">
-                <p className="fw-bold mb-4 h5 text-dark">Quick Contact</p>
+            <div className="pp-form-side">
+              <div className="pp-list-card" style={{ padding: "1.6rem 1.6rem" }}>
+                <p className="fw-bold mb-3" style={{ fontSize: "1.05rem", color: "var(--pp-ink)" }}>Quick Contact</p>
                 <div className="d-flex mb-3 align-items-center">
-                  <div className="bg-light p-3 rounded-circle me-3 text-primary">
+                  <div className="p-3 rounded-circle me-3" style={{ background: "rgba(245,160,2,0.12)", color: "var(--pp-amber)" }}>
                     <Phone size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="mb-0 fw-bold text-dark mb-0">
-                      <a href={`tel:${SITE.phoneTel}`} className="text-decoration-none text-dark">{SITE.phoneDisplay}</a>
+                    <p className="mb-0 fw-bold" style={{ color: "var(--pp-ink)" }}>
+                      <a href={`tel:${SITE.phoneTel}`} className="text-decoration-none" style={{ color: "var(--pp-ink)" }}>{SITE.phoneDisplay}</a>
                     </p>
-                    <p className="small text-muted mb-0">{SITE.phoneNote}</p>
+                    <p className="small mb-0" style={{ color: "var(--pp-muted)" }}>{SITE.phoneNote}</p>
                   </div>
                 </div>
                 <div className="d-flex align-items-center">
-                  <div className="bg-light p-3 rounded-circle me-3 text-primary">
+                  <div className="p-3 rounded-circle me-3" style={{ background: "rgba(245,160,2,0.12)", color: "var(--pp-amber)" }}>
                     <Mail size={20} aria-hidden="true" />
                   </div>
                   <div>
-                    <p className="mb-0 fw-bold text-dark mb-0">
-                      <a href={`mailto:${SITE.email}`} className="text-decoration-none text-dark">{SITE.email}</a>
+                    <p className="mb-0 fw-bold" style={{ color: "var(--pp-ink)" }}>
+                      <a href={`mailto:${SITE.email}`} className="text-decoration-none" style={{ color: "var(--pp-ink)" }}>{SITE.email}</a>
                     </p>
-                    <p className="small text-muted mb-0">Direct Support</p>
+                    <p className="small mb-0" style={{ color: "var(--pp-muted)" }}>Direct Support</p>
                   </div>
                 </div>
               </div>
-              <div className="card border-0 bg-dark text-white p-4 rounded-4 shadow-sm text-center">
-                <ShieldCheck size={40} className="text-primary mx-auto mb-2" aria-hidden="true" />
-                <p className="fw-bold text-white h6 mb-2">Guaranteed Pricing</p>
-                <p className="small opacity-75 mb-0">The quote you receive is final. No hidden fuel surcharges or driver fees.</p>
+              <div className="pp-final-card" style={{ marginTop: 18 }}>
+                <ShieldCheck aria-hidden="true" />
+                <h3 style={{ fontSize: "1.15rem" }}>Guaranteed pricing</h3>
+                <p>The quote you receive is final. No hidden fuel surcharges or driver fees.</p>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* FAQ (brief 7.13) */}
-      <section className="py-5 bg-light">
-        <div className="container py-4">
-          <div className="text-center mb-5">
-            <h2 className="fw-bold text-dark">Booking Questions</h2>
-          </div>
+      {/* ===== FAQ ===== */}
+      <section className="pp-sec pp-bg-white" id="faq">
+        <div className="container">
+          <header className="pp-sec-head">
+            <p className="pp-eyebrow">Booking questions</p>
+            <h2>Before you hit send</h2>
+            <p>The four things organizers ask first.</p>
+          </header>
           <div className="row justify-content-center">
-            <div className="col-lg-9">
+            <div className="col-lg-10">
               <FaqAccordion faqs={CONTACT_FAQS} idPrefix="contact-faq" />
             </div>
           </div>
         </div>
       </section>
 
-      {/* Map — loaded only when scrolled into view (IntersectionObserver via loading=lazy iframe) */}
-      <section className="py-5 bg-white">
+      {/* ===== coverage map ===== */}
+      <section className="pp-sec" id="map">
         <div className="container">
-          <div className="text-center mb-4">
-            <h2 className="fw-bold text-dark">Our Service Coverage</h2>
-            <p className="text-muted">Dispatching across all major hubs and surrounding regions.</p>
-          </div>
-          <div className="rounded-5 overflow-hidden shadow-sm border position-relative" style={{ height: 450 }}>
-            <iframe
-              title="Google Map of New York — Cascade Charter Bus headquarters"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d193595.2528000654!2d-74.11976373966282!3d40.69766374859258!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c24fa5d33f083b%3A0xc80b8f06e177fe62!2sNew%20York%2C%20NY!5e0!3m2!1sen!2sus!4v1689000000000!5m2!1sen!2sus"
-              width="100%"
-              height="100%"
-              style={{ border: 0 }}
-              allowFullScreen
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            />
-          </div>
+          <header className="pp-sec-head">
+            <p className="pp-eyebrow">Coverage</p>
+            <h2>Dispatching across all major hubs</h2>
+            <p>And the small towns, resorts and campuses around them.</p>
+          </header>
+          <MapEmbed />
         </div>
       </section>
     </main>

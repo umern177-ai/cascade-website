@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--
+  DEV NOTES (remove before publishing)
+  1. Pricing section and the Locations section were removed on purpose. Do not add prices or Offer schema.
+  2. Fleet on this page = Charter Bus, Mini Bus, Sprinter Van, School Bus. Sleeper buses belong on /services/band-tour-bus only.
+  3. Confirm before publishing: (a) "gratuity, tolls and taxes included" is standard on every corporate quote,
+     (b) "24/7 dispatch" wording, (c) /fleet/school-bus page is live.
+  4. The three trip stories in "Why us" are real jobs but unnamed. Do not add client names without written permission.
+  5. Replace image paths with real WebP files (stock is fine for now). Verify every internal link is live.
+-->
+
+<!-- ============ PRIMARY SEO ============ -->
+<title>Corporate Event Charter Bus &amp; Shuttles | Cascade Charter Bus</title>
+<meta name="description" content="Book a corporate charter bus or employee shuttle with Cascade Charter Bus. Charter buses, minibuses, Sprinter vans &amp; school buses. Same-day written quotes.">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="https://www.cascadecharterbus.com/services/corporate-transportation">
+<meta name="theme-color" content="#0E1424">
+
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Cascade Charter Bus">
+<meta property="og:title" content="Corporate Charter Bus &amp; Shuttle Service, Nationwide">
+<meta property="og:description" content="Employee shuttles, conference loops, off-site retreats and client airport runs. One written quote with gratuity, tolls and taxes included.">
+<meta property="og:url" content="https://www.cascadecharterbus.com/services/corporate-transportation">
+<meta property="og:image" content="https://www.cascadecharterbus.com/images/services/corporate-transportation/og-corporate-charter-bus.jpg">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Corporate Charter Bus &amp; Shuttle Service, Nationwide">
+<meta name="twitter:description" content="Employee shuttles, conference loops and client transfers in all 50 states. Same-day written quotes.">
+<meta name="twitter:image" content="https://www.cascadecharterbus.com/images/services/corporate-transportation/og-corporate-charter-bus.jpg">
+
+<link rel="preload" as="image" type="image/webp" href="/images/services/corporate-transportation/corporate-charter-bus-employees-boarding.webp" fetchpriority="high">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+<!-- ============ STRUCTURED DATA (no Offer/price schema) ============ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://www.cascadecharterbus.com/#organization",
+      "name": "Cascade Charter Bus",
+      "url": "https://www.cascadecharterbus.com/",
+      "logo": "https://www.cascadecharterbus.com/images/logo.png",
+      "email": "info@cascadecharterbus.com",
+      "telephone": "+1-646-705-0816",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "12409 Linden Blvd",
+        "addressLocality": "South Ozone Park",
+        "addressRegion": "NY",
+        "postalCode": "11420",
+        "addressCountry": "US"
+      }
+    },
+    {
+      "@type": "Service",
+      "@id": "https://www.cascadecharterbus.com/services/corporate-transportation#service",
+      "name": "Corporate Charter Bus & Shuttle Service",
+      "serviceType": "Corporate transportation",
+      "description": "Charter buses, minibuses, Sprinter vans and school buses for employee shuttles, conferences, off-site retreats and client airport transfers in all 50 states.",
+      "provider": { "@id": "https://www.cascadecharterbus.com/#organization" },
+      "areaServed": { "@type": "Country", "name": "United States" },
+      "audience": { "@type": "BusinessAudience", "audienceType": "Companies, event planners and executive assistants" },
+      "url": "https://www.cascadecharterbus.com/services/corporate-transportation"
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.cascadecharterbus.com/" },
+        { "@type": "ListItem", "position": 2, "name": "Services", "item": "https://www.cascadecharterbus.com/services" },
+        { "@type": "ListItem", "position": 3, "name": "Corporate Transportation", "item": "https://www.cascadecharterbus.com/services/corporate-transportation" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        { "@type": "Question", "name": "Can you run a recurring employee shuttle, not just a one-time event?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Send us the weekly pattern: pickup points, times and days. That is enough to price a recurring route. We run daily employee shuttles with the same driver for a full quarter, as well as weekly and event-season routes." } },
+        { "@type": "Question", "name": "Do your vehicles have Wi-Fi for conference attendees?",
+          "acceptedAnswer": { "@type": "Answer", "text": "It depends on the vehicle assigned in your city. If your group needs Wi-Fi, say so in your quote request and we will confirm in writing whether the assigned vehicle has it before you book." } },
+        { "@type": "Question", "name": "How far in advance should we book conference transportation?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Book as soon as your dates and headcount are firm. Big conferences and the spring and fall event seasons fill vehicles fast, so several weeks ahead is safest. Short-notice requests are welcome too. Written quotes go out the same day, and we take pickups at any hour." } },
+        { "@type": "Question", "name": "Can you handle transportation for a multi-day event?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. Send the schedule for each day, from hotel departures and sessions to dinners and the final airport run. We price the whole event as one booking with one quote, and driver overnight stays and late pickups are included in that price." } },
+        { "@type": "Question", "name": "Do you provide invoices for business bookings?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. You get a written quote and itinerary you can forward for internal approval. Share your billing needs, such as a PO number or invoice details, when you request a quote and we will confirm them before booking." } },
+        { "@type": "Question", "name": "Can we mix vehicle types for one corporate event?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes. A large group might need a charter bus for the main group, a minibus for staff and a Sprinter van for a venue a bus cannot reach. We plan the mix in your quote instead of sending whatever is free that day." } },
+        { "@type": "Question", "name": "Do you use school buses for corporate trips?",
+          "acceptedAnswer": { "@type": "Answer", "text": "Yes, for short runs where cost matters more than comfort, like a parking-lot shuttle or a quick hotel-to-airport transfer. For longer trips, a charter bus with reclining seats and luggage space is the better choice, and we will tell you which one fits." } },
+        { "@type": "Question", "name": "What is included in a corporate charter quote?",
+          "acceptedAnswer": { "@type": "Answer", "text": "The vehicle, the driver, gratuity, tolls and taxes. There are no fuel surcharges or driver fees added later, so the price you approve is the price you pay." } }
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+:root{
+  --navy:#0E1424;--navy-2:#18213A;--navy-3:#253052;
+  --amber:#F6A609;--amber-hover:#FFB82E;--amber-text:#8A5A00;
+  --paper:#F7F5F0;--paper-2:#EFEBE2;--white:#fff;
+  --line:#E2DDD2;--line-dark:rgba(255,255,255,.12);
+  --text:#1F2533;--muted:#5A6274;--muted-light:#A7AFC0;
+  --r:6px;
+  --head:"Barlow Condensed","Arial Narrow",Arial,sans-serif;
+  --body:"Barlow",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+  --wrap:1180px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;font-family:var(--body);font-size:17px;line-height:1.6;color:var(--text);background:var(--paper);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:inherit}
+h1,h2,h3{font-family:var(--head);color:var(--navy);line-height:1.08;margin:0 0 .45em;font-weight:700;letter-spacing:.005em}
+p{margin:0 0 1em}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:24px;padding-right:24px}
+.skip{position:absolute;left:-999px;top:8px;background:var(--amber);color:var(--navy);padding:10px 16px;font-weight:700;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--amber);outline-offset:2px}
+
+/* Buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 15px/1 var(--body);padding:15px 24px;border-radius:var(--r);text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .15s,border-color .15s,color .15s}
+.btn svg{width:17px;height:17px;flex:none}
+.btn-amber{background:var(--amber);color:var(--navy)}
+.btn-amber:hover{background:var(--amber-hover)}
+.btn-ghost{border-color:rgba(255,255,255,.35);color:#fff}
+.btn-ghost:hover{border-color:#fff}
+.btn-navy{background:var(--navy);color:#fff}
+.btn-navy:hover{background:var(--navy-3)}
+.btn-line{border-color:var(--line);color:var(--navy);background:#fff}
+.btn-line:hover{border-color:var(--navy)}
+.text-link{font-weight:700;color:var(--navy);text-decoration:none;border-bottom:2px solid var(--amber);padding-bottom:1px}
+.text-link:hover{color:var(--amber-text)}
+
+.kicker{font:700 13px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;color:var(--amber-text);margin:0 0 14px}
+.on-dark .kicker{color:var(--amber)}
+
+/* Top bar + header */
+.topbar{background:#070B16;color:var(--muted-light);font-size:13.5px}
+.topbar .wrap{display:flex;justify-content:space-between;align-items:center;gap:16px;padding-top:8px;padding-bottom:8px}
+.topbar a{text-decoration:none;display:inline-flex;align-items:center;gap:8px}
+.topbar a:hover{color:#fff}
+.topbar svg{width:15px;height:15px;color:var(--amber)}
+.site-header{background:var(--navy);position:sticky;top:0;z-index:50;border-bottom:3px solid var(--amber)}
+.site-header .wrap{display:flex;align-items:center;justify-content:space-between;height:72px;gap:24px}
+.logo{display:flex;align-items:center;gap:12px;text-decoration:none}
+.logo-mark{width:42px;height:42px;border-radius:var(--r);background:var(--amber);display:grid;place-items:center;color:var(--navy)}
+.logo-mark svg{width:25px;height:25px}
+.logo-text{font-family:var(--head);font-weight:700;line-height:1;color:#fff;font-size:22px;letter-spacing:.04em}
+.logo-text span{display:block;color:var(--amber);font-size:12.5px;letter-spacing:.22em;margin-top:3px}
+.nav > ul{display:flex;list-style:none;margin:0;padding:0;gap:2px}
+.nav li{position:relative}
+.nav a{display:block;padding:10px 14px;color:#D3D8E3;text-decoration:none;font-weight:600;font-size:15px}
+.nav a:hover,.nav > ul > li > a[aria-current="page"]{color:#fff}
+.nav > ul > li > a[aria-current="page"]{box-shadow:inset 0 -2px 0 var(--amber)}
+.nav .has-sub > a::after{content:"";display:inline-block;width:6px;height:6px;border-right:2px solid currentColor;border-bottom:2px solid currentColor;transform:rotate(45deg) translateY(-3px);margin-left:8px;opacity:.7}
+.sub{position:absolute;top:100%;left:0;min-width:280px;background:#fff;border-top:3px solid var(--amber);box-shadow:0 18px 40px -16px rgba(14,20,36,.35);padding:6px 0;list-style:none;margin:0;opacity:0;visibility:hidden;transition:.15s}
+.has-sub:hover .sub,.has-sub:focus-within .sub{opacity:1;visibility:visible}
+.sub a{color:var(--text);font-weight:500;padding:10px 18px}
+.sub a:hover{background:var(--paper);color:var(--navy)}
+.header-cta{display:flex;align-items:center;gap:12px}
+.header-cta .btn{padding:12px 20px}
+.menu-toggle{display:none;background:none;border:1px solid var(--line-dark);color:#fff;width:46px;height:46px;border-radius:var(--r);cursor:pointer}
+.menu-toggle svg{width:22px;height:22px}
+
+/* Hero */
+.hero{background:var(--navy);color:#C7CDDA}
+.crumbs{padding-top:22px}
+.crumbs ol{display:flex;flex-wrap:wrap;gap:6px;list-style:none;margin:0;padding:0;font-size:14px}
+.crumbs li{display:flex;align-items:center;gap:6px;color:var(--muted-light)}
+.crumbs li + li::before{content:"›";opacity:.6}
+.crumbs a{text-decoration:none}
+.crumbs a:hover{color:#fff}
+.crumbs [aria-current]{color:#fff}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center;padding:36px 0 64px}
+.hero h1{color:#fff;font-size:clamp(40px,4.8vw,62px);margin-bottom:20px}
+.hero h1 span{color:var(--amber)}
+.hero .lead{font-size:18.5px;max-width:580px}
+.hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin:28px 0 0}
+.hero-photo{position:relative;aspect-ratio:5/4;background:var(--navy-2);border-radius:var(--r);overflow:hidden}
+.hero-photo img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero-photo::after{content:"";position:absolute;left:0;bottom:0;width:38%;height:6px;background:var(--amber)}
+.img-fallback{position:absolute;inset:0;display:grid;place-items:center;color:rgba(255,255,255,.18)}
+.img-fallback svg{width:88px;height:88px}
+.facts{border-top:1px solid var(--line-dark);background:var(--navy-2)}
+.facts ul{display:grid;grid-template-columns:repeat(4,1fr);list-style:none;margin:0;padding:0}
+.facts li{padding:20px 22px;border-left:1px solid var(--line-dark);font-size:14.5px;color:var(--muted-light);line-height:1.35}
+.facts li:first-child{border-left:0;padding-left:0}
+.facts strong{display:block;font-family:var(--head);font-size:22px;color:#fff;font-weight:700;letter-spacing:.01em}
+
+/* Sections */
+section{scroll-margin-top:90px}
+.section{padding:96px 0}
+.bg-white{background:#fff}
+.section-head{max-width:760px;margin-bottom:44px}
+.section-head h2{font-size:clamp(34px,3.8vw,48px)}
+.section-head p{font-size:18px;color:var(--muted);margin:0}
+.section-head.split{max-width:none;display:flex;justify-content:space-between;align-items:flex-end;gap:32px}
+.section-head.split > div{max-width:720px}
+
+/* About */
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:64px;align-items:center}
+.about-media{position:relative;aspect-ratio:4/4.4;border-radius:var(--r);overflow:hidden;background:var(--navy-2)}
+.about-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.about-copy h2{font-size:clamp(32px,3.4vw,44px)}
+.about-copy > p{font-size:17.5px;color:#3A4256}
+.ticks{list-style:none;padding:0;margin:26px 0 0;border-top:1px solid var(--line)}
+.ticks li{position:relative;padding:15px 0 15px 34px;border-bottom:1px solid var(--line);color:#3A4256;font-size:16px}
+.ticks li::before{content:"";position:absolute;left:4px;top:21px;width:12px;height:7px;border-left:3px solid var(--amber);border-bottom:3px solid var(--amber);transform:rotate(-45deg)}
+.ticks strong{color:var(--navy)}
+
+/* Problems table */
+.compare{border:1px solid var(--line);border-radius:var(--r);overflow:hidden;background:#fff}
+.compare-row{display:grid;grid-template-columns:.9fr 1fr 1.1fr;border-top:1px solid var(--line)}
+.compare-row:first-child{border-top:0}
+.compare-row > div{padding:24px 26px}
+.compare-head{background:var(--navy);color:#fff;font:700 13px/1 var(--body);letter-spacing:.1em;text-transform:uppercase}
+.compare-head > div{padding:16px 26px}
+.compare h3{font-size:23px;margin:0}
+.compare .bad{color:#4A5164;font-size:15.5px;border-left:1px solid var(--line)}
+.compare .good{font-size:15.5px;color:var(--text);border-left:1px solid var(--line);background:#FFFBF1}
+.compare .good strong{color:var(--navy)}
+
+/* Included list */
+.included{display:grid;grid-template-columns:repeat(3,1fr);gap:0 40px}
+.inc{padding:26px 0;border-top:2px solid var(--navy)}
+.inc-top{display:flex;align-items:center;gap:12px;margin-bottom:8px}
+.inc-top svg{width:22px;height:22px;color:var(--amber-text);flex:none}
+.inc h3{font-size:24px;margin:0}
+.inc p{margin:0;color:var(--muted);font-size:15.5px}
+
+/* Why us */
+.why{background:var(--paper-2)}
+.why-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start}
+.why-intro{font-size:19px;color:#2C3345;max-width:620px;margin-bottom:34px}
+.reasons{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.reason{background:#fff;border-radius:var(--r);padding:26px 24px;border-bottom:3px solid var(--amber)}
+.reason svg{width:26px;height:26px;color:var(--navy);margin-bottom:14px}
+.reason h3{font-size:24px;margin-bottom:8px}
+.reason p{margin:0;color:#454D60;font-size:15.5px}
+.log{background:var(--navy);color:#C7CDDA;border-radius:var(--r);padding:34px 32px}
+.log h3{color:#fff;font-size:28px;margin-bottom:6px}
+.log > p{font-size:15px;color:var(--muted-light);margin-bottom:22px}
+.log ol{list-style:none;margin:0 0 26px;padding:0}
+.log li{padding:20px 0;border-top:1px solid var(--line-dark)}
+.log .tag{display:block;font:700 12.5px/1.3 var(--body);letter-spacing:.1em;text-transform:uppercase;color:var(--amber);margin-bottom:8px}
+.log li p{margin:0;font-size:15.5px;color:#E2E6EE}
+.log .btn{width:100%}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);margin-top:48px;border-top:1px solid #D6D0C2}
+.stats div{padding:22px 20px 0 0}
+.stats strong{display:block;font-family:var(--head);font-size:34px;line-height:1;color:var(--navy)}
+.stats span{font-size:14.5px;color:var(--muted)}
+
+/* Fleet */
+.buses{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.bus{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column}
+.bus-media{position:relative;aspect-ratio:4/3;background:var(--navy-2)}
+.bus-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bus-body{padding:22px;display:flex;flex-direction:column;flex:1}
+.seats{font:700 13px/1 var(--body);letter-spacing:.08em;text-transform:uppercase;color:var(--amber-text);margin:0 0 8px}
+.bus-body h3{font-size:26px;margin-bottom:8px}
+.bus-body p.use{font-size:15px;color:var(--muted);margin:0 0 20px}
+.bus-actions{margin-top:auto;display:flex;justify-content:space-between;align-items:center;gap:10px;padding-top:16px;border-top:1px solid var(--line)}
+.bus-actions .btn{padding:11px 16px;font-size:14px}
+.fleet-note{margin-top:28px;display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px;padding:20px 24px;background:var(--paper);border-left:4px solid var(--amber);border-radius:var(--r)}
+.fleet-note p{margin:0;font-size:16px}
+
+/* Related */
+.related{display:grid;grid-template-columns:repeat(4,1fr);gap:20px}
+.rel-card{display:flex;flex-direction:column;text-decoration:none;background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:border-color .15s}
+.rel-card:hover{border-color:var(--navy)}
+.rel-media{position:relative;aspect-ratio:16/10;background:var(--navy-2)}
+.rel-media img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.rel-media .img-fallback svg{width:52px;height:52px}
+.rel-body{padding:16px 18px 18px}
+.rel-label{display:block;font-size:12.5px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;color:var(--amber-text);margin-bottom:6px}
+.rel-card h3{font-size:21px;margin:0}
+
+/* FAQ */
+.faq-layout{display:grid;grid-template-columns:.75fr 1.25fr;gap:56px;align-items:start}
+.faq-aside{position:sticky;top:110px}
+.faq-aside h2{font-size:clamp(34px,3.6vw,46px)}
+.faq-aside > p{color:var(--muted)}
+.help{margin-top:22px;padding:20px 0;border-top:1px solid var(--line)}
+.help span{display:block;font-size:14.5px;color:var(--muted)}
+.help a{font-family:var(--head);font-size:28px;font-weight:700;color:var(--navy);text-decoration:none}
+.faq{border-top:2px solid var(--navy)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:22px 0}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary h3{margin:0;font-family:var(--body);font-size:18px;line-height:1.4;font-weight:600;color:var(--navy)}
+.pm{flex:none;width:18px;height:18px;position:relative}
+.pm::before,.pm::after{content:"";position:absolute;left:0;top:8px;width:18px;height:2px;background:var(--navy)}
+.pm::after{transform:rotate(90deg);transition:transform .2s}
+.faq details[open] .pm::after{transform:rotate(0)}
+.faq .answer{padding:0 40px 24px 0;color:#3F4759;font-size:16.5px}
+.faq .answer p{margin:0}
+
+/* CTA */
+.cta-band{background:var(--navy);border-top:6px solid var(--amber)}
+.cta-inner{display:flex;justify-content:space-between;align-items:center;gap:32px;padding-top:64px;padding-bottom:64px}
+.cta-inner h2{color:#fff;font-size:clamp(32px,3.6vw,46px);margin-bottom:10px}
+.cta-inner p{margin:0;font-size:17.5px;color:var(--muted-light);max-width:560px}
+.cta-actions{display:flex;flex-wrap:wrap;gap:12px;flex:none}
+
+/* Footer */
+.site-footer{background:#070B16;color:var(--muted-light);font-size:15px}
+.footer-grid{display:grid;grid-template-columns:1.4fr 1fr 1.3fr 1.3fr;gap:44px;padding-top:72px;padding-bottom:52px}
+.footer-title{font:700 13px var(--body);letter-spacing:.14em;text-transform:uppercase;color:#fff;margin:0 0 18px}
+.site-footer ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.site-footer a{text-decoration:none}
+.site-footer a:hover{color:var(--amber)}
+.footer-about p{margin:18px 0 22px;line-height:1.7}
+.social{display:flex;gap:10px}
+.social a{width:40px;height:40px;border-radius:var(--r);border:1px solid var(--line-dark);display:grid;place-items:center;color:#fff}
+.social a:hover{border-color:var(--amber)}
+.social svg{width:18px;height:18px}
+.site-footer address{font-style:normal;display:grid;gap:14px}
+.site-footer address a,.site-footer address span{display:flex;gap:12px;align-items:flex-start;color:#DDE1EA}
+.site-footer address svg{width:18px;height:18px;color:var(--amber);flex:none;margin-top:3px}
+.footer-bottom{border-top:1px solid var(--line-dark);padding:22px 0;font-size:13.5px}
+.footer-bottom .wrap{display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.footer-bottom nav{display:flex;gap:18px;flex-wrap:wrap}
+.mobile-bar{display:none}
+
+/* Responsive */
+@media (max-width:1100px){
+  .hero-grid{grid-template-columns:1fr;gap:40px}
+  .hero-photo{max-width:680px}
+  .about-grid,.why-grid,.faq-layout{grid-template-columns:1fr;gap:40px}
+  .faq-aside{position:static}
+  .related,.buses{grid-template-columns:repeat(2,1fr)}
+  .included{grid-template-columns:1fr 1fr}
+  .facts ul,.stats{grid-template-columns:repeat(2,1fr)}
+  .facts li:nth-child(3){border-left:0;padding-left:0}
+  .facts li{border-top:1px solid var(--line-dark)}
+  .facts li:nth-child(-n+2){border-top:0}
+  .footer-grid{grid-template-columns:1fr 1fr}
+  .about-media{aspect-ratio:16/10}
+  .section-head.split{flex-direction:column;align-items:flex-start}
+}
+@media (max-width:900px){
+  .nav,.header-cta .btn{display:none}
+  .menu-toggle{display:grid;place-items:center}
+  .nav.open{display:block;position:absolute;top:75px;left:0;right:0;background:var(--navy);border-bottom:3px solid var(--amber);padding:12px 16px 20px}
+  .nav.open > ul{flex-direction:column}
+  .nav.open .sub{position:static;opacity:1;visibility:visible;background:transparent;box-shadow:none;border:0;padding:0 0 0 12px}
+  .nav.open .sub a{color:var(--muted-light)}
+  .cta-inner{flex-direction:column;align-items:flex-start}
+  .compare-head{display:none}
+  .compare-row{grid-template-columns:1fr}
+  .compare .bad,.compare .good{border-left:0;border-top:1px solid var(--line)}
+  .compare .bad::before{content:"What happens: ";font-weight:700;color:var(--navy)}
+}
+@media (max-width:640px){
+  body{font-size:16px;padding-bottom:72px}
+  .section{padding:68px 0}
+  .topbar .email-txt{display:none}
+  .hero-grid{padding-top:24px;padding-bottom:48px}
+  .related,.buses,.included,.reasons{grid-template-columns:1fr}
+  .facts ul,.stats{grid-template-columns:1fr 1fr}
+  .log{padding:26px 22px}
+  .footer-grid{grid-template-columns:1fr;gap:36px}
+  .mobile-bar{display:grid;grid-template-columns:1fr 1fr;gap:10px;position:fixed;left:0;right:0;bottom:0;z-index:60;background:var(--navy);padding:10px 12px calc(10px + env(safe-area-inset-bottom));border-top:3px solid var(--amber)}
+  .mobile-bar .btn{padding:14px 10px;font-size:14px}
+}
+@media (prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important}}
+</style>
+</head>
+
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-phone" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 6-10 7L2 6"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 10c0 6-8 12-8 12S4 16 4 10a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></symbol>
+  <symbol id="i-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></symbol>
+  <symbol id="i-shield" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/><path d="m9 12 2 2 4-4"/></symbol>
+  <symbol id="i-clock" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></symbol>
+  <symbol id="i-headset" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 18v-6a9 9 0 0 1 18 0v6"/><path d="M21 19a2 2 0 0 1-2 2h-1v-6h3zM3 19a2 2 0 0 0 2 2h1v-6H3z"/></symbol>
+  <symbol id="i-bus" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="14" rx="3"/><path d="M3 10h18M7 17v3M17 17v3"/><circle cx="7.5" cy="13.5" r="1"/><circle cx="16.5" cy="13.5" r="1"/></symbol>
+  <symbol id="i-doc" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M8 13h8M8 17h5"/></symbol>
+  <symbol id="i-repeat" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m17 1 4 4-4 4"/><path d="M3 11V9a4 4 0 0 1 4-4h14M7 23l-4-4 4-4"/><path d="M21 13v2a4 4 0 0 1-4 4H3"/></symbol>
+  <symbol id="i-receipt" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 2v20l3-2 3 2 2-2 2 2 3-2 3 2V2l-3 2-3-2-2 2-2-2-3 2z"/><path d="M8 9h8M8 13h6"/></symbol>
+  <symbol id="i-route" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="6" cy="19" r="3"/><circle cx="18" cy="5" r="3"/><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/></symbol>
+  <symbol id="i-scale" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v18M5 21h14M3 7h18M6 7l-3 7a3 3 0 0 0 6 0zM18 7l-3 7a3 3 0 0 0 6 0z"/></symbol>
+  <symbol id="i-globe" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15 15 0 0 1 0 20M12 2a15 15 0 0 0 0 20"/></symbol>
+  <symbol id="i-briefcase" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></symbol>
+</svg>
+
+<!-- ============ TOP BAR ============ -->
+<div class="topbar">
+  <div class="wrap">
+    <a href="mailto:info@cascadecharterbus.com"><svg><use href="#i-mail"/></svg><span class="email-txt">info@cascadecharterbus.com</span></a>
+    <a href="tel:+16467050816"><svg><use href="#i-phone"/></svg>+1 (646) 705-0816</a>
+  </div>
+</div>
+
+<!-- ============ HEADER ============ -->
+<header class="site-header">
+  <div class="wrap">
+    <a class="logo" href="/" aria-label="Cascade Charter Bus home">
+      <span class="logo-mark" aria-hidden="true"><svg><use href="#i-bus"/></svg></span>
+      <span class="logo-text">CASCADE<span>CHARTER BUS</span></span>
+    </a>
+    <nav class="nav" id="site-nav" aria-label="Main">
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li class="has-sub"><a href="/services" aria-current="page">Services</a>
+          <ul class="sub">
+            <li><a href="/services/corporate-transportation" aria-current="page">Corporate Event Transportation</a></li>
+            <li><a href="/services/wedding-shuttle-bus-rental">Wedding Shuttle Bus Rental</a></li>
+            <li><a href="/services/school-field-trip-transportation">School &amp; Field Trip Transportation</a></li>
+            <li><a href="/services/sports-team-transportation">Sports Team Transportation</a></li>
+            <li><a href="/services/group-airport-shuttle">Group Airport Shuttle</a></li>
+            <li><a href="/services/band-tour-bus">Band Tour Bus</a></li>
+          </ul>
+        </li>
+        <li class="has-sub"><a href="/fleet">Fleet</a>
+          <ul class="sub">
+            <li><a href="/fleet/charter-bus">Charter Buses</a></li>
+            <li><a href="/fleet/minibus">Mini Buses</a></li>
+            <li><a href="/fleet/sprinter-van">Sprinter Vans</a></li>
+            <li><a href="/fleet/school-bus">School Buses</a></li>
+          </ul>
+        </li>
+        <li><a href="/locations">Locations</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="header-cta">
+      <a class="btn btn-amber" href="/get-a-quote">Get a Quote</a>
+      <button class="menu-toggle" aria-controls="site-nav" aria-expanded="false" aria-label="Open menu">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M3 6h18M3 12h18M3 18h18"/></svg>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+
+<!-- ============ 1. HERO ============ -->
+<section class="hero on-dark" aria-labelledby="hero-title">
+  <div class="wrap">
+    <nav class="crumbs" aria-label="Breadcrumb">
+      <ol>
+        <li><a href="/">Home</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><span aria-current="page">Corporate Transportation</span></li>
+      </ol>
+    </nav>
+    <div class="hero-grid">
+      <div>
+        <p class="kicker">Corporate transportation</p>
+        <h1 id="hero-title">Corporate Charter Bus &amp; Shuttle Service, <span>Nationwide</span></h1>
+        <p class="lead">We move employees, clients and conference guests for companies, event planners and executive assistants in all 50 states. Daily staff shuttles, three-day conference loops, off-site retreats, client airport runs. All on one booking, with one written price. Your driver gets the full pickup list before the trip, and you have one number to call until the last guest is dropped off.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-amber" href="/get-a-quote?service=corporate-transportation">Get a Free Quote <svg><use href="#i-arrow"/></svg></a>
+          <a class="btn btn-ghost" href="tel:+16467050816"><svg><use href="#i-phone"/></svg>+1 (646) 705-0816</a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span>
+        <img src="/images/services/corporate-transportation/corporate-charter-bus-employees-boarding.webp" alt="Employees boarding a charter bus outside a conference hotel" width="1200" height="960" fetchpriority="high" decoding="async" onerror="this.remove()">
+      </div>
+    </div>
+  </div>
+  <div class="facts">
+    <div class="wrap">
+      <ul>
+        <li><strong>All 50 states</strong>Vehicles and stations nationwide</li>
+        <li><strong>Same-day quotes</strong>Written, before you commit</li>
+        <li><strong>Any hour</strong>Early and late pickups</li>
+        <li><strong>No add-ons</strong>Gratuity, tolls &amp; taxes included</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 2. WHY CHARTER ============ -->
+<section class="section" id="about" aria-labelledby="about-title">
+  <div class="wrap about-grid">
+    <div class="about-media">
+      <span class="img-fallback" aria-hidden="true"><svg><use href="#i-briefcase"/></svg></span>
+      <img src="/images/services/corporate-transportation/conference-shuttle-minibus-hotel.webp" alt="Conference guests stepping off a minibus at a convention center" width="900" height="990" loading="lazy" decoding="async" onerror="this.remove()">
+    </div>
+    <div class="about-copy">
+      <p class="kicker">Why charter</p>
+      <h2 id="about-title">Why Charter a Bus for a Corporate Event?</h2>
+      <p>One bus puts the whole group on one schedule. Instead of fifty rideshare receipts and fifty different arrival times, you get one departure, one arrival and one bill.</p>
+      <ul class="ticks">
+        <li><strong>Parking stops being a cost.</strong> Hotels and venues charge for every space. A coach needs one loading zone.</li>
+        <li><strong>The agenda holds.</strong> The group leaves the hotel together and is seated before the keynote starts.</li>
+        <li><strong>People talk on the way.</strong> Teams catch up on the ride to a retreat, and clients ride with their hosts.</li>
+        <li><strong>Nobody drives after the dinner.</strong> A licensed professional driver handles the road, which covers your duty of care.</li>
+        <li><strong>Finance sees one number.</strong> The quote is written and final, so it can be approved before the event.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 3. PROBLEMS ============ -->
+<section class="section bg-white" id="issues" aria-labelledby="issues-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">The usual headaches</p>
+      <h2 id="issues-title">What Goes Wrong When Companies Move Groups Without a Charter</h2>
+      <p>Rideshares and rental cars work for two or three people. Past that, the same five problems show up at almost every event.</p>
+    </header>
+    <div class="compare">
+      <div class="compare-row compare-head"><div>Problem</div><div>What happens</div><div>What we do instead</div></div>
+      <div class="compare-row">
+        <div><h3>People arrive in pieces</h3></div>
+        <div class="bad">Fifty guests leave the hotel in separate cars and arrive over forty minutes. The keynote starts to half a room.</div>
+        <div class="good"><strong>Set departures from one pickup point.</strong> The driver is on site before the first run, so the group walks in together.</div>
+      </div>
+      <div class="compare-row">
+        <div><h3>Venue parking is short and costly</h3></div>
+        <div class="bad">Hotels charge for every space. Off-site venues may only have a handful, and the receipts pile up.</div>
+        <div class="good"><strong>One vehicle, one loading zone.</strong> We agree the pickup spot with the venue ahead of time, so nobody circles the block.</div>
+      </div>
+      <div class="compare-row">
+        <div><h3>The invoice grows after the event</h3></div>
+        <div class="bad">Fuel surcharges, driver tips and tolls show up afterwards. Now you have to explain the gap to finance.</div>
+        <div class="good"><strong>A final written quote.</strong> Gratuity, tolls and taxes are already in it. The approved number is the number you pay.</div>
+      </div>
+      <div class="compare-row">
+        <div><h3>The agenda changes on the day</h3></div>
+        <div class="bad">A session runs long, dinner moves, or an executive needs to leave an hour early. With rideshares, there is no one to call.</div>
+        <div class="good"><strong>Dispatch stays reachable during the trip.</strong> One message confirms the change with your driver.</div>
+      </div>
+      <div class="compare-row">
+        <div><h3>Staff drive home after a late event</h3></div>
+        <div class="bad">Awards dinners and holiday parties end late. Nobody wants a colleague behind the wheel after a toast.</div>
+        <div class="good"><strong>A hotel-to-venue loop with a last run after close.</strong> Every guest gets back safely, and so does your liability record.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 4. INCLUDED ============ -->
+<section class="section" id="features" aria-labelledby="features-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">What you get</p>
+      <h2 id="features-title">What Every Corporate Booking Includes</h2>
+      <p>These come standard. You don't have to ask for them.</p>
+    </header>
+    <div class="included">
+      <article class="inc"><div class="inc-top"><svg><use href="#i-receipt"/></svg><h3>All-in written quote</h3></div><p>Gratuity, tolls and taxes included. No fuel surcharges or driver fees added later.</p></article>
+      <article class="inc"><div class="inc-top"><svg><use href="#i-clock"/></svg><h3>Same-day reply</h3></div><p>Send your trip details and get a written quote back the same day.</p></article>
+      <article class="inc"><div class="inc-top"><svg><use href="#i-doc"/></svg><h3>Written itinerary</h3></div><p>Every pickup time and address on paper, ready to share with guests and venues.</p></article>
+      <article class="inc"><div class="inc-top"><svg><use href="#i-shield"/></svg><h3>Briefed drivers</h3></div><p>Drivers from licensed, insured operators, briefed on your pickup points before day one.</p></article>
+      <article class="inc"><div class="inc-top"><svg><use href="#i-headset"/></svg><h3>Dispatch on every trip</h3></div><p>Reachable while your shuttles run, so a late meeting never strands anyone.</p></article>
+      <article class="inc"><div class="inc-top"><svg><use href="#i-repeat"/></svg><h3>Recurring routes</h3></div><p>Daily or weekly shuttles priced once, with the same driver on your route.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 5. WHY CASCADE ============ -->
+<section class="section why" id="why" aria-labelledby="why-title">
+  <div class="wrap">
+    <div class="why-grid">
+      <div>
+        <p class="kicker">Why us</p>
+        <h2 id="why-title" style="font-size:clamp(34px,3.8vw,48px)">Why Companies Book Cascade Charter Bus</h2>
+        <p class="why-intro">We choose the vehicle for the job, not for the bigger invoice, and we put the price in writing before you commit. That's most of it.</p>
+        <div class="reasons">
+          <div class="reason">
+            <svg aria-hidden="true"><use href="#i-route"/></svg>
+            <h3>We check the venue, not just the headcount</h3>
+            <p>Narrow roads, tight turns and small loading zones decide what can actually reach your door. We look at those before we pick a coach, a minibus or a set of vans.</p>
+          </div>
+          <div class="reason">
+            <svg aria-hidden="true"><use href="#i-scale"/></svg>
+            <h3>We'll tell you when cheaper works</h3>
+            <p>For a short airport run, a school bus often does the job for less than a coach. If that's the better fit, that's what we quote.</p>
+          </div>
+          <div class="reason">
+            <svg aria-hidden="true"><use href="#i-globe"/></svg>
+            <h3>One team in every state</h3>
+            <p>Your Chicago kickoff and your Austin offsite go through the same people, the same quote format and the same phone number.</p>
+          </div>
+          <div class="reason">
+            <svg aria-hidden="true"><use href="#i-receipt"/></svg>
+            <h3>A price finance can sign</h3>
+            <p>The quote already includes gratuity, tolls and taxes. Your purchase order and our invoice match.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Real jobs, unnamed on purpose. Do not add client names without written permission. -->
+      <aside class="log" aria-labelledby="log-title">
+        <h3 id="log-title">Three recent jobs, and what we sent</h3>
+        <p>Not all of these were corporate. The planning works the same way.</p>
+        <ol>
+          <li>
+            <span class="tag">Wedding · 200 guests · Georgia</span>
+            <p>The venue was a farm on narrow dirt roads. A 45-foot coach couldn't turn there, so we ran two 32-seat minibuses on loops instead. The client left a 5-star review.</p>
+          </li>
+          <li>
+            <span class="tag">Farm tour · 100–120 guests · Hawaii</span>
+            <p>The access roads were too tight and unpaved even for a minibus. Five Sprinter vans ran rotations, with water coolers on board for the humidity.</p>
+          </li>
+          <li>
+            <span class="tag">Airport transfer · 85 riders · 5:00 a.m.</span>
+            <p>A 30-minute campus-to-airport run. School buses cost less than a coach for a trip that short, so that's what we quoted.</p>
+          </li>
+        </ol>
+        <a class="btn btn-amber" href="/get-a-quote?service=corporate-transportation">Plan My Corporate Trip <svg><use href="#i-arrow"/></svg></a>
+      </aside>
+    </div>
+
+    <div class="stats">
+      <div><strong>5+ years</strong><span>of service</span></div>
+      <div><strong>50 states</strong><span>with vehicles and stations</span></div>
+      <div><strong>Same day</strong><span>written quotes</span></div>
+      <div><strong>24/7</strong><span>pickups at any hour</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 6. FLEET ============ -->
+<section class="section bg-white" id="buses" aria-labelledby="buses-title">
+  <div class="wrap">
+    <header class="section-head split">
+      <div>
+        <p class="kicker">Our fleet</p>
+        <h2 id="buses-title">Which Vehicles Work Best for Corporate Groups?</h2>
+        <p>A charter bus fits most full-group moves. Smaller groups, tight venues and short budget runs call for something else, and big events often mix two or three types.</p>
+      </div>
+      <a class="text-link" href="/fleet">See the full fleet</a>
+    </header>
+    <div class="buses">
+      <article class="bus">
+        <div class="bus-media">
+          <span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span>
+          <img src="/images/fleet/charter-bus.webp" alt="56-passenger charter bus for corporate conference transportation" width="600" height="450" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <div class="bus-body">
+          <p class="seats">52–56 passengers</p>
+          <h3>Charter Bus</h3>
+          <p class="use">Whole conference groups, offsite moves and longer trips between cities. Reclining seats and luggage bays underneath.</p>
+          <div class="bus-actions"><a class="text-link" href="/fleet/charter-bus">Details</a><a class="btn btn-amber" href="/get-a-quote?vehicle=charter-bus">Get Quote</a></div>
+        </div>
+      </article>
+      <article class="bus">
+        <div class="bus-media">
+          <span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span>
+          <img src="/images/fleet/minibus.webp" alt="Minibus used for corporate employee shuttles" width="600" height="450" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <div class="bus-body">
+          <p class="seats">20–32 passengers</p>
+          <h3>Mini Bus</h3>
+          <p class="use">Hotel-to-venue loops, all-day staff shuttles and venues where a full coach can't turn.</p>
+          <div class="bus-actions"><a class="text-link" href="/fleet/minibus">Details</a><a class="btn btn-amber" href="/get-a-quote?vehicle=minibus">Get Quote</a></div>
+        </div>
+      </article>
+      <article class="bus">
+        <div class="bus-media">
+          <span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span>
+          <img src="/images/fleet/sprinter-van.webp" alt="Mercedes Sprinter van for executive and airport transfers" width="600" height="450" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <div class="bus-body">
+          <p class="seats">Up to 14 passengers</p>
+          <h3>Sprinter Van</h3>
+          <p class="use">Leadership teams, board members, client airport pickups and roads too narrow for a bus.</p>
+          <div class="bus-actions"><a class="text-link" href="/fleet/sprinter-van">Details</a><a class="btn btn-amber" href="/get-a-quote?vehicle=sprinter-van">Get Quote</a></div>
+        </div>
+      </article>
+      <article class="bus">
+        <div class="bus-media">
+          <span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span>
+          <img src="/images/fleet/school-bus.webp" alt="Yellow school bus for short corporate shuttle runs" width="600" height="450" loading="lazy" decoding="async" onerror="this.remove()">
+        </div>
+        <div class="bus-body">
+          <p class="seats">44–72 passengers</p>
+          <h3>School Bus</h3>
+          <p class="use">Short, budget-friendly runs: parking-lot shuttles, campus events and quick airport transfers for large groups.</p>
+          <div class="bus-actions"><a class="text-link" href="/fleet/school-bus">Details</a><a class="btn btn-amber" href="/get-a-quote?vehicle=school-bus">Get Quote</a></div>
+        </div>
+      </article>
+    </div>
+    <div class="fleet-note">
+      <p><strong>Moving a band or a touring crew?</strong> Sleeper buses with 4 to 15 bunks are booked through our band tour service.</p>
+      <a class="text-link" href="/services/band-tour-bus">Band Tour Bus</a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 7. RELATED SERVICES (link only to live pages) ============ -->
+<section class="section" id="related" aria-labelledby="related-title">
+  <div class="wrap">
+    <header class="section-head">
+      <p class="kicker">Other services</p>
+      <h2 id="related-title">Planning a Different Kind of Group Trip?</h2>
+      <p>The same team handles weddings, teams, schools and tours.</p>
+    </header>
+    <div class="related">
+      <a class="rel-card" href="/services/group-airport-shuttle">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span><img src="/images/services/cards/group-airport-shuttle.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">Service</span><h3>Group Airport Shuttle</h3></div>
+      </a>
+      <a class="rel-card" href="/services/band-tour-bus">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span><img src="/images/services/cards/band-tour-bus.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">Sleeper buses</span><h3>Band Tour Bus</h3></div>
+      </a>
+      <a class="rel-card" href="/services/wedding-shuttle-bus-rental">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span><img src="/images/services/cards/wedding-shuttle.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">Service</span><h3>Wedding Shuttle Bus Rental</h3></div>
+      </a>
+      <a class="rel-card" href="/services/sports-team-transportation">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span><img src="/images/services/cards/sports-team-bus.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">Service</span><h3>Sports Team Transportation</h3></div>
+      </a>
+      <a class="rel-card" href="/services/school-field-trip-transportation">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span><img src="/images/services/cards/school-field-trip-bus.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">Service</span><h3>School &amp; Field Trip Transportation</h3></div>
+      </a>
+      <a class="rel-card" href="/services/sightseeing-tour-bus-rental">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span><img src="/images/services/cards/sightseeing-tour-bus.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">Service</span><h3>Sightseeing &amp; Tour Bus Rental</h3></div>
+      </a>
+      <a class="rel-card" href="/services/church-religious-group-transportation">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-bus"/></svg></span><img src="/images/services/cards/church-group-bus.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">Service</span><h3>Church &amp; Religious Groups</h3></div>
+      </a>
+      <a class="rel-card" href="/locations/ct/shelton">
+        <div class="rel-media"><span class="img-fallback" aria-hidden="true"><svg><use href="#i-pin"/></svg></span><img src="/images/locations/shelton/card-shelton-ct.webp" alt="" width="600" height="375" loading="lazy" decoding="async" onerror="this.remove()"></div>
+        <div class="rel-body"><span class="rel-label">City page</span><h3>Shelton, CT</h3></div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 8. FAQ (text matches FAQPage schema word for word) ============ -->
+<section class="section bg-white" id="faq" aria-labelledby="faq-title">
+  <div class="wrap faq-layout">
+    <div class="faq-aside">
+      <p class="kicker">FAQ</p>
+      <h2 id="faq-title">Corporate Transportation Questions</h2>
+      <p>What event planners and office managers ask us most.</p>
+      <div class="help"><span>Rather talk it through?</span><a href="tel:+16467050816">+1 (646) 705-0816</a></div>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary><h3>Can you run a recurring employee shuttle, not just a one-time event?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>Yes. Send us the weekly pattern: pickup points, times and days. That is enough to price a recurring route. We run daily employee shuttles with the same driver for a full quarter, as well as weekly and event-season routes.</p></div>
+      </details>
+      <details>
+        <summary><h3>Do your vehicles have Wi-Fi for conference attendees?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>It depends on the vehicle assigned in your city. If your group needs Wi-Fi, say so in your quote request and we will confirm in writing whether the assigned vehicle has it before you book.</p></div>
+      </details>
+      <details>
+        <summary><h3>How far in advance should we book conference transportation?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>Book as soon as your dates and headcount are firm. Big conferences and the spring and fall event seasons fill vehicles fast, so several weeks ahead is safest. Short-notice requests are welcome too. Written quotes go out the same day, and we take pickups at any hour.</p></div>
+      </details>
+      <details>
+        <summary><h3>Can you handle transportation for a multi-day event?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>Yes. Send the schedule for each day, from hotel departures and sessions to dinners and the final airport run. We price the whole event as one booking with one quote, and driver overnight stays and late pickups are included in that price.</p></div>
+      </details>
+      <details>
+        <summary><h3>Do you provide invoices for business bookings?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>Yes. You get a written quote and itinerary you can forward for internal approval. Share your billing needs, such as a PO number or invoice details, when you request a quote and we will confirm them before booking.</p></div>
+      </details>
+      <details>
+        <summary><h3>Can we mix vehicle types for one corporate event?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>Yes. A large group might need a charter bus for the main group, a minibus for staff and a Sprinter van for a venue a bus cannot reach. We plan the mix in your quote instead of sending whatever is free that day.</p></div>
+      </details>
+      <details>
+        <summary><h3>Do you use school buses for corporate trips?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>Yes, for short runs where cost matters more than comfort, like a parking-lot shuttle or a quick hotel-to-airport transfer. For longer trips, a charter bus with reclining seats and luggage space is the better choice, and we will tell you which one fits.</p></div>
+      </details>
+      <details>
+        <summary><h3>What is included in a corporate charter quote?</h3><span class="pm" aria-hidden="true"></span></summary>
+        <div class="answer"><p>The vehicle, the driver, gratuity, tolls and taxes. There are no fuel surcharges or driver fees added later, so the price you approve is the price you pay.</p></div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- ============ 9. CTA ============ -->
+<section class="cta-band" aria-labelledby="cta-title">
+  <div class="wrap cta-inner">
+    <div>
+      <h2 id="cta-title">Send Us Your Schedule. We'll Send Back a Price.</h2>
+      <p>Dates, headcount and pickup points are enough to start. You'll have a written quote the same day.</p>
+    </div>
+    <div class="cta-actions">
+      <a class="btn btn-amber" href="/get-a-quote?service=corporate-transportation">Get a Free Quote <svg><use href="#i-arrow"/></svg></a>
+      <a class="btn btn-ghost" href="tel:+16467050816"><svg><use href="#i-phone"/></svg>+1 (646) 705-0816</a>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="wrap footer-grid">
+    <div class="footer-about">
+      <a class="logo" href="/" aria-label="Cascade Charter Bus home">
+        <span class="logo-mark" aria-hidden="true"><svg><use href="#i-bus"/></svg></span>
+        <span class="logo-text">CASCADE<span>CHARTER BUS</span></span>
+      </a>
+      <p>Group transportation across the United States: charter buses, minibuses, Sprinter vans, school buses and sleeper coaches, from licensed and insured operators in every state.</p>
+      <div class="social">
+        <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M14 8h3V4h-3a4 4 0 0 0-4 4v2H8v4h2v8h4v-8h3l1-4h-4V8z"/></svg></a>
+        <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor"/></svg></a>
+        <a href="#" aria-label="LinkedIn"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 9h4v12H4zM6 3a2 2 0 1 1 0 4 2 2 0 0 1 0-4zM10 9h4v1.7c.6-1 2-2 4-2 4 0 4 2.6 4 6V21h-4v-5.5c0-1.5 0-3.3-2-3.3s-2.3 1.6-2.3 3.2V21H10z"/></svg></a>
+      </div>
+    </div>
+    <nav aria-labelledby="f-quick">
+      <p class="footer-title" id="f-quick">Quick Links</p>
+      <ul>
+        <li><a href="/">Home</a></li>
+        <li><a href="/fleet">Our Fleet</a></li>
+        <li><a href="/locations">Service Areas</a></li>
+        <li><a href="/services">Services</a></li>
+        <li><a href="/about">About Us</a></li>
+        <li><a href="/get-a-quote">Get a Quote</a></li>
+        <li><a href="/faqs">FAQs</a></li>
+      </ul>
+    </nav>
+    <nav aria-labelledby="f-services">
+      <p class="footer-title" id="f-services">Our Services</p>
+      <ul>
+        <li><a href="/services/corporate-transportation" aria-current="page">Corporate Event Transportation</a></li>
+        <li><a href="/services/wedding-shuttle-bus-rental">Wedding Shuttle Bus Rental</a></li>
+        <li><a href="/services/school-field-trip-transportation">School &amp; Field Trip Transportation</a></li>
+        <li><a href="/services/sports-team-transportation">Sports Team Transportation</a></li>
+        <li><a href="/services/group-airport-shuttle">Group Airport Shuttle</a></li>
+        <li><a href="/services/sightseeing-tour-bus-rental">Sightseeing &amp; Tour Bus Rental</a></li>
+        <li><a href="/services/church-religious-group-transportation">Church &amp; Religious Group Transportation</a></li>
+        <li><a href="/services/band-tour-bus">Band Tour Bus</a></li>
+      </ul>
+    </nav>
+    <div>
+      <p class="footer-title">Contact</p>
+      <address>
+        <span><svg><use href="#i-pin"/></svg>12409 Linden Blvd, South Ozone Park, NY 11420</span>
+        <a href="tel:+16467050816"><svg><use href="#i-phone"/></svg>+1 (646) 705-0816</a>
+        <a href="mailto:info@cascadecharterbus.com"><svg><use href="#i-mail"/></svg>info@cascadecharterbus.com</a>
+      </address>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <div class="wrap">
+      <span>© 2026 Cascade Charter Bus. All rights reserved.</span>
+      <nav aria-label="Legal"><a href="/privacy-policy">Privacy</a><a href="/terms">Terms</a><a href="/cancellation-policy">Cancellation</a><a href="/sitemap">Sitemap</a></nav>
+    </div>
+  </div>
+</footer>
+
+<div class="mobile-bar" role="region" aria-label="Quick actions">
+  <a class="btn btn-ghost" href="tel:+16467050816"><svg><use href="#i-phone"/></svg>Call</a>
+  <a class="btn btn-amber" href="/get-a-quote?service=corporate-transportation">Free Quote</a>
+</div>
+
+<script>
+(function(){
+  var btn=document.querySelector('.menu-toggle'),nav=document.getElementById('site-nav');
+  if(!btn||!nav)return;
+  btn.addEventListener('click',function(){
+    var open=nav.classList.toggle('open');
+    btn.setAttribute('aria-expanded',open);
+    btn.setAttribute('aria-label',open?'Close menu':'Open menu');
+  });
+})();
+</script>
+</body>
+</html>

@@ -93,6 +93,7 @@ export default function Footer() {
               <li className="mb-2"><Link className="footer-link text-white" href="/fleet/">Our Fleet</Link></li>
               <li className="mb-2"><Link className="footer-link text-white" href="/locations/">Service Areas</Link></li>
               <li className="mb-2"><Link className="footer-link text-white" href="/services/">Services</Link></li>
+              <li className="mb-2"><Link className="footer-link text-white" href="/blog/">Blog</Link></li>
               <li className="mb-2"><Link className="footer-link text-white" href="/about/">About Us</Link></li>
               <li className="mb-2"><Link className="footer-link text-white" href="/contact/">Get A Quote</Link></li>
               <li className="mb-2"><Link className="footer-link text-white" href="/faqs/">FAQ&apos;s</Link></li>

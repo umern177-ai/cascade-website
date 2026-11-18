@@ -478,7 +478,7 @@ export const SERVICE_META: Record<
     eyebrow: "Tour-Grade Equipment",
     h1: "Band Tour Bus Rental for Musicians, Crews & Gear",
     intro: "Tour travel is overnight, gear-heavy and schedule-critical. Cascade Charter Bus rents sleeper buses with up to 15 bunks, a restroom and shower on board, and lounges for the crew—plus vans and minibuses for local dates. Dispatch stays available around the clock, which matters most when the route slips past midnight.",
-    metaTitle: "Band Tour Bus Rental | Sleeper Coaches With Bunks & Shower",
+    metaTitle: "Band Tour Bus Rental | Sleeper Coaches With Bunks",
     metaDescription:
       "Band tour bus rental with sleeper coaches (up to 15 bunks, restroom and shower on board), lounges and gear storage. Nationwide routing with 24/7 dispatch.",
   },

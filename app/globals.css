@@ -1073,7 +1073,10 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
    review Nov 17) — scoped to .pp-svc so city pages keep their spacing ===== */
 .pp-svc .pp-sec { padding: 3.4rem 0; }
 .pp-svc .pp-sec-head { margin-bottom: 2.1rem; }
-.pp-svc .pp-facts { padding: 2.4rem 0; }
+/* facts strip: no extra padding on pp-svc pages — the global -44px overlap
+   (half on hero banner, half below, like the city pages) must show
+   site-wide (owner request Nov 18). */
+/* pp facts strip spacing is handled by .pp-facts globally */
 /* pricing row: both columns stretch to the same height, cards aligned */
 .pp-svc #pricing .row { align-items: stretch; }
 .pp-svc #pricing .col-lg-5 { display: flex; }

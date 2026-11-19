@@ -23,7 +23,7 @@ const SERVICE_CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
   "corporate-transportation": { src: "/images/services/corp.webp", alt: "Passengers riding a charter coach to a corporate event" },
   "wedding-transportation": { src: "/images/services/wed.webp", alt: "Wedding couple greeting guests riding a shuttle bus" },
   "school-transportation": { src: "/images/services/school.webp", alt: "Students boarding a yellow school bus" },
-  "sports-team-transportation": { src: "/images/services/sport.webp", alt: "Football team heading to a stadium" },
+  "sports-team-transportation": { src: "/images/services/sport.webp", alt: "Soccer team lined up on the pitch before a match" },
   "airport-transfer": { src: fleetMain("sprinter-van", "/images/fleet/sprinter.jpg"), alt: "Black Sprinter van parked beside aircraft on an airport apron" },
   "sightseeing-tour-bus": { src: "/images/services/multi.webp", alt: "Motorcoach on a scenic tour route" },
   "church-religious-transportation": { src: "/images/services/church.webp", alt: "Minibuses ready for a group shuttle" },

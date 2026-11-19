@@ -120,7 +120,7 @@ const SERVICE_PHOTOS: Record<string, { src: string; alt: string }[]> = {
     { src: "/images/services/school2.webp", alt: "District yellow school bus driving along a coastal road" },
   ],
   "sports-team-transportation": [
-    { src: "/images/services/sport.webp", alt: "Football players walking through a stadium tunnel before a game" },
+    { src: "/images/services/sport.webp", alt: "Soccer team lined up on the pitch before a match" },
   ],
   "airport-transfer": [
     { src: "/images/services/airport.webp", alt: "Group shuttle bus waiting on the airport apron beside the terminal" },

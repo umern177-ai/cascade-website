@@ -48,7 +48,7 @@ export default function VehiclePhoto({
       style={
         fill
           ? { position: "absolute", inset: 0, display: "block" }
-          : { position: "relative", display: "block" }
+          : { ...style, position: "relative", display: "block", overflow: "hidden" }
       }
     >
       {photos.map((src, i) => (
@@ -58,12 +58,28 @@ export default function VehiclePhoto({
           alt={i === idx ? alt : ""}
           {...(fill ? { fill: true } : dims)}
           sizes={sizes}
-          style={{
-            ...style,
-            zIndex: i === idx ? 1 : 0,
-            opacity: i === idx ? 1 : 0,
-            transition: "opacity 0.6s ease",
-          }}
+          style={
+            fill
+              ? {
+                  ...style,
+                  zIndex: i === idx ? 1 : 0,
+                  opacity: i === idx ? 1 : 0,
+                  transition: "opacity 0.6s ease",
+                }
+              : {
+                  // non-fill: the CALLER's style sizes the wrapper (one tile);
+                  // every photo in the cycle is pinned inside it as an overlay,
+                  // so the box never grows to N stacked images.
+                  position: "absolute",
+                  inset: 0,
+                  width: "100%",
+                  height: "100%",
+                  objectFit: "cover",
+                  zIndex: i === idx ? 1 : 0,
+                  opacity: i === idx ? 1 : 0,
+                  transition: "opacity 0.6s ease",
+                }
+          }
           priority={priority && i === 0}
           aria-hidden={i !== idx}
         />

@@ -87,7 +87,7 @@ export default function FleetHub() {
                       photos={fleetShots(v.slug, v.photo)}
                       alt={`${v.cardName} rental - Cascade Charter Bus`}
                       intrinsic={{ width: 900, height: 520 }}
-                      style={{ objectFit: "cover", width: "100%" }}
+                      style={{ objectFit: "cover", width: "100%", minHeight: 300 }}
                       sizes="(max-width: 992px) 100vw, 58vw"
                       priority={i === 0}
                     />

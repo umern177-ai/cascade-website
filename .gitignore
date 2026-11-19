@@ -9,7 +9,7 @@ capture/live-css/
 docs/live-reference/shots/
 docs/new-site-shots/
 docs/compare/
-reports/lh-*.json
+reports/*.json
 .lead-queue/
 .next/dev*.log
 .next/start3200*.log

@@ -182,9 +182,10 @@ export default function Home() {
                 <div className="rounded-4 overflow-hidden shadow border border-2 border-white">
                   <Image src={fleetMain("charter-bus", "/images/fleet/charter.jpg")} alt="Cascade Charter Bus Fleet" width={800} height={600} priority sizes="(max-width: 992px) 100vw, 50vw" className="w-100 h-100 object-fit-cover" style={{ minHeight: 300 }} />
                 </div>
-                <div className="position-absolute bottom-0 end-0 bg-primary text-white p-3 rounded-4 shadow mb-n3 me-n3 d-none d-md-block">
-                  <h3 className="display-6 fw-bold mb-0">5+</h3>
-                  <p className="mb-0 text-uppercase small fw-bold">Years of Service</p>
+                {/* dark-on-amber: white text on the amber badge fails contrast */}
+                <div className="position-absolute bottom-0 end-0 bg-primary text-dark p-3 rounded-4 shadow mb-n3 me-n3 d-none d-md-block">
+                  <h3 className="display-6 fw-bold mb-0" style={{ color: "var(--fleet-black)" }}>5+</h3>
+                  <p className="mb-0 text-uppercase small fw-bold" style={{ color: "var(--fleet-black)" }}>Years of Service</p>
                 </div>
               </div>
             </div>

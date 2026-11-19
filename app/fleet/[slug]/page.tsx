@@ -11,6 +11,7 @@ import {
 import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { VEHICLES, getVehicle } from "@/lib/fleet-data";
+import { fleetGallery } from "@/lib/fleet-photos";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
@@ -58,6 +59,7 @@ export default async function FleetDetail({ params }: { params: Promise<{ slug: 
       others={others}
       h1={copy.h1}
       em={copy.em}
+      gallery={fleetGallery(v.slug).slice(1)}
     />
   );
 }

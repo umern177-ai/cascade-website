@@ -10,10 +10,11 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { SERVICES } from "@/lib/site-data";
 import { getService } from "@/lib/fleet-data";
 import { SITE } from "@/lib/site-data";
+import { fleetMain } from "@/lib/fleet-photos";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Charter Bus Services for Groups & Events",
+  title: "Charter Bus Services & Group Travel",
   description:
     "Charter bus services for corporate events, weddings, schools, sports teams, airport transfers, sightseeing tours, church groups and band tours—nationwide.",
   path: "/services/",
@@ -56,14 +57,14 @@ const CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
   "wedding-transportation": { src: "/images/services/wed.webp", alt: "Wedding couple greeting guests riding a shuttle bus" },
   "school-transportation": { src: "/images/services/school.webp", alt: "Students boarding a yellow school bus for a field trip" },
   "sports-team-transportation": { src: "/images/services/sport.webp", alt: "Football team walking through a stadium tunnel before a game" },
-  "airport-transfer": { src: "/images/fleet/sprinter.jpg", alt: "Black Sprinter van parked beside aircraft on an airport apron" },
+  "airport-transfer": { src: fleetMain("sprinter-van", "/images/fleet/sprinter.jpg"), alt: "Black Sprinter van parked beside aircraft on an airport apron" },
   "sightseeing-tour-bus": { src: "/images/services/multi.webp", alt: "White motorcoach on a scenic mountain road" },
   "church-religious-transportation": { src: "/images/services/church.webp", alt: "Executive minibuses parked on a city street for a group shuttle" },
-  "band-tour-bus": { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus used for band tours" },
+  "band-tour-bus": { src: fleetMain("sleeper", "/images/fleet/sleeper.jpg"), alt: "Sleeper tour bus used for band tours" },
   "winery-tour-bus-rental": { src: "/images/services/winery.webp", alt: "Vineyard rows in wine country" },
   "military-group-transportation": { src: "/images/services/military.webp", alt: "The American flag against a blue sky" },
   "government-transportation": { src: "/images/services/government.webp", alt: "The United States Capitol building" },
-  "casino-bus-trips": { src: "/images/fleet/limo.jpg", alt: "Party bus hired for a casino night out" },
+  "casino-bus-trips": { src: fleetMain("party-bus", "/images/fleet/limo.jpg"), alt: "Party bus hired for a casino night out" },
 };
 
 const FACTS = [
@@ -79,9 +80,15 @@ export default function ServicesHub() {
     "@type": "ItemList",
     itemListElement: SERVICES.map((s, i) => ({ "@type": "ListItem", position: i + 1, name: s.name, url: `${SITE.url}/services/${s.slug}/` })),
   };
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: SERVICES_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
   return (
     <main className="pp bg-white pp-svc" style={{ fontSize: "inherit" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services" }]} />
 

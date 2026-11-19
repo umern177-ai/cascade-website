@@ -6,11 +6,10 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
 import { POSTS } from "@/lib/blog-data";
 import Image from "next/image";
-import Image2 from "next/image";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Charter Bus Planning Guides & Group Travel Tips",
+  title: "Charter Bus Trip Guides & Planning Tips",
   description:
     "Practical charter bus planning guides from the Cascade dispatch team: booking timelines, vehicle sizing, route planning and pre-trip checklists.",
   path: "/blog/",

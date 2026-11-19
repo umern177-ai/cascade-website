@@ -22,7 +22,7 @@ export type BlogPost = {
 export const POSTS: BlogPost[] = [
   {
     slug: "how-to-plan-a-group-charter-bus-trip",
-    title: "How to Plan a Group Charter Bus Trip: The Complete Timing Guide",
+    title: "How to Plan a Group Charter Bus Trip",
     description:
       "A step-by-step charter bus planning timeline: when to book, how to size the vehicle, route planning, the pickup plan and a pre-trip checklist.",
     date: "2026-11-18",

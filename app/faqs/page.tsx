@@ -9,7 +9,7 @@ import { HOME_FAQS } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Frequently Asked Questions | Charter Bus Rentals",
+  title: "Charter Bus Rental FAQs",
   description:
     "Answers about booking, safety, cancellations, amenities and group travel logistics for charter bus rentals nationwide.",
   path: "/faqs/",
@@ -51,7 +51,7 @@ export default function FaqsPage() {
           </div>
           <p className="text-center opacity-75 mt-4">
             Not seeing your question?{" "}
-            <Link href="/contact/" className="text-primary fw-bold text-decoration-none">
+            <Link href="/contact/" className="text-primary fw-bold text-decoration-none text-link-pad">
               Ask the dispatch team
             </Link>{" "}
             — they answer around the clock.

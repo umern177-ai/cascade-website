@@ -1,4 +1,6 @@
 // Fleet data — single source of truth so the hub, vehicle pages, cards and
+
+import { fleetMain } from "./fleet-photos";
 // service pages can never disagree (brief Sections 7.4, 7.5b, 19.10).
 // Numbers follow the brief's confirmed table; sleeper corrected per owner (Nov 9):
 // up to 15 bunks, restroom and shower on board, no private artist room.
@@ -33,7 +35,7 @@ export const VEHICLES: Vehicle[] = [
     ctaName: "Charter Bus",
     tagline: "Full-Size Motorcoach Travel for Large Groups",
     passengers: "52–56 Passengers",
-    photo: "/images/fleet/charter.jpg",
+    photo: fleetMain("charter-bus", "/images/fleet/charter.jpg"),
     amenities: ["Onboard Restroom", "High-Speed WiFi", "Under-Bus Luggage Storage", "PA System"],
     luggage: "50–60 Large Bags",
     climate: "Dual-Zone A/C",
@@ -77,7 +79,7 @@ export const VEHICLES: Vehicle[] = [
       { q: "Can I rent a charter bus for a long-distance trip?", a: "Yes. Charter buses are built for long distances: under-bus luggage bays, an onboard restroom, dual-zone climate control and a professional driver who works to federal hours-of-service rules." },
       { q: "Can charter buses carry luggage?", a: "Yes—the under-bus bays hold 50–60 large bags, and there is overhead storage inside for carry-ons and gear bags." },
     ],
-    metaTitle: "Charter Bus & Motorcoach Rental | 52-56 Seats",
+    metaTitle: "Charter Bus & Motorcoach | 52-56 Seats",
     metaDescription:
       "Charter bus and motorcoach rental for 52–56 passengers: onboard restroom, WiFi, 50–60 bag luggage bays. Nationwide charter bus rental service with DOT-certified drivers. Free quote.",
   },
@@ -88,7 +90,7 @@ export const VEHICLES: Vehicle[] = [
     ctaName: "Sleeper Bus",
     tagline: "Overnight Touring Comfort for Artists & Crews",
     passengers: "Up to 15 Bunks",
-    photo: "/images/fleet/sleeper.jpg",
+    photo: fleetMain("sleeper", "/images/fleet/sleeper.jpg"),
     amenities: ["Sleeping Bunks", "Front & Rear Lounge", "Restroom & Shower", "Lounge Seating"],
     luggage: "Personal & Tour Gear",
     climate: "Central Climate Control",
@@ -130,7 +132,7 @@ export const VEHICLES: Vehicle[] = [
       { q: "Can the bus pull a trailer for gear?", a: "Trailer options depend on the specific coach and route. Tell us what gear you're moving and the dispatch team will confirm what's available for your dates." },
       { q: "How do driver hours work on overnight runs?", a: "Drivers work to federal hours-of-service rules. On long overnight routes we schedule relief drivers or timed rest stops so the schedule stays legal and safe." },
     ],
-    metaTitle: "Sleeper Bus Rental for Band Tours | Up to 15 Bunks",
+    metaTitle: "Sleeper Bus Rental | Up to 15 Bunks",
     metaDescription:
       "Sleeper bus rental for touring bands: up to 15 bunks, onboard restroom and shower, front and rear lounges. Nationwide routing with 24/7 dispatch support.",
   },
@@ -141,7 +143,7 @@ export const VEHICLES: Vehicle[] = [
     ctaName: "Minibus",
     tagline: "Flexible Group Transportation for 20-32 Passengers",
     passengers: "20–32 Passengers",
-    photo: "/images/fleet/mini.jpg",
+    photo: fleetMain("minibus", "/images/fleet/mini.jpg"),
     amenities: ["Air Conditioning", "Reclining Seats", "Overhead Storage", "Easy City Parking"],
     luggage: "Overhead / Seat Storage",
     climate: "Rear Climate Control",
@@ -183,7 +185,7 @@ export const VEHICLES: Vehicle[] = [
       { q: "Can a minibus handle narrow venue roads?", a: "Yes—that's what minibuses are for. They handle hotel loops, farm-lane venues and tight downtown blocks where a 45-foot coach can't turn." },
       { q: "Is WiFi available on minibuses?", a: "WiFi and USB charging are on most vehicles. Tell us if connectivity matters and we'll match the right bus." },
     ],
-    metaTitle: "Minibus Rental | 20-32 Passenger Shuttle Buses",
+    metaTitle: "Minibus Shuttle Rental | 20-32 Seats",
     metaDescription:
       "Rent a 20–32 passenger minibus with A/C, reclining seats and easy city maneuvering. Ideal for weddings, shuttles and airport transfers. Get a free quote.",
   },
@@ -194,7 +196,7 @@ export const VEHICLES: Vehicle[] = [
     ctaName: "School Bus",
     tagline: "High-Capacity Transportation for Short Trips",
     passengers: "28–60 Passengers",
-    photo: "/images/fleet/school.jpg",
+    photo: fleetMain("school-bus", "/images/fleet/school.jpg"),
     amenities: ["Large Group Capacity", "Safety-Focused Design", "Bench Seating", "PA System"],
     luggage: "No Luggage Bay",
     climate: "Climate Varies by Vehicle",
@@ -234,7 +236,7 @@ export const VEHICLES: Vehicle[] = [
       { q: "Are school buses cheaper than charter buses?", a: "Usually yes—per-seat cost is the lowest in the fleet, especially for short local runs. The trade-off is no restroom, no luggage bay and simpler seating." },
       { q: "Can we book a school bus for a wedding shuttle?", a: "Yes—many couples use school buses for guest shuttles when the venue is close and budget matters more than amenities." },
     ],
-    metaTitle: "School Bus Rental | Affordable Group Transportation",
+    metaTitle: "School Bus Rental | Affordable & Safe",
     metaDescription:
       "Rent a school bus for 28–60 passengers— the most economical option for field trips, shuttles and short local trips. DOT-certified drivers nationwide.",
   },
@@ -245,7 +247,7 @@ export const VEHICLES: Vehicle[] = [
     ctaName: "Sprinter Van",
     tagline: "Small-Group Transportation With a Professional Driver",
     passengers: "Up to 14 Passengers",
-    photo: "/images/fleet/sprinter.jpg",
+    photo: fleetMain("sprinter-van", "/images/fleet/sprinter.jpg"),
     amenities: ["Air Conditioning", "Luggage Space", "Reclining Seats", "Easy Handling"],
     luggage: "Carry-on / Rear Storage",
     climate: "Rear Climate Control",
@@ -285,7 +287,7 @@ export const VEHICLES: Vehicle[] = [
       { q: "How much luggage fits in a sprinter van?", a: "Carry-ons and a rear storage area—roughly a weekend-trip amount for a full van. For skis, trunks or big equipment cases, use a minibus or charter bus." },
       { q: "Is a sprinter van good for airport transfers?", a: "Very good: it's fast at terminals, parks easily, and handles small groups without splitting into multiple cars." },
     ],
-    metaTitle: "Sprinter Van Rental With Driver | Up to 14 Passengers",
+    metaTitle: "Sprinter Van Rental With Driver",
     metaDescription:
       "Rent a Sprinter van with a professional driver for up to 14 passengers. Airport pickups, executive transfers and small-group trips nationwide.",
   },
@@ -296,7 +298,7 @@ export const VEHICLES: Vehicle[] = [
     ctaName: "Party Bus",
     tagline: "Celebration Transportation With Lights & Sound",
     passengers: "14–40 Passengers",
-    photo: "/images/fleet/limo.jpg",
+    photo: fleetMain("party-bus", "/images/fleet/limo.jpg"),
     amenities: ["Premium Interior", "LED Lighting", "Bar Area", "Entertainment System"],
     luggage: "Limited Luggage",
     climate: "Climate Control",
@@ -337,7 +339,7 @@ export const VEHICLES: Vehicle[] = [
       { q: "Is there a minimum rental time?", a: "Party buses usually run on hourly minimums. Tell us your plan and we'll quote the hours you actually need." },
       { q: "Do party buses have luggage space?", a: "Very limited—party buses are built for people, not bags. For airport or multi-day trips with luggage, use a minibus or charter bus." },
     ],
-    metaTitle: "Party Bus & Limo Rental | 14-40 Passengers",
+    metaTitle: "Party Bus & Limo Rental | 14-40 Guests",
     metaDescription:
       "Rent a limo or party bus for 14–40 passengers with LED lighting, bar area and entertainment system. Nights out, proms and celebrations nationwide.",
   },
@@ -348,7 +350,7 @@ export const VEHICLES: Vehicle[] = [
     ctaName: "Sedan or SUV",
     tagline: "Point-to-Point Transportation for Small Groups",
     passengers: "Up to 7 Passengers",
-    photo: "/images/fleet/suv.jpg",
+    photo: fleetMain("suv-sedan", "/images/fleet/suv.jpg"),
     amenities: ["Climate Control", "Privacy Glass", "Bluetooth Audio", "Comfortable Seating"],
     luggage: "Up to 7 Carry-Ons",
     climate: "Climate Control",
@@ -388,7 +390,7 @@ export const VEHICLES: Vehicle[] = [
       { q: "Do SUVs come with a driver?", a: "Yes—every vehicle comes with a professional driver; there is no self-drive option." },
       { q: "When is an SUV the right choice?", a: "Small executive transfers, airport pickups of a few people, and trips where parking or access rules out bigger vehicles." },
     ],
-    metaTitle: "SUV & Sedan Rental With Driver | Up to 7 Passengers",
+    metaTitle: "SUV & Sedan Rental With Driver",
     metaDescription:
       "Rent an SUV or sedan with a professional driver for up to 7 passengers. Airport transfers and executive point-to-point trips nationwide.",
   },
@@ -408,7 +410,7 @@ export const SERVICE_META: Record<
     eyebrow: "Professional Group Logistics",
     h1: "Corporate Shuttle Service for Conferences, Retreats & Employee Transportation",
     intro: "Coordinating transportation for a conference, an off-site retreat, or a daily employee shuttle takes more planning than booking a few rideshares and hoping everyone arrives on time. A corporate shuttle keeps your team, clients, or attendees moving on a predictable schedule, with a professional appearance that matches the event. Cascade Charter Bus arranges corporate transportation nationwide, from one-time events to recurring shuttle routes.",
-    metaTitle: "Corporate Event Transportation & Shuttle Service",
+    metaTitle: "Corporate Event Shuttle & Bus Service",
     metaDescription:
       "Corporate shuttle service for conferences, retreats and daily employee routes. Professional drivers, recurring schedules available. Get a fast quote.",
   },
@@ -418,7 +420,7 @@ export const SERVICE_META: Record<
     eyebrow: "Seamless Guest Experience",
     h1: "Wedding Shuttle Service for Your Guests, Wedding Party & Bachelorette Crew",
     intro: "A wedding shuttle keeps guests moving between hotels, the ceremony and the reception without parking stress or late arrivals. Cascade Charter Bus plans guest loops for weddings across the country—rehearsal dinners, ceremony-to-reception runs, and late pickups after the send-off. Gratuity is included in every quote, and the quote you receive is final.",
-    metaTitle: "Wedding Shuttle Bus Rental for Guests & Party",
+    metaTitle: "Wedding Shuttle Bus Rental",
     metaDescription:
       "Wedding shuttle bus rental with guest hotel loops, ceremony-to-reception runs and party buses. Gratuity included. Get a fast, final quote.",
   },
@@ -428,7 +430,7 @@ export const SERVICE_META: Record<
     eyebrow: "Certified Safety",
     h1: "School Trip & Field Trip Bus Rental With DOT-Certified Drivers",
     intro: "Field trips run on tight schedules and strict safety standards. Cascade Charter Bus provides school buses and charter buses for school districts, private schools and colleges—DOT-certified drivers, background-checked and trained on group management for young passengers. One call covers the whole run, from morning pickup to the final drop-off.",
-    metaTitle: "School & Field Trip Bus Rental | Safe Group Transport",
+    metaTitle: "School & Field Trip Bus Rental",
     metaDescription:
       "Field trip bus rental with DOT-certified, background-checked drivers. School buses and charter buses for districts, schools and colleges. Free quote.",
   },
@@ -438,7 +440,7 @@ export const SERVICE_META: Record<
     eyebrow: "The Athlete's Choice",
     h1: "Sports Team Bus Rental for Games, Tournaments & Season Travel",
     intro: "Team travel fails in the details: gear that doesn't fit, arrival windows that slip, and a bus that can't handle the equipment load. Cascade Charter Bus moves teams and their gear to games and tournaments nationwide—charter buses for full rosters, minibuses for staff runs, and luggage bays sized for the equipment.",
-    metaTitle: "Sports Team Bus Rental | Games & Tournament Travel",
+    metaTitle: "Sports Team Bus Rental | Game Travel",
     metaDescription:
       "Sports team bus rental with gear bays, punctual arrivals and DOT-certified drivers. Charter buses and minibuses for teams and tournaments.",
   },
@@ -448,7 +450,7 @@ export const SERVICE_META: Record<
     eyebrow: "Punctual Arrivals",
     h1: "Group Airport Shuttle Service & Corporate Airport Transfers",
     intro: "An airport run with a group is one job with three clocks: your people, their bags, and the flight. Cascade Charter Bus runs group airport shuttles nationwide—arrival pickups at the terminal, departure drop-offs with time to spare, and flight tracking on request so a late landing doesn't leave the bus gone.",
-    metaTitle: "Group Airport Shuttle & Airport Transfer Service",
+    metaTitle: "Group Airport Shuttle & Transfers",
     metaDescription:
       "Group airport shuttle service with terminal pickups, flight tracking and room for luggage. Sprinters, minibuses and motorcoaches nationwide.",
   },
@@ -458,7 +460,7 @@ export const SERVICE_META: Record<
     eyebrow: "Extended Journeys",
     h1: "Sightseeing & Charter Tour Bus Rental for Guided Group Trips",
     intro: "A good tour day is a routing problem: which stop, which order, how long at each one. Cascade Charter Bus runs sightseeing and multi-day tours with a driver who knows coach routing and the logistics of parking a 45-foot bus at attractions. From single-day city loops to weeklong journeys, we build the schedule around the stops you want.",
-    metaTitle: "Sightseeing & Tour Bus Rental | Guided Group Trips",
+    metaTitle: "Sightseeing & Tour Bus Rental",
     metaDescription:
       "Sightseeing and tour bus rental for day trips and multi-day journeys. Coach routing by experienced drivers, restrooms on board, WiFi on most coaches.",
   },
@@ -478,7 +480,7 @@ export const SERVICE_META: Record<
     eyebrow: "Tour-Grade Equipment",
     h1: "Band Tour Bus Rental for Musicians, Crews & Gear",
     intro: "Tour travel is overnight, gear-heavy and schedule-critical. Cascade Charter Bus rents sleeper buses with up to 15 bunks, a restroom and shower on board, and lounges for the crew—plus vans and minibuses for local dates. Dispatch stays available around the clock, which matters most when the route slips past midnight.",
-    metaTitle: "Band Tour Bus Rental | Sleeper Coaches With Bunks",
+    metaTitle: "Band Tour Bus Rental | Sleeper Coaches",
     metaDescription:
       "Band tour bus rental with sleeper coaches (up to 15 bunks, restroom and shower on board), lounges and gear storage. Nationwide routing with 24/7 dispatch.",
   },

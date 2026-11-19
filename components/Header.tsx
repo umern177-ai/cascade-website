@@ -64,7 +64,7 @@ export default function Header() {
 
   return (
     <header className="shadow-lg" ref={rootRef}>
-      <div className="top-ribbon py-2 d-none d-md-block bg-black border-bottom border-white border-opacity-10">
+      <div className="top-ribbon py-2 d-none d-md-block bg-black border-bottom border-white border-opacity-25">
         <div className="container d-flex justify-content-between align-items-center">
           <a href={`mailto:${SITE.email}`} className="text-decoration-none d-flex align-items-center gap-2">
             <Mail size={14} className="text-primary" aria-hidden="true" />
@@ -128,7 +128,7 @@ export default function Header() {
                       All Services
                     </Link>
                   </li>
-                  <li className="mega-full"><hr className="dropdown-divider opacity-10" /></li>
+                  <li className="mega-full"><hr className="dropdown-divider" /></li>
                   {SERVICES.map((s) => (
                     <li key={s.slug}>
                       <Link className="dropdown-item py-2 px-3 small" href={`/services/${s.slug}/`} onClick={() => { setOpen(false); setServicesOpen(false); }}>
@@ -163,7 +163,7 @@ export default function Header() {
                       View Entire Fleet
                     </Link>
                   </li>
-                  <li className="mega-full"><hr className="dropdown-divider opacity-10" /></li>
+                  <li className="mega-full"><hr className="dropdown-divider" /></li>
                   {FLEET.map((f) => (
                     <li key={f.slug}>
                       <Link className="dropdown-item py-2 px-3 small" href={`/fleet/${f.slug}/`} onClick={() => { setOpen(false); setFleetOpen(false); }}>

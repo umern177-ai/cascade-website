@@ -25,3 +25,6 @@ servicespictures/
 .vscode/settings.json
 __pycache__/
 *.pyc
+
+.vercel
+.env*

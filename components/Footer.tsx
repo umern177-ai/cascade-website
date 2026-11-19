@@ -140,8 +140,7 @@ export default function Footer() {
         <div className="row align-items-center gy-3 pb-3">
           <div className="col-md-6 text-center text-md-start">
             <p className="x-small text-muted mb-0">
-              © {new Date().getFullYear()} <strong>Cascade Charter Bus</strong>.
-              <span className="ms-2 opacity-50">All rights reserved.</span>
+              © {new Date().getFullYear()} <strong>Cascade Charter Bus</strong>. All rights reserved.
             </p>
           </div>
           <div className="col-md-6 text-center text-md-end">

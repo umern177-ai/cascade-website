@@ -5,11 +5,14 @@
 // cities. Site-wide facts only — nothing invented per city.
 import Image from "next/image";
 import { Phone, MapPin, Users, Check, Plane, Award } from "lucide-react";
+import VehiclePhoto from "@/components/VehiclePhoto";
+import { fleetShots } from "@/lib/fleet-photos";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RouteDiagram, { etaText } from "@/components/RouteDiagram";
 import { getCityContent } from "@/lib/city-content";
 import { VEHICLES, type Vehicle } from "@/lib/fleet-data";
 import { SITE } from "@/lib/site-data";
+import { localBusinessSchema } from "@/lib/schema";
 import type { Place, Airport } from "@/lib/city-content";
 
 const GENERIC_FACTS = [
@@ -70,7 +73,8 @@ export default function GenericPremiumCity({ name, citySlug, state, stName, coun
 
   return (
     <main className="pp bg-white" style={{ fontSize: "inherit" }}>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@type": "LocalBusiness", name: SITE.name, url: SITE.url, telephone: SITE.phoneDisplay } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify({ "@context": "https://schema.org", "@type": "Service", "@id": `https://cascadecharterbus.com/locations/${state}/${citySlug}/#service`, name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@id": "https://cascadecharterbus.com/#organization" } }) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema({ path: `/locations/${state}/${citySlug}/`, locationName: `${name}, ${stAbbr}`, description: `Charter bus rental in ${name}, ${stName}. Local group transportation for weddings, corporate trips, school runs and tours, with 24/7 dispatch and one final quote.`, areaServedType: "City", areaServedName: name })) }} />
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: stName, href: `/locations/${state}/` }, { label: name }]} />
 
@@ -286,7 +290,13 @@ export default function GenericPremiumCity({ name, citySlug, state, stName, coun
               return (
               <a href={`/fleet/${v.slug}/`} className="pp-vehicle" key={v.slug}>
                 <div className="pp-vehicle-media">
-                  <Image src={v.photo} alt={v.cardName} fill sizes="(max-width:900px) 50vw, 25vw" style={{ objectFit: "cover" }} />
+                  <VehiclePhoto
+                    photos={fleetShots(slug, v.photo)}
+                    alt={`${v.cardName} available for charter bus rental in ${name}, ${stAbbr}`}
+                    fill
+                    sizes="(max-width:900px) 50vw, 25vw"
+                    style={{ objectFit: "cover" }}
+                  />
                   <span className="pp-cap"><Users aria-hidden="true" />{v.passengers}</span>
                 </div>
                 <div className="pp-vehicle-body">

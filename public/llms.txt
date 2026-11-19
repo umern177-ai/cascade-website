@@ -1,0 +1,51 @@
+# Cascade Charter Bus
+
+> Cascade Charter Bus is a nationwide charter bus rental company in the United States. It provides motorcoaches, minibuses, school buses, sprinter vans, sleeper buses, party buses, and SUVs/sedans with DOT-certified drivers for corporate events, weddings, school trips, sports teams, airport transfers, tours, and church groups.
+
+Full content: The complete text of the site's core pages (services, fleet, locations, FAQs, policies) is available as a single Markdown file at [llms-full.txt](https://cascadecharterbus.com/llms-full.txt).
+
+Key facts:
+- Service area: Nationwide (USA), coast to coast, with city pages across 48 states. See the Locations page for state and city coverage.
+- Headquarters: 12409 Linden Blvd, South Ozone Park, NY 11420, United States
+- Phone: +1 (646) 705-0816
+- Email: info@cascadecharterbus.com
+- Booking: Free custom quotes by phone, email, or the contact form. Pricing depends on vehicle type, group size, trip distance, and duration.
+- Group sizes: From small groups in SUVs, sedans, and sprinter vans to 20–32 passenger minibuses and full-size charter buses for large groups.
+
+## Fleet
+- [Charter Bus Rental](https://cascadecharterbus.com/fleet/charter-bus/): Full-size motorcoaches for large groups, corporate travel, tours, schools, sports teams, and long-distance trips.
+- [Minibus Rental](https://cascadecharterbus.com/fleet/minibus/): 20–32 passenger minibuses for medium-sized groups, local events, and airport shuttles.
+- [Sprinter Van Rental](https://cascadecharterbus.com/fleet/sprinter-van/): Sprinter vans for small groups, executive airport transfers, and private tours.
+- [SUV & Sedan Service](https://cascadecharterbus.com/fleet/suv-sedan/): Chauffeured SUVs and sedans for business travel, executives, and VIP transfers.
+- [Party Bus & Limo Rental](https://cascadecharterbus.com/fleet/party-bus/): Party buses and limo buses for weddings, celebrations, concerts, and nights out.
+- [School Bus Rental](https://cascadecharterbus.com/fleet/school-bus/): Budget-friendly school buses for field trips, sports games, camps, and group shuttles.
+- [Sleeper Bus Rental](https://cascadecharterbus.com/fleet/sleeper/): Sleeper motorcoaches for multi-day tours, band and entertainer travel, and overnight trips.
+- [Fleet Overview](https://cascadecharterbus.com/fleet/): Compare all vehicle types, capacities, and amenities.
+
+## Services
+- [Corporate Event Transportation](https://cascadecharterbus.com/services/corporate-transportation/): WiFi-equipped shuttles for conferences, trade shows, retreats, and employee commuting.
+- [Wedding Shuttle Bus Rental](https://cascadecharterbus.com/services/wedding-transportation/): Guest shuttles and wedding party transportation between hotels, ceremony, and reception.
+- [Group Airport Shuttle](https://cascadecharterbus.com/services/airport-transfer/): Airport transfers for large groups, conference attendees, and tour groups.
+- [Sightseeing & Tour Bus Rental](https://cascadecharterbus.com/services/sightseeing-tour-bus/): Custom single-day and multi-day tours built around your stops and schedule.
+- [School & Field Trip Transportation](https://cascadecharterbus.com/services/school-transportation/): Safe, affordable buses for field trips, school sports, and academic events.
+- [Sports Team Transportation](https://cascadecharterbus.com/services/sports-team-transportation/): Team buses with extra luggage space for equipment, away games, and tournaments.
+- [Church & Religious Group Transportation](https://cascadecharterbus.com/services/church-religious-transportation/): Transportation for church services, youth retreats, conferences, and mission trips.
+- [Services Overview](https://cascadecharterbus.com/services/): All transportation solutions for corporate, private, and educational groups.
+
+## Locations
+- [Locations](https://cascadecharterbus.com/locations/): Nationwide coverage by state, with links to city pages.
+- [New York](https://cascadecharterbus.com/locations/ny/), [California](https://cascadecharterbus.com/locations/ca/), [Texas](https://cascadecharterbus.com/locations/tx/), [Florida](https://cascadecharterbus.com/locations/fl/), [Illinois](https://cascadecharterbus.com/locations/il/): Example state pages. Every state page follows the pattern https://cascadecharterbus.com/locations/{state-code}/
+
+## Company & Contact
+- [About Us](https://cascadecharterbus.com/about/): Company background, safety commitment, and nationwide fleet.
+- [Contact Us](https://cascadecharterbus.com/contact/): Request a quote, plan a custom trip, or reach customer support.
+- [FAQs](https://cascadecharterbus.com/faqs/): Answers on pricing, how far ahead to book, choosing a bus size, what rates include, and onboard amenities.
+
+## Optional
+- [Blog](https://cascadecharterbus.com/blog/): Group travel guides, charter bus booking tips, and industry insights.
+- [Cancellation Policy](https://cascadecharterbus.com/cancellation-policy/): Rules for booking changes and trip cancellations.
+- [Terms & Conditions](https://cascadecharterbus.com/termsandconditions/): Service agreement, passenger guidelines, and liability terms.
+- [Privacy Policy](https://cascadecharterbus.com/privacy-policy/): How personal and booking data is collected and protected.
+- [llms-full.txt](https://cascadecharterbus.com/llms-full.txt): Full Markdown text of all core pages in one file.
+- [Sitemap](https://cascadecharterbus.com/sitemap.xml): Full list of site URLs.
+- Social: [Facebook](https://www.facebook.com/people/Cascade-Charter-Bus/61583281777154), [Instagram](https://www.instagram.com/cascadecharterbus), [LinkedIn](https://www.linkedin.com/company/cascadecharterbus), [TikTok](https://www.tiktok.com/@cascadecharterbus)

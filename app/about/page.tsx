@@ -4,6 +4,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ArrowRight, Check, Phone, ShieldCheck, Bus, MapPin, Clock, Tag, Headset, Quote } from "lucide-react";
+import { fleetMain } from "@/lib/fleet-photos";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
@@ -126,7 +127,7 @@ export default function About() {
             </div>
             <div className="col-lg-6">
               <div className="pp-vhero" style={{ minHeight: 380 }}>
-                <Image src="/images/fleet/charter.jpg" alt="Cascade Charter Bus motorcoach" fill sizes="(max-width: 992px) 100vw, 50vw" style={{ objectFit: "cover" }} />
+                <Image src={fleetMain("charter-bus", "/images/fleet/charter.jpg")} alt="Cascade Charter Bus motorcoach" fill sizes="(max-width: 992px) 100vw, 50vw" style={{ objectFit: "cover" }} />
                 <div className="pp-vhero-chips">
                   <span className="pp-spec pp-spec-dark"><Quote size={13} aria-hidden="true" />5+ years of service</span>
                   <span className="pp-spec pp-spec-dark">50 states covered</span>

@@ -24,11 +24,6 @@ body {
 
 .text-primary { color: var(--fleet-orange) !important; }
 
-.tracking-wide {
-  letter-spacing: 1.5px;
-  text-transform: uppercase;
-}
-
 .navbar {
   -webkit-backdrop-filter: blur(10px);
   backdrop-filter: blur(10px);
@@ -73,7 +68,6 @@ body {
   border-radius: 50rem;
 }
 
-.vanguard-footer,
 .footer-modern {
   border-top: 4px solid var(--fleet-orange);
   padding-top: 5rem;
@@ -81,42 +75,20 @@ body {
   background-color: var(--fleet-black) !important;
   color: #fff !important;
 }
-.vanguard-footer .text-muted,
 .footer-modern .text-muted {
   color: #a1a1a1 !important;
 }
-.footer-logo-outline {
-  border: 2px solid var(--fleet-orange);
-  padding: 5px 15px;
-  display: inline-block;
-}
-.vanguard-footer a,
-.vanguard-footer .footer-link,
 .footer-modern a,
-.footer-modern .footer-link,
-.footer-icon {
+.footer-modern .footer-link {
   font-weight: 500;
   text-decoration: none;
   transition: all 0.3s;
   color: var(--fleet-orange) !important;
 }
-.vanguard-footer a:hover,
-.vanguard-footer .footer-link:hover,
 .footer-modern a:hover,
-.footer-modern .footer-link:hover,
-.footer-icon:hover {
+.footer-modern .footer-link:hover {
   padding-left: 5px;
   color: #d4d4d4 !important;
-}
-.footer-divider {
-  border-top: 1px solid #ffffff1a;
-  margin: 3rem 0 1.5rem;
-}
-
-@media (max-width: 768px) {
-  .vanguard-footer {
-    padding-top: 3rem;
-  }
 }
 
 svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
@@ -156,18 +128,13 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 .tracking-tighter { letter-spacing: -0.05em; }
 .tracking-widest { letter-spacing: 0.1em; }
 .tracking-wider { letter-spacing: 0.05em; }
-.opacity-90 { opacity: 0.9; }
 .opacity-75 { opacity: 0.75; }
 .opacity-50 { opacity: 0.5; }
 .x-small { font-size: 0.75rem; }
 .x-small-bold { font-size: 0.78rem; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; }
-.z-index-10 { z-index: 10; }
 .max-w-2xl { max-width: 42rem; }
 .lh-relaxed { line-height: 1.7; }
 .bg-primary-soft { background-color: rgba(245, 160, 2, 0.12); }
-/* Amber brand color on WHITE fails contrast for small text: eyebrow/label
-   spots use a darker amber that passes 4.5:1 while keeping the amber look */
-.services-card-text { font-size: 0.9rem; line-height: 1.65; }
 /* Breadcrumb strip: dark band right below the header, all pages */
 .breadcrumb-strip {
   background-color: var(--fleet-black);
@@ -217,13 +184,6 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
   transform: translateY(-2px);
 }
 
-/* mobile: service photo floats under the title as its own spaced block */
-@media (max-width: 767.98px) {
-  .service-photo-mobile { height: 210px; }
-}
-@media (min-width: 768px) {
-  .row > [class*="col-"] > .service-photo-h { height: 100% !important; }
-}
 .card .badge {
   max-width: 100%;
   white-space: normal;
@@ -243,7 +203,6 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 .shadow-glow { box-shadow: 0 0 18px rgba(245, 160, 2, 0.35); }
 .shadow-xl { box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.3) !important; }
 .hover-orange:hover { color: var(--fleet-orange) !important; }
-.bg-shadow-inset { box-shadow: inset 0 0 40px rgba(0, 0, 0, 0.4); }
 .footer-heading { text-transform: uppercase; letter-spacing: 2px; font-weight: 800; }
 .social-btn {
   display: inline-flex;
@@ -328,35 +287,6 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
   }
-}
-
-/* City page mobile sizing (structured pages) */
-.city-hero-display { font-size: 1.9rem; line-height: 1.15; }
-.city-intro-h1 { font-size: 1.25rem; line-height: 1.3; }
-.dest-name { font-size: 1.05rem; }
-@media (min-width: 768px) {
-  .city-hero-display { font-size: 3.5rem; }
-  .city-intro-h1 { font-size: 1.6rem; }
-  .dest-name { font-size: 1.25rem; }
-}
-
-/* Fleet showcase: swipeable slides on mobile, grid on desktop */
-@media (max-width: 767.98px) {
-  .fleet-slider {
-    display: flex;
-    flex-wrap: nowrap !important;
-    overflow-x: auto;
-    scroll-snap-type: x mandatory;
-    gap: 0.75rem;
-    padding-bottom: 0.5rem;
-    -webkit-overflow-scrolling: touch;
-  }
-  .fleet-slider > div {
-    flex: 0 0 76%;
-    scroll-snap-align: center;
-  }
-  .fleet-slider::-webkit-scrollbar { height: 6px; }
-  .fleet-slider::-webkit-scrollbar-thumb { background: rgba(245, 160, 2, 0.45); border-radius: 3px; }
 }
 
 /* ================================================================
@@ -464,228 +394,6 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
   border-radius: 2px;
 }
 
-/* Premium cards with amber top border */
-.premium-card {
-  border: none;
-  border-radius: 1rem;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
-  transition: box-shadow 0.3s ease, transform 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  position: relative;
-}
-.premium-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 3px;
-  background: linear-gradient(90deg, var(--fleet-orange), rgba(245,160,2,0.3));
-  border-radius: 1rem 1rem 0 0;
-  z-index: 1;
-}
-.premium-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 12px 24px rgba(0,0,0,0.12), 0 4px 8px rgba(0,0,0,0.06);
-}
-.premium-card .card-img-top {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-.premium-card:hover .card-img-top {
-  transform: scale(1.03);
-}
-.premium-card .card-body {
-  padding: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.premium-card .card-title {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--fleet-black);
-  margin-bottom: 0.75rem;
-}
-.premium-card .card-text {
-  font-size: 0.92rem;
-  color: #5a5a5a;
-  line-height: 1.65;
-  flex-grow: 1;
-}
-.premium-card .learn-more {
-  margin-top: auto;
-  padding-top: 1rem;
-  font-weight: 700;
-  font-size: 0.85rem;
-  text-decoration: none;
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  transition: gap 0.2s ease;
-}
-.premium-card:hover .learn-more {
-  gap: 0.7rem;
-}
-
-/* Destination cards */
-.dest-card {
-  border: 1px solid rgba(245,160,2,0.15);
-  border-radius: 1rem;
-  background: #fff;
-  box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-  padding: 1.25rem 1.5rem 1.5rem;
-  transition: box-shadow 0.3s ease;
-  height: 100%;
-}
-.dest-card:hover {
-  box-shadow: 0 8px 20px rgba(0,0,0,0.08);
-}
-.dest-card .dest-number {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  width: 2rem;
-  height: 2rem;
-  border-radius: 0.5rem;
-  background: var(--fleet-orange);
-  color: var(--fleet-black);
-  font-weight: 800;
-  font-size: 0.9rem;
-  flex-shrink: 0;
-  margin-bottom: 0.75rem;
-}
-.dest-card .dest-name {
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: var(--fleet-black);
-  margin-bottom: 0.5rem;
-}
-.dest-card .dest-text {
-  font-size: 0.92rem;
-  color: #5a5a5a;
-  line-height: 1.65;
-  margin-bottom: 1rem;
-}
-.dest-card .dest-tip {
-  border-left: 3px solid var(--fleet-orange);
-  padding: 0.65rem 0.8rem;
-  background: rgba(245,160,2,0.06);
-  border-radius: 0 0.5rem 0.5rem 0;
-  font-size: 0.85rem;
-  line-height: 1.55;
-}
-.dest-card .dest-tip strong {
-  color: var(--fleet-black);
-}
-
-/* Fleet showcase cards */
-.fleet-card {
-  border: none;
-  border-radius: 0.875rem;
-  overflow: hidden;
-  background: #fff;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-}
-.fleet-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 20px rgba(0,0,0,0.1);
-}
-.fleet-card img {
-  width: 100%;
-  height: 160px;
-  object-fit: cover;
-  transition: transform 0.4s ease;
-}
-.fleet-card:hover img {
-  transform: scale(1.04);
-}
-.fleet-card .fleet-body {
-  padding: 0.875rem 1rem 1rem;
-  display: flex;
-  flex-direction: column;
-  flex-grow: 1;
-}
-.fleet-card .fleet-body h3 {
-  font-weight: 700;
-  color: var(--fleet-black);
-  margin-bottom: 0.25rem;
-  font-size: 1rem;
-}
-.fleet-card .fleet-body .badge {
-  align-self: flex-start;
-  margin-bottom: 0.5rem;
-}
-.fleet-card .fleet-body p {
-  font-size: 0.82rem;
-  color: #6a6a6a;
-  margin: 0;
-}
-
-/* Booking steps */
-.booking-step {
-  text-align: center;
-  position: relative;
-  padding: 0 1rem;
-}
-.booking-step .step-circle {
-  width: 3.5rem;
-  height: 3.5rem;
-  border-radius: 50%;
-  background: var(--fleet-orange);
-  color: var(--fleet-black);
-  font-weight: 800;
-  font-size: 1.1rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 1rem;
-  box-shadow: 0 4px 10px rgba(245,160,2,0.25);
-}
-.booking-step h3 {
-  font-weight: 700;
-  color: var(--fleet-black);
-  font-size: 1rem;
-  margin-bottom: 0.5rem;
-}
-.booking-step p {
-  font-size: 0.88rem;
-  color: #5a5a5a;
-  line-height: 1.55;
-}
-
-/* Nearby cities */
-.nearby-card {
-  border: 1px solid rgba(245,160,2,0.15);
-  border-radius: 0.875rem;
-  padding: 1rem 1.25rem;
-  background: #fff;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.05);
-  transition: transform 0.25s ease, box-shadow 0.25s ease;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-}
-.nearby-card:hover {
-  transform: translateY(-3px);
-  box-shadow: 0 6px 16px rgba(0,0,0,0.08);
-}
-.nearby-card.no-link {
-  background: rgba(245,160,2,0.05);
-  border-color: rgba(245,160,2,0.12);
-}
-
 /* Intro section with accent */
 .intro-premium {
   border-left: 3px solid var(--fleet-orange);
@@ -695,13 +403,11 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
   color: #444;
 }
 
-/* Mobile responsive */
 @media (max-width: 767.98px) {
   .city-hero-premium { min-height: 400px; padding-top: 100px; padding-bottom: 70px; }
   .city-hero-premium .hero-content { padding-left: 1.5rem; }
   .city-hero-premium .hero-title { font-size: 1.9rem; }
   .intro-premium { border-left-width: 2px; padding-left: 1rem; font-size: 0.95rem; }
-  .fleet-card img { height: 140px; }
 }
 @media (max-width: 767.98px) {
   .fleet-slider-m {
@@ -719,12 +425,7 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .premium-card, .fleet-card, .nearby-card,
-  .premium-card .card-img-top, .fleet-card img,
-  .booking-step .step-circle {
-    transition: none !important;
-    transform: none !important;
-  }
+  .city-hero-premium, .city-hero-premium::before, .city-hero-premium .hero-photo { transition: none !important; }
 }
 
 /* ================================================================
@@ -1180,3 +881,93 @@ svg[stroke="currentColor"] { stroke: var(--fleet-orange); }
 .footer-link { display: inline-block; padding: 4px 2px; }
 /* header dropdown caret: 24px hit area */
 button.custom-nav-link { min-width: 24px; min-height: 24px; }
+
+/* ===== auto-rotating fleet photos (owner request Nov 19): every card-sized
+   fleet showcase cycles that vehicle's photos every ~3s with a soft fade.
+   The box never changes size — only the shot inside it. ===== */
+.pp-autoshot { overflow: hidden; }
+.pp-autoshot > img { will-change: opacity; }
+@media (prefers-reduced-motion: reduce) {
+  .pp-autoshot > img { transition: none !important; }
+}
+
+/* fleet detail page: compact photo-showcase grid (small, even, centered tiles) */
+.pp-vshow {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(195px, 232px));
+  gap: 16px;
+  justify-content: center;
+}
+.pp-vshow .pp-service-photo {
+  margin: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--pp-line);
+  box-shadow: 0 1px 2px rgba(14, 20, 36, 0.04), 0 10px 22px -12px rgba(14, 20, 36, 0.25);
+}
+.pp-vshow .pp-service-photo img { display: block; transition: transform 0.35s ease; }
+.pp-vshow .pp-service-photo:hover img { transform: scale(1.045); }
+@media (max-width: 640px) {
+  .pp-vshow { grid-template-columns: repeat(2, 1fr); gap: 12px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .pp-vshow .pp-service-photo img { transition: none; }
+}
+
+/* ===== contact page coverage map (USA SVG, owner request Nov 19) ===== */
+.us-map .us-map-states path {
+  fill: #1e2126;
+  stroke: rgba(255, 255, 255, 0.09);
+  stroke-width: 1;
+  transition: fill 0.15s ease;
+}
+.us-map .us-map-states path:hover { fill: #2c313c; stroke: var(--fleet-orange); }
+.us-map a { outline: none; }
+.us-map a:focus-visible circle { stroke: var(--fleet-orange); stroke-width: 3; }
+.us-map .us-map-halo {
+  transform-box: fill-box;
+  transform-origin: center;
+  animation: usmap-pulse 2.6s ease-out infinite;
+}
+@keyframes usmap-pulse {
+  0% { opacity: 0.9; transform: scale(0.5); }
+  70% { opacity: 0; transform: scale(1.7); }
+  100% { opacity: 0; transform: scale(1.7); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .us-map .us-map-halo { animation: none; opacity: 0.35; }
+}
+
+/* ===== final QA pass (Nov 19): 24px+ tap targets everywhere ===== */
+/* footer bottom legal links + top ribbon links: text-height links get a
+   padded hit box without shifting the layout they sit in */
+.x-small-bold a, a.x-small, .top-ribbon a, .breadcrumb-strip a {
+  display: inline-block;
+  padding: 6px 2px;
+  margin: -6px -2px;
+}
+/* inline text links inside sentences (e.g. "Trustpilot profile") */
+.text-link-pad {
+  display: inline-block;
+  padding: 8px 0;
+  margin: -8px 0;
+}
+/* phone + email text links (footer contact block, contact cards):
+   20px text becomes a ~36px hit box without moving anything.
+   Excludes button-styled links — .pp-btn/.btn manage their own padding. */
+a[href^="tel:"]:not(.pp-btn):not(.btn),
+a[href^="mailto:"]:not(.pp-btn):not(.btn) {
+  display: inline-block;
+  padding: 8px 4px;
+  margin: -8px -4px;
+}
+/* HTML sitemap: 21px rows become comfortable targets */
+.sitemap-link { padding: 5px 2px; margin: -5px -2px; }
+.sitemap-chip { padding: 7px 13px; }
+/* desktop mega-menu label links: the whole label is the hit area */
+.navbar .nav-label-link {
+  display: inline-flex;
+  align-items: center;
+  padding: 12px 0;
+  margin: -12px 0;
+}

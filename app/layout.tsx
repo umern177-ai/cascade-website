@@ -8,6 +8,7 @@ import Footer from "@/components/Footer";
 import ConsentBanner from "@/components/ConsentBanner";
 import PickupPrefill from "@/components/PickupPrefill";
 import { SITE } from "@/lib/site-data";
+import { orgSchema } from "@/lib/schema";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -51,41 +52,21 @@ export const viewport: Viewport = {
   themeColor: "#0F1115",
 };
 
-// Site-wide default schema (brief Section 9.5). The SEO consultant's document can
-// override from the admin later; per-page schema never duplicates these types.
-const organizationSchema = {
-  "@context": "https://schema.org",
-  "@type": "LocalBusiness",
-  name: SITE.name,
-  url: SITE.url,
-  logo: `${SITE.url}/logo.png`,
-  telephone: SITE.phoneDisplay,
-  email: SITE.email,
-  image: `${SITE.url}/logo.png`,
-  priceRange: "$$",
-  address: {
-    "@type": "PostalAddress",
-    streetAddress: SITE.address.street,
-    addressLocality: SITE.address.city,
-    addressRegion: SITE.address.state,
-    postalCode: SITE.address.zip,
-    addressCountry: "US",
-  },
-  openingHoursSpecification: {
-    "@type": "OpeningHoursSpecification",
-    dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday", "Sunday"],
-    opens: "00:00",
-    closes: "23:59",
-  },
-  areaServed: { "@type": "Country", name: "United States" },
-  sameAs: Object.values(SITE.social),
-};
+// Site-wide schema: the SEO consultant's Organization block (lib/schema.ts).
+// Location pages add their LocalBusiness; service/fleet pages add Service —
+// no schema type is ever emitted twice on a page.
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
       <head>
-        {/* LCP: hero photo preloaded like the live site (brief Section 11) */}
+        {/* Organization schema — sitewide, one block, in the head (consultant doc).
+            Note: the home page preload-preloads its CSS-background hero through
+            ReactDOM.preload in app/page.tsx (city pages use next/image priority). */}
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
+        />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
       </head>
       <body className={inter.className}>
@@ -103,11 +84,6 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <noscript>
           <iframe src={`https://www.googletagmanager.com/ns.html?id=${SITE.gtmId}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
         </noscript>
-
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
-        />
       </body>
     </html>
   );

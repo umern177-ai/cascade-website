@@ -1,0 +1,337 @@
+# Cascade Charter Bus — Full Site Content
+
+> Cascade Charter Bus (Cascade Charter Bus LLC) is a nationwide charter bus rental company serving all 50 US states. It provides charter buses, minibuses, school buses, sprinter vans, sleeper tour buses, limo and party buses, and SUVs/sedans with DOT-compliant vehicles and professional drivers.
+
+This file contains the main text of the core pages of https://cascadecharterbus.com in one Markdown document, for AI assistants and search tools. The short index is at https://cascadecharterbus.com/llms.txt.
+
+---
+
+## Company Overview
+Source: https://cascadecharterbus.com/ and https://cascadecharterbus.com/about/
+
+Cascade Charter Bus provides nationwide charter bus rentals, coast to coast from New York to Los Angeles, for weddings, group excursions, winery tours, corporate conferences, school trips, and sports teams. Every trip is run by DOT-certified drivers with a focus on safety, comfort, and on-time arrival.
+
+The company started with one vehicle and a small garage, built on punctuality and honesty, and grew through repeat customers and referrals into a nationwide network. Its guiding principle is to get people to their destinations safely and on time, every trip, with the same service quality whether the booking is in New York or Los Angeles.
+
+Key figures:
+- All 50 states covered
+- 24/7 dispatch and support team
+- 5+ years of service
+
+Contact:
+- Phone: +1 (646) 705-0816
+- Email: info@cascadecharterbus.com
+- Headquarters: 12409 Linden Blvd, South Ozone Park, NY 11420, United States
+- Quotes: https://cascadecharterbus.com/contact/
+
+### Why choose Cascade
+- **A fleet you can trust:** every vehicle meets the same standard, with no shortcuts.
+- **Professional drivers:** DOT-certified drivers with local route knowledge.
+- **On-time arrivals:** real-time tracking keeps dispatch and your group together on every route.
+- **Flexible vehicle sizes:** from a 7-passenger SUV or 14-passenger Sprinter van to a 56-seat motorcoach.
+- **Safety-first culture:** DOT-compliant protocols, multi-point inspections, and electronic logging.
+- **Modern amenities:** WiFi, power outlets, and climate control on equipped coaches.
+- **Dedicated support:** 24/7 dispatch reachable before and during your trip.
+
+### Groups served
+Corporate events, weddings, sports teams, school and university trips, airport transfers, multi-day and winery tours, church and religious groups, touring artists and crews.
+
+### Service areas
+Nationwide, including New York, Los Angeles, Chicago, Houston, Atlanta, and other major cities. State pages: https://cascadecharterbus.com/locations/{state-code}/ (for example /locations/ny/ for New York).
+
+---
+
+## Pricing & Booking (General FAQ)
+Source: https://cascadecharterbus.com/
+
+**How much does a charter bus rental cost?**
+Price depends on group size, vehicle type, trip distance, and seasonal demand. Sprinter vans and school buses cost less than full-size motorcoaches. Free custom quotes are available.
+
+**What's included in the rental cost?**
+Rates are all-inclusive with no surprise fees: the vehicle, a professional driver, tolls, taxes, and driver gratuity, in one price for the whole trip.
+
+**How far in advance should I book?**
+For weddings or peak-season travel, book 4 to 8 weeks ahead. For smaller local trips or off-peak dates, 1 to 2 weeks is usually enough.
+
+**What size bus do I need?**
+Sprinter vans fit 10 to 14 people, minibuses 20 to 30, and full-size motorcoaches up to 56. Consider luggage space as well as headcount.
+
+**Can I rent a school bus to save money?**
+Yes. School buses are usually the cheapest option per seat. They suit school trips and budget wedding guest shuttles, but they have no luxury amenities.
+
+**What should I ask when booking?**
+Confirm whether the price is fully all-inclusive, whether there are hidden fees, how extra services during the trip are handled, whether the driver tip is included, whether active dispatch support is provided, what the backup plan is if something goes wrong, and whether the coach has a restroom.
+
+**What areas do you serve?**
+All 50 states. Give your pickup location and destination and the team confirms availability.
+
+---
+
+## Frequently Asked Questions
+Source: https://cascadecharterbus.com/faqs/
+
+**How far in advance should I book my charter bus?**
+For peak seasons (April–June and September–October), book at least 3 to 6 months ahead. For off-peak travel, 1 to 2 months is usually enough. Last-minute requests may be possible depending on fleet availability.
+
+**What is your cancellation policy?**
+See the Cancellation & Refund Policy section of this file, which reflects the official policy page.
+
+**Can we bring food, drinks, or alcohol on board?**
+Light snacks and bottled water are allowed. Alcohol requires a refundable cleaning deposit, and all passengers must be of legal drinking age. Smoking and vaping are not allowed on any vehicle.
+
+**Are your buses DOT compliant and insured?**
+Yes. Every vehicle is inspected every 3,000 miles, and Cascade carries $5M in liability insurance, above federal requirements.
+
+**Do we need to provide lodging for the driver on multi-day trips?**
+Yes. On trips with an overnight stay, the customer pays for the driver's hotel room. Booking the driver at the same hotel as the group is recommended.
+
+**Still have questions?**
+The 24/7 support team can help with specific itineraries: +1 (646) 705-0816.
+
+---
+
+## Fleet
+
+### Vehicle capacity summary
+| Vehicle | Capacity | Best for |
+|---|---|---|
+| SUV & Sedan | Up to 7 passengers | Executives, VIP and airport transfers |
+| Sprinter Van | Up to 14 passengers | Small groups, executive travel, private tours |
+| Sleeper Tour Bus | Sleeps 12, seats up to 15 | Bands, touring crews, overnight travel |
+| Limo & Party Bus | 14–40 passengers | Weddings, birthdays, nightlife, concerts |
+| Minibus | 20–32 passengers | Mid-size groups, weddings, airport shuttles |
+| School Bus | 28–60 passengers | School trips, camps, event shuttles |
+| Charter Bus (Motorcoach) | Up to 56 passengers | Large groups, long-distance travel, tours |
+
+### Charter Bus
+Source: https://cascadecharterbus.com/fleet/charter-bus/
+
+Full-size charter buses for organized group travel between cities and destinations: corporate travel, school and university trips, sports teams, tours and sightseeing, weddings, conferences, and multi-day journeys. A charter bus lets a group travel together instead of in several cars or smaller vehicles.
+
+Features and amenities (vary by vehicle):
+- Up to 56 passengers
+- Restroom on applicable motorcoaches
+- Climate-controlled interior
+- Reclining seats
+- Under-bus luggage storage and overhead storage
+- PA system
+- WiFi on applicable vehicles
+
+FAQ:
+- **How many passengers can a charter bus hold?** Up to about 56, depending on the vehicle.
+- **Do charter buses have restrooms?** Applicable full-size motorcoaches may. Confirm for the specific vehicle.
+- **Can I rent a charter bus for a long-distance trip?** Yes, including tours and multi-day trips.
+- **Can charter buses carry luggage?** Yes. Many have under-bus storage plus overhead storage.
+
+### Minibus
+Source: https://cascadecharterbus.com/fleet/minibus/
+
+Minibuses sit between passenger vans and full-size coaches. They suit groups that need more seats than a van but not a full motorcoach. Configurations seat about 20, 24, 27, 29, or 32 passengers. Their smaller size makes them easier to drive on city streets and to position at venues and pickup points.
+
+Common uses: corporate and employee transport, airport transfers, wedding shuttles between hotels, ceremony, and reception, events, small tours, and local group travel.
+
+Amenities (vary by vehicle): air conditioning, comfortable seating, reclining seats and USB charging on select vehicles, overhead storage, and a professional driver. Minibuses usually have no luggage bay and no restroom.
+
+FAQ:
+- **How many passengers fit on a minibus?** About 20 to 32.
+- **Is a minibus good for airport transportation?** Yes, for groups too large for a van.
+- **Can a minibus be used for weddings?** Yes, to move guests between hotels, ceremony, and reception.
+- **Does a minibus have a restroom?** Generally no.
+
+### Sprinter Van
+Source: https://cascadecharterbus.com/fleet/sprinter-van/
+
+Private transportation for smaller groups of up to 14 passengers: airport transfers, executive travel, corporate events, private tours, and events. Their compact size helps in cities and at locations where easy loading matters.
+
+Features: up to 14 passengers, professional driver, air conditioning, comfortable seating, rear luggage area, charging on applicable vehicles. Heavy luggage can reduce the number of seats available, so include luggage needs when requesting a quote.
+
+FAQ:
+- **How many people can a Sprinter van hold?** Up to about 14.
+- **Are Sprinter vans good for airport transfers?** Yes, for small groups traveling together.
+- **Can I use a Sprinter van for a corporate event?** Yes.
+- **Can a Sprinter van carry luggage?** Yes, in the rear luggage area; large loads can reduce seating.
+
+### SUVs & Sedans
+Source: https://cascadecharterbus.com/fleet/suv-sedan/
+
+Private chauffeured transportation for individuals, executives, and small groups of up to 7 passengers: executive transport, airport transfers, business travel, and VIP service. SUVs and sedans can be combined with larger vehicles for events with several passenger groups.
+
+Features: professional driver, climate control, comfortable seating, privacy glass and Bluetooth on applicable vehicles.
+
+FAQ:
+- **How many passengers can an SUV or sedan carry?** Up to about 7, depending on the vehicle.
+- **Are SUVs suitable for airport transportation?** Yes.
+- **Can SUVs be used for corporate transportation?** Yes, for executives, employees, and clients.
+- **Can SUVs and sedans be combined with charter buses?** Yes.
+
+### Limo & Party Buses
+Source: https://cascadecharterbus.com/fleet/party-bus/
+
+Private group transportation with an entertainment-focused interior, in configurations of about 14, 24, 30, or 40 passengers. Used for weddings, birthdays, nightlife, concerts, bachelor and bachelorette parties, corporate celebrations, and private events.
+
+Features (vary by vehicle): premium interior, entertainment and sound system, LED or ambient lighting, comfortable seating, bar area on applicable vehicles, professional driver.
+
+Rentals may be priced hourly or with a minimum rental period, depending on the vehicle and event. Confirm interior features and capacity for the selected vehicle before booking.
+
+FAQ:
+- **How many people fit on a party bus?** About 14 to 40.
+- **Can I rent a party bus for a wedding?** Yes, for the wedding party, guests, and transfers.
+- **Do party buses have entertainment systems?** Applicable vehicles have sound equipment and lighting.
+- **Are party buses rented by the hour?** Often, or with a minimum rental period.
+
+### School Bus
+Source: https://cascadecharterbus.com/fleet/school-bus/
+
+A cost-effective way to move large groups between set pickup and drop-off points. Configurations hold about 28, 40, or 60 passengers. School buses have bench seating and no luxury amenities; air conditioning varies by vehicle.
+
+Ideal for school trips, university transport, camps, event shuttles, community organizations, and short-distance group travel.
+
+FAQ:
+- **How many passengers can a school bus carry?** About 28, 40, or 60.
+- **Are school buses suitable for event shuttles?** Yes, between parking, venues, hotels, and event sites.
+- **Does a school bus have a restroom?** No.
+- **Can school buses be used for university transportation?** Yes.
+
+### Sleeper Tour Bus
+Source: https://cascadecharterbus.com/fleet/sleeper/
+
+Luxury sleeper coaches for touring artists, bands, crews, VIP passengers, executive groups, and long-distance overnight trips across the USA.
+
+Specifications and amenities:
+- 4 to 15 sleeping bunks, restroom and shower on board
+- Restroom, kitchen/galley with refrigerator
+- Premium sound system, with front and rear lounge areas; WiFi available on applicable vehicles
+- Climate control and air conditioning
+- Large under-bay luggage storage
+
+---
+
+## Services
+
+### Corporate Event Transportation
+Source: https://cascadecharterbus.com/services/corporate-transportation/
+
+Corporate shuttles for conferences, off-site retreats, client events, and recurring employee commutes, for one-time events and ongoing routes nationwide. Highlights: onboard WiFi and power, dispatch reachable 24/7, and one point of contact who confirms the itinerary in writing.
+
+Pricing depends on vehicle type and group size, one-time versus recurring service, with consistent driver and vehicle on recurring schedules, trip length, overnight stays and late-night pickups, and seasonal or local event demand.
+
+FAQ:
+- **Can you provide a recurring employee shuttle?** Yes, often with a consistent driver and vehicle.
+- **Do your vehicles have WiFi?** Motorcoaches can include WiFi, power outlets, audio, and screens; mention this when requesting a quote.
+- **How far ahead should we book conference transportation?** Several weeks ahead for large conferences or convention season; smaller trips can often be arranged sooner.
+- **Can you handle multi-day events?** Yes, including different pickup points on different days.
+- **Do you provide invoicing for business bookings?** Yes.
+
+### Wedding Shuttle Bus Rental
+Source: https://cascadecharterbus.com/services/wedding-transportation/
+
+Wedding shuttles for guests, wedding parties, and bachelor or bachelorette groups across the U.S., with vehicles and schedules matched to guest count and budget. One contact handles the whole wedding weekend: rehearsal dinner, ceremony, reception, and airport runs. Upfront pricing with no fees added after booking.
+
+Pricing depends on vehicle type (school buses and minibuses cost less than motorcoaches or party buses), hours booked, guest count and number of vehicles, and season (May through November is peak).
+
+FAQ:
+- **How far ahead should I book?** For May through October, 2 to 3 months ahead.
+- **How many buses do I need?** A minibus seats about 20–30 guests and a motorcoach up to 56; the team helps plan vehicles and trips from your guest list.
+- **Is a school bus cheaper?** Yes, usually the lowest cost per seat.
+- **Can you serve multiple locations?** Yes: hotel block, rehearsal dinner, ceremony, and reception on one schedule.
+- **Can we book a separate bachelor or bachelorette bus?** Yes, a party or limo bus.
+
+### Group Airport Shuttle
+Source: https://cascadecharterbus.com/services/airport-transfer/
+
+Group airport transfers nationwide for weddings, conferences, school trips, and tours. The whole group travels in one vehicle with one pickup time. Includes help with luggage and, on request, flight tracking so a late landing stays covered. Vehicles are matched to luggage as well as passenger count.
+
+Pricing depends on group size and vehicle type, one-way or round trip, distance from the airport, and whether arrivals are on one flight or several.
+
+FAQ:
+- **Do you track flight delays?** Yes; drivers monitor flight status.
+- **How much luggage can a vehicle hold?** Sprinter vans hold a moderate amount; minibuses and motorcoaches have more under-bus storage.
+- **Can a group arrive on different flights?** Yes; staggered pickups can be part of one booking.
+- **Is round trip cheaper than two one-way trips?** Often; ask for both prices.
+- **How far ahead should I book?** 1–2 weeks for most trips; earlier for busy periods and large groups.
+
+### Sightseeing & Tour Bus Rental
+Source: https://cascadecharterbus.com/services/sightseeing-tour-bus/
+
+Single-day city tours and multi-day, multi-stop trips nationwide, with routes planned around the group's schedule and stops. Drivers are experienced with multi-stop routes and planned wait times; driver lodging is handled for multi-day tours. One point of contact plans the whole route.
+
+Pricing depends on the number of stops and wait time, single-day versus multi-day with overnight stays, group size and vehicle type, and total route distance.
+
+FAQ:
+- **Can you build a custom multi-stop itinerary?** Yes.
+- **Do you handle multi-day tours with overnight stays?** Yes.
+- **Can a tour guide ride along and narrate?** Yes; a microphone or PA system can be arranged.
+- **What group sizes can you handle?** From small groups in a minibus to large groups in a motorcoach.
+
+### School & Field Trip Transportation
+Source: https://cascadecharterbus.com/services/school-transportation/
+
+Student transportation for field trips, competitions, and school events nationwide, matched to trip length, group size, and budget. Highlights: licensed, background-checked drivers, regularly inspected vehicles, and booking that works with school purchase orders and district approval processes.
+
+Pricing: school buses are the lowest cost per seat; motorcoaches cost more but suit longer trips with reclining seats, restrooms, and luggage space. Distance, same-day versus overnight, and student headcount also affect price.
+
+FAQ:
+- **Are drivers background-checked?** Yes.
+- **School bus or motorcoach for a field trip?** School buses for shorter local trips; motorcoaches for longer or overnight trips.
+- **Can you work with a purchase order?** Yes.
+- **How far ahead should a school book?** At least 3–4 weeks; earlier in spring field trip and graduation season.
+- **Can chaperones sit with students?** Yes, seating can be planned.
+
+### Sports Team Transportation
+Source: https://cascadecharterbus.com/services/sports-team-transportation/
+
+Team buses that keep players, coaches, and equipment together for away games, tournaments, and full seasons. Highlights: extra legroom, climate control, flexible scheduling, under-bus storage for team gear, and drivers experienced with tight game-day arrival windows.
+
+Pricing depends on vehicle size and equipment storage needs, distance and overnight stays, single trips versus season-long schedules, and timing (tournament weekends book up early).
+
+FAQ:
+- **Is there space for team equipment?** Yes, in under-bus storage separate from passenger seating.
+- **Do you offer buses with sleeping bunks?** Yes, some buses have bunks and a restroom.
+- **Can we book a whole season at once?** Yes.
+- **How early should we book a tournament weekend?** As soon as the schedule is confirmed.
+- **What size bus does our team need?** It depends on roster plus staff; the team helps match the vehicle.
+
+### Church & Religious Group Transportation
+Source: https://cascadecharterbus.com/services/church-religious-transportation/
+
+Transportation for churches, synagogues, mosques, temples, and other faith communities of any size: weekly services, youth retreats, conventions, and mission trips. Drivers are licensed, insured, and respectful of the purpose of religious trips. Vehicles range from small weekly shuttles to large coaches, with attention to passengers with limited mobility.
+
+Pricing depends on vehicle type, one-time versus recurring weekly service, distance, group size, and accessibility needs.
+
+FAQ:
+- **Do you serve only churches?** No, all faith communities.
+- **Can you set up a recurring weekly shuttle?** Yes.
+- **Do you have accessible vehicles?** The team can find vehicles with accessibility accommodations; mention your needs when requesting a quote.
+- **Is a school bus suitable for a youth group?** Yes, usually the most affordable option.
+- **Are there discounts for religious or nonprofit groups?** Many groups qualify for nonprofit or community pricing; ask when requesting a quote.
+
+---
+
+## Cancellation & Refund Policy
+Source: https://cascadecharterbus.com/cancellation-policy/
+
+Payment schedule:
+- A 50% deposit is due at booking and secures the vehicle and dates; it is not refundable.
+- The remaining balance is due two weeks (14 days) before the event date.
+
+Cancellation charges (on top of the non-refundable deposit, based on when the cancellation is received):
+- Within 2 weeks of the event: 100% of the trip value is charged.
+- 3 weeks before the event: 50% of the trip value is charged.
+- 3 weeks to 1 month before the event: 20% of the trip value is charged.
+- Cancellations cost nothing extra until you are inside one month from the trip.
+
+How to cancel:
+- By phone at +1 (646) 705-0816 (24/7 dispatch) or by email at info@cascadecharterbus.com. The cancellation is effective when received — timing rules apply from that moment.
+
+Changes, breakdowns and weather:
+- Changes that increase miles or hours may carry an additional charge, and overtime is charged according to the bus type used. Prices can change without notice until a deposit is made; once paid, quoted terms are locked.
+- If no vehicle is available after a mechanical breakdown and no acceptable replacement is offered, you receive a pro-rated refund for the unused time or mileage.
+- If dangerous weather forces cancellation of the service before the trip, all money paid is refunded.
+
+## Other Pages
+- Terms & Conditions: https://cascadecharterbus.com/termsandconditions/
+- Privacy Policy: https://cascadecharterbus.com/privacy-policy/
+- Blog (group travel guides and booking tips): https://cascadecharterbus.com/blog/
+- Locations: https://cascadecharterbus.com/locations/
+- Contact / free quote: https://cascadecharterbus.com/contact/
+- Social: Facebook https://www.facebook.com/people/Cascade-Charter-Bus/61583281777154 · Instagram https://www.instagram.com/cascadecharterbus · LinkedIn https://www.linkedin.com/company/cascadecharterbus · TikTok https://www.tiktok.com/@cascadecharterbus

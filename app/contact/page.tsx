@@ -1,7 +1,7 @@
 // Contact / booking page — premium pp-* frame (Nov 17) around the WORKING
 // QuoteForm: dark hero with trust chips, facts strip, form + quick-contact
 // cards aligned, FAQ, coverage map. No functional form changes.
-import MapEmbed from "@/components/MapEmbed";
+import UsMap from "@/components/UsMap";
 import { Phone, Mail, ShieldCheck, Tag, Headset } from "lucide-react";
 import QuoteForm from "@/components/QuoteForm";
 import FaqAccordion from "@/components/Faq";
@@ -10,7 +10,7 @@ import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Charter Bus Booking & Free Quote Request",
+  title: "Charter Bus Booking & Free Quote",
   description:
     "Request a detailed itinerary quote for your group trip. Average response: 15 minutes. 24/7 dispatch, final pricing with gratuity included, U.S.-wide coverage.",
   path: "/contact/",
@@ -123,9 +123,11 @@ export default function Contact() {
                   </div>
                 </div>
               </div>
+              {/* Card caption as a styled <p>: the page's next real heading level
+                  is h2, so an h3 here would skip a heading level (Lighthouse). */}
               <div className="pp-final-card" style={{ marginTop: 18 }}>
                 <ShieldCheck aria-hidden="true" />
-                <h3 style={{ fontSize: "1.15rem" }}>Guaranteed pricing</h3>
+                <p className="fw-bold mb-2" style={{ fontSize: "1.15rem", color: "var(--pp-ink)", margin: "12px 0 8px" }}>Guaranteed pricing</p>
                 <p>The quote you receive is final. No hidden fuel surcharges or driver fees.</p>
               </div>
             </div>
@@ -149,15 +151,18 @@ export default function Contact() {
         </div>
       </section>
 
-      {/* ===== coverage map ===== */}
+      {/* ===== coverage map — whole-USA SVG with a pin in every state (owner
+          request Nov 19: replaces the click-to-load Google embed) ===== */}
       <section className="pp-sec" id="map">
         <div className="container">
           <header className="pp-sec-head">
             <p className="pp-eyebrow">Coverage</p>
-            <h2>Dispatching across all major hubs</h2>
-            <p>And the small towns, resorts and campuses around them.</p>
+            <h2>Sent from one station, received in every state</h2>
+            <p>Dispatch runs from South Ozone Park, NY — and routes run to all 50 states, DC and the small towns in between.</p>
           </header>
-          <MapEmbed />
+          <div className="rounded-5" style={{ background: "linear-gradient(140deg,#1e2126,#0f1115)", padding: "clamp(10px, 2.5vw, 28px)" }}>
+            <UsMap />
+          </div>
         </div>
       </section>
     </main>

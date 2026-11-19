@@ -2,6 +2,9 @@
 // Fixes applied per brief: confirmed facts only (5+ years, no 4.9/5, no 500+),
 // heading order corrected, testimonial names kept (owner permission), FAQ answers
 // start with the direct answer.
+import { fleetMain, fleetShots } from "@/lib/fleet-photos";
+import VehiclePhoto from "@/components/VehiclePhoto";
+import { preload } from "react-dom";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -21,14 +24,14 @@ const SERVICE_CARD_PHOTOS: Record<string, { src: string; alt: string }> = {
   "wedding-transportation": { src: "/images/services/wed.webp", alt: "Wedding couple greeting guests riding a shuttle bus" },
   "school-transportation": { src: "/images/services/school.webp", alt: "Students boarding a yellow school bus" },
   "sports-team-transportation": { src: "/images/services/sport.webp", alt: "Football team heading to a stadium" },
-  "airport-transfer": { src: "/images/fleet/sprinter.jpg", alt: "Black Sprinter van parked beside aircraft on an airport apron" },
+  "airport-transfer": { src: fleetMain("sprinter-van", "/images/fleet/sprinter.jpg"), alt: "Black Sprinter van parked beside aircraft on an airport apron" },
   "sightseeing-tour-bus": { src: "/images/services/multi.webp", alt: "Motorcoach on a scenic tour route" },
   "church-religious-transportation": { src: "/images/services/church.webp", alt: "Minibuses ready for a group shuttle" },
-  "band-tour-bus": { src: "/images/fleet/sleeper.jpg", alt: "Sleeper tour bus" },
+  "band-tour-bus": { src: fleetMain("sleeper", "/images/fleet/sleeper.jpg"), alt: "Sleeper tour bus" },
   "winery-tour-bus-rental": { src: "/images/services/winery.webp", alt: "Vineyard rows in wine country" },
   "military-group-transportation": { src: "/images/services/military.webp", alt: "The American flag against a blue sky" },
   "government-transportation": { src: "/images/services/government.webp", alt: "The United States Capitol building" },
-  "casino-bus-trips": { src: "/images/fleet/limo.jpg", alt: "Party bus hired for a casino night out" },
+  "casino-bus-trips": { src: fleetMain("party-bus", "/images/fleet/limo.jpg"), alt: "Party bus hired for a casino night out" },
 };
 
 // The four booking shapes (owner request, Nov 12).
@@ -79,9 +82,27 @@ export const metadata = pageMeta({
   path: "/",
 });
 
+// LCP: the hero photo is a CSS background, so it must be preloaded explicitly
+// (the layout comment claimed this for every page — it is only true here, where
+// the hero is actually used as a background; city pages get the same effect
+// from next/image priority).
+// NOTE: must be called during render, not at module scope, so React hoists the
+// <link rel="preload"> into the server-rendered head. (ReactDOM.preload is not
+// hoisted into prerendered HTML in this Next version, so the element form below
+// is used instead.)
 export default function Home() {
+  preload("/hero-bus.webp", { as: "image", fetchPriority: "high" });
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: HOME_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
   return (
     <main className="pp pp-svc">
+      {/* LCP: React 19 hoists this <link> into <head> at build time */}
+      <link rel="preload" href="/hero-bus.webp" as="image" fetchPriority="high" />
+      {/* FAQPage schema — home shows the 7-tidied FAQ section (consultant doc) */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       {/* 1. Hero — pp-frame (Nov 18): the facts strip overlap now lands in
           reserved hero space, matching the city/service/contact pages. */}
       <section
@@ -159,7 +180,7 @@ export default function Home() {
             <div className="col-lg-6">
               <div className="position-relative">
                 <div className="rounded-4 overflow-hidden shadow border border-2 border-white">
-                  <Image src="/images/fleet/charter.jpg" alt="Cascade Charter Bus Fleet" width={800} height={600} priority sizes="(max-width: 992px) 100vw, 50vw" className="w-100 h-100 object-fit-cover" style={{ minHeight: 300 }} />
+                  <Image src={fleetMain("charter-bus", "/images/fleet/charter.jpg")} alt="Cascade Charter Bus Fleet" width={800} height={600} priority sizes="(max-width: 992px) 100vw, 50vw" className="w-100 h-100 object-fit-cover" style={{ minHeight: 300 }} />
                 </div>
                 <div className="position-absolute bottom-0 end-0 bg-primary text-white p-3 rounded-4 shadow mb-n3 me-n3 d-none d-md-block">
                   <h3 className="display-6 fw-bold mb-0">5+</h3>
@@ -186,8 +207,14 @@ export default function Home() {
                 <Link href={`/fleet/${v.slug}/`} className="text-decoration-none h-100 d-block">
                   <div className="card border-0 shadow-sm rounded-4 hover-lift h-100 overflow-hidden bg-white">
                     <div className="position-relative">
-                      <Image src={v.photo} alt={`${v.cardName} rental for ${v.passengers}`} width={480} height={270} sizes="(max-width: 768px) 76vw, 25vw" style={{ width: "100%", height: 170, objectFit: "cover" }} />
-                      <span className="badge rounded-pill px-3 py-2" style={{ position: "absolute", left: 12, bottom: 12, background: "rgba(15,17,21,0.86)", color: "#fff", fontWeight: 700, fontSize: "0.78rem" }}>
+                      <VehiclePhoto
+                        photos={fleetShots(v.slug, v.photo)}
+                        alt={`${v.cardName} rental for ${v.passengers}`}
+                        intrinsic={{ width: 480, height: 270 }}
+                        sizes="(max-width: 768px) 76vw, 25vw"
+                        style={{ width: "100%", height: 170, objectFit: "cover" }}
+                      />
+                      <span className="badge rounded-pill px-3 py-2" style={{ position: "absolute", left: 12, bottom: 12, background: "rgba(15,17,21,0.86)", color: "#fff", fontWeight: 700, fontSize: "0.78rem", zIndex: 2 }}>
                         <Users size={13} className="me-1" aria-hidden="true" />{v.passengers}
                       </span>
                     </div>
@@ -244,7 +271,7 @@ export default function Home() {
           <div>
             <p className="text-center small text-muted mb-4">
               All reviews below are verified on our{" "}
-              <a href={SITE.trustpilotProfile} target="_blank" rel="noopener noreferrer" className="text-decoration-none fw-semibold">
+              <a href={SITE.trustpilotProfile} target="_blank" rel="noopener noreferrer" className="text-decoration-none fw-semibold text-link-pad">
                 Trustpilot profile
               </a>
             </p>

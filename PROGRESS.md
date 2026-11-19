@@ -4,6 +4,59 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
+**Nov 19 — fleet photo folders (owner workflow) — in working tree, NOT yet committed.**
+- New: `public/images/fleet/<vehicle>/` (charter-bus, sleeper, minibus, school-bus, sprinter-van, party-bus, suv-sedan). Owner dropped 26 real fleet photos; covers set as `main.jpg` (charter-bus = 3/4 front Volvo exterior, party-bus = wide pink-lit interior; school-bus/sprinter/minibus/suv kept their existing strong covers). `AVIF` accepted by the manifest scanner besides JPG/PNG/WebP.
+- `components/VehiclePhoto.tsx` (client, ~60 lines): every card-sized fleet showcase (home cards, fleet hub, fleet-page "other fleet options", city page vehicle cards, service-page vehicle rows) now auto-rotates that vehicle's photos every 3s with a soft crossfade — box size unchanged; static when the folder holds one photo; respects prefers-reduced-motion. Alt text lives on the visible shot only.
+- Fleet detail page "Photo showcase" rebuilt as a compact, centered grid (`pp-vshow`: ~210px tiles, 4/3 crop, 4-6 per row, 2-up on phones) per owner's "small, beautiful" request.
+- `lib/fleet-photos.ts` (fleetGallery / fleetMain / fleetShots) feeds every photo spot with the legacy files as fallback, so an empty folder never renders a broken card.
+- Instructions for the owner: `docs/how-to-add-fleet-photos.md`.
+
+**Nov 19 — full polish pass (mobile/desktop, speed, SEO lengths, garbage cleanup) — in working tree, NOT yet committed.**
+- Lighthouse round 2 fixes (verified from the report, not guessed):
+  - React hydration error (#418) on /contact/: React 19 hoists SVG `<title>` elements into `<head>`, so the map's `<title>` tooltips broke hydration — removed; state names show as SVG text on hover + every state link carries an aria-label.
+  - Heading-order flag on /contact/: the "Guaranteed pricing" side-card h3 skipped a heading level — retyped as a styled p.
+  - Contrast flag: footer copyright "All rights reserved." sat at ~3:1 (text-muted + opacity-50) — restored to normal muted color.
+  - Tap targets: tel:/mailto: links across the site get padded 36px hit boxes; the map's small eastern states get invisible 30px tap circles (all map taps route through them; hover still highlights shapes).
+- Verified in round 1 of Lighthouse (mobile, before those fixes): SEO 100 on home/city/contact/fleet; best-practices 100 except contact (hydration error, fixed above); a11y 95–97; CLS 0 everywhere.
+- FINAL Lighthouse (mobile, local build, serial runs — LCP numbers carry local-server variance; production CDN will be faster): home perf 76, city 88, contact 96, fleet 94 — accessibility 100, best-practices 100, SEO 100 on all four; CLS 0 everywhere. Final QA sweep: 0 console errors, 0 broken images, correct canonical/meta on every indexed template, tap targets ≥24px (only flags left are inherent: the 404 page's own status, and home's by-design swipeable fleet rows).
+- Title/description length hygiene, verified programmatically:
+  - City titles: all 710 now render ≤60 chars (55 shortened to "{City}, {ST} Charter Bus Rental…"; 2 long-named cities use "{City} Charter Bus Rental…"; app/locations/[state]/[city]/page.tsx appends ", ST" only to the old "Charter Bus Rental in …" titles). 0 duplicate rendered titles across 710.
+  - City descriptions: 0 over 160; 1 sub-120 description brought to 134 with the standard trailer.
+  - State pages: description trimmed to ≤160 for every state name; FAQPage schema added to match the visible FAQ accordion.
+  - Fleet + service pages: 14 metaTitles trimmed; every one renders ≤60 with the " | Cascade Charter Bus" suffix (verified list in the session).
+  - Blog post title + hub, FAQs, contact, services hub, fleet hub, locations hub titles all ≤60 rendered.
+- Locations-count copy fixed sitewide (data holds 48 states, no DC): locations hub title/description/badges (48 states with city pages), HTML sitemap badge, llms.txt line. "All 50 states" service-coverage claims (home facts, state-page copy, UsMap legend) are unchanged and correct.
+- Speed:
+  - Home hero photo now actually preloaded (ReactDOM.preload in app/page.tsx — the layout comment claimed it but no preload link existed anywhere).
+  - /contact/ map replaced: the click-to-load Google Maps iframe (~350 KB on click) is gone. New inline SVG USA map (components/UsMap.tsx + data/us-map.json, ~19 KB, generated from US Census public-domain boundaries by scripts/build-us-map.mjs): pin in every state, hover draws a dashed signal line from the dispatch station (South Ozone Park, NY) to that state, 48 state pins link to their locations page, NV/ND/DC pins open the quote form. Zero external requests.
+  - Blog posts get twitter card via metadata (they were missing).
+- Tap targets ≥24px: footer legal links, breadcrumb strip, top ribbon, sitemap page rows + chips, nav label links, inline "Trustpilot profile" link (CSS block "final QA pass" in globals.css).
+- Garbage removed (all verified import-free before deletion): components/StructuredCityPage.tsx (superseded by PremiumCityPage; GenericPremiumCity kept — it is the documented fallback for admin-created cities, brief 19.6), components/MapEmbed.tsx (replaced by UsMap), lib/city-variants.ts, lib/privacy-restored.json; ~250 lines of dead CSS verified unused then removed from globals.css (premium-card/dest-card/fleet-card/booking-step/nearby-card/fleet-slider/Vanguard footer variants/etc.); dead opacity-10 classes in Header (top ribbon border corrected to border-opacity-25); duplicate Image2 import in blog hub; dead inline serviceSchema/FAQ/example constants in app/services/[slug]/page.tsx (+ unused SITE/nf404 imports; owner TODO note preserved as a comment); root reference HTML files archived to docs/design-reference/.
+- PremiumCityPage intro heading no longer renders data.h1 a second time (was H1 text duplicated as an H2 right below it); city vehicle-card alts now carry city + state.
+- State-page fleet/neighbor cards converted from raw <a> to <Link>.
+- Verified: tsc 0 errors, build 0 errors. Owner pending items: NEXT_PUBLIC_GSC_VERIFICATION not set (Search Console meta tag not emitted) — set it as a Vercel env var; Google Rich Results Test on each template after deploy.
+
+**SEO consultant's schema document implemented (Nov 18) — in working tree, NOT yet committed.**
+- Consultant doc (owner-supplied) mapped onto the site, with confirmed-facts adjustments:
+  Organization sitewide (was LocalBusiness) with @id/#logo/#organization, contactPoint,
+  correct South Ozone Park HQ (doc carried the old Bronx 10462 block — replaced per brief
+  Section 15); LocalBusiness (@id #localbusiness, parentOrganization, 00:00–23:59 hours,
+  HQ address) added to all 710 city pages + 51 state pages (areaServed City/State as the
+  doc prescribes; geo omitted — no verified coordinates in data); Service blocks now @id'd
+  (#service) with provider → Organization @id on service + fleet pages (offers dropped per
+  doc note — no starting prices shown); FAQPage added where it was missing (home,
+  services hub, fleet hub); Article → BlogPosting on blog posts (author → Organization @id
+  per consultant note — no individual author/profile URL).
+- NOT implemented (flagged to owner): the doc's sitewide "Product + AggregateRating
+  (4.9 / 1205)" block — self-review markup is banned by the brief (7.12/9.5) and risks a
+  Google manual action; real ratings come via the official Trustpilot widget only.
+  Also: doc's tiktok.com/@cascadecharterbus vs owner-confirmed @cascadecharters handle —
+  kept the owner handle (SITE data) pending owner check.
+- Verified: tsc 0 errors, build 804 pages 0 errors, all 793 built HTML files parse every
+  JSON-LD block (0 failures), 0 pages with duplicate schema types, exactly one
+  Organization block per page, breadcrumb positions all numeric.
+- After deploy: run each template through Google Rich Results Test (consultant's ask).
+
 **ALL 710 CITY PAGES DONE (Nov 17). Owner said go on Nov 18: committed and pushed to staging (origin/staging). Production (origin/main) untouched.**
 - Finished in one go: OR 7, UT 5, WY 6, CO 9, MT 9, TN 7, MS 6, CA 16,
   ME 8, WV 8, IL 9, MO 8, AZ 9, VT 3, RI 4, KS 4, LA 4, OK 3, SD 1,

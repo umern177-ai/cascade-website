@@ -1,16 +1,18 @@
 // Fleet hub — same structure as the live fleet hub (brief Section 7.4), with the
 // corrected sleeper numbers and one data source (lib/fleet-data.ts).
-import Image from "next/image";
+
 import Link from "next/link";
 import { Users, Check, Briefcase, Wifi, ShieldCheck, Bus, ChevronRight } from "lucide-react";
 import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import VehiclePhoto from "@/components/VehiclePhoto";
+import { fleetShots } from "@/lib/fleet-photos";
 import { VEHICLES } from "@/lib/fleet-data";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Charter Bus & Motorcoach Fleet | Group Vehicle Guide",
+  title: "Charter Bus & Motorcoach Fleet Guide",
   description:
     "Explore charter buses, sleeper coaches, minibuses, Sprinter vans, school buses, party buses, SUVs and sedans for group transportation across the USA.",
   path: "/fleet/",
@@ -38,9 +40,15 @@ export const FLEET_FAQS = [
 const SPEC_ICONS = { luggage: Briefcase, climate: Wifi, technology: ShieldCheck } as const;
 
 export default function FleetHub() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: FLEET_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
   return (
     <main className="bg-white min-vh-100">
       {/* Hero */}
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Fleet" }]} />
 <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
@@ -75,7 +83,14 @@ export default function FleetHub() {
               <div className="row g-4 align-items-center" key={v.slug}>
                 <div className={`col-lg-7 ${i % 2 === 1 ? "order-lg-2" : ""}`}>
                   <div className="rounded-4 overflow-hidden shadow-lg border position-relative">
-                    <Image src={v.photo} alt={`${v.cardName} rental - Cascade Charter Bus`} width={900} height={520} style={{ minHeight: 300, objectFit: "cover", width: "100%" }} sizes="(max-width: 992px) 100vw, 58vw" />
+                    <VehiclePhoto
+                      photos={fleetShots(v.slug, v.photo)}
+                      alt={`${v.cardName} rental - Cascade Charter Bus`}
+                      intrinsic={{ width: 900, height: 520 }}
+                      style={{ objectFit: "cover", width: "100%" }}
+                      sizes="(max-width: 992px) 100vw, 58vw"
+                      priority={i === 0}
+                    />
                     <div className="position-absolute top-0 end-0 m-4">
                       <span className="badge bg-dark px-3 py-2 rounded-pill shadow-sm fs-6">
                         <Users size={16} className="me-2" aria-hidden="true" />

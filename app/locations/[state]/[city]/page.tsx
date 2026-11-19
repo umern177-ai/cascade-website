@@ -28,15 +28,19 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { state, city } = await params;
   const structured = getStructuredCityPage(state, city);
   if (structured) {
-    // SEO fix (Nov 18 audit): (a) append the state to the title so same-named
-    // cities in different states don't share identical <title> strings —
-    // e.g. Columbus OH vs Columbus MS vs Columbus IN; (b) route through
-    // pageMeta so every city page carries og:image / og:type / og:site_name
-    // and twitter tags (they were missing → social shares had no image).
+    // SEO fix (Nov 18 audit + Nov 19 length pass): (a) append the state abbr to
+    // the template titles ("Charter Bus Rental in <City>") so same-named cities
+    // in different states don't share identical <title> strings — e.g. Columbus
+    // OH vs Columbus MS vs Columbus IN. Shortened data titles (variant
+    // "{City}, {ST} Charter Bus Rental…" / "{City} Charter Bus Rental…") already
+    // carry their differentiation and are used as-is. (b) route everything
+    // through pageMeta so every city page carries og:image / og:type /
+    // og:site_name and twitter tags.
     const stAbbr = state.toUpperCase();
-    const title = structured.title.includes(`, ${stAbbr}`)
-      ? structured.title
-      : structured.title.replace(" | Cascade Charter Bus", `, ${stAbbr} | Cascade Charter Bus`);
+    const needsAbbr = structured.title.startsWith("Charter Bus Rental in ") && !structured.title.includes(`, ${stAbbr}`);
+    const title = needsAbbr
+      ? structured.title.replace(" | Cascade Charter Bus", `, ${stAbbr} | Cascade Charter Bus`)
+      : structured.title;
     return pageMeta({
       title, // pageMeta's includes-brand guard makes it absolute
       description: structured.metaDescription,

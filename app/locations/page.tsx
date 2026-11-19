@@ -8,9 +8,9 @@ import { stateCodes, stateName, keptCities, otherCities } from "@/lib/locations"
 import { pageMeta } from "@/lib/page-meta";
 
 export const metadata = pageMeta({
-  title: "Charter Bus Service Locations | 48 States + DC",
+  title: "Charter Bus Service Locations in 48 States",
   description:
-    "Our service locations: charter bus rental across 48 states plus Washington DC. Browse cities and regions for local group transportation and fleet options.",
+    "Our service locations: charter bus rental city pages across 48 states. Browse by state for local group transportation, or book from any town in America.",
   path: "/locations/",
 });
 
@@ -32,11 +32,11 @@ export default function LocationsHub() {
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">Service Areas</span>
           <h1 className="display-4 fw-bold mb-3">Our Service Locations</h1>
           <p className="lead opacity-75 mx-auto mb-4" style={{ maxWidth: 700 }}>
-            Charter bus rental in {count} states and Washington, DC — pick a state to see
+            Charter bus rental city pages across {count} states—pick a state to see
             its destinations, or send the form from any town in America.
           </p>
           <div className="d-flex justify-content-center flex-wrap gap-3">
-            <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{count} States + DC</span>
+            <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{count} States with City Pages</span>
             <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">{cityPages} City Pages</span>
             <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">24/7 Dispatch</span>
           </div>

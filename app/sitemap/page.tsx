@@ -69,7 +69,7 @@ export default function SitemapPage() {
             grouped by state.
           </p>
           <div className="d-flex justify-content-center flex-wrap gap-3">
-            <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{allStates.length} States + DC</span>
+            <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{allStates.length} States</span>
             <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">{cityPages} City Pages</span>
             <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">{SERVICES.length} Services</span>
             <span className="badge bg-white bg-opacity-10 border border-white border-opacity-25 text-white px-4 py-2 rounded-pill x-small-bold">{FLEET.length} Vehicle Types</span>

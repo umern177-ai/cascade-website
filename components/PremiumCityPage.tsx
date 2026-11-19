@@ -18,11 +18,14 @@ const SERVICE_LINKS: Record<string, string> = {
   "church-religious-transportation": "Church & religious group transportation",
   "band-tour-bus": "Band tour bus rental",
 };
+import { fleetMain, fleetShots } from "@/lib/fleet-photos";
+import VehiclePhoto from "@/components/VehiclePhoto";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import RouteDiagram, { etaText } from "@/components/RouteDiagram";
 import { VEHICLES } from "@/lib/fleet-data";
 import { keptCities, isKept, stateName } from "@/lib/locations";
 import { SITE } from "@/lib/site-data";
+import { localBusinessSchema } from "@/lib/schema";
 import { getCityContent } from "@/lib/city-content";
 import type { CityPageData, CityRoute, CityRule } from "@/lib/city-page-data";
 
@@ -31,10 +34,10 @@ const SERVICE_IMAGES: Record<string, string> = {
   "wedding-transportation": "/images/services/wed2.webp",
   "school-transportation": "/images/services/school.webp",
   "sports-team-transportation": "/images/services/sport.webp",
-  "airport-transfer": "/images/fleet/sprinter.jpg",
+  "airport-transfer": fleetMain("sprinter-van", "/images/fleet/sprinter.jpg"),
   "sightseeing-tour-bus": "/images/services/multi.webp",
   "church-religious-transportation": "/images/services/church.webp",
-  "band-tour-bus": "/images/fleet/sleeper.jpg",
+  "band-tour-bus": fleetMain("sleeper", "/images/fleet/sleeper.jpg"),
 };
 
 function slugId(name: string) {
@@ -49,7 +52,8 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
   const premium = data.premium ?? {};
   const minDate = new Date().toISOString().slice(0, 10);
 
-  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@type": "LocalBusiness", name: SITE.name, url: SITE.url, telephone: SITE.phoneDisplay } };
+  const serviceSchema = { "@context": "https://schema.org", "@type": "Service", "@id": `https://cascadecharterbus.com/locations/${state}/${data.slug}/#service`, name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@id": "https://cascadecharterbus.com/#organization" } };
+  const localBusiness = localBusinessSchema({ path: `/locations/${state}/${data.slug}/`, locationName: `${name}, ${stAbbr}`, description: data.metaDescription, areaServedType: "City", areaServedName: name });
   const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: data.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
   // Every city page shows 5 vehicles (owner request: the standard four plus
   // the sleeper). Any of the standard five missing from the city's data is
@@ -126,6 +130,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
   return (
     <main className="pp bg-white" style={{ fontSize: "inherit" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(serviceSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: stName, href: `/locations/${state}/` }, { label: name }]} />
@@ -211,7 +216,9 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
           <div className="container pp-intro-grid">
             <div className="pp-intro-copy">
               <p className="pp-eyebrow">Know before you book</p>
-              <h2>{data.h1}</h2>
+              {/* Section heading differs from the H1 ("Charter Bus Rental in
+                  {City}") so the page never carries the same headline twice. */}
+              <h2>Charter Bus Planning in {name}</h2>
             {premium.routing ? (
               <>
                 {(premium.routingIntro || []).map((par) => (
@@ -293,7 +300,13 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
             {vehicles.map((v) => (
               <a href={`/fleet/${v.slug}/`} className="pp-vehicle" key={v.slug}>
                 <div className="pp-vehicle-media">
-                  <Image src={v.meta!.photo} alt={v.meta!.cardName} fill sizes="(max-width:900px) 50vw, 25vw" style={{ objectFit: "cover" }} />
+                  <VehiclePhoto
+                    photos={fleetShots(v.slug, v.meta!.photo)}
+                    alt={`${v.meta!.cardName} available for charter bus rental in ${name}, ${stAbbr}`}
+                    fill
+                    sizes="(max-width:900px) 50vw, 25vw"
+                    style={{ objectFit: "cover" }}
+                  />
                   <span className="pp-cap"><Users aria-hidden="true" />{v.meta!.passengers}</span>
                 </div>
                 <div className="pp-vehicle-body">

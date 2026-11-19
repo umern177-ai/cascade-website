@@ -61,7 +61,7 @@ export default function ConsentBanner() {
           <Cookie size={18} className="text-primary flex-shrink-0" aria-hidden="true" />
           <span>
             We use cookies to improve the site and measure how it performs.
-            <Link href="/privacy-policy/" className="text-primary ms-1">Privacy Policy</Link>
+            <Link href="/privacy-policy/" className="text-primary ms-1 text-link-pad">Privacy Policy</Link>
           </span>
         </p>
         <div className="d-flex gap-2 flex-shrink-0">

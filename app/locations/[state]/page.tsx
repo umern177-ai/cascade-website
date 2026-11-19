@@ -4,12 +4,14 @@
 // consistent section heads (eyebrow + accent line), themed section rhythm.
 import type { Metadata } from "next";
 import { notFound } from "next/navigation";
+import Link from "next/link";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { KeptCityButton, QuoteCityButton } from "@/components/CityButton";
 import { keptCities, otherCities, stateName, stateCodes } from "@/lib/locations";
 import { neighborStates } from "@/lib/state-neighbors";
 import { VEHICLES } from "@/lib/fleet-data";
 import { pageMeta } from "@/lib/page-meta";
+import { localBusinessSchema } from "@/lib/schema";
 
 export const dynamicParams = false;
 
@@ -54,7 +56,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const name = stateName(state);
   return pageMeta({
     title: `Charter Bus Rental in ${name} | Cascade Charter Bus`,
-    description: `Charter bus rental across ${name}. Choose your city to see local group transportation, or open the booking form with your pickup pre-filled. 24/7 dispatch nationwide.`,
+    description:
+      `Charter bus rental across ${name}. Pick your city to see local group transportation, or open the booking form with pickup pre-filled. 24/7 dispatch.`,
     path: `/locations/${state}/`,
   });
 }
@@ -68,17 +71,41 @@ export default async function StatePage({ params }: Props) {
   const kept = keptCities(state);
   const others = otherCities(state);
 
+  const stateMetaDescription =
+    `Charter bus rental across ${name}. Pick your city to see local group transportation, or open the booking form with pickup pre-filled. 24/7 dispatch.`;
   const introSchema = {
     "@context": "https://schema.org",
     "@type": "Service",
+    "@id": `https://cascadecharterbus.com/locations/${state}/#service`,
     name: `Charter Bus Rental in ${name}`,
+    description: stateMetaDescription,
     areaServed: { "@type": "State", name },
-    provider: { "@type": "LocalBusiness", name: "Cascade Charter Bus", url: "https://cascadecharterbus.com", telephone: "+1 (646) 705-0816" },
+    provider: { "@id": "https://cascadecharterbus.com/#organization" },
   };
+  // State FAQ accordion on the page → matching FAQPage schema (consultant doc:
+  // every visible FAQ set is also declared once as structured data).
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: stateFaqs(name).map((f) => ({
+      "@type": "Question",
+      name: f.q,
+      acceptedAnswer: { "@type": "Answer", text: f.a },
+    })),
+  };
+  const localBusiness = localBusinessSchema({
+    path: `/locations/${state}/`,
+    locationName: name,
+    description: stateMetaDescription,
+    areaServedType: "State",
+    areaServedName: name,
+  });
 
   return (
     <main className="bg-white min-vh-100">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(introSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: name }]} />
 
       {/* Hero */}
@@ -170,7 +197,7 @@ export default async function StatePage({ params }: Props) {
           <div className="row g-3">
             {VEHICLES.map((v) => (
               <div className="col-md-6 col-lg-4" key={v.slug}>
-                <a className="text-decoration-none" href={`/fleet/${v.slug}/`}>
+                <Link className="text-decoration-none" href={`/fleet/${v.slug}/`}>
                   <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100 bg-white">
                     <div className="d-flex align-items-center justify-content-between">
                       <h3 className="h6 fw-bold text-dark mb-0">{v.cardName}</h3>
@@ -178,7 +205,7 @@ export default async function StatePage({ params }: Props) {
                     </div>
                     <p className="text-muted small mb-0 mt-2">{v.tagline}</p>
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
           </div>
@@ -219,14 +246,14 @@ export default async function StatePage({ params }: Props) {
           <div className="row g-3">
             {neighborStates(state, 5).map((nb) => (
               <div className="col-md-4 col-6" key={nb}>
-                <a className="text-decoration-none" href={`/locations/${nb}/`}>
+                <Link className="text-decoration-none" href={`/locations/${nb}/`}>
                   <div className="card border-0 shadow-sm rounded-4 hover-lift p-3 h-100 bg-white">
                     <div className="d-flex align-items-center justify-content-between">
                       <span className="fw-bold text-dark">{stateName(nb)}</span>
                       <span aria-hidden="true" className="text-muted">→</span>
                     </div>
                   </div>
-                </a>
+                </Link>
               </div>
             ))}
           </div>

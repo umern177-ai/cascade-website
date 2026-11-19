@@ -16,17 +16,25 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const post = getPost(slug);
   if (!post) return {};
+  const url = `https://cascadecharterbus.com/blog/${post.slug}/`;
+  const img = `${SITE.url}/images/blog/3.webp`;
   return {
     title: { absolute: `${post.title} | Cascade Charter Bus` },
     description: post.description,
-    alternates: { canonical: `https://cascadecharterbus.com/blog/${post.slug}/` },
+    alternates: { canonical: url },
     openGraph: {
       title: post.title,
       description: post.description,
-      url: `https://cascadecharterbus.com/blog/${post.slug}/`,
-      images: [{ url: `${SITE.url}/images/blog/3.webp`, width: 1600, height: 900, alt: post.title }],
+      url,
+      images: [{ url: img, width: 1600, height: 900, alt: post.title }],
       type: "article",
       publishedTime: post.date,
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: post.title,
+      description: post.description,
+      images: [img],
     },
   };
 }
@@ -36,14 +44,23 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
   const post = getPost(slug);
   if (!post) notFound();
 
+  // BlogPosting per the consultant's schema doc. Posts have no individual
+  // author person/profile URL (byline is the "Cascade Dispatch Team"), so
+  // per the consultant's note the author resolves to the Organization @id.
   const articleSchema = {
     "@context": "https://schema.org",
-    "@type": "Article",
+    "@type": "BlogPosting",
+    "@id": `${SITE.url}/blog/${post.slug}/#article`,
+    mainEntityOfPage: { "@type": "WebPage", "@id": `${SITE.url}/blog/${post.slug}/` },
     headline: post.title,
     description: post.description,
+    image: `${SITE.url}/images/blog/3.webp`,
+    articleSection: post.tag,
     datePublished: post.date,
-    author: { "@type": "Organization", name: post.author },
-    publisher: { "@type": "Organization", name: SITE.name },
+    dateModified: post.date,
+    author: { "@id": "https://cascadecharterbus.com/#organization" },
+    publisher: { "@id": "https://cascadecharterbus.com/#organization" },
+    url: `${SITE.url}/blog/${post.slug}/`,
   };
 
   return (

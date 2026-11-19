@@ -9,6 +9,9 @@ import { ArrowRight, Check, ChevronRight, Phone, ShieldCheck, Tag, Headset, Quot
 import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
+import VehiclePhoto from "@/components/VehiclePhoto";
+import { fleetMain, fleetShots } from "@/lib/fleet-photos";
+import { serviceSchema as serviceSchemaOf } from "@/lib/schema";
 import { VEHICLES } from "@/lib/fleet-data";
 
 type Photo = { src: string; alt: string };
@@ -17,12 +20,12 @@ type VehiclePick = { slug: string; why: string };
 type Faq = { q: string; a: string };
 
 const SERVICE_IMAGES: Record<string, string> = {
-  "minibus": "/images/fleet/mini.jpg",
-  "school-bus": "/images/fleet/school.jpg",
-  "party-bus": "/images/fleet/limo.jpg",
-  "charter-bus": "/images/fleet/charter.jpg",
-  "sprinter-van": "/images/fleet/sprinter.jpg",
-  "sleeper": "/images/fleet/sleeper.jpg",
+  "minibus": fleetMain("minibus", "/images/fleet/mini.jpg"),
+  "school-bus": fleetMain("school-bus", "/images/fleet/school.jpg"),
+  "party-bus": fleetMain("party-bus", "/images/fleet/limo.jpg"),
+  "charter-bus": fleetMain("charter-bus", "/images/fleet/charter.jpg"),
+  "sprinter-van": fleetMain("sprinter-van", "/images/fleet/sprinter.jpg"),
+  "sleeper": fleetMain("sleeper", "/images/fleet/sleeper.jpg"),
 };
 
 const FACTS = [
@@ -147,13 +150,12 @@ export default function PremiumServicePage({
   siblings: { slug: string; name: string }[];
 }) {
   const f = FEATURED[slug];
-  const serviceSchema = {
-    "@context": "https://schema.org",
-    "@type": "Service",
+  const serviceSchema = serviceSchemaOf({
+    path: `/services/${slug}/`,
     name: meta.name,
-    provider: { "@type": "LocalBusiness", name: SITE.name, telephone: SITE.phoneDisplay, url: SITE.url },
-    areaServed: { "@type": "Country", name: "United States" },
-  };
+    description: meta.metaDescription,
+    image: photos?.[0]?.src ? `${SITE.url}${photos[0].src}` : undefined,
+  });
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -278,7 +280,15 @@ export default function PremiumServicePage({
                   <Link href={`/fleet/${vh.slug}/`} className="pp-vrow-media" aria-label={`See the ${vh.ctaName} details`}>
                     <span className="pp-num" aria-hidden="true">{`0${i + 1}`}</span>
                     {i === 0 && <span className="pp-vrow-pick">Best fit</span>}
-                    {img && <Image src={img} alt={`${vh.cardName} - Cascade Charter Bus`} fill sizes="(max-width: 800px) 100vw, 320px" style={{ objectFit: "cover" }} />}
+                    {img && (
+                      <VehiclePhoto
+                        photos={fleetShots(vh.slug, img)}
+                        alt={`${vh.cardName} - Cascade Charter Bus`}
+                        fill
+                        sizes="(max-width: 800px) 100vw, 320px"
+                        style={{ objectFit: "cover" }}
+                      />
+                    )}
                   </Link>
                   <div className="pp-vrow-body">
                     <div className="d-flex align-items-center justify-content-between gap-2 flex-wrap mb-1">
@@ -372,7 +382,7 @@ export default function PremiumServicePage({
             <p className="mt-4 mb-0" style={{ color: "var(--pp-muted)" }}>
               {crossLinks.map((l) => (
                 <span className="d-block d-sm-inline me-2" key={l.href + l.anchor}>
-                  {l.lead} <Link href={l.href} className="fw-semibold text-decoration-none" style={{ color: "var(--pp-ink)" }}>{l.anchor}</Link> page.
+                  {l.lead} <Link href={l.href} className="fw-semibold text-decoration-none text-link-pad" style={{ color: "var(--pp-ink)" }}>{l.anchor}</Link> page.
                 </span>
               ))}
             </p>

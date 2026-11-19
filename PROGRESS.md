@@ -4,7 +4,7 @@ Updated every phase. Current status at the top.
 
 ## Status now
 
-**Nov 19 — fleet photo folders (owner workflow) — in working tree, NOT yet committed.**
+**Nov 19 — committed (097ad98) and pushed to origin/staging per owner go-ahead; production (origin/main) untouched.** Includes: fleet photo folders + auto-rotate + showcase, USA coverage map, SEO/metadata lengths, speed + Lighthouse fixes, llms.txt (owner files, fact-checked). Production flow memory: llms.txt now serves from public/ (app/llms.txt route removed — re-add a route if the admin phase needs one).
 - New: `public/images/fleet/<vehicle>/` (charter-bus, sleeper, minibus, school-bus, sprinter-van, party-bus, suv-sedan). Owner dropped 26 real fleet photos; covers set as `main.jpg` (charter-bus = 3/4 front Volvo exterior, party-bus = wide pink-lit interior; school-bus/sprinter/minibus/suv kept their existing strong covers). `AVIF` accepted by the manifest scanner besides JPG/PNG/WebP.
 - `components/VehiclePhoto.tsx` (client, ~60 lines): every card-sized fleet showcase (home cards, fleet hub, fleet-page "other fleet options", city page vehicle cards, service-page vehicle rows) now auto-rotates that vehicle's photos every 3s with a soft crossfade — box size unchanged; static when the folder holds one photo; respects prefers-reduced-motion. Alt text lives on the visible shot only.
 - Fleet detail page "Photo showcase" rebuilt as a compact, centered grid (`pp-vshow`: ~210px tiles, 4/3 crop, 4-6 per row, 2-up on phones) per owner's "small, beautiful" request.

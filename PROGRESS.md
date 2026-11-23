@@ -1254,3 +1254,18 @@ Owner reviews `docs/compare/` → approve template match (Phase 2 done) → Phas
   computations at module load so hover no longer recomputes them (stutter
   fix). Verified in a real browser via Playwright: hover shows the clean
   NY -> state dash line + state name, zero console errors, zero layout shift.
+
+## Map hover stability pass (Nov 23, commit 5aaaa64)
+
+- Owner still saw glitching sweeping the cursor bottom-to-top. Cause: every
+  pointerenter re-rendered the whole map (51 paths + 51 tap circles + 50 pins
+  repainted; pin opacities flipped as attributes) and leaving the map snapped
+  the signal line back to NY.
+- Fix: StatesLayer / TapLayer / PinLayer are memoized components whose props
+  never change on hover, so a hover only moves the line coordinates, the
+  state-name tag and the one hot pin (CSS class .us-map-pin-hot + 0.2s
+  opacity fade). Line and tag always mounted, moved in place. No snap-back
+  on exit (last connection kept).
+- Verified in-browser: fast zig-zag sweep triggered 12 state transitions with
+  zero console errors, zero layout shift, no snap-back; tsc + build clean.
+  Pushed to staging (Vercel check pending at time of note).

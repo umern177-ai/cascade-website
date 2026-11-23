@@ -18,8 +18,8 @@ import mapData from "@/data/us-map.json";
 const NO_PAGE_STATES = new Set(["nv", "nd", "dc"]);
 
 // approximate polygon area from a compact "M x y L x y … Z" path (shoelace over
-// each subpath). Only used to stack the invisible tap circles: smaller states
-// must sit on top so overlapping circles resolve to the nearer state.
+// each subpath). Stacks the invisible tap circles: smaller states sit on top so
+// overlapping circles resolve to the nearer state.
 function pathArea(d: string): number {
   let total = 0;
   for (const sub of d.split("M")) {
@@ -34,14 +34,22 @@ function pathArea(d: string): number {
   return total;
 }
 
+const DATA = mapData as unknown as {
+  hq: { n: string; p: [number, number] };
+  width: number;
+  height: number;
+  states: Record<string, { n: string; d: string; p: [number, number] }>;
+};
+
+// computed ONCE at module load — recomputing 51 polygon areas on every
+// pointerenter re-render made hover stutter (owner: "glitch" on hover, Nov 23)
+const TAP_ORDER = Object.entries(DATA.states)
+  .map(([code, s]) => ({ code, s, area: pathArea(s.d) }))
+  .sort((a, b) => b.area - a.area);
+
 export default function UsMap() {
   const [active, setActive] = useState<string | null>("ny");
-  const { hq, width, height, states } = mapData as unknown as {
-    hq: { n: string; p: [number, number] };
-    width: number;
-    height: number;
-    states: Record<string, { n: string; d: string; p: [number, number] }>;
-  };
+  const { hq, width, height, states } = DATA;
   const target = active ? states[active] : null;
 
   return (
@@ -60,22 +68,6 @@ export default function UsMap() {
           </radialGradient>
         </defs>
 
-        {/* signal line: dispatch station -> hovered state */}
-        {target && (
-          <g aria-hidden="true">
-            <line
-              x1={hq.p[0]}
-              y1={hq.p[1]}
-              x2={target.p[0]}
-              y2={target.p[1]}
-              stroke="#f5a002"
-              strokeWidth="2"
-              strokeDasharray="6 7"
-              opacity="0.75"
-            />
-          </g>
-        )}
-
         <g className="us-map-states">
           {/* No <title> tooltips here: React 19 hoists <title> elements into
               <head>, which breaks hydration. The state name shows as SVG text
@@ -90,6 +82,25 @@ export default function UsMap() {
           ))}
         </g>
 
+        {/* dashed "signal" line: dispatch station -> hovered state. Drawn ON
+            TOP of the state fills (below the pin dots) — it used to sit under
+            the states and only leaked through thin gaps, which read as a
+            rendering glitch (owner, Nov 23). Not interactive. */}
+        {target && (
+          <g aria-hidden="true" style={{ pointerEvents: "none" }}>
+            <line
+              x1={hq.p[0]}
+              y1={hq.p[1]}
+              x2={target.p[0]}
+              y2={target.p[1]}
+              stroke="#f5a002"
+              strokeWidth="2"
+              strokeDasharray="6 7"
+              opacity="0.8"
+            />
+          </g>
+        )}
+
         {/* Invisible tap circles around each pin: ALL clicks and taps route
             through these (keyboard-accessible), because tiny eastern shapes
             (RI, DE, CT, DC…) can't be tapped as paths and the whole SVG scales
@@ -97,11 +108,8 @@ export default function UsMap() {
             stacked smallest-state-last, so a tap inside two overlapping
             circles picks the smaller (more likely intended) state. Hover
             still highlights the state shape itself. */
-        /* shoelace area over the path subpaths — used only for stacking */}
-        {Object.entries(states)
-          .map(([code, s]) => ({ code, s, area: pathArea(s.d) }))
-          .sort((a, b) => b.area - a.area)
-          .map(({ code, s }) => (
+        }
+        {TAP_ORDER.map(({ code, s }) => (
             <a
               key={"hit-" + code}
               href={NO_PAGE_STATES.has(code) ? "/contact/" : `/locations/${code}/`}

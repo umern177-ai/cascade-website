@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { withOverrides } from "@/lib/admin/meta-apply";
 // Fleet hub — same structure as the live fleet hub (brief Section 7.4), with the
 // corrected sleeper numbers and one data source (lib/fleet-data.ts).
 
@@ -10,13 +12,17 @@ import { fleetShots } from "@/lib/fleet-photos";
 import { VEHICLES } from "@/lib/fleet-data";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
+import { getContent } from "@/lib/admin/store";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   title: "Charter Bus & Motorcoach Fleet Guide",
   description:
     "Explore charter buses, sleeper coaches, minibuses, Sprinter vans, school buses, party buses, SUVs and sedans for group transportation across the USA.",
   path: "/fleet/",
-});
+  }));
+}
 
 export const FLEET_FAQS = [
   {
@@ -39,7 +45,9 @@ export const FLEET_FAQS = [
 
 const SPEC_ICONS = { luggage: Briefcase, climate: Wifi, technology: ShieldCheck } as const;
 
-export default function FleetHub() {
+export default async function FleetHub() {
+  // admin overrides for the hub headline (brief 19.10)
+  const c = await getContent();
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -53,12 +61,9 @@ export default function FleetHub() {
 <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <span className="text-brand-dark fw-bold text-uppercase tracking-widest mb-3 d-block">CASCADE CHARTER BUS FLEET</span>
-          <h1 className="display-4 fw-bold mb-4">Charter Bus &amp; Group Transportation Fleet</h1>
+          <h1 className="display-4 fw-bold mb-4">{c.fleetHub?.heading ?? "Charter Bus & Group Transportation Fleet"}</h1>
           <p className="opacity-75 mx-auto mb-4" style={{ maxWidth: 820 }}>
-            Explore charter buses, sleeper coaches, minibuses, Sprinter vans, school buses,
-            party buses, SUVs and sedans for group transportation across the USA. Choose
-            your vehicle based on passenger count, luggage, route, trip length and the
-            experience your group needs.
+            {c.fleetHub?.sub ?? "Explore charter buses, sleeper coaches, minibuses, Sprinter vans, school buses, party buses, SUVs and sedans for group transportation across the USA. Choose your vehicle based on passenger count, luggage, route, trip length and the experience your group needs."}
           </p>
           <div className="d-flex justify-content-center">
             <a className="btn btn-outline-light rounded-pill px-4 py-2 fw-bold" href="#vehicles">Explore Our Vehicles</a>

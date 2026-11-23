@@ -1,6 +1,7 @@
 // One helper so EVERY page ships the full metadata set: title, description,
-// self-canonical, robots directives, Open Graph and Twitter tags
-// (consultant checklist #2 and #7).
+// self-referencing canonical, robots directives, Open Graph and Twitter tags
+// (consultant checklist #2 and #7). Admin overrides (canonical / robots /
+// OG fields) arrive through withOverrides and win over these defaults.
 import type { Metadata } from "next";
 import { SITE } from "@/lib/site-data";
 
@@ -10,39 +11,49 @@ export function pageMeta(opts: {
   title: string;
   description: string;
   path: string;
-  image?: string;      // absolute or root-relative
-  index?: boolean;     // default true; false → noindex, follow
+  image?: string;       // absolute or root-relative
+  index?: boolean;      // default true; false → noindex, follow
+  canonical?: string;   // admin override (absolute URL or /path/)
+  robots?: string;      // admin override (MetaRobots key)
+  ogTitle?: string;
+  ogDescription?: string;
+  ogImage?: string;
 }): Metadata {
-  const { title, description, path, image, index = true } = opts;
-  const url = `${SITE.url}${path}`;
-  const img = image && image.startsWith("http") ? image : `${SITE.url}${image ?? "/hero-bus.jpg"}`;
-  const brand = " | Cascade Charter Bus";
+  const { title, description, path, image, index = true, canonical, robots, ogTitle, ogDescription, ogImage } = opts;
+  const selfUrl = `${SITE.url}${path}`;
+  const url = canonical ? (canonical.startsWith("http") ? canonical : `${SITE.url}${canonical}`) : selfUrl;
+  const img = (ogImage ?? image)
+    ? (ogImage ?? image)!.startsWith("http")
+      ? (ogImage ?? image)!
+      : `${SITE.url}${(ogImage ?? image)!}`
+    : OG_IMAGE;
+  const ogT = ogTitle?.trim() || title;
+  const ogD = ogDescription?.trim() || description;
+  const robotKey = robots ?? (index ? "index-follow" : "noindex-follow");
   return {
-    // absolute when the page title already carries the brand anywhere
-    // ("About Cascade Charter Bus" too) - never let the template double it
     title: title.includes("Cascade Charter Bus") ? { absolute: title } : title,
     description,
     robots: {
-      index,
-      follow: true,
+      index: robotKey.startsWith("index"),
+      follow: robotKey.endsWith("follow"),
       "max-video-preview": -1,
       "max-image-preview": "large",
       "max-snippet": -1,
     },
     alternates: { canonical: url },
     openGraph: {
-      title,
-      description,
-      url,
+      title: ogT,
+      description: ogD,
+      url: selfUrl,
       siteName: SITE.name,
       type: "website",
-      images: [{ url: img, width: 1600, height: 900, alt: title }],
+      images: [{ url: img, width: 1600, height: 900, alt: ogT }],
     },
     twitter: {
       card: "summary_large_image",
-      title,
-      description,
+      title: ogT,
+      description: ogD,
       images: [img],
     },
-  };
+  } as Metadata;
 }

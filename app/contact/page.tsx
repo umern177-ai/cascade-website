@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { withOverrides } from "@/lib/admin/meta-apply";
 // Contact / booking page — premium pp-* frame (Nov 17) around the WORKING
 // QuoteForm: dark hero with trust chips, facts strip, form + quick-contact
 // cards aligned, FAQ, coverage map. No functional form changes.
@@ -8,13 +10,18 @@ import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
+import { getPageBody } from "@/lib/admin/store";
+import { isAuthed } from "@/lib/admin/auth";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   title: "Charter Bus Booking & Free Quote",
   description:
     "Request a detailed itinerary quote for your group trip. Average response: 15 minutes. 24/7 dispatch, final pricing with gratuity included, U.S.-wide coverage.",
   path: "/contact/",
-});
+  }));
+}
 
 const CONTACT_FAQS = [
   {
@@ -42,7 +49,8 @@ const FACTS = [
   { dt: "States covered", dd: "50", unit: "" },
 ];
 
-export default function Contact() {
+export default async function Contact() {
+  const F = (await getPageBody("/contact/"))?.fields ?? {};
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
@@ -50,7 +58,7 @@ export default function Contact() {
   };
 
   return (
-    <main className="pp bg-white pp-svc" style={{ fontSize: "inherit" }}>
+    <main className="pp bg-white pp-svc pp-contact-page" style={{ fontSize: "inherit" }}>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Contact" }]} />
@@ -61,17 +69,17 @@ export default function Contact() {
           <div className="pp-hero-solo">
             <p className="pp-eyebrow">Booking &amp; free quote</p>
             <h1>
-              Book Your <em>Group Transportation</em>
+              {F.h1 ? (
+                F.h1
+              ) : (
+                <>
+                Book Your <em>Group Transportation</em>
+                </>
+              )}
             </h1>
             <p className="pp-lead">
-              Complete the form below for a detailed itinerary quote. Average
-              response time: about 15 minutes, any hour of the day.
+              {F.intro ?? "Complete the form below for a detailed itinerary quote. Average response time: about 15 minutes, any hour of the day."}
             </p>
-            <ul className="pp-trust">
-              <li><ShieldCheck aria-hidden="true" />DOT-compliant fleet</li>
-              <li><Tag aria-hidden="true" />Gratuity, tolls &amp; taxes included</li>
-              <li><Headset aria-hidden="true" />24/7 dispatch</li>
-            </ul>
           </div>
         </div>
       </section>

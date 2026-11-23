@@ -1,3 +1,5 @@
+import { withOverrides } from "@/lib/admin/meta-apply";
+import type { Metadata } from "next";
 // FAQs page — dark hero + accordion, same look as the live /faqs/ page.
 // The live questions are kept (brief 7.11 "keep text"); the wider grouped list
 // grows in Phase 3 as more page FAQs are written. FAQPage schema included.
@@ -6,18 +8,27 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import FaqAccordion from "@/components/Faq";
 import { Site } from "@/lib/faq-data";
 import { HOME_FAQS } from "@/lib/site-data";
+import { getContent } from "@/lib/admin/store";
 import { pageMeta } from "@/lib/page-meta";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   title: "Charter Bus Rental FAQs",
   description:
     "Answers about booking, safety, cancellations, amenities and group travel logistics for charter bus rentals nationwide.",
   path: "/faqs/",
-});
+  }));
+}
 
-const ALL = [...Site.faqs, ...HOME_FAQS.filter((f) => !Site.faqs.some((s) => s.q === f.q))];
+const ALL_BUILTIN = [...Site.faqs, ...HOME_FAQS.filter((f) => !Site.faqs.some((s) => s.q === f.q))];
+async function allFaqs(): Promise<{ q: string; a: string }[]> {
+  const c = await getContent();
+  return [...ALL_BUILTIN, ...(c.faqsExtra ?? [])];
+}
 
-export default function FaqsPage() {
+export default async function FaqsPage() {
+  const ALL = await allFaqs();
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",

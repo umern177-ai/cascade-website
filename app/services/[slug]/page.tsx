@@ -5,16 +5,19 @@
 
 import { notFound } from "next/navigation";
 import type { Metadata } from "next";
+import { isAuthed } from "@/lib/admin/auth";
 
 import { fleetMain } from "@/lib/fleet-photos";
 import { SERVICES } from "@/lib/site-data";
 import { SERVICE_META } from "@/lib/fleet-data";
 
 import { pageMeta } from "@/lib/page-meta";
+import { withOverrides } from "@/lib/admin/meta-apply";
+import { getPageBody } from "@/lib/admin/store";
 
 type ServiceFaq = { q: string; a: string };
 
-const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
+export const SERVICE_FAQS: Record<string, ServiceFaq[]> = {
   "corporate-transportation": [
     { q: "Can you provide a recurring employee shuttle, not just a one-time event?", a: "Yes—we arrange both one-time event transportation and recurring shuttle schedules with a consistent driver and vehicle." },
     { q: "Do your vehicles have WiFi for conference attendees?", a: "WiFi, power outlets, an audio system and screens are available on most motorcoaches—tell us this is a requirement when you request your quote and we'll confirm the vehicle." },
@@ -350,14 +353,14 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const meta = SERVICE_META[slug];
   if (!meta) return {};
-  return pageMeta({
+  return pageMeta(await withOverrides({
     title: meta.metaTitle,
     description: meta.metaDescription,
     path: `/services/${slug}/`,
-  });
+  }));
 }
 
-export default async function ServiceDetail({ params }: { params: Promise<{ slug: string }> }) {
+export default async function ServiceDetail({ params, searchParams }: { params: Promise<{ slug: string }>; searchParams: Promise<{ edit?: string }> }) {
   const { slug } = await params;
   const meta = SERVICE_META[slug];
   const faqs = SERVICE_FAQS[slug];
@@ -433,14 +436,21 @@ export default async function ServiceDetail({ params }: { params: Promise<{ slug
   };
 
   // Rolled out Nov 17 (owner approved the wedding demo): every service page
-  // uses the premium pp-* component. The old layout below is retired but kept
-  // in the file as content reference.
+  // uses the premium pp-* component.
+  // Admin live-copy overrides (brief 19.10): H1/intro/FAQs from the editor.
+  const { edit } = await searchParams;
+  const body = await getPageBody(`/services/${slug}/`);
+  const liveMeta = { ...meta, h1: body?.fields?.h1 || meta.h1, intro: body?.fields?.intro || meta.intro };
+  const liveFaqs = body?.faqs ?? faqs;
   const PremiumServicePage = (await import("@/components/PremiumServicePage")).default;
   return (
     <PremiumServicePage
+      editPath={edit === "1" && (await isAuthed()) ? `/services/${slug}/` : undefined}
+      copyH1={body?.fields?.h1 || undefined}
+      copyLead={body?.fields?.intro || undefined}
       slug={slug}
-      meta={meta}
-      faqs={faqs}
+      meta={liveMeta}
+      faqs={liveFaqs}
       photos={photos}
       story={SERVICE_STORY[slug] || []}
       vehiclesFor={(vehiclesFor[slug] as { slug: string; why: string }[] | undefined) || []}

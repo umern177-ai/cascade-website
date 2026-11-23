@@ -8,7 +8,10 @@ import Footer from "@/components/Footer";
 import ConsentBanner from "@/components/ConsentBanner";
 import PickupPrefill from "@/components/PickupPrefill";
 import { SITE } from "@/lib/site-data";
+import HideOnAdmin from "@/components/HideOnAdmin";
+import ConversionClicks from "@/components/ConversionClicks";
 import { orgSchema } from "@/lib/schema";
+import { getSiteConfig } from "@/lib/admin/store";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -56,7 +59,10 @@ export const viewport: Viewport = {
 // Location pages add their LocalBusiness; service/fleet pages add Service —
 // no schema type is ever emitted twice on a page.
 
-export default function RootLayout({ children }: { children: React.ReactNode }) {
+export default async function RootLayout({ children }: { children: React.ReactNode }) {
+  // sitewide schema + custom head code from the admin (Schema manager)
+  const siteConfig = await getSiteConfig();
+  const customSchema = siteConfig.customSchema?.trim();
   return (
     <html lang="en">
       <head>
@@ -68,22 +74,46 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           dangerouslySetInnerHTML={{ __html: JSON.stringify(orgSchema) }}
         />
         <link rel="preconnect" href="https://www.googletagmanager.com" />
+        {customSchema ? (
+          <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: customSchema }} />
+        ) : null}
+        {siteConfig.clarityId && !siteConfig.headHtml?.includes("clarity.ms") ? (
+          <script
+            dangerouslySetInnerHTML={{
+              __html:
+                "(function(c,l,a,r,i,t,y){c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};t=l.createElement(r);t.async=1;t.src='https://www.clarity.ms/tag/'+i;y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);})(window,document,'clarity','script','" +
+                siteConfig.clarityId +
+                "');",
+            }}
+          />
+        ) : null}
+        {siteConfig.headHtml ? (
+          <div style={{ position: "absolute", width: 0, height: 0, overflow: "hidden" }} dangerouslySetInnerHTML={{ __html: siteConfig.headHtml }} />
+        ) : null}
       </head>
       <body className={inter.className}>
-        <Header />
+        {/* admin dashboard: no header/footer/cookie banner (HideOnAdmin) */}
+        <HideOnAdmin>
+          <Header />
+        </HideOnAdmin>
+        <ConversionClicks />
         {children}
-        <Footer />
-        <ConsentBanner />
-        <PickupPrefill />
+        <HideOnAdmin>
+          <Footer />
+          <ConsentBanner />
+          <PickupPrefill />
+        </HideOnAdmin>
 
-        {/* Google Tag Manager — owner-supplied snippet, loaded non-blocking */}
-        <Script id="gtm" strategy="afterInteractive">
-          {`window.dataLayer = window.dataLayer || [];
+        {/* Google Tag Manager — owner-supplied snippet, loaded non-blocking (not on /admin) */}
+        <HideOnAdmin>
+          <Script id="gtm" strategy="afterInteractive">
+            {`window.dataLayer = window.dataLayer || [];
 (function(){var s=document.createElement('script');s.async=true;s.src='https://www.googletagmanager.com/gtm.js?id=${SITE.gtmId}';document.head.appendChild(s);})();`}
-        </Script>
-        <noscript>
-          <iframe src={`https://www.googletagmanager.com/ns.html?id=${SITE.gtmId}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
-        </noscript>
+          </Script>
+          <noscript>
+            <iframe src={`https://www.googletagmanager.com/ns.html?id=${SITE.gtmId}`} height="0" width="0" style={{ display: "none", visibility: "hidden" }} />
+          </noscript>
+        </HideOnAdmin>
       </body>
     </html>
   );

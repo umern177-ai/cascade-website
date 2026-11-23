@@ -14,8 +14,11 @@ import { keptCities, isKept, stateName, nearbyKept, states } from "@/lib/locatio
 import { getStructuredCityPage } from "@/lib/city-page-data";
 import { getCityContent, getCityFallback } from "@/lib/city-content";
 import { pageMeta } from "@/lib/page-meta";
+import { withOverrides } from "@/lib/admin/meta-apply";
+import { getPageBody } from "@/lib/admin/store";
+import { isAuthed } from "@/lib/admin/auth";
 
-type Props = { params: Promise<{ state: string; city: string }> };
+type Props = { params: Promise<{ state: string; city: string }>; searchParams: Promise<{ edit?: string }> };
 
 export const dynamicParams = false;
 
@@ -41,29 +44,34 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     const title = needsAbbr
       ? structured.title.replace(" | Cascade Charter Bus", `, ${stAbbr} | Cascade Charter Bus`)
       : structured.title;
-    return pageMeta({
-      title, // pageMeta's includes-brand guard makes it absolute
-      description: structured.metaDescription,
-      path: `/locations/${state}/${city}/`,
-    });
+    const pagePath = `/locations/${state}/${city}/`;
+    const builtIn = { title, description: structured.metaDescription, path: pagePath };
+    // admin override (brief 19.10): a saved city meta edit wins over the data file
+    return pageMeta(await withOverrides(builtIn));
   }
   const found = keptCities(state).find((c) => c.slug === city);
   if (!found) return {};
-  return pageMeta({
-    title: `Charter Bus Rental in ${found.city}, ${state.toUpperCase()} | Cascade Charter Bus`,
-    description: `Charter bus rental in ${found.city}, ${stateName(state)} for weddings, school trips, sports travel and corporate events. DOT-certified drivers, 24/7 dispatch, final quotes.`,
-    path: `/locations/${state}/${city}/`,
-  });
+  return pageMeta(
+    await withOverrides({
+      title: `Charter Bus Rental in ${found.city}, ${state.toUpperCase()} | Cascade Charter Bus`,
+      description: `Charter bus rental in ${found.city}, ${stateName(state)} for weddings, school trips, sports travel and corporate events. DOT-certified drivers, 24/7 dispatch, final quotes.`,
+      path: `/locations/${state}/${city}/`,
+    })
+  );
 }
 
-export default async function CityPage({ params }: Props) {
+export default async function CityPage({ params, searchParams }: Props) {
   const { state, city } = await params;
+  const { edit } = await searchParams;
   const found = isKept(state, city) ? keptCities(state).find((c) => c.slug === city) : undefined;
   if (!found) notFound();
 
   const structured = getStructuredCityPage(state, city);
   if (structured) {
-    return <PremiumCityPage data={structured} state={state} />;
+    // admin live-copy overrides (brief 19.10): H1 / intro / FAQs from the editor
+    const body = await getPageBody(`/locations/${state}/${city}/`);
+    const editPath = edit === "1" && (await isAuthed()) ? `/locations/${state}/${city}/` : undefined;
+    return <PremiumCityPage data={structured} state={state} body={body} editPath={editPath} />;
   }
 
   // Generic premium page from the real data we hold for this city.

@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { withOverrides } from "@/lib/admin/meta-apply";
 // HTML sitemap page (brief Section 9.6): main pages, services, fleet, states,
 // kept cities grouped by state. Structured layout with the site theme (Nov 12).
 import Link from "next/link";
@@ -6,11 +8,14 @@ import { states, stateName } from "@/lib/locations";
 import { SERVICES, FLEET } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   title: "HTML Sitemap",
   description: "Every page on cascadecharterbus.com: services, fleet, locations and city pages.",
   path: "/sitemap/",
-});
+  }));
+}
 
 const SIMPLE = [
   ["Home", "/"],

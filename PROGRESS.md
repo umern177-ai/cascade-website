@@ -1,4 +1,24 @@
-# PROGRESS
+
+**Nov 19 — ADMIN DASHBOARD (brief Section 19.10) — built + verified on localhost. NOT committed / NOT deployed (owner reviews on localhost first).**
+- Login: /admin/login with the shared team password (env ADMIN_PASSWORD; localhost default "cascade-admin"). Session cookie is HMAC-signed, HttpOnly, 30-day; ADMIN_COOKIE_SECURE=1 should be set on the https production domain.
+- SEO GUY SECOND LIST (Nov 23): verified + closed. (1) www→apex 301 already in next.config; http→https is host-level on Vercel, production domain needs only DNS pointing at the project. (2) Canonical: VERIFIED present on every built page (static, city, service, fleet, blog) via curl of .next HTML — the consultant's finding was from the old live site; custom canonical + robots + OG are admin-editable per page. (3) 404: no canonical emitted (correct), true 404 status. (4) Home headings verified strictly sequential h1→h2→h3 by scanning the built HTML. (5) Conversion tracking: generate_lead pushed to dataLayer on successful quote submit (components/QuoteForm.tsx) plus click_phone / click_email / cta_quote_click click events sitewide (components/ConversionClicks.tsx) — map them to GA4 conversions in GTM. (6) Speed: home hero converted from CSS background to priority next/image (sized AVIF/WebP instead of 224KB fixed webp). (7) Sitemap restructured to the consultant's exact hierarchy: /sitemap.xml index → sitemap-static.xml (12) + sitemap-services.xml (13) + sitemap-fleet.xml (8) + sitemap-locations.xml (758 = 48 states + 710 cities) + sitemap-posts.xml (1); noindex/deleted excluded automatically; old file names 301-redirect (sitemap-pages→posts, locations-states/cities→locations). (8) Footer already links the HTML sitemap /sitemap/, not XML — confirmed. Sitemaps also allowed through middleware while the site is closed (crawlers must reach them).
+- OWNER FEEDBACK PASS (Nov 21): fixed the Redirects page 500 (CSV-import event handler lived in a server component — moved to RedirectImport client component). Extended /admin/pages/edit so EVERY page now opens with its real content: home (hero lines, lead, facts strip, section headings), about (standards cards), contact + locations hub + every state page (hero H1/lead), legal pages (full long-form text sections) — plus the existing city/service/fleet/blog editors. Render side patched to consume these overrides (home, about, contact, hub, state pages verified live; the / h1 'Group buses, done brilliantly — Every Trip.' published from the editor rendered on the site, then restored to default). Verified field counts: home 22, about 16, contact 8, hub 8, state 10, legal 6.
+- SEO CONSULTANT CHECKLIST PASS (Nov 20-21): gaps closed on top of the admin build.
+  Self-referencing canonical remains the default on every page; the page editor's Meta panel now also edits CANONICAL URL, ROBOTS (index-follow / noindex-follow / noindex-nofollow / index-nofollow), OG title, OG description and OG social image per page (verified live on /faqs/: canonical + ogTitle + noindex applied, then restored). Blog editor gained SEO title, canonical, noindex checkbox, OG image, scheduled publish date (future-dated posts stay off /blog/ until the date), updated-date stamp and multi-select categories; slug changes auto-create the 301 (old→new) in the redirect manager and slugs are uniqueness-checked against posts and pages (409 on collision). Sitemap excludes noindex/deleted pages at build. New Schema & tracking admin page: sitewide JSON-LD (validated, injected into every page head), GA4 measurement ID, Microsoft Clarity ID and raw <head> code — all live without deployment. Blog editor: uploads auto-convert to WebP in the browser and the internal-link button opens a searchable picker of all 789 pages. Redirect manager has CSV export + file import (dedupes by source URL). Still true: SSG crawlability, 404s, 410s with noindex, robots.txt with sitemap ref + /admin blocked, next/font, manifest + apple icons, WebP/AVIF, lazy loading, LCP preload, cookie consent.
+- ON-PAGE EDITING (owner request Nov 20): open any city/service/fleet page with ?edit=1 while logged in — pencil icons appear on every editable text block (21–25 per page); click → edit in place → "Save & publish" → the live page updates INSTANTLY (PATCH /api/admin/page-body merges the field + revalidatePath; no deployment, no rebuild). Non-edit mode = identical to the visitor view. The edit bar is click-through (pointer-events: none on the wrapper).
+- FINAL STRUCTURE (after owner's mid-build feedback — WordPress-style): sidebar = Dashboard, ALL PAGES, Blog posts, Meta tags, Page content, Redirects. /admin/pages lists every page of the site (789 in catalog: core + 12 services + 7 fleet + blog + 48 states + 710 cities) search- and filter-able; Edit opens /admin/pages/edit?path=… showing that page's meta tags + its H1/intro/FAQ live copy (city/service/fleet), with save/remove — editing, updating AND deleting existing content in one screen.
+  - Dashboard (/admin/): overview cards + live counts.
+  - Blog posts (/admin/blog): create, edit (built-in guide too), retire, drafts, slug changes; featured image + image uploads INSIDE the content (saved to public/uploads/YYYY-MM/, inserted as <figure> at the cursor); sanitized server-side (no scripts); posts appear on /blog/, /blog/{slug}/ and sitemap-pages.xml automatically.
+  - Meta tags (/admin/meta): title + description overrides for every core, service, fleet page + any path (state pages, blog). Empty = built-in tags.
+  - Page content (/admin/content): three FAQ sets (home, FAQs-page extras, contact), home hero copy, heritage section, services/fleet hub headlines.
+  - City pages (/admin/cities): search all 758 city + state pages; per-page title/description overrides.
+  - Redirects (/admin/redirects): 301/302 rules stored in data/admin/redirects.json; applied by next.config at the next build (local: npm run build; deploy: next push). Slug changes should add their old→new rule here.
+- Plumbing: lib/admin/{store,auth,slugify,sanitize}.ts; save posts via /api/admin/save-post + uploads via /api/admin/upload (cookie-checked, sanitized server-side); server actions for the rest (all guarded); sitemap children now include admin posts (ISG hourly).
+- Data stores ship empty: site falls back to 100% built-in content while the admin fields are blank.
+- Public chrome (header/footer/cookie banner/GTM) is hidden inside /admin (HideOnAdmin). ADMIN_ONLY=1 (.env.local, localhost only) keeps the public website CLOSED while the dashboard is tested: every open URL 307s to the admin login; logged-in admins (cb_admin_open mirror cookie) can still preview pages and use on-page editing. REMOVE the ADMIN_ONLY line from the env before going live.
+- Verified end-to-end in ADMIN_ONLY mode with preview: on-page publish of city (intro + destination tip + section heading), service (H1) and fleet (use case) — saves appear for the editing admin instantly and in normal browsing.
+- KNOWN LIMIT (production later): data/*.json edits don't persist across Vercel builds — wire Vercel Blob / a database for the admin store at deploy time (localhost + self-host work as-is). Verified end-to-end on the production build locally: login, wrong-password rejection, content/meta/city overrides going live, post publishing with in-content image + sitemap entry, redirect storage.
+
 
 Updated every phase. Current status at the top.
 
@@ -1196,3 +1216,22 @@ TODOs left: agency invoicing FAQ not added (invoicing terms not confirmed).
 
 Owner reviews `docs/compare/` → approve template match (Phase 2 done) → Phase 3 polish
 + PageSpeed, then Phase 3b admin.
+
+## Admin history log + staging deploy (Nov 23)
+
+- New admin page: Admin → "History log" (sidebar item added). Every admin save
+  now appends a record to data/admin/history.json via logHistory() in
+  lib/admin/store.ts: meta tags, meta removal, location meta, FAQs & hub copy,
+  page content editor, on-page pencil edits, blog post saves/deletes, redirect
+  add/remove/CSV import, schema & tracking saves. Newest first, capped at 500
+  entries, write is wrapped so history can never break a save.
+- Verified live on localhost:3210: on-page PATCH → entry appears on
+  /admin/history ("On-page edit · / · histtest = …"); test field cleared and
+  history reset after the test; home fields intact (11).
+- tsc clean, next build clean (798 pages).
+- Deployed: committed to main locally and pushed to origin/staging (Vercel
+  branch build → staging URL). Production (main/push) NOT touched.
+- Note: on localhost the "publish without deploying" flow is fully live
+  (revalidatePath). On the hosted staging the file-backed store is still
+  ephemeral (Vercel read-only/lambda storage) — a hosted admin save does not
+  persist until the store is moved to Blob/DB (pending decision).

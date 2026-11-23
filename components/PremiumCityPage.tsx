@@ -27,6 +27,9 @@ import { keptCities, isKept, stateName } from "@/lib/locations";
 import { SITE } from "@/lib/site-data";
 import { localBusinessSchema } from "@/lib/schema";
 import { getCityContent } from "@/lib/city-content";
+import { getPageBody, type PageBody } from "@/lib/admin/store";
+import Editable from "@/components/admin/Editable";
+import EditBar from "@/components/admin/EditBar";
 import type { CityPageData, CityRoute, CityRule } from "@/lib/city-page-data";
 
 const SERVICE_IMAGES: Record<string, string> = {
@@ -44,7 +47,16 @@ function slugId(name: string) {
   return name.toLowerCase().replace(/[''.]/g, "").replace(/[^a-z0-9]+/g, "-").replace(/^-+|-+$/g, "");
 }
 
-export default function PremiumCityPage({ data, state }: { data: CityPageData; state: string }) {
+export default function PremiumCityPage({ data, state, body, editPath }: { data: CityPageData; state: string; body?: PageBody; editPath?: string }) {
+  const F = (body?.fields ?? {}) as Record<string, string | undefined>;
+  const fv = (k: string, built: string) => F[k] || built;
+  // inline editor helper: an Editable wrapper in edit mode, plain copy otherwise
+  const ed = (key: string, built: string, label: string, Tag: "h1" | "h2" | "p" | "span" = "p") =>
+    editPath ? (
+      <Editable key={key} path={editPath} fkey={key} value={fv(key, built)} as={Tag} label={label} />
+    ) : (
+      <Tag>{fv(key, built)}</Tag>
+    );
   const name = data.city;
   const stName = stateName(state);
   const stAbbr = state.toUpperCase();
@@ -54,7 +66,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
 
   const serviceSchema = { "@context": "https://schema.org", "@type": "Service", "@id": `https://cascadecharterbus.com/locations/${state}/${data.slug}/#service`, name: `Charter Bus Rental in ${name}`, areaServed: { "@type": "City", name, containedInPlace: { "@type": "State", name: stName } }, provider: { "@id": "https://cascadecharterbus.com/#organization" } };
   const localBusiness = localBusinessSchema({ path: `/locations/${state}/${data.slug}/`, locationName: `${name}, ${stAbbr}`, description: data.metaDescription, areaServedType: "City", areaServedName: name });
-  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: data.faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
+  const faqSchema = { "@context": "https://schema.org", "@type": "FAQPage", mainEntity: (body?.faqs ?? data.faqs).map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })) };
   // Every city page shows 5 vehicles (owner request: the standard four plus
   // the sleeper). Any of the standard five missing from the city's data is
   // added with a true, generic reason from the fleet data.
@@ -133,6 +145,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusiness) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
+      {editPath && <EditBar path={editPath} />}
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Locations", href: "/locations/" }, { label: stName, href: `/locations/${state}/` }, { label: name }]} />
 
       {/* ===== hero with quote form ===== */}
@@ -142,9 +155,23 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
             <div>
               <p className="pp-eyebrow">{`Charter Bus Rental · ${stName}`}</p>
               <h1>
-                Charter Bus Rental in <em>{`${name}, ${stAbbr}`}</em>
+              {editPath ? (
+                <Editable path={editPath} fkey="h1" value={fv("h1", `Charter Bus Rental in ${name}, ${stAbbr}`)} as="h1" label="Hero H1" />
+              ) : body?.fields?.h1 ? (
+                body.fields.h1
+              ) : (
+                <>
+                  Charter Bus Rental in <em>{`${name}, ${stAbbr}`}</em>
+                </>
+              )}
               </h1>
-              {heroLead && <p className="pp-lead">{heroLead}</p>}
+              {editPath ? (
+                <Editable path={editPath} fkey="intro" value={fv("intro", heroLead || "")} as="p" className="pp-lead" label="Hero intro" />
+              ) : body?.fields?.intro ? (
+                <p className="pp-lead">{body.fields.intro}</p>
+              ) : heroLead ? (
+                <p className="pp-lead">{heroLead}</p>
+              ) : null}
               <div className="pp-hero-ctas">
                 <a className="pp-btn pp-btn-amber" href="/contact/" data-pickup={pickup} data-source={`city-hero:${state}:${data.slug}`} rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>
                 <a className="pp-btn pp-btn-ghost" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" /> {SITE.phoneDisplay}</a>
@@ -255,7 +282,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
         <div className="container">
           <header className="pp-sec-head">
             <p className="pp-eyebrow">What we run in {name}</p>
-            <h2>{data.servicesHeading}</h2>
+            {ed("servicesHeading", data.servicesHeading, "Services section heading", "h2")}
             <p>From daily office loops to once-a-year school trips, each {name} job gets a vehicle and route matched to where you&apos;re going.</p>
           </header>
           <div className="pp-services">
@@ -278,7 +305,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
                         ))}
                       </ul>
                     )}
-                    <p>{sv.text}</p>
+                    {ed(`svc${i}Text`, sv.text, sv.title + " — text")}
                     <a className="pp-link-arrow" href={sv.href}>{SERVICE_LINKS[slug] || sv.title} <ArrowRight aria-hidden="true" /></a>
                   </div>
                 </article>
@@ -293,7 +320,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
         <div className="container">
           <header className="pp-sec-head">
             <p className="pp-eyebrow">Our fleet</p>
-            <h2>{data.vehiclesHeading}</h2>
+            {ed("vehiclesHeading", data.vehiclesHeading, "Fleet section heading", "h2")}
             <p>Pick by headcount and trip length — or tell us both and we&apos;ll match the vehicle for you.</p>
           </header>
           <div className="pp-fleet fleet-slider-m">
@@ -325,7 +352,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
         <div className="container">
           <header className="pp-sec-head">
             <p className="pp-eyebrow">Where {name} groups go</p>
-            <h2>{data.destinationsHeading}</h2>
+            {ed("destinationsHeading", data.destinationsHeading, "Destinations section heading", "h2")}
             <p>Local favorites, with the drop-off advice our drivers actually use.</p>
           </header>
           <div className="pp-dest-layout">
@@ -350,8 +377,8 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
                       )}
                     </div>
                   </div>
-                  <p>{d.text}</p>
-                  <div className="pp-tip"><Lightbulb aria-hidden="true" /><p><strong>Bus drop-off tip:</strong> {d.tip}</p></div>
+                  {ed(`dest${i}Text`, d.text, d.name + " — text")}
+                  <div className="pp-tip"><Lightbulb aria-hidden="true" /><p><strong>Bus drop-off tip:</strong> {ed(`dest${i}Tip`, d.tip, d.name + " — tip")}</p></div>
                 </article>
               ))}
             </div>
@@ -439,7 +466,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
         <div className="container pp-faq-layout">
           <div className="pp-faq-aside">
             <p className="pp-eyebrow">FAQ</p>
-            <h2>{data.faqsHeading}</h2>
+            {ed("faqsHeading", data.faqsHeading, "FAQ section heading", "h2")}
             <p>Quick answers to what {name} groups ask us most. Don&apos;t see yours?</p>
             <div className="pp-help">
               <strong>Talk to dispatch</strong>
@@ -447,7 +474,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
             </div>
           </div>
           <div className="pp-faq">
-            {data.faqs.map((f, i) => (
+            {(body?.faqs ?? data.faqs).map((f, i) => (
               <details key={f.q} open={i === 0}>
                 <summary>{f.q}<span className="pm" aria-hidden="true" /></summary>
                 <div className="pp-answer"><p>{f.a}</p></div>
@@ -461,7 +488,7 @@ export default function PremiumCityPage({ data, state }: { data: CityPageData; s
       <section className="pp-cta-band">
         <div className="container pp-cta-inner">
           <div>
-            <h2>{data.ctaHeading}</h2>
+            {ed("ctaHeading", data.ctaHeading, "Footer CTA heading", "h2")}
             <p>Fast, final quote. Gratuity, tolls and taxes included. Dispatch answers around the clock.</p>
           </div>
           <div className="pp-cta-actions">

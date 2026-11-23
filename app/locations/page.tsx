@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { withOverrides } from "@/lib/admin/meta-apply";
 // Locations hub — same structure as the live hub: H1, one tile per state with
 // a VIEW CITIES button, A–Z. True count of state areas, breadcrumb + intro,
 // per-state city counts, consistent theme (Nov 12 polish).
@@ -6,15 +8,21 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { MapPin } from "lucide-react";
 import { stateCodes, stateName, keptCities, otherCities } from "@/lib/locations";
 import { pageMeta } from "@/lib/page-meta";
+import { getPageBody } from "@/lib/admin/store";
+import { isAuthed } from "@/lib/admin/auth";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   title: "Charter Bus Service Locations in 48 States",
   description:
     "Our service locations: charter bus rental city pages across 48 states. Browse by state for local group transportation, or book from any town in America.",
   path: "/locations/",
-});
+  }));
+}
 
-export default function LocationsHub() {
+export default async function LocationsHub() {
+  const F = (await getPageBody("/locations/"))?.fields ?? {};
   const codes = [...stateCodes()].sort((a, b) => a.localeCompare(b));
   const areas = codes.map((code) => {
     const kept = keptCities(code).length;
@@ -30,10 +38,9 @@ export default function LocationsHub() {
       <section className="py-5 bg-dark text-white" style={{ paddingTop: 140, paddingBottom: 80 }}>
         <div className="container text-center">
           <span className="text-primary fw-bold text-uppercase tracking-widest mb-3 d-block">Service Areas</span>
-          <h1 className="display-4 fw-bold mb-3">Our Service Locations</h1>
+          <h1 className="display-4 fw-bold mb-3">{F.h1 ?? "Our Service Locations"}</h1>
           <p className="lead opacity-75 mx-auto mb-4" style={{ maxWidth: 700 }}>
-            Charter bus rental city pages across {count} states—pick a state to see
-            its destinations, or send the form from any town in America.
+            {F.intro ?? "Charter bus rental city pages across " + count + " states—pick a state to see its destinations, or send the form from any town in America."}
           </p>
           <div className="d-flex justify-content-center flex-wrap gap-3">
             <span className="badge bg-primary text-dark px-4 py-2 rounded-pill x-small-bold">{count} States with City Pages</span>

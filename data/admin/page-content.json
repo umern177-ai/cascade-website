@@ -1,0 +1,17 @@
+{
+  "/": {
+    "fields": {
+      "fact1": "Gratuity, tolls & taxes",
+      "fact2": "Dispatch support",
+      "fact3": "States covered",
+      "fleetH": "A Vehicle for Every Group and Every Trip",
+      "fleetSub": "Pick by headcount and trip length — or tell us both and we’ll match the vehicle for you.",
+      "servicesH": "Charter Bus Services",
+      "servicesSub": "Eight services, one booking team—matched vehicle and driver for every kind of trip.",
+      "tripsH": "Four Ways to Book a Charter Bus",
+      "stepsH": "How to Book a Charter Bus in 4 Steps",
+      "ctaH": "Ready to Book Your Charter Bus?",
+      "ctaP": "Fast, final quote. Gratuity, tolls and taxes included. Dispatch answers around the clock."
+    }
+  }
+}

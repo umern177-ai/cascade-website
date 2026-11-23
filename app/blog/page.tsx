@@ -1,21 +1,27 @@
+import type { Metadata } from "next";
+import { withOverrides } from "@/lib/admin/meta-apply";
 // Blog hub — premium pp-* design matching the rest of the site. Lists every
 // published guide from lib/blog-data.ts. Facts only; no invented content.
 import Link from "next/link";
 import { ArrowRight, Check, ChevronRight, Phone, ShieldCheck, Tag, Headset } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
-import { POSTS } from "@/lib/blog-data";
+import { blogPosts } from "@/lib/blog-serve";
 import Image from "next/image";
 import { pageMeta } from "@/lib/page-meta";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   title: "Charter Bus Trip Guides & Planning Tips",
   description:
     "Practical charter bus planning guides from the Cascade dispatch team: booking timelines, vehicle sizing, route planning and pre-trip checklists.",
   path: "/blog/",
-});
+  }));
+}
 
-export default function BlogHub() {
+export default async function BlogHub() {
+  const posts = await blogPosts();
   return (
     <main className="pp bg-white pp-svc" style={{ fontSize: "inherit" }}>
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Blog" }]} />
@@ -50,10 +56,10 @@ export default function BlogHub() {
             <p>New guides are added as the dispatch team answers real planning questions.</p>
           </header>
           <div className="pp-service-gallery">
-            {POSTS.map((p) => (
+            {posts.map((p) => (
               <Link key={p.slug} href={`/blog/${p.slug}/`} className="pp-hub-card" aria-label={p.title}>
                 <div className="pp-hub-media">
-                  <Image src={p.featuredImage} alt={p.imageAlt || p.title} fill sizes="(max-width: 800px) 100vw, 33vw" style={{ objectFit: "cover" }} />
+                  <Image src={p.image} alt={p.imageAlt || p.title} fill sizes="(max-width: 800px) 100vw, 33vw" style={{ objectFit: "cover" }} loading="lazy" />
                 </div>
                 <div className="pp-hub-body">
                   <span className="pp-badge">{p.date}</span>

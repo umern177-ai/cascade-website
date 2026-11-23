@@ -25,6 +25,9 @@ servicespictures/
 .vscode/settings.json
 __pycache__/
 *.pyc
+*.log
+tsconfig.tsbuildinfo
+nul
 
 .vercel
 .env*

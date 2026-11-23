@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+import { withOverrides } from "@/lib/admin/meta-apply";
 // About page — premium pp-* design (Nov 17), same facts as before, corrected
 // per brief 7.5b: "5+ years of service" (no 10+/15+), no invented trips,
 // drivers or rating numbers. One real testimonial from SITE data.
@@ -9,14 +11,17 @@ import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   // absolute: "About Cascade Charter Bus" would otherwise get the brand
   // appended again by the root template (brand must appear exactly once).
   title: "About Cascade Charter Bus",
   description:
     "About Cascade Charter Bus: group transportation across the US with DOT-certified drivers, 24/7 dispatch, 5+ years of service and coverage in all 50 states.",
   path: "/about/",
-});
+  }));
+}
 
 const STANDARDS = [
   {

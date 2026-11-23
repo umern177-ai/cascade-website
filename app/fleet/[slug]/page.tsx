@@ -12,8 +12,11 @@ import FaqAccordion from "@/components/Faq";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { VEHICLES, getVehicle } from "@/lib/fleet-data";
 import { fleetGallery } from "@/lib/fleet-photos";
+import { getPageBody } from "@/lib/admin/store";
+import { isAuthed } from "@/lib/admin/auth";
 import { SITE } from "@/lib/site-data";
 import { pageMeta } from "@/lib/page-meta";
+import { withOverrides } from "@/lib/admin/meta-apply";
 
 export function generateStaticParams() {
   return VEHICLES.map((v) => ({ slug: v.slug }));
@@ -23,16 +26,17 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
   const { slug } = await params;
   const v = getVehicle(slug);
   if (!v) return {};
-  return pageMeta({
+  return pageMeta(await withOverrides({
     title: v.metaTitle,
     description: v.metaDescription,
     path: `/fleet/${v.slug}/`,
     image: v.photo,
-  });
+  }));
 }
 
-export default async function FleetDetail({ params }: { params: Promise<{ slug: string }> }) {
+export default async function FleetDetail({ params, searchParams }: { params: Promise<{ slug: string }>; searchParams: Promise<{ edit?: string }> }) {
   const { slug } = await params;
+  const { edit } = await searchParams;
   const v = getVehicle(slug);
   if (!v) notFound();
   const others = VEHICLES.filter((o) => o.slug !== v.slug);
@@ -53,11 +57,25 @@ export default async function FleetDetail({ params }: { params: Promise<{ slug: 
     
   };
   const copy = h1Copy[slug] || { h1: `${v.cardName} Rental for `, em: "Groups" };
+  // Admin live-copy overrides (brief 19.10): every text field + FAQ list.
+  const body = await getPageBody(`/fleet/${slug}/`);
+  const F = (body?.fields ?? {}) as Record<string, string | undefined>;
+  const liveVehicle = {
+    ...v,
+    faqs: body?.faqs ?? v.faqs,
+    tagline: F.tagline || v.tagline,
+    intro: F.intro || v.intro,
+    features: v.features.map((x, i) => F["feat" + i] || x),
+    whyChoose: v.whyChoose.map((x, i) => F["why" + i] || x),
+    useCases: v.useCases.map((u, i) => ({ title: F["useCase" + i + "Title"] || u.title, text: F["useCase" + i + "Text"] || u.text })),
+    planningTips: v.planningTips.map((x, i) => F["tip" + i] || x),
+  };
   return (
     <PremiumFleetPage
-      v={v}
+      editPath={edit === "1" && (await isAuthed()) ? `/fleet/${slug}/` : undefined}
+      v={liveVehicle}
       others={others}
-      h1={copy.h1}
+      h1={F.h1 ? `${F.h1} ` : copy.h1}
       em={copy.em}
       gallery={fleetGallery(v.slug).slice(1)}
     />

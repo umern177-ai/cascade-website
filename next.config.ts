@@ -37,6 +37,19 @@ const nextConfig: NextConfig = {
     } catch {
       removed = [];
     }
+    // SEO consultant Nov 2026: old hierarchy file names moved (index entries)
+    // Admin-managed rules (brief 19.10): data/admin/redirects.json.
+    // Read at build/start; the admin stores the rules, a rebuild applies them.
+    try {
+      const admin = JSON.parse(
+        await fs.promises.readFile(path.join(process.cwd(), "data", "admin", "redirects.json"), "utf8")
+      ) as Array<{ from: string; to: string; status: number }>;
+      for (const r of admin) {
+        removed.push({ source: r.from, destination: r.to, permanent: r.status === 301 });
+      }
+    } catch {
+      // no admin redirects yet
+    }
     const all: Array<{ source: string; destination: string; permanent: boolean }> = [...base, ...removed];
     return all as any;
   },

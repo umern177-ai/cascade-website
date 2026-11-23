@@ -13,6 +13,8 @@ import { VEHICLES, type Vehicle } from "@/lib/fleet-data";
 import VehiclePhoto from "@/components/VehiclePhoto";
 import { fleetShots } from "@/lib/fleet-photos";
 import { serviceSchema as serviceSchemaOf } from "@/lib/schema";
+import Editable from "@/components/admin/Editable";
+import EditBar from "@/components/admin/EditBar";
 
 const FACTS = [
   { dt: "Quote reply time", dd: "15", unit: "min" },
@@ -21,7 +23,7 @@ const FACTS = [
   { dt: "States covered", dd: "50", unit: "" },
 ];
 
-export default function PremiumFleetPage({ v, others, h1, em, gallery = [] }: { v: Vehicle; others: Vehicle[]; h1?: string; em?: string; gallery?: string[] }) {
+export default function PremiumFleetPage({ v, others, h1, em, gallery = [], editPath }: { v: Vehicle; others: Vehicle[]; h1?: string; em?: string; gallery?: string[]; editPath?: string }) {
   const h1Plain = h1 || `${v.cardName} Rental for `;
   const h1Em = em || "Groups";
   const serviceSchema = serviceSchemaOf({
@@ -128,8 +130,8 @@ export default function PremiumFleetPage({ v, others, h1, em, gallery = [] }: { 
         <div className="container">
           <header className="pp-sec-head">
             <p className="pp-eyebrow">What this vehicle is</p>
-            <h2>{v.tagline}</h2>
-            <p>{v.intro}</p>
+            <h2>{editPath ? <Editable path={editPath} fkey="tagline" value={v.tagline} as="h2" label="Section heading" /> : v.tagline}</h2>
+            <p>{editPath ? <Editable path={editPath} fkey="intro" value={v.intro} as="p" className="pp-lead" label="Intro" /> : v.intro}</p>
           </header>
           <div className="pp-vhero">
             <Image src={v.photo} alt={`${v.cardName} - Cascade Charter Bus`} fill sizes="(max-width: 900px) 100vw, 90vw" style={{ objectFit: "cover" }} priority />
@@ -174,8 +176,8 @@ export default function PremiumFleetPage({ v, others, h1, em, gallery = [] }: { 
           </header>
           <div className="pp-list-card">
             <ul className="pp-checklist" style={{ width: "100%" }}>
-              {v.features.map((feat) => (
-                <li key={feat}><Check aria-hidden="true" /><span>{feat}</span></li>
+              {v.features.map((feat, fIndex) => (
+                <li key={feat}><Check aria-hidden="true" /><span>{editPath ? <Editable path={editPath} fkey={"feat" + fIndex} value={feat} as="span" label={"Feature: " + feat.slice(0, 24)} /> : feat}</span></li>
               ))}
             </ul>
           </div>
@@ -196,11 +198,11 @@ export default function PremiumFleetPage({ v, others, h1, em, gallery = [] }: { 
             ))}
           </div>
           <div className="row g-3">
-            {v.whyChoose.map((w) => (
+            {v.whyChoose.map((w, wIndex) => (
               <div className="col-md-6" key={w}>
                 <div className="p-3 h-100 d-flex align-items-start gap-2" style={{ background: "var(--pp-white)", border: "1px solid var(--pp-line)", borderRadius: 16 }}>
                   <Check size={16} style={{ color: "var(--pp-amber)", flexShrink: 0, marginTop: 3 }} aria-hidden="true" />
-                  <p className="mb-0" style={{ color: "var(--pp-ink)", fontSize: "0.95rem", lineHeight: 1.6 }}>{w}</p>
+                  <p className="mb-0" style={{ color: "var(--pp-ink)", fontSize: "0.95rem", lineHeight: 1.6 }}>{editPath ? <Editable path={editPath} fkey={"why" + wIndex} value={w} as="span" label={"Reason " + (wIndex + 1)} /> : w}</p>
                 </div>
               </div>
             ))}
@@ -217,10 +219,10 @@ export default function PremiumFleetPage({ v, others, h1, em, gallery = [] }: { 
             <p>How customers actually use the {v.ctaName.toLowerCase()}, so you can match it to your own trip.</p>
           </header>
           <div className="pp-service-gallery">
-            {v.useCases.map((u) => (
+            {v.useCases.map((u, ucIndex) => (
               <div key={u.title} style={{ background: "var(--pp-white)", border: "1px solid var(--pp-line)", borderRadius: 22, padding: "1.6rem 1.7rem" }}>
-                <h3 style={{ fontSize: "1.12rem", fontWeight: 800, color: "var(--pp-ink)", marginBottom: 8 }}>{u.title}</h3>
-                <p className="mb-0" style={{ color: "var(--pp-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>{u.text}</p>
+                <h3 style={{ fontSize: "1.12rem", fontWeight: 800, color: "var(--pp-ink)", marginBottom: 8 }}>{editPath ? <Editable path={editPath} fkey={"useCase" + ucIndex + "Title"} value={u.title} as="span" label={u.title + " title"} /> : u.title}</h3>
+                <p className="mb-0" style={{ color: "var(--pp-muted)", fontSize: "0.95rem", lineHeight: 1.65 }}>{editPath ? <Editable path={editPath} fkey={"useCase" + ucIndex + "Text"} value={u.text} as="span" label={u.title + " text"} /> : u.text}</p>
               </div>
             ))}
           </div>
@@ -239,7 +241,7 @@ export default function PremiumFleetPage({ v, others, h1, em, gallery = [] }: { 
             {v.planningTips.map((tip, i) => (
               <li className="pp-step" key={i}>
                 <div className="pp-step-num" aria-hidden="true">{i + 1}</div>
-                <p style={{ color: "#e7eaf2", fontWeight: 600, fontSize: "1.02rem", margin: 0, lineHeight: 1.6 }}>{tip}</p>
+                <p style={{ color: "#e7eaf2", fontWeight: 600, fontSize: "1.02rem", margin: 0, lineHeight: 1.6 }}>{editPath ? <Editable path={editPath} fkey={"tip" + i} value={tip} as="span" label={"Planning tip " + (i + 1)} /> : tip}</p>
               </li>
             ))}
           </ol>

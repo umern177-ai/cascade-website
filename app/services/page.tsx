@@ -1,3 +1,6 @@
+import type { Metadata } from "next";
+import { withOverrides } from "@/lib/admin/meta-apply";
+import { getContent } from "@/lib/admin/store";
 // Services hub — premium pp-* design (Nov 17): matches the city-page frame.
 // Dark hero + quote form, facts strip, all 12 service cards with real photos,
 // dark process band, FAQ, amber CTA band. Same real data as before, nothing
@@ -13,12 +16,15 @@ import { SITE } from "@/lib/site-data";
 import { fleetMain } from "@/lib/fleet-photos";
 import { pageMeta } from "@/lib/page-meta";
 
-export const metadata = pageMeta({
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(await withOverrides({
+
   title: "Charter Bus Services & Group Travel",
   description:
     "Charter bus services for corporate events, weddings, schools, sports teams, airport transfers, sightseeing tours, church groups and band tours—nationwide.",
   path: "/services/",
-});
+  }));
+}
 
 const SERVICES_FAQS = [
   {
@@ -74,7 +80,9 @@ const FACTS = [
   { dt: "States covered", dd: "50", unit: "" },
 ];
 
-export default function ServicesHub() {
+export default async function ServicesHub() {
+  // admin overrides for the hub headline (brief 19.10)
+  const c = await getContent();
   const serviceSchema = {
     "@context": "https://schema.org",
     "@type": "ItemList",
@@ -99,11 +107,16 @@ export default function ServicesHub() {
             <div>
               <p className="pp-eyebrow">Charter Services · Every Kind of Group</p>
               <h1>
-                Charter Bus Services for <em>Every Kind of Group</em>
+                {c.servicesHub?.heading ? (
+                  c.servicesHub.heading
+                ) : (
+                  <>
+                    Charter Bus Services for <em>Every Kind of Group</em>
+                  </>
+                )}
               </h1>
               <p className="pp-lead">
-                Weddings, conferences, school trips, teams, tours and unit moves—planned,
-                quoted and run the same disciplined way, across all 50 states.
+                {c.servicesHub?.sub ?? "Weddings, conferences, school trips, teams, tours and unit moves—planned, quoted and run the same disciplined way, across all 50 states."}
               </p>
               <div className="pp-hero-ctas">
                 <a className="pp-btn pp-btn-amber" href="/contact/" data-source="services-hero" rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>

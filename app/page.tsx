@@ -4,7 +4,10 @@
 // start with the direct answer.
 import { fleetMain, fleetShots } from "@/lib/fleet-photos";
 import VehiclePhoto from "@/components/VehiclePhoto";
+import type { Metadata } from "next";
 import { preload } from "react-dom";
+import { withOverrides } from "@/lib/admin/meta-apply";
+import { getContent, getPageBody } from "@/lib/admin/store";
 import Image from "next/image";
 import Link from "next/link";
 import {
@@ -75,12 +78,16 @@ function Stars() {
   );
 }
 
-export const metadata = pageMeta({
-  title: "Charter Bus Rental | Cascade Charter Bus",
-  description:
-    "Charter bus rental for group trips of every size—from weddings and field trips to corporate events and band tours. All 50 states, 24/7 dispatch, final quotes.",
-  path: "/",
-});
+export async function generateMetadata(): Promise<Metadata> {
+  return pageMeta(
+    await withOverrides({
+      title: "Charter Bus Rental | Cascade Charter Bus",
+      description:
+        "Charter bus rental for group trips of every size—from weddings and field trips to corporate events and band tours. All 50 states, 24/7 dispatch, final quotes.",
+      path: "/",
+    })
+  );
+}
 
 // LCP: the hero photo is a CSS background, so it must be preloaded explicitly
 // (the layout comment claimed this for every page — it is only true here, where
@@ -90,12 +97,16 @@ export const metadata = pageMeta({
 // <link rel="preload"> into the server-rendered head. (ReactDOM.preload is not
 // hoisted into prerendered HTML in this Next version, so the element form below
 // is used instead.)
-export default function Home() {
+export default async function Home() {
   preload("/hero-bus.webp", { as: "image", fetchPriority: "high" });
+  // Admin overrides (brief 19.10): FAQs + hero copy fall back to the built-ins.
+  const c = await getContent();
+  const F = (await getPageBody("/"))?.fields ?? {};
+  const faqs = c.homeFaqs ?? HOME_FAQS;
   const faqSchema = {
     "@context": "https://schema.org",
     "@type": "FAQPage",
-    mainEntity: HOME_FAQS.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
   };
   return (
     <main className="pp pp-svc">
@@ -118,17 +129,14 @@ export default function Home() {
           <div style={{ maxWidth: 820, padding: "5rem 0 7rem" }}>
             <p className="pp-eyebrow">Premium Group Transportation</p>
             <h1>
-              Charter Bus Travel, <br />
-              <em>Elevated.</em>
+              {F.h1 ?? "Charter Bus Travel,"} <br />
+              <em>{F.h1line2 ?? "Elevated."}</em>
             </h1>
             <p className="pp-lead">
-              Some trips are more than just travel. Cascade Charter Bus knows the value of
-              your gatherings—whether it&apos;s a wedding, group excursion, winery tour, or
-              corporate conference.
+              {F.intro ?? c.homeHero?.lead ?? "Some trips are more than just travel. Cascade Charter Bus knows the value of your gatherings—whether it’s a wedding, group excursion, winery tour, or corporate conference."}
             </p>
             <p className="mb-0" style={{ color: "#c9cfdc", fontSize: "0.98rem", maxWidth: 620 }}>
-              From a 7-seat SUV to a full 56-seat motorcoach—modern vehicles for every size
-              of group, with professional, DOT-certified drivers. Because your safety is everything.
+              {F.sub ?? c.homeHero?.sub ?? "From a 7-seat SUV to a full 56-seat motorcoach—modern vehicles for every size of group, with professional, DOT-certified drivers. Because your safety is everything."}
             </p>
             <div className="pp-hero-ctas">
               <Link className="pp-btn pp-btn-amber" href="/contact/" data-source="home-hero" rel="nofollow">
@@ -149,10 +157,24 @@ export default function Home() {
       <section className="pp-facts" aria-label="Cascade Charter Bus key facts">
         <div className="container">
           <dl className="pp-facts-grid">
-            <div className="pp-fact"><dt>Quote reply time</dt><dd>15<small>min</small></dd></div>
-            <div className="pp-fact"><dt>Gratuity, tolls &amp; taxes</dt><dd>Included</dd></div>
-            <div className="pp-fact"><dt>Dispatch support</dt><dd>24/7</dd></div>
-            <div className="pp-fact"><dt>States covered</dt><dd>50</dd></div>
+            {F.facts
+              ? F.facts.split("|").map((fx, i) => {
+                  const [ddv, dtv] = fx.split("=");
+                  return (
+                    <div className="pp-fact" key={i}>
+                      <dt>{dtv}</dt>
+                      <dd>{ddv}<small>{ddv.match(/^(15|5\+)$/) ? "" : ""}</small></dd>
+                    </div>
+                  );
+                })
+              : (
+                <>
+                  <div className="pp-fact"><dt>Quote reply time</dt><dd>15<small>min</small></dd></div>
+                  <div className="pp-fact"><dt>Gratuity, tolls &amp; taxes</dt><dd>Included</dd></div>
+                  <div className="pp-fact"><dt>Dispatch support</dt><dd>24/7</dd></div>
+                  <div className="pp-fact"><dt>States covered</dt><dd>50</dd></div>
+                </>
+              )}
           </dl>
         </div>
       </section>
@@ -163,12 +185,9 @@ export default function Home() {
           <div className="row align-items-center g-4">
             <div className="col-lg-6">
               <span className="text-brand-dark fw-bold text-uppercase tracking-wider">Our Heritage</span>
-              <h2 className="fw-bold text-dark mt-2 mb-3" style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)" }}>Built on Punctuality, Honesty, and Hard Work</h2>
+              <h2 className="fw-bold text-dark mt-2 mb-3" style={{ fontSize: "clamp(1.6rem, 2.6vw, 2.2rem)" }}>{c.heritage?.heading ?? "Built on Punctuality, Honesty, and Hard Work"}</h2>
               <p className="text-muted mb-3" style={{ fontSize: "1rem" }}>
-                Cascade Charter Bus started with one vehicle, a small garage, and a core
-                belief: punctuality and honesty come first on every journey. We didn&apos;t
-                become a company with routes in all 50 states overnight—we grew one trip,
-                one customer, one referral at a time.
+                {c.heritage?.body ?? "Cascade Charter Bus started with one vehicle, a small garage, and a core belief: punctuality and honesty come first on every journey. We didn't become a company with routes in all 50 states overnight—we grew one trip, one customer, one referral at a time."}
               </p>
               <div className="d-flex align-items-center gap-3 p-3 bg-light rounded-3 border-start border-primary border-4">
                 <Award size={32} className="text-primary flex-shrink-0" aria-hidden="true" />
@@ -415,7 +434,7 @@ export default function Home() {
           </div>
           <div className="row g-4 justify-content-center">
             <div className="col-lg-10">
-              <FaqAccordion faqs={HOME_FAQS} idPrefix="home-faq" />
+              <FaqAccordion faqs={faqs} idPrefix="home-faq" />
             </div>
           </div>
         </div>

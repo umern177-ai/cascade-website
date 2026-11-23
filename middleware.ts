@@ -11,13 +11,34 @@ type SlugMap = Record<string, string[]>;
 const KEPT = keptSlugs as SlugMap;
 const KEPT_STATES = new Set(Object.keys(KEPT));
 
+// 0b. ADMIN_ONLY mode (e.g. testing on localhost): the public website stays
+// closed and every URL opens the admin login instead. Off unless the
+// ADMIN_ONLY=1 env var is set, so production is never affected.
 export const config = {
-  // Skip internal assets and the API/admin surfaces.
-  matcher: ["/((?!api/|_next/|favicon|robots.txt|sitemap|llms.txt|images/|brand/|manifest).*)"],
+  matcher: ["/((?!_next/|favicon|robots.txt|sitemap|llms.txt|images/|brand/|manifest|uploads/).*?)"],
 };
 
 export default function middleware(req: NextRequest) {
   const { pathname } = req.nextUrl;
+
+  // ADMIN_ONLY gate (env-gated: production never sets ADMIN_ONLY): the whole
+  // public site is closed and every URL opens the admin login instead.
+  // /admin/*, /api/admin/* and admin assets always pass through, and a
+  // logged-in admin can still preview the closed site (mirror cookie).
+  if (process.env.ADMIN_ONLY === "1") {
+    const isAdminSurface =
+      pathname === "/admin" ||
+      pathname.startsWith("/admin/") ||
+      pathname.startsWith("/api/admin") ||
+      pathname.startsWith("/uploads");
+    const hasSession = !!req.cookies.get("cb_admin_open");
+    if (!isAdminSurface && !hasSession) {
+      const url = req.nextUrl.clone();
+      url.pathname = "/admin/login";
+      url.search = "";
+      return NextResponse.redirect(url, 307);
+    }
+  }
 
   // 0. STAGING flag read once: deployments with STAGING=1 are never indexable
   //    (robots.txt blocks crawling; the header below keeps discovered URLs out

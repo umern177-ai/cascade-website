@@ -12,6 +12,8 @@ import { SITE } from "@/lib/site-data";
 import VehiclePhoto from "@/components/VehiclePhoto";
 import { fleetMain, fleetShots } from "@/lib/fleet-photos";
 import { serviceSchema as serviceSchemaOf } from "@/lib/schema";
+import Editable from "@/components/admin/Editable";
+import EditBar from "@/components/admin/EditBar";
 import { VEHICLES } from "@/lib/fleet-data";
 
 type Photo = { src: string; alt: string };
@@ -138,6 +140,9 @@ export default function PremiumServicePage({
   trips,
   crossLinks,
   siblings,
+  editPath,
+  copyH1,
+  copyLead,
 }: {
   slug: string;
   meta: { name: string; title: string; eyebrow: string; h1: string; intro: string; metaTitle: string; metaDescription: string; lastUpdated?: string };
@@ -148,6 +153,9 @@ export default function PremiumServicePage({
   trips: string[];
   crossLinks: { href: string; anchor: string; lead: string }[];
   siblings: { slug: string; name: string }[];
+  editPath?: string;
+  copyH1?: string;
+  copyLead?: string;
 }) {
   const f = FEATURED[slug];
   const serviceSchema = serviceSchemaOf({
@@ -168,17 +176,18 @@ export default function PremiumServicePage({
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
 
       <Breadcrumbs items={[{ label: "Home", href: "/" }, { label: "Services", href: "/services/" }, { label: meta.title }]} />
+      {editPath && <EditBar path={editPath} />}
 
       {/* ===== hero with quote form (same frame as city pages) ===== */}
       <section className="pp-hero">
         <div className="container">
           <div className="pp-hero-grid">
             <div>
-              <p className="pp-eyebrow">{`${meta.name} · ${meta.eyebrow}`}</p>
+              <p className="pp-eyebrow">{editPath ? `${meta.name} · ` : `${meta.name} · `}{editPath ? <Editable path={editPath} fkey="eyebrow" value={meta.eyebrow} as="span" label="Eyebrow" /> : meta.eyebrow}</p>
               <h1>
-                {f.h1} <em>{f.em}</em>
+                {editPath ? <Editable path={editPath} fkey="h1" value={`${copyH1 ?? `${f.h1} ${f.em}`}`} as="span" label="Page H1" /> : copyH1 ? <>{copyH1}</> : <>{f.h1} <em>{f.em}</em></>}
               </h1>
-              <p className="pp-lead">{f.lead}</p>
+              <p className="pp-lead">{editPath ? <Editable path={editPath} fkey="intro" value={copyLead ?? f.lead} as="p" className="" label="Intro" /> : copyLead ? <>{copyLead}</> : f.lead}</p>
               <div className="pp-hero-ctas">
                 <a className="pp-btn pp-btn-amber" href="/contact/" data-source={`service-hero:${slug}`} rel="nofollow">Get a Free Quote <ArrowRight aria-hidden="true" /></a>
                 <a className="pp-btn pp-btn-ghost" href={`tel:${SITE.phoneTel}`}><Phone aria-hidden="true" /> {SITE.phoneDisplay}</a>

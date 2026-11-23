@@ -11,6 +11,7 @@ import { keptCities, otherCities, stateName, stateCodes } from "@/lib/locations"
 import { neighborStates } from "@/lib/state-neighbors";
 import { VEHICLES } from "@/lib/fleet-data";
 import { pageMeta } from "@/lib/page-meta";
+import { withOverrides } from "@/lib/admin/meta-apply";
 import { localBusinessSchema } from "@/lib/schema";
 
 export const dynamicParams = false;
@@ -54,12 +55,13 @@ function SectionHead({ eyebrow, title, sub }: { eyebrow: string; title: string; 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { state } = await params;
   const name = stateName(state);
-  return pageMeta({
-    title: `Charter Bus Rental in ${name} | Cascade Charter Bus`,
-    description:
-      `Charter bus rental across ${name}. Pick your city to see local group transportation, or open the booking form with pickup pre-filled. 24/7 dispatch.`,
-    path: `/locations/${state}/`,
-  });
+  return pageMeta(
+    await withOverrides({
+      title: `Charter Bus Rental in ${name} | Cascade Charter Bus`,
+      description: `Charter bus rental across ${name}. Pick your city to see local group transportation, or open the booking form with pickup pre-filled. 24/7 dispatch.`,
+      path: `/locations/${state}/`,
+    })
+  );
 }
 
 export default async function StatePage({ params }: Props) {

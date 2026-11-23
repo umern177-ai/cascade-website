@@ -76,6 +76,17 @@ export default function QuoteForm() {
       if (res.ok) {
         setStatus("ok");
         form.reset();
+        // conversion event for GA4/GTM (consultant checklist #17): the key
+        // website conversion — a quote request successfully sent.
+        try {
+          (window as unknown as { dataLayer: object[] }).dataLayer = (window as unknown as { dataLayer: object[] }).dataLayer || [];
+          (window as unknown as { dataLayer: object[] }).dataLayer.push({
+            event: "generate_lead",
+            form_type: "quote_request",
+            trip_type: tripType,
+            page_path: window.location.pathname,
+          });
+        } catch {}
       } else {
         const j = await res.json().catch(() => ({}));
         setErrorMsg(j.error || "Something went wrong. Please try again or call us.");

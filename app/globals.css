@@ -922,6 +922,8 @@ button.custom-nav-link { min-width: 24px; min-height: 24px; }
   transition: fill 0.15s ease;
 }
 .us-map .us-map-states path:hover { fill: #2c313c; stroke: var(--fleet-orange); }
+.us-map .us-map-pin { opacity: 0.85; transition: opacity 0.2s ease; }
+.us-map .us-map-pin-hot { opacity: 1; }
 .us-map a { outline: none; }
 .us-map a:focus-visible circle { stroke: var(--fleet-orange); stroke-width: 3; }
 .us-map .us-map-halo {

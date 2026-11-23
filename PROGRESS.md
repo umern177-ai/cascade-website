@@ -1235,3 +1235,22 @@ Owner reviews `docs/compare/` → approve template match (Phase 2 done) → Phas
   (revalidatePath). On the hosted staging the file-backed store is still
   ephemeral (Vercel read-only/lambda storage) — a hosted admin save does not
   persist until the store is moved to Blob/DB (pending decision).
+
+## Admin password changed + contact map fix (Nov 23)
+
+- New owner-chosen admin password deployed: .env.local (localhost, escaped
+  `$$` so dotenv-expansion keeps both dollars) and Vercel ADMIN_PASSWORD env
+  (Preview + Production). Old password and its sessions are dead. The value
+  is never committed (.env.local gitignored).
+- .env gotcha recorded: plain `cascade$$7890` in .env.local resolves to
+  `cascade` (dotenv-expand collapses `$$`); it must be written with a
+  backslash per dollar: `cascade\$\$7890` -> literal `cascade$$7890`.
+  Vercel env values are stored literally (no expansion), so the CLI value
+  is typed as-is.
+- Contact map glitch fixed (commit e2c1a8a, pushed to staging): the dashed
+  "signal" line used to render UNDER the state fills and only peeked through
+  thin gaps on hover (looked broken). It now draws on top of the states;
+  tap circles still handle clicks. Also memoized the 51 polygon-area
+  computations at module load so hover no longer recomputes them (stutter
+  fix). Verified in a real browser via Playwright: hover shows the clean
+  NY -> state dash line + state name, zero console errors, zero layout shift.

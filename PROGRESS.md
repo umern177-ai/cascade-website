@@ -1269,3 +1269,19 @@ Owner reviews `docs/compare/` → approve template match (Phase 2 done) → Phas
 - Verified in-browser: fast zig-zag sweep triggered 12 state transitions with
   zero console errors, zero layout shift, no snap-back; tsc + build clean.
   Pushed to staging (Vercel check pending at time of note).
+
+## Admin password corrected (Nov 23/24)
+
+- The Vercel ADMIN_PASSWORD had been stored with literal backslashes
+  (`cascade\$\$7890`) because the shell printf leaked them in — owners typed
+  the right password and got rejected. Replaced the value in place
+  (`vercel env update`, byte-verified: exactly `cascade$$7890`, 13 chars) and
+  redeployed staging (`vercel redeploy`).
+- Verified end-to-end in a real browser on BOTH hosts: typing the password
+  into the actual /admin/login form logs in and shows the dashboard + History
+  sidebar; a wrong password still shows the error. Staging alias
+  cascade-website-git-staging-umer-5179.vercel.app confirmed on the fresh
+  deployment.
+- Lesson for future env changes: values with $ go in via node stdout
+  (fromCharCode), never shell printf/echo; secrets are unreadable later, so
+  verify by behavior (real-form login test), not by listing.

@@ -1,0 +1,10 @@
+[
+  {
+    "id": "u-owner",
+    "name": "Owner",
+    "email": "owner@cascadecharterbus.com",
+    "role": "admin",
+    "salt": "105f5a6139b2fffa0c7bef3aac770d14",
+    "hash": "016de354399d45c1f325ccfebd9c736c90ede3f39b28e263c2c464ea8dcca080"
+  }
+]

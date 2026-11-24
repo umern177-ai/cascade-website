@@ -1,97 +1,104 @@
-// Meta tags editor: title + meta description for EVERY page — core, services,
-// fleet, blog, plus the full city/state browser (710 + 48). Values here
-// override the defaults; clearing both removes the override (the page falls
-// back to its built-in tags).
-import { getMetaFile, AdminMeta, MetaFile } from "@/lib/admin/store";
-import { SERVICES, FLEET } from "@/lib/site-data";
-import { saveMetaAction, removeMetaAction } from "../../actions";
+// Meta Tags bulk view (Admin Panel Upgrade Phase 5, section 7.1): a paginated
+// table of ALL pages with the title and description inline-edited per row,
+// problem highlighting (missing / too long / too short / duplicate), CSV
+// export and import with a preview-before-save flow.
+import Link from "next/link";
+import { pageCatalog } from "@/lib/admin/page-catalog";
+import { getMetaFile } from "@/lib/admin/store";
+import MetaCell from "@/components/admin/MetaCell";
 import { Tags } from "lucide-react";
+import MetaBulkImport from "@/components/admin/MetaBulkImport";
 
-const STATIC_PAGES: { path: string; label: string }[] = [
-  { path: "/", label: "Home" },
-  { path: "/about/", label: "About" },
-  { path: "/contact/", label: "Contact" },
-  { path: "/faqs/", label: "FAQs" },
-  { path: "/blog/", label: "Blog hub" },
-  { path: "/services/", label: "Services hub" },
-  { path: "/fleet/", label: "Fleet hub" },
-  { path: "/locations/", label: "Locations hub" },
-  { path: "/privacy-policy/", label: "Privacy policy" },
-  { path: "/termsandconditions/", label: "Terms & conditions" },
-  { path: "/cancellation-policy/", label: "Cancellation policy" },
-];
+export const dynamic = "force-dynamic";
 
-function MetaRow({ path: p, label, value }: { path: string; label: string; value?: AdminMeta }) {
-  return (
-    <details className="adm-acc" open={!!value}>
-      <summary>
-        <span>{label}</span>
-        <code>{p}</code>
-        {value && <span className="adm-chip adm-chip-ok">custom</span>}
-      </summary>
-      <form action={saveMetaAction} className="adm-form">
-        <input type="hidden" name="path" value={p} />
-        <label className="adm-label">Title <span className="adm-hint-inline">{(value?.title || "").length}/60 · brand is added automatically unless included</span></label>
-        <input className="adm-input" name="title" defaultValue={value?.title || ""} maxLength={120} placeholder="Leave empty to keep the built-in title" />
-        <label className="adm-label">Meta description <span className="adm-hint-inline">{(value?.description || "").length}/160 (120–160 ideal)</span></label>
-        <textarea className="adm-input" name="description" rows={2} defaultValue={value?.description || ""} maxLength={320} placeholder="Leave empty to keep the built-in description" />
-        <div className="adm-inline">
-          <button className="adm-btn adm-btn-primary" type="submit">Save</button>
-          {value && (
-            <button className="adm-btn adm-danger-btn" type="submit" formAction={removeMetaAction}>Remove override</button>
-          )}
-          <a className="adm-btn" href={p} target="_blank" rel="noreferrer">Open page</a>
-        </div>
-      </form>
-    </details>
-  );
-}
+export default async function AdminMetaBulk({
+  searchParams,
+}: {
+  searchParams: Promise<{ q?: string; type?: string; page?: string; problem?: string }>;
+}) {
+  const sp = await searchParams;
+  const [catalog, meta] = await Promise.all([pageCatalog(), getMetaFile()]);
 
-export default async function AdminMetaPage({ searchParams }: { searchParams: Promise<{ saved?: string }> }) {
-  const { saved } = await searchParams;
-  const file: MetaFile = await getMetaFile();
+  const q = (sp.q || "").toLowerCase().trim();
+  const filtered = catalog
+    .map((c) => ({ ...c, saved: meta[c.path] }))
+    .filter((c) => (!q || `${c.title} ${c.path}`.toLowerCase().includes(q)));
+
+  // duplicate detection across the WHOLE meta file
+  const slugifyTitle = (t?: string) => (t || "").trim().toLowerCase().slice(0, 64);
+  const dupTitles = new Map<string, number>();
+  const dupDescs = new Map<string, number>();
+  const titlesSeen = new Map<string, string[]>();
+  const descsSeen = new Map<string, string[]>();
+  for (const c of filtered) {
+    const t = slugifyTitle(c.saved?.title);
+    const d = (c.saved?.description || "").trim().toLowerCase().slice(0, 64);
+    if (t) titlesSeen.set(t, [...(titlesSeen.get(t) ?? []), c.path]);
+    if (d) descsSeen.set(d, [...(descsSeen.get(d) ?? []), c.path]);
+  }
+  for (const [k, paths] of titlesSeen) if (paths.length > 1) for (const p of paths) dupTitles.set(p, (dupTitles.get(p) ?? 0) + paths.length);
+  for (const [k, paths] of descsSeen) if (paths.length > 1) for (const p of paths) dupDescs.set(p, (dupDescs.get(p) ?? 0) + paths.length);
+
+  const isProblem = (row: (typeof filtered)[number]) => {
+    const t = (row.saved?.title || "").trim();
+    const d = (row.saved?.description || "").trim();
+    return !t || t.length < 30 || t.length > 70 || !d || d.length < 90 || d.length > 165 || dupTitles.has(row.path) || dupDescs.has(row.path);
+  };
+  const problemCount = filtered.filter(isProblem).length;
 
   return (
     <>
       <header className="adm-page-head">
-        <div><h1>Meta tags</h1><p>Every page: core, services, fleet, blog and all city/state pages. Empty fields keep the built-in tags.</p></div>
+        <div>
+          <h1>Meta tags — bulk view</h1>
+          <p>{filtered.length} pages · {problemCount} needing attention (missing / short / long / duplicate). Click a cell to edit it.</p>
+        </div>
         <Tags aria-hidden="true" />
       </header>
-      {saved && <div className="adm-alert">Saved meta for <code>{saved}</code>.</div>}
 
-      <div className="adm-panel">
-        <h2>Core pages</h2>
-        {STATIC_PAGES.map((s) => <MetaRow key={s.path} path={s.path} label={s.label} value={file[s.path]} />)}
-      </div>
-
-      <div className="adm-panel">
-        <h2>Service pages</h2>
-        {SERVICES.map((s) => {
-          const p = `/services/${s.slug}/`;
-          return <MetaRow key={p} path={p} label={s.name} value={file[p]} />;
-        })}
-      </div>
-
-      <div className="adm-panel">
-        <h2>Fleet pages</h2>
-        {FLEET.map((s) => {
-          const p = `/fleet/${s.slug}/`;
-          return <MetaRow key={p} path={p} label={s.name} value={file[p]} />;
-        })}
-      </div>
-
-      <div className="adm-panel">
-        <h2>Any other URL (blog posts, …)</h2>
-        <p className="adm-hint">Blog meta normally comes from the post itself. For a custom search-only title/description type the path here.</p>
-        <form action={saveMetaAction} className="adm-form">
-          <label className="adm-label">Path (must start with /)</label>
-          <input className="adm-input" name="path" required placeholder="/blog/my-post/" pattern="/.*" />
-          <label className="adm-label">Title</label>
-          <input className="adm-input" name="title" maxLength={120} />
-          <label className="adm-label">Description</label>
-          <textarea className="adm-input" name="description" rows={2} maxLength={320} />
-          <button className="adm-btn adm-btn-primary" type="submit">Save override</button>
+      <div className="adm-panel" style={{ display: "flex", gap: 8, flexWrap: "wrap" }}>
+        <form action="/admin/meta" method="get" style={{ display: "flex", gap: 8 }}>
+          <input className="adm-input" style={{ width: 260 }} name="q" defaultValue={sp.q ?? ""} placeholder="Search all pages…" />
+          <button className="adm-btn" type="submit">Search</button>
+          <Link className="adm-btn" href="/admin/meta">Reset</Link>
         </form>
+        <a className="adm-btn" href="/api/admin/meta-export" download>Export CSV</a>
+        <MetaBulkImport />
+      </div>
+
+      <div className="adm-panel">
+        <table className="adm-table">
+          <thead>
+            <tr><th style={{ width: 240 }}>Page</th><th>SEO title <span className="adm-hint-inline">50–60 best</span></th><th>Meta description <span className="adm-hint-inline">140–160</span></th></tr>
+          </thead>
+          <tbody>
+            {(filtered.length ? filtered : []).map((row) => {
+              const t = (row.saved?.title || "").trim();
+              const d = (row.saved?.description || "").trim();
+              const flags: string[] = [];
+              if (!t) flags.push("title missing");
+              else if (t.length < 30) flags.push("title short");
+              else if (t.length > 70) flags.push("title long");
+              if (dupTitles.has(row.path)) flags.push("title duplicate");
+              if (!d) flags.push("description missing");
+              else if (d.length < 90) flags.push("description short");
+              else if (d.length > 165) flags.push("description long");
+              if (dupDescs.has(row.path)) flags.push("description duplicate");
+              return (
+                <tr key={row.path} style={flags.length ? { background: "#fff6f6" } : undefined}>
+                  <td>
+                    <Link className="adm-link" href={`/admin/pages/edit?path=${encodeURIComponent(row.path)}`}>{row.title}</Link>
+                    <div><code style={{ fontSize: 10.5 }}>{row.path}</code></div>
+                    {flags.length > 0 && <div style={{ marginTop: 4 }}>{flags.map((f) => <span key={f} className="adm-badge-new" style={{ marginRight: 4, background: flags.length && (f.includes("duplicate") || f.includes("missing")) ? "#e23b3b" : "#d98a00", fontSize: 9.5 }}>{f}</span>)}</div>}
+                  </td>
+                  <MetaCell path={row.path} field="title" value={t} />
+                  <MetaCell path={row.path} field="description" value={d} />
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+        {filtered.length > 60 && <p className="adm-hint">Showing the first 60 — use search to narrow (the search covers every page).</p>}
       </div>
     </>
   );

@@ -2,14 +2,14 @@
 // with any saved override) or "new:<id>" (a post created in the admin).
 import { notFound } from "next/navigation";
 import BlogForm, { EditorPost } from "@/components/BlogForm";
-import { getBasePosts, getBlogFile } from "@/lib/admin/store";
+import { getBasePosts, getBlogFile, getBlogCategories, getAuthors } from "@/lib/admin/store";
 
 export default async function AdminEditPost({ params, searchParams }: { params: Promise<{ id: string }>; searchParams: Promise<{ saved?: string }> }) {
   const { id: rawId } = await params;
   const { saved } = await searchParams;
   const id = decodeURIComponent(rawId);
 
-  const [base, file] = await Promise.all([getBasePosts(), getBlogFile()]);
+  const [base, file, managedCategories, authors] = await Promise.all([getBasePosts(), getBlogFile(), getBlogCategories(), getAuthors()]);
 
   if (id.startsWith("base:")) {
     const slug = id.replace("base:", "");
@@ -34,7 +34,7 @@ export default async function AdminEditPost({ params, searchParams }: { params: 
     return (
       <>
         <header className="adm-page-head"><div><h1>{`Edit: ${post.title}`}</h1><p>Built-in guide — your edits override the original.</p></div></header>
-        <BlogForm post={post} saved={!!saved} />
+        <BlogForm post={post} saved={!!saved} managedCategories={managedCategories} authors={authors} />
       </>
     );
   }

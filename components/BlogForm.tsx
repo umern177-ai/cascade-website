@@ -24,9 +24,21 @@ export type EditorPost = {
   contentHtml: string;
   draft?: boolean;
   isBase?: boolean;
+  excerpt?: string;
+  tags?: string[];
 };
 
-export default function BlogForm({ post, saved }: { post: EditorPost; saved?: boolean }) {
+export default function BlogForm({
+  post,
+  saved,
+  managedCategories = [],
+  authors = [],
+}: {
+  post: EditorPost;
+  saved?: boolean;
+  managedCategories?: { name: string; slug: string }[];
+  authors?: { name: string; bio?: string }[];
+}) {
   const router = useRouter();
   const [title, setTitle] = useState(post.title);
   const [slug, setSlug] = useState(post.slug);
@@ -47,6 +59,10 @@ export default function BlogForm({ post, saved }: { post: EditorPost; saved?: bo
   const [ogImage, setOgImage] = useState((post as { ogImage?: string }).ogImage ?? "");
   const [publishAt, setPublishAt] = useState((post as { publishAt?: string }).publishAt ?? "");
   const [categories, setCategories] = useState<string[]>((post as { categories?: string[] }).categories ?? (post.tag ? [post.tag] : []));
+  const [excerpt, setExcerpt] = useState((post as { excerpt?: string }).excerpt ?? "");
+  const [tags, setTags] = useState<string[]>((post as { tags?: string[] }).tags ?? []);
+  const [tagDraft, setTagDraft] = useState("");
+  const [bio, setBio] = useState(authors.find((a) => a.name === post.author)?.bio ?? "");
   const [uploading, startUpload] = useTransition();
   const [saving, setSaving] = useState(false);
   const [error, setError] = useState<string | null>(null);
@@ -140,13 +156,29 @@ export default function BlogForm({ post, saved }: { post: EditorPost; saved?: bo
     e.preventDefault();
     setError(null);
     if (!title.trim() || !slug) { setError("Title and slug are required."); return; }
+    // ALT text is REQUIRED to publish (section 4.3) — enforced in the editor
+    // and again server-side: featured image + every <img> in the content.
+    if (!draft && !(publishAt && publishAt > new Date().toISOString())) {
+      const missing: string[] = [];
+      if (image && !featuredAlt.trim()) missing.push("the featured image");
+      const html = new DOMParser().parseFromString(contentHtml, "text/html");
+      html.querySelectorAll("img").forEach((img, i) => {
+        if (!img.getAttribute("alt")?.trim()) missing.push(`image ${i + 1} in the content`);
+      });
+      if (missing.length) {
+        setError(`Publishing blocked — missing ALT text on ${missing.join(", ")}. Add ALT text (good for SEO + accessibility) or save as draft.`);
+        setSaving(false);
+        return;
+      }
+    }
     setSaving(true);
     try {
       const res = await fetch("/api/admin/save-post", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
-          post: { ...post, title, slug, description, date: dateVal, tag: categories[0] || "Guides", author, readMinutes, image, imageAlt: featuredAlt, contentHtml, draft, ogImage, noindex, publishAt: publishAt || undefined, categories },
+          post: { ...post, title, slug, description, excerpt: excerpt || undefined, tags, date: dateVal, tag: categories[0] || "Guides", author, readMinutes, image, imageAlt: featuredAlt, contentHtml, draft, ogImage, noindex, publishAt: publishAt || undefined, categories },
+          authorBio: bio || undefined,
           oldSlug: post.isBase ? post.slug : undefined,
           seoBundle: { seoTitle, canonical, noindex, ogImage, ogTitle: seoTitle, ogDescription: description },
         }),
@@ -192,18 +224,22 @@ export default function BlogForm({ post, saved }: { post: EditorPost; saved?: bo
         <label className="adm-label" htmlFor="description">Meta description <span className={(description.length < 70 || description.length > 160) ? "adm-warn-long" : "adm-ok"}>{description.length} chars (120–160 ideal)</span></label>
         <textarea id="description" className="adm-input" rows={2} required value={description} onChange={(e) => setDescription(e.target.value)} />
 
+        <label className="adm-label" htmlFor="excerpt">Excerpt / short summary <span className="adm-hint-inline">shown on the blog list — empty = first 30 words of the meta description</span></label>
+        <textarea id="excerpt" className="adm-input" rows={2} value={excerpt} onChange={(e) => setExcerpt(e.target.value)} />
+
         <div className="adm-grid4">
           <div>
             <label className="adm-label" htmlFor="date">Date</label>
             <input id="date" type="date" className="adm-input" value={dateVal} onChange={(e) => setDateVal(e.target.value)} />
           </div>
           <div>
-            <label className="adm-label" htmlFor="tag">Tag</label>
-            <input id="tag" className="adm-input" value={tag} onChange={(e) => setTag(e.target.value)} />
-          </div>
-          <div>
             <label className="adm-label" htmlFor="author">Author</label>
-            <input id="author" className="adm-input" value={author} onChange={(e) => setAuthor(e.target.value)} />
+            <input id="author" className="adm-input" list="author-list" value={author} onChange={(e) => { setAuthor(e.target.value); setBio(authors.find((a) => a.name === e.target.value)?.bio ?? ""); }} />
+            <datalist id="author-list">
+              {authors.map((a) => <option key={a.name} value={a.name} />)}
+            </datalist>
+            <label className="adm-label" htmlFor="authorBio" style={{ marginTop: 8 }}>Author bio (trust / E-E-A-T)</label>
+            <textarea id="authorBio" className="adm-input" rows={2} value={bio} onChange={(e) => setBio(e.target.value)} />
           </div>
           <div>
             <label className="adm-label" htmlFor="readMinutes">Read time (0 = auto)</label>
@@ -262,13 +298,45 @@ export default function BlogForm({ post, saved }: { post: EditorPost; saved?: bo
           <div>
             <label className="adm-label">Categories (multi-select)</label>
             <div className="adm-inline">
-              {categories.map((t) => (
-                <span key={t} className="adm-chip" style={{ margin: 0 }}>{t}</span>
+              {managedCategories
+                .filter((c) => categories.includes(c.name))
+                .map((c) => <span key={c.slug} className="adm-chip" style={{ margin: 0 }}>{c.name}</span>)}
+              {categories
+                .filter((t) => !managedCategories.some((c) => c.name === t))
+                .map((t) => <span key={t} className="adm-chip" style={{ margin: 0 }}>{t}</span>)}
+            </div>
+            <div className="adm-inline" style={{ marginTop: 8 }}>
+              <select className="adm-input" defaultValue="" onChange={(e) => { const v = e.target.value; e.target.value = ""; if (v && !categories.includes(v)) setCategories([...categories, v]); }}>
+                <option value="">Add a managed category…</option>
+                {managedCategories.filter((c) => !categories.includes(c.name)).map((c) => (
+                  <option key={c.slug} value={c.name}>{c.name}</option>
+                ))}
+              </select>
+            </div>
+            <div className="adm-inline" style={{ marginTop: 8 }}>
+              <input className="adm-input" style={{ width: 200 }} value={tagInput} onChange={(e) => setTagInput(e.target.value)} placeholder="Or type a new one…" onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addCategory(); } }} />
+              <button type="button" className="adm-btn" onClick={addCategory}>Add</button>
+            </div>
+            {categories.length > 1 && (
+              <div className="adm-inline" style={{ marginTop: 8 }}>
+                {categories.map((t) => (
+                  <button key={t} type="button" className="adm-btn" onClick={() => setCategories(categories.filter((x) => x !== t))} style={{ fontSize: 12 }}>{t} ×</button>
+                ))}
+              </div>
+            )}
+          </div>
+          <div>
+            <label className="adm-label">Tags (free text, beyond categories)</label>
+            <div className="adm-inline" style={{ flexWrap: "wrap" }}>
+              {tags.map((t) => (
+                <span key={t} className="adm-chip" style={{ margin: 0 }}>
+                  {t} <button type="button" aria-label={`Remove tag ${t}`} onClick={() => setTags(tags.filter((x) => x !== t))} style={{ marginLeft: 6, background: "transparent", border: 0, cursor: "pointer", fontWeight: 700 }}>×</button>
+                </span>
               ))}
             </div>
             <div className="adm-inline" style={{ marginTop: 8 }}>
-              <input className="adm-input" style={{ width: 200 }} value={tagInput} onChange={(e) => setTagInput(e.target.value)} placeholder="Add category…" onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); addCategory(); } }} />
-              <button type="button" className="adm-btn" onClick={addCategory}>Add</button>
+              <input className="adm-input" style={{ width: 200 }} value={tagDraft} onChange={(e) => setTagDraft(e.target.value)} placeholder="Add tag…" onKeyDown={(e) => { if (e.key === "Enter") { e.preventDefault(); const v = tagDraft.trim(); if (v && !tags.includes(v)) setTags([...tags, v]); setTagDraft(""); } }} />
+              <button type="button" className="adm-btn" onClick={() => { const v = tagDraft.trim(); if (v && !tags.includes(v)) setTags([...tags, v]); setTagDraft(""); }}>Add</button>
             </div>
           </div>
         </div>

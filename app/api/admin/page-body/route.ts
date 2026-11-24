@@ -5,7 +5,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { revalidatePath } from "next/cache";
 import { isAuthed } from "@/lib/admin/auth";
-import { setPageBodyEntry, logHistory } from "@/lib/admin/store";
+import { setPageBodyEntry, getPageDrafts, deletePageDraft, restorePageBodyVersion, logHistory } from "@/lib/admin/store";
 
 export const dynamic = "force-dynamic";
 
@@ -29,6 +29,7 @@ export async function PATCH(req: NextRequest) {
   });
   revalidatePath(j.path);
   revalidatePath("/", "layout");
+  await deletePageDraft(j.path); // a direct on-page edit supersedes drafts
   await logHistory("page-field", j.path, `${j.key} = ${j.value?.trim() ? j.value.trim().slice(0, 120) : "(cleared)"}`);
   return NextResponse.json({ ok: true });
 }
@@ -51,6 +52,22 @@ export async function POST(req: NextRequest) {
   await logHistory("page", body.path, `${edited} field${edited === 1 ? "" : "s"} + ${faqs.length} FAQ${faqs.length === 1 ? "" : "s"} saved`);
   revalidatePath(body.path);
   revalidatePath("/sitemap-pages.xml");
+  revalidatePath("/", "layout");
+  await deletePageDraft(body.path); // publishing supersedes any stored draft
+  return NextResponse.json({ ok: true });
+}
+
+// RESTORE an older version of a page (Phase 3 history tab): PUT { path, versionIndex }
+export async function PUT(req: NextRequest) {
+  if (!(await isAuthed())) {
+    return NextResponse.json({ ok: false, error: "not-authenticated" }, { status: 401 });
+  }
+  const j = (await req.json().catch(() => null)) as { path?: string; versionIndex?: number } | null;
+  if (!j?.path?.startsWith("/")) return NextResponse.json({ ok: false, error: "bad-path" }, { status: 400 });
+  const restored = await restorePageBodyVersion(j.path, j.versionIndex ?? 0);
+  if (!restored) return NextResponse.json({ ok: false, error: "no-version" }, { status: 404 });
+  await logHistory("page", j.path, `Restored version #${(j.versionIndex ?? 0) + 1} from history`);
+  revalidatePath(j.path);
   revalidatePath("/", "layout");
   return NextResponse.json({ ok: true });
 }

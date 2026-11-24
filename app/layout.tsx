@@ -12,6 +12,7 @@ import HideOnAdmin from "@/components/HideOnAdmin";
 import ConversionClicks from "@/components/ConversionClicks";
 import { orgSchema } from "@/lib/schema";
 import { getSiteConfig } from "@/lib/admin/store";
+import { getSiteData } from "@/lib/admin/global";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -63,6 +64,7 @@ export default async function RootLayout({ children }: { children: React.ReactNo
   // sitewide schema + custom head code from the admin (Schema manager)
   const siteConfig = await getSiteConfig();
   const customSchema = siteConfig.customSchema?.trim();
+  const facts = await getSiteData();
   return (
     <html lang="en">
       <head>
@@ -94,12 +96,12 @@ export default async function RootLayout({ children }: { children: React.ReactNo
       <body className={inter.className}>
         {/* admin dashboard: no header/footer/cookie banner (HideOnAdmin) */}
         <HideOnAdmin>
-          <Header />
+          <Header facts={{ phoneDisplay: facts.phoneDisplay, phoneTel: facts.phoneTel, phoneNote: facts.phoneNote, email: facts.email, quoteLabel: (facts as { quoteLabel?: string }).quoteLabel }} />
         </HideOnAdmin>
         <ConversionClicks />
         {children}
         <HideOnAdmin>
-          <Footer />
+          <Footer facts={{ phoneDisplay: facts.phoneDisplay, phoneTel: facts.phoneTel, email: facts.email, street: (facts as { address: { street: string } }).address.street, city: (facts as { address: { city: string } }).address.city, state: (facts as { address: { state: string } }).address.state, zip: (facts as { address: { zip: string } }).address.zip, quoteLabel: (facts as { quoteLabel?: string }).quoteLabel }} />
           <ConsentBanner />
           <PickupPrefill />
         </HideOnAdmin>

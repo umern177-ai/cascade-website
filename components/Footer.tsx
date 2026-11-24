@@ -51,7 +51,18 @@ function TiktokIcon() {
   );
 }
 
-export default function Footer() {
+export type FooterFacts = { phoneDisplay?: string; phoneTel?: string; email?: string; street?: string; city?: string; state?: string; zip?: string; quoteLabel?: string };
+
+export default function Footer({ facts }: { facts?: FooterFacts }) {
+  const FF = {
+    email: facts?.email || SITE.email,
+    phoneTel: facts?.phoneTel || SITE.phoneTel,
+    phoneDisplay: facts?.phoneDisplay || SITE.phoneDisplay,
+    street: facts?.street || SITE.address.street,
+    city: facts?.city || SITE.address.city,
+    state: facts?.state || SITE.address.state,
+    zip: facts?.zip || SITE.address.zip,
+  };
   return (
     <footer className="footer-modern pt-5 pb-3">
       <div className="container">
@@ -72,16 +83,16 @@ export default function Footer() {
               24/7 dispatch team.
             </p>
             <div className="d-flex gap-3 mt-4">
-              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={SITE.social.facebook} aria-label="Facebook">
+              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={`SITE.social.facebook`} aria-label="Facebook">
                 <FacebookIcon />
               </a>
-              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={SITE.social.instagram} aria-label="Instagram">
+              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={`SITE.social.instagram`} aria-label="Instagram">
                 <InstagramIcon />
               </a>
-              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={SITE.social.linkedin} aria-label="LinkedIn">
+              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={`SITE.social.linkedin`} aria-label="LinkedIn">
                 <LinkedinIcon />
               </a>
-              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={SITE.social.tiktok} aria-label="TikTok">
+              <a target="_blank" rel="noopener noreferrer" className="social-btn" href={`SITE.social.tiktok`} aria-label="TikTok">
                 <TiktokIcon />
               </a>
             </div>
@@ -115,16 +126,16 @@ export default function Footer() {
               <li className="d-flex align-items-start mb-3 gap-3">
                 <MapPin size={18} className="text-primary mt-1 flex-shrink-0" aria-hidden="true" />
                 <span className="text-white">
-                  {SITE.address.street}, {SITE.address.city}, {SITE.address.state} {SITE.address.zip}
+                  {FF.street}, {FF.city}, {FF.state} {FF.zip}
                 </span>
               </li>
               <li className="d-flex align-items-center mb-3 gap-3">
                 <Phone size={18} className="text-primary flex-shrink-0" aria-hidden="true" />
-                <a href={`tel:${SITE.phoneTel}`} className="text-white fw-bold text-decoration-none hover-orange">{SITE.phoneDisplay}</a>
+                <a href={`tel:${FF.phoneTel}`} className="text-white fw-bold text-decoration-none hover-orange">{FF.phoneDisplay}</a>
               </li>
               <li className="d-flex align-items-center mb-3 gap-3">
                 <Mail size={18} className="text-primary flex-shrink-0" aria-hidden="true" />
-                <a href={`mailto:${SITE.email}`} className="text-white fw-bold text-decoration-none hover-orange">{SITE.email}</a>
+                <a href={`mailto:${FF.email}`} className="text-white fw-bold text-decoration-none hover-orange">{FF.email}</a>
               </li>
             </ul>
             <div className="safety-card">

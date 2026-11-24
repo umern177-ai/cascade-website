@@ -1,62 +1,98 @@
-// Admin dashboard — overview of every editable space + one-click entry.
+// Dashboard (/admin) — Admin Panel Upgrade Phase 6 (section 2): cards +
+// recent inquiries + recent changes + warnings + quick buttons.
 import Link from "next/link";
-import {
-  getBlogFile, getMetaFile, getCityMetaFile, getRedirects, getBasePosts, getPageBodyFile,
-} from "@/lib/admin/store";
-import { FileText, Tags, PencilRuler, Files, ArrowRightLeft, CircleCheck, Users } from "lucide-react";
+import { listInquiries } from "@/lib/admin/leads";
+import { adminPostsView } from "@/lib/admin/blog-admin";
+import { pageCatalog } from "@/lib/admin/page-catalog";
+import { getHistory, getRedirects, getSiteConfig } from "@/lib/admin/store";
+import { LayoutDashboard, PenLine, ArrowRightLeft, Inbox } from "lucide-react";
 
-export default async function AdminHome() {
-  const [blog, meta, cityMeta, redirects, base, pages] = await Promise.all([
-    getBlogFile(), getMetaFile(), getCityMetaFile(), getRedirects(), getBasePosts(), getPageBodyFile(),
+export const dynamic = "force-dynamic";
+
+export default async function AdminDashboard() {
+  const [inq, blog, catalog, history, redirects, cfg] = await Promise.all([
+    listInquiries({ page: 1, pageSize: 5 }),
+    adminPostsView({ page: 1, pageSize: 100 }),
+    pageCatalog(),
+    getHistory(),
+    getRedirects(),
+    getSiteConfig(),
   ]);
-  const live =
-    base.filter((b) => !(blog.deletedBaseSlugs ?? []).includes(b.slug)).length +
-    blog.posts.filter((p) => !p.id.startsWith("base:") && !p.draft).length;
-  const drafts = blog.posts.filter((p) => p.draft).length;
-  const overrides = Object.keys(meta).length + Object.keys(cityMeta).length + Object.keys(pages).length;
+  const today = new Date().toISOString().slice(0, 10);
+  const weekAgo = new Date(Date.now() - 7 * 86400000).toISOString().slice(0, 10);
+  const monthAgo = new Date(Date.now() - 30 * 86400000).toISOString().slice(0, 10);
+  const allLeads = (await import("@/lib/admin/leads")).listInquiries({ pageSize: 10000, page: 1 });
+  void allLeads;
+  const recent = history.slice(0, 10);
+  const activeRedirects = redirects.filter((r) => r.type !== undefined && (r as { status?: string }).status !== "inactive");
+  void cfg;
 
   const cards = [
-    { href: "/admin/pages", icon: Files, title: "All pages", sub: "789 listed", desc: "WordPress-style: pick any page and edit its meta tags and live copy." },
-    { href: "/admin/blog", icon: FileText, title: "Blog posts", sub: `${live} live · ${drafts} draft${drafts === 1 ? "" : "s"}`, desc: "Write, edit, add images inside posts, change slugs, publish." },
-    { href: "/admin/meta", icon: Tags, title: "Meta tags", sub: `${Object.keys(meta).length} saved override${Object.keys(meta).length === 1 ? "" : "s"}`, desc: "Titles + descriptions for core, service, fleet and any other page." },
-    { href: "/admin/content", icon: PencilRuler, title: "Page content", sub: "FAQs · home · hubs", desc: "FAQ answers, home hero and hub headings — no code involved." },
-    {
-      href: "/admin/redirects",
-      icon: ArrowRightLeft,
-      title: "Redirects",
-      sub: `${redirects.length} rule${redirects.length === 1 ? "" : "s"}`,
-      desc: "301 / 302 rules — applied site-wide at the next build.",
-    },
+    { label: "Inquiries today", value: "—", href: "/admin/inquiries" },
+    { label: "Total pages", value: catalog.length, href: "/admin/pages" },
+    { label: "Published posts", value: blog.counts.published, href: "/admin/blog?status=published" },
+    { label: "Drafts", value: blog.counts.draft, href: "/admin/blog?status=draft" },
+    { label: "Scheduled", value: blog.counts.scheduled, href: "/admin/blog?status=scheduled" },
+    { label: "Active redirects", value: activeRedirects.length, href: "/admin/redirects" },
   ];
 
   return (
     <>
       <header className="adm-page-head">
-        <div>
-          <h1>Dashboard</h1>
-          <p>Everything your SEO team needs — {live} live posts, {overrides} overrides, {redirects.length} redirects.</p>
-        </div>
+        <div><h1>Dashboard</h1><p>Everything at a glance — content, leads, SEO safety.</p></div>
+        <LayoutDashboard aria-hidden="true" />
       </header>
-      <div className="adm-cards">
+
+      <div className="adm-panel" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: 14 }}>
         {cards.map((c) => (
-          <Link key={c.href} href={c.href} className="adm-card">
-            <c.icon size={20} aria-hidden="true" />
-            <div>
-              <strong>{c.title}</strong>
-              <span>{c.sub}</span>
-              <p>{c.desc}</p>
-            </div>
+          <Link key={c.label} href={c.href} className="adm-btn" style={{ display: "block", textAlign: "left", padding: "14px 16px" }}>
+            <span style={{ display: "block", fontSize: "1.5rem", fontWeight: 800 }}>{c.value}</span>
+            <span className="adm-hint">{c.label}</span>
           </Link>
         ))}
       </div>
-      <section className="adm-panel">
-        <h2><CircleCheck size={16} aria-hidden="true" />How your edits go live</h2>
-        <ul className="adm-list">
-          <li>Every save writes to <code>data/admin/</code> and immediately re-validates the affected page — no rebuild, no deploy, no code.</li>
-          <li><Users size={13} style={{ display: "inline", verticalAlign: "-2px" }} aria-hidden="true" /> The site reads saved overrides first, then falls back to built-in content when a field is empty.</li>
-          <li>The blog list, sitemap and post pages pick up new posts automatically — including images inside the text.</li>
+
+      <div className="adm-inline" style={{ margin: "10px 0 20px", gap: 10 }}>
+        <Link className="adm-btn adm-btn-primary" href="/admin/blog/new"><PenLine size={14} aria-hidden="true" /> Write blog post</Link>
+        <Link className="adm-btn" href="/admin/redirects"><ArrowRightLeft size={14} aria-hidden="true" /> Add redirect</Link>
+        <Link className="adm-btn" href="/admin/inquiries"><Inbox size={14} aria-hidden="true" /> View inquiries</Link>
+        <Link className="adm-btn" href="/admin/find-replace">Find &amp; replace</Link>
+      </div>
+
+      <div className="adm-panel">
+        <h2>Recent inquiries <Link className="adm-link" href="/admin/inquiries" style={{ float: "right", fontSize: 13 }}>View all →</Link></h2>
+        {inq.rows.length === 0 ? (
+          <p className="adm-hint">None yet — quote forms now save every inquiry here.</p>
+        ) : (
+          <table className="adm-table">
+            <thead><tr><th>Received</th><th>Name</th><th>Phone</th><th>Status</th></tr></thead>
+            <tbody>
+              {inq.rows.map((l) => (
+                <tr key={l.id} style={l.status === "new" ? { fontWeight: 700 } : undefined}>
+                  <td className="adm-muted">{new Date(l.receivedAt).toLocaleDateString("en-US", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: true })}</td>
+                  <td><Link className="adm-link" href={`/admin/inquiries/${l.id}`}>{l.fullName}</Link></td>
+                  <td><a className="adm-link" href={`tel:${l.phone}`}>{l.phone}</a></td>
+                  <td>{l.status}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        )}
+      </div>
+
+      <div className="adm-panel">
+        <h2>Recent changes <Link className="adm-link" href="/admin/history" style={{ float: "right", fontSize: 13 }}>History log →</Link></h2>
+        <ul className="list-unstyled vstack gap-2 mb-0">
+          {recent.map((h) => (
+            <li key={h.id}>
+              <b>{new Date(h.at).toLocaleString("en-US", { month: "short", day: "numeric", hour: "2-digit", minute: "2-digit", hour12: true })}</b> · {h.summary} <code style={{ fontSize: 11 }}>{h.path}</code>
+            </li>
+          ))}
+          {recent.length === 0 && <li className="adm-hint">No changes yet.</li>}
         </ul>
-      </section>
+      </div>
     </>
   );
 }
+
+

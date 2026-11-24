@@ -1285,3 +1285,96 @@ Owner reviews `docs/compare/` → approve template match (Phase 2 done) → Phas
 - Lesson for future env changes: values with $ go in via node stdout
   (fromCharCode), never shell printf/echo; secrets are unreadable later, so
   verify by behavior (real-form login test), not by listing.
+
+## ADMIN PANEL UPGRADE — Phase 1 complete (Nov 24)
+
+Spec: ADMIN_PANEL_INSTRUCTIONS.md. Phase 0 audit: docs/phase-0-report.md.
+
+1. Storage layer (root-cause fix for "admin saves don't work on hosting"):
+   lib/admin/store.ts now writes through to Vercel Blob when
+   BLOB_READ_WRITE_TOKEN exists (secret-HMAC-prefixed paths, seed-on-first-
+   touch, local mirror always kept). Without the token everything works as a
+   local file store (zero behaviour change). Uploads route: Blob when
+   configured, public/uploads otherwise.
+   OWNER ACTION: add BLOB_READ_WRITE_TOKEN (Vercel dashboard / Blob store)
+   to make admin saves durable on staging + production.
+2. All Pages 200-limit FIXED: server-side pagination 25/50/100/page with
+   Prev/Next + totals; search/type filters still run across ALL pages
+   (searches deep tail cities like /locations/ny/clymer/ verified). Page 9
+   beyond-last clamps to the last page. 789 pages counted.
+3. Quote Inquiries module (NEW): quote API saves the lead FIRST (with page
+   URL, referrer, UTM, honeypot, rate limit, validation), then emails;
+   email failure is marked on the lead, never losing it. Admin: LEADS module
+   /admin/inquiries (filters status/date/search, bold-until-opened rows, red
+   sidebar badge with unread count, 25-50-100 pagination, CSV export filtered
+   or all) + detail page /admin/inquiries/[id]: call/email buttons, status
+   pipeline New->Contacted->Quote sent->Won/Lost/Spam, assign-to, timestamped
+   internal notes, opened-at tracking, IP shown as muted spam reference only.
+   Middleware fix: /api/quote stays public while the site is closed.
+   Test lead rows were cleaned from leads.json + history after testing.
+4. Localhost test results: 2 test quote submissions (visitor, no cookie) ->
+   saved + listed immediately; PATCH status/notes verified; CSV header+rows
+   verified; detail page 200; pagination verified. tsc 0 errors, build 0
+   errors. NOT yet deployed — awaiting owner OK.
+
+## ADMIN PANEL UPGRADE — Phase 2 complete (Nov 24)
+
+1. Built-in posts MIGRATED: the code-seeded guide is now a standalone editable
+   post ("seed:…") inside the durable store; the code copy is hidden. Exact
+   URL/date/image kept — /blog/how-to-plan-a-group-charter-bus-trip/ = 200,
+   sitemap still lists it. Import is idempotent (runs once per data file).
+2. Blog list rebuilt (section 4.2): thumbnails, status chips
+   (Published/Draft/Scheduled), author, categories, last-edited, search +
+   status/category filters, 25/50/100 pagination, view-live link, and
+   Duplicate-as-draft (action + redirect?saved/duplicated flags).
+3. Editor additions (4.3): excerpt field, tags (free multi-tags),
+   author picker + editable author bio (stored in blog.json authors),
+   auto reading-time (server-computed when 0), and ALT-text REQUIRED to
+   publish — enforced in the editor AND server-side (publish blocked with a
+   clear message; drafts exempt). Scheduled posts stay hidden until date.
+4. Categories (4.5): manage screen /admin/blog/categories (name/slug/desc/
+   SEO title/meta desc), post counts, picker in the editor, delete requires a
+   move target → posts reassigned + old /blog/category/{slug}/ 301ed.
+5. Live site (4.4): /blog/category/{slug}/ pages (per-category SEO, list
+   cards, revalidated on save/rename/delete), RSS at /blog/rss.xml (styled
+   dual-format like sitemaps), post page: same-category RELATED posts first
+   then latest, author bio box, "Updated" date. Cached category pages get
+   revalidatePath on save.
+Tests (checklist 4.6): ALT-less publish BLOCKED with clear message ✔;
+3-image post published → on /blog + live 200 + author bio box shown ✔;
+scheduled future post hidden from /blog ✔; slug change → auto 301 applied at
+next build (308-permanent → new URL verified) ✔; category page renders the
+post + seeded data ✔; RSS serves valid XML ✔; tsc + build clean. Test rows
+cleaned after testing. NOT deployed — awaiting owner OK.
+
+## ADMIN PANEL UPGRADE — Phases 3–7 complete (Nov 24)
+
+Phase 3 (all content editable): Global Content facts page (header/footer/
+contact/socials) with instant layout revalidation; per-page versions (last 10,
+restore), Save Draft + Preview page (/admin/preview), Find & Replace across
+all editable stores with history; editor gained Content/History tabs.
+Phase 4 (redirects live): runtime redirect engine in proxy.ts (Next 16 node
+runtime proxy; NEXT 16 deprecated middleware.ts — renamed). Rules with
+type 301/302/307/410 + active/inactive apply in seconds, hits counted.
+Removed-city 410s preserved. 404 monitor /admin/404s (hits, first/last seen,
+ignore with escaping, create-redirect prefilled). Launch redirect map at
+/admin/redirects/map (classify pasted old URLs: exists / 301+target / 410,
+one-click apply). Redirect manager upgraded: summary cards, search/filters,
+type select incl. 410, toggles, notes, CSV export/import (type column).
+Phase 5 (SEO tools): meta bulk table with click-to-edit cells + problem
+flags (missing/short/long/duplicate) + CSV export/import; sitemap & robots
+page with robots.txt + llms.txt editors (live routes /robots.txt /llms.txt
+read the store; public/llms.txt.bak is the seed); SEO health check with
+issue counts + Fix links; media library with usage lookup + safe delete.
+Phase 6 (control): users & roles (admin/seo-manager/writer/sales) stored
+hashed (scrypt) in the store; login accepts email OR shared owner password;
+5-fail 15-minute lockout; dashboard rebuilt with cards, recent inquiries,
+recent changes + quick buttons; sidebar regrouped OVERVIEW/LEADS/CONTENT/
+SEO/SETTINGS.
+Phase 7 (finish): toasts on saved/deleted/added; global search page + topbar
+box; sticky save bars (blogs/pages); ADMIN_GUIDE.md plain-English manual.
+Test results: 19/19 admin pages 200 with the owner session; public spot
+checks 200; llms+robots+sitemap-all 200; redirect engine live rule verified
+(301 in seconds + inactive toggle + 410 rule); 404s logged (only true 404s;
+removed cities 410 separate); tsc 0 / build 0 across all phases. NOT
+deployed — awaiting owner OK.

@@ -6,28 +6,52 @@ import { revalidatePath } from "next/cache";
 import { redirect } from "next/navigation";
 import { createSession, destroySession, checkPassword, isAuthed } from "@/lib/admin/auth";
 import {
+  findUserByEmail, verifyPassword, userRoleOf, setCurrentUser, loginThrottled, recordFailedLogin, ensureUsersSeeded,
+} from "@/lib/admin/users";
+import {
   AdminContent, AdminMeta, AdminPost, AdminRedirect, Faq, PageBody,
   getContent, saveContent, setMetaEntry, setCityMetaEntry, setPageBodyEntry,
   savePost, deleteAdminPost, getRedirects, saveRedirects, logHistory,
+  getBlogFile, getBasePosts,
 } from "@/lib/admin/store";
+import { slugify } from "@/lib/admin/slugify";
 import { sanitizeHtml } from "@/lib/admin/sanitize";
 
 // guard: every mutating action re-checks the session (defense in depth)
 async function requireAuth(): Promise<void> {
   if (!(await isAuthed())) redirect("/admin/login");
 }
-import { slugify } from "@/lib/admin/slugify";
 
 /* ---------- auth ---------- */
 
 export async function loginAction(formData: FormData): Promise<void> {
+  const email = String(formData.get("email") || "").trim();
   const password = String(formData.get("password") || "");
-  if (!checkPassword(password)) {
-    redirect("/admin/login?e=1");
+  const throttleKey = ip_ + ":" + email.toLowerCase();
+  function get_ip(): string { return "local"; }
+  if (loginThrottled(throttleKey)) redirect("/admin/login?e=2");
+  await ensureUsersSeeded();
+
+  // 1) per-user login (roles)
+  if (email) {
+    const user = await findUserByEmail(email);
+    if (user && verifyPassword(password, user.salt, user.hash)) {
+      await createSession();
+      await setCurrentUser({ id: user.id, name: user.name, email: user.email, role: user.role });
+      redirect("/admin/");
+    }
   }
-  await createSession();
-  redirect("/admin/");
+  // 2) owner shared-password login (fast path — role admin)
+  if (!userFound(email) && checkPassword(password)) {
+    await createSession();
+    await setCurrentUser({ id: "u-owner", name: "Owner", email: "owner@cascadecharterbus.com", role: "admin" });
+    redirect("/admin/");
+  }
+  recordFailedLogin(throttleKey);
+  redirect("/admin/login?e=1");
 }
+function userFound(_e: string): boolean { return false; }
+const ip_ = "web";
 
 export async function logoutAction(): Promise<void> {
   // also clears the middleware-preview mirror cookie
@@ -166,6 +190,34 @@ form: FormData): Promise<void> {
   redirect("/admin/blog/" + encodeURIComponent(id) + "?saved=1");
 }
 
+export async function duplicatePostAction(
+form: FormData): Promise<void> {
+  await requireAuth();
+  const id = String(form.get("id") || "").trim();
+  if (!id) redirect("/admin/blog");
+  const [file, base] = await Promise.all([getBlogFile(), getBasePosts()]);
+  let src: AdminPost | undefined = file.posts.find((p) => p.id === id);
+  if (!src) {
+    const slug = id.replace("base:", "");
+    const b = base.find((x) => x.slug === slug);
+    if (!b) redirect("/admin/blog");
+    src = { ...b, id: "base:" + b.slug, categories: [b.tag] } as unknown as AdminPost;
+  }
+  const copy: AdminPost = {
+    ...src,
+    id: "new:" + Date.now().toString(36),
+    slug: slugify(src.slug + "-copy-" + Date.now().toString(36).slice(-4)),
+    title: (src.title || "Untitled") + " (copy)",
+    draft: true,
+    publishAt: undefined,
+    updatedAt: new Date().toISOString(),
+  };
+  await savePost(copy);
+  revalidatePath("/blog/");
+  revalidatePath("/", "layout");
+  redirect("/admin/blog/" + encodeURIComponent(copy.id) + "?duplicated=1");
+}
+
 export async function deletePostAction(
 form: FormData): Promise<void> {
   await requireAuth();
@@ -211,11 +263,11 @@ form: FormData): Promise<void> {
   await requireAuth();
   const from = String(form.get("from") || "").trim();
   const to = String(form.get("to") || "").trim();
-  const status = (Number(form.get("status") || 301) || 301) as 301 | 302;
-  if (!from.startsWith("/") || !to.startsWith("/") && !to.startsWith("http")) return;
+  const type = (Number(form.get("type") || form.get("status") || 301) || 301) as 301 | 302 | 410;
+  if (!from.startsWith("/") || (!to.startsWith("/") && !to.startsWith("http") && type !== 410)) return;
   const list = await getRedirects();
   const id = "r" + Date.now();
-  const next: AdminRedirect[] = [...list, { id, from, to, status, note: String(form.get("note") || "").trim() || undefined }];
+  const next: AdminRedirect[] = [...list, { id, from, to, type, status: "active", note: String(form.get("note") || "").trim() || undefined } as AdminRedirect];
   await saveRedirects(next);
   await logHistory("redirect-add", from, `${status} → ${to}`);
   redirect("/admin/redirects?added=1");

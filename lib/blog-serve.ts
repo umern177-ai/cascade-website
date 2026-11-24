@@ -8,6 +8,8 @@ import { getPublishedPosts, getBlogFile } from "@/lib/admin/store";
 export type PublicPost = {
   updatedAt?: string;
   categories?: string[];
+  tags?: string[];
+  excerpt?: string;
   noindex?: boolean;
   ogImage?: string;
   seoTitle?: string;
@@ -49,6 +51,8 @@ export async function blogPosts(): Promise<PublicPost[]> {
         contentHtml: override?.contentHtml ?? p.contentHtml ?? "",
         updatedAt: (p as { updatedAt?: string }).updatedAt,
         categories: (p as { categories?: string[] }).categories ?? ((p as { tag?: string }).tag ? [(p as { tag?: string }).tag!] : undefined),
+        tags: (override as { tags?: string[] } | undefined)?.tags,
+        excerpt: (override as { excerpt?: string } | undefined)?.excerpt,
         noindex: (p as { noindex?: boolean }).noindex,
         ogImage: (p as { ogImage?: string }).ogImage,
         seoTitle: (p as { seoTitle?: string }).seoTitle,

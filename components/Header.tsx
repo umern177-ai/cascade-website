@@ -21,7 +21,15 @@ const FLEET_CAP: Record<string, string> = {
   "suv-sedan": "Up to 7",
 };
 
-export default function Header() {
+export type HeaderFacts = { phoneDisplay?: string; phoneTel?: string; phoneNote?: string; email?: string; quoteLabel?: string };
+
+export default function Header({ facts }: { facts?: HeaderFacts }) {
+  // admin-editable facts (Global Content) fall back to code defaults
+  const FH = {
+    email: facts?.email || SITE.email,
+    phoneTel: facts?.phoneTel || SITE.phoneTel,
+    phoneDisplay: facts?.phoneDisplay || SITE.phoneDisplay,
+  };
   const pathname = usePathname();
   const [open, setOpen] = useState(false);
   const [servicesOpen, setServicesOpen] = useState(false);
@@ -66,13 +74,13 @@ export default function Header() {
     <header className="shadow-lg" ref={rootRef}>
       <div className="top-ribbon py-2 d-none d-md-block bg-black border-bottom border-white border-opacity-25">
         <div className="container d-flex justify-content-between align-items-center">
-          <a href={`mailto:${SITE.email}`} className="text-decoration-none d-flex align-items-center gap-2">
+          <a href={`mailto:${FH.email}`} className="text-decoration-none d-flex align-items-center gap-2">
             <Mail size={14} className="text-primary" aria-hidden="true" />
-            <span className="small fw-bold text-white opacity-75">{SITE.email}</span>
+            <span className="small fw-bold text-white opacity-75">{FH.email}</span>
           </a>
-          <a href={`tel:${SITE.phoneTel}`} className="text-decoration-none d-flex align-items-center gap-2">
+          <a href={`tel:${FH.phoneTel}`} className="text-decoration-none d-flex align-items-center gap-2">
             <Phone size={14} className="text-primary" aria-hidden="true" />
-            <span className="small fw-bold text-white opacity-75">{SITE.phoneDisplay}</span>
+            <span className="small fw-bold text-white opacity-75">{FH.phoneDisplay}</span>
           </a>
         </div>
       </div>

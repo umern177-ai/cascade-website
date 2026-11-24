@@ -27,6 +27,10 @@ const nextConfig: NextConfig = {
       { source: "/:path*", has: [{ type: "host", value: "www.cascadecharterbus.com" }], destination: "https://cascadecharterbus.com/:path*", permanent: true },
     ];
     let removed: Array<{ source: string; destination: string; permanent: boolean }> = [];
+    // Build-time redirects stay for the generated 410/removed-city set only.
+    // NOTE (Admin Panel Upgrade Phase 4): admin-managed rules moved OUT of the
+    // build — they are applied live at runtime by middleware.ts (node runtime),
+    // so a saved rule is live in seconds with no deploy.
     try {
       removed = JSON.parse(
         await fs.promises.readFile(
@@ -35,20 +39,8 @@ const nextConfig: NextConfig = {
         )
       );
     } catch {
-      removed = [];
-    }
-    // SEO consultant Nov 2026: old hierarchy file names moved (index entries)
-    // Admin-managed rules (brief 19.10): data/admin/redirects.json.
-    // Read at build/start; the admin stores the rules, a rebuild applies them.
-    try {
-      const admin = JSON.parse(
-        await fs.promises.readFile(path.join(process.cwd(), "data", "admin", "redirects.json"), "utf8")
-      ) as Array<{ from: string; to: string; status: number }>;
-      for (const r of admin) {
-        removed.push({ source: r.from, destination: r.to, permanent: r.status === 301 });
-      }
-    } catch {
-      // no admin redirects yet
+      removed = [] as Array<{ source: string; destination: string; permanent: boolean }>;
+      // removed initialized above
     }
     const all: Array<{ source: string; destination: string; permanent: boolean }> = [...base, ...removed];
     return all as any;

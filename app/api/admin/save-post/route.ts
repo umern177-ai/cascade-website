@@ -46,24 +46,71 @@ export async function POST(req: NextRequest) {
     if (!rules.some((r) => r.from === `/blog/${body.oldSlug}/`)) {
       const next = [
         ...rules.filter((r) => r.to !== `/blog/${cleanSlug}/` || r.from !== `/blog/${body.oldSlug}/`),
-        { id: "r" + Date.now(), from: `/blog/${body.oldSlug}/`, to: `/blog/${cleanSlug}/`, status: 301 as const, note: `Slug change: ${post.title.slice(0, 60)}` },
+        { id: "r" + Date.now(), from: `/blog/${body.oldSlug}/`, to: `/blog/${cleanSlug}/`, type: 301 as const, status: "active" as const, note: `Slug change: ${post.title.slice(0, 60)}` },
       ];
       await saveRedirects(next);
     }
   }
 
+  const cleanHtml = sanitizeHtml(post.contentHtml || "");
+  const isPublished = !post.draft && !(post.publishAt && post.publishAt > new Date().toISOString());
+
+  // ALT text is REQUIRED to publish (Admin Panel Upgrade section 4.3):
+  // featured image plus every <img> inside the content.
+  if (isPublished) {
+    const missing: string[] = [];
+    if (post.image && !post.imageAlt?.trim()) missing.push("featured image");
+    for (const m of cleanHtml.matchAll(/<img\b[^>]*>/gi)) {
+      if (!/\balt\s*=\s*["'][^"']+["']/i.test(m[0])) missing.push(m[0].slice(0, 60));
+    }
+    if (missing.length) {
+      return NextResponse.json({
+        ok: false,
+        error: `Publishing blocked — image(s) without ALT text: ${missing.slice(0, 3).join(", ")}. Add ALT text or save as draft.`,
+      }, { status: 400 });
+    }
+  }
+
+  // Reading time auto-calculated when the writer leaves it 0 (from the words).
+  const wordCount = cleanHtml.replace(/<[^>]*>/g, " ").split(/\s+/).filter(Boolean).length;
+  const finalReadMinutes = post.readMinutes || Math.max(1, Math.round(wordCount / 200));
   const now = new Date().toISOString();
   await savePost({
     ...post,
+    excerpt: (post as { excerpt?: string }).excerpt?.trim() || undefined,
+    tags: (post as { tags?: string[] }).tags?.length ? (post as { tags?: string[] }).tags : undefined,
     slug: cleanSlug,
     author: post.author || "Cascade Dispatch Team",
     tag: (!post.categories || post.categories.length === 0) ? (post.tag || "Guides") : post.categories[0],
     categories: post.categories?.length ? post.categories : post.tag ? [post.tag] : undefined,
-    contentHtml: sanitizeHtml(post.contentHtml || ""),
+    readMinutes: finalReadMinutes,
+    contentHtml: cleanHtml,
     updatedAt: now,
     // schedule: a publish date in the future keeps the public page hidden
     // but the editor can still draft it (same rule the list uses).
   });
+
+  // revalidate affected category pages too (posts flow through them)
+  for (const cat of post.categories ?? []) {
+    revalidatePath(`/blog/category/${slugify(cat)}/`);
+  }
+  revalidatePath("/blog/category/");
+
+  // author bio — kept in the blog authors list so the public post can show it
+  const authorBio = (body as { authorBio?: string } | null)?.authorBio?.trim();
+  if (post.author && authorBio) {
+    const { getAuthors, saveAuthors } = await import("@/lib/admin/store");
+    const authors = await getAuthors();
+    const existing = authors.find((a) => a.name === post.author);
+    if (existing) {
+      if (existing.bio !== authorBio) {
+        existing.bio = authorBio;
+        await saveAuthors(authors);
+      }
+    } else {
+      await saveAuthors([...authors, { name: post.author, bio: authorBio }]);
+    }
+  }
 
   // per-post SEO bundle (consultant #2 + #7): written to meta.json, which
   // blog/[slug] generateMetadata reads through withOverrides.

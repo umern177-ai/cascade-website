@@ -9,7 +9,7 @@ import { ChevronRight, Phone, ArrowRight } from "lucide-react";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import { SITE } from "@/lib/site-data";
 import { blogPost, blogPosts } from "@/lib/blog-serve";
-import { getMetaFile } from "@/lib/admin/store";
+import { getMetaFile, getAuthors } from "@/lib/admin/store";
 
 export function generateStaticParams() {
   // Admin posts are published on-demand (ISR-style via revalidatePath), so at
@@ -57,7 +57,16 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
     publisher: { "@id": "https://cascadecharterbus.com/#organization" },
     url: `${SITE.url}/blog/${post.slug}/`,
   };
-  const others = (await blogPosts()).filter((p) => p.slug !== post.slug).slice(0, 3);
+  const all = await blogPosts();
+  // Related posts: same category first, then the freshest (section 4.3/4.4).
+  const cats = new Set(post.categories ?? [post.tag]);
+  const others = [
+    ...all.filter((p) => p.slug !== post.slug && (p.categories ?? [p.tag]).some((c) => cats.has(c))),
+    ...all.filter((p) => p.slug !== post.slug && !(p.categories ?? [p.tag]).some((c) => cats.has(c))),
+  ]
+    .filter((p, i, a) => a.findIndex((x) => x.slug === p.slug) === i)
+    .slice(0, 3);
+  const authorBio = (await getAuthors()).find((a) => a.name === post.author)?.bio;
 
   return (
     <main className="pp bg-white pp-svc" style={{ fontSize: "inherit" }}>
@@ -71,9 +80,10 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <div className="pp-hero-solo">
             <p className="pp-eyebrow">{`Guide · ${post.tag}`}</p>
             <h1>{post.title}</h1>
-            <p className="pp-lead">{post.description}</p>
+            <p className="pp-lead">{post.excerpt || post.description}</p>
             <p className="mb-0 small" style={{ color: "#8b93a8" }}>
-              By {post.author} · {new Date(post.date + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })} · {post.readMinutes} min read
+              By {post.author} · {new Date(post.date + "T00:00:00Z").toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}
+              {post.updatedAt && <> · Updated {new Date(post.updatedAt).toLocaleDateString("en-US", { year: "numeric", month: "long", day: "numeric", timeZone: "UTC" })}</>} · {post.readMinutes} min read
             </p>
           </div>
         </div>
@@ -85,6 +95,12 @@ export default async function BlogPostPage({ params }: { params: Promise<{ slug:
           <Image src={post.image} alt={post.imageAlt} width={1200} height={640} priority sizes="(max-width: 900px) 100vw, 860px" style={{ objectFit: "cover", width: "100%", maxHeight: 420, borderRadius: 22, marginBottom: "1.6rem" }} />
           {/* contentHtml is sanitized on save (scripts, frames, handlers stripped) */}
           <div className="pp-prose" dangerouslySetInnerHTML={{ __html: post.contentHtml }} />
+          {authorBio && (
+            <div className="pp-author-box" style={{ marginTop: "2rem", padding: "1.4rem 1.6rem", background: "#f5f6f8", borderRadius: 16 }}>
+              <p className="fw-bold mb-1" style={{ fontSize: "1.02rem" }}>{`About ${post.author}`}</p>
+              <p className="mb-0" style={{ fontSize: "0.94rem", color: "#4a5060" }}>{authorBio}</p>
+            </div>
+          )}
         </div>
       </article>
 

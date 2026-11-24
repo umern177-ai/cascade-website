@@ -35,10 +35,10 @@ export async function POST(req: NextRequest) {
     const cols = line.match(/("([^"]*)"|[^,s]+)(,)?/g) ?? [];
     const clean = (x: string | undefined) => (x ? x.replace(/"/g, "").trim() : "");
     const from = clean(cols[0]); const to = clean(cols[1]);
-    const status = clean(cols[2]) === "302" ? 302 : 301;
+    const type = (clean(cols[2]) === "302" ? 302 : clean(cols[2]) === "410" ? 410 : 301) as 301 | 302 | 410;
     const note = clean(cols[3]);
-    if (!from.startsWith("/") || !to.startsWith("/") || rules.some((r) => r.from === from)) continue;
-    rules.push({ id: "r" + Date.now() + "_" + added, from, to, status: status as 301 | 302, note: note || undefined });
+    if (!from.startsWith("/") || (!to.startsWith("/") && type !== 410) || rules.some((r) => r.from === from)) continue;
+    rules.push({ id: "r" + Date.now() + "_" + added, from, to, type, status: "active", note: note || undefined } as AdminRedirect);
     added++;
   }
   await saveRedirects(rules);

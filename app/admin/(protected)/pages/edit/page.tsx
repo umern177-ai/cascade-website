@@ -4,7 +4,7 @@
 import Link from "next/link";
 import { notFound } from "next/navigation";
 import { pageCatalog } from "@/lib/admin/page-catalog";
-import { getPageBody, getMetaFile, type Faq, type PageBody } from "@/lib/admin/store";
+import { getPageBody, getMetaFile, getPageDrafts, type Faq, type PageBody } from "@/lib/admin/store";
 import {
   cityFields, serviceFields, fleetFields, homeFields, aboutFields, contactFields,
   locationsHubFields, stateFields, legalFields,
@@ -39,7 +39,9 @@ export default async function PageEditor({ searchParams }: Props) {
 
   const content = await (await import("@/lib/admin/page-content")).getSiteContent();
 
-  const [metaFile, body] = await Promise.all([getMetaFile(), getPageBody(path)]);
+  const [metaFile, body, drafts] = await Promise.all([getMetaFile(), getPageBody(path), getPageDrafts()]);
+  const versions = body?.versions ?? [];
+  const hasDraft = !!drafts[path];
   const type = pageType(path);
 
   // ---- build the full field spec for body-capable pages ----
@@ -201,7 +203,7 @@ export default async function PageEditor({ searchParams }: Props) {
 
       {/* ===== every content field (city / service / fleet) ===== */}
       {spec ? (
-        <PageBodyEditor path={path} groups={spec.groups} faqs={spec.faqs} saved={!!saved} />
+        <PageBodyEditor path={path} groups={spec.groups} faqs={spec.faqs} saved={!!saved} versions={versions} hasDraft={hasDraft} />
       ) : (
         <div className="adm-panel">
           <h2>Page body</h2>

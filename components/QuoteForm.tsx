@@ -69,6 +69,8 @@ export default function QuoteForm() {
     // Page source carried through the hero form's query string, if any.
     const src = qsRef.current?.get("source");
     if (src) fd.set("source", src);
+    // Exact page URL the inquiry came from (quote inquiries module, Phase 1).
+    fd.set("pageUrl", window.location.href);
     setStatus("sending");
     setErrorMsg("");
     try {

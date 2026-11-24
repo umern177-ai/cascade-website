@@ -91,6 +91,8 @@ export type AdminRedirect = {
   status?: "active" | "inactive";   // runtime engine applies active rules only
   match?: "exact" | "wildcard";
   note?: string;
+  created_at?: string;
+  updated_at?: string;
   hits?: number;
   last_hit?: string;
 };
@@ -530,6 +532,8 @@ export function normalizeRedirect(r: Partial<AdminRedirect> & { status?: number 
     note: r.note,
     hits: r.hits,
     last_hit: r.last_hit,
+    created_at: r.created_at,
+    updated_at: r.updated_at,
   };
   return out;
 }

@@ -135,9 +135,9 @@ export async function saveRule(rule: RuntimeRule): Promise<void> {
   const active = rule.status ?? "active";
   if (i >= 0) {
     const old = rules[i];
-    rules[i] = { ...rule, status: active, hits: old.hits, last_hit: old.last_hit };
+    rules[i] = { ...rule, status: active, hits: old.hits, last_hit: old.last_hit, created_at: rule.created_at ?? old.created_at ?? new Date().toISOString(), updated_at: new Date().toISOString() };
   } else {
-    rules.push({ ...rule, status: active, hits: 0 });
+    rules.push({ ...rule, status: active, hits: 0, created_at: rule.created_at ?? new Date().toISOString(), updated_at: new Date().toISOString() });
   }
   await saveRedirects(rules);
 }

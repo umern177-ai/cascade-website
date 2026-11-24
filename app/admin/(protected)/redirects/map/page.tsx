@@ -84,7 +84,7 @@ export default async function AdminLaunchMap({ searchParams }: { searchParams: P
 
       {sp.saved && <div className="adm-alert">Applied — the rules are live in the redirect list.</div>}
       <div className="adm-panel">
-        <Link className="adm-btn" href="/admin/redirects">← Redirects</Link>
+        <Link className="adm-btn" href="/admin/redirect-management">← Redirects</Link>
       </div>
 
       <div className="adm-panel">

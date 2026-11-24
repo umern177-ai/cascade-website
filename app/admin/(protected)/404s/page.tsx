@@ -52,7 +52,7 @@ export default async function Admin404s({ searchParams }: { searchParams: Promis
                   <td className="adm-muted" style={{ whiteSpace: "nowrap" }}>{new Date(h.last).toLocaleDateString("en-US", { month: "short", day: "numeric" })}</td>
                   <td><code style={{ fontSize: 11 }}><Link className="adm-link" href={suggest(path)} target="_blank">{suggest(path)}</Link></code></td>
                   <td className="adm-row-actions">
-                    <Link className="adm-btn" href={`/admin/redirects?from=${encodeURIComponent(path)}`}>Create redirect</Link>
+                    <Link className="adm-btn" href={`/admin/redirect-management?create=${encodeURIComponent(path)}`}>Create redirect</Link>
                     <form action="/api/admin/404-ignore" method="post">
                       <input type="hidden" name="pattern" value={path} />
                       <button className="adm-iconbtn" type="submit" title="Ignore this path"><EyeOff size={14} /></button>

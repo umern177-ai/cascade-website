@@ -252,7 +252,7 @@ function bumpHitsFile(rule: RuntimeRule): void {
       for (const r of raw) {
         const upd = HIT_FLUSH.dirty.get(r.id);
         if (upd) {
-          r.hits = upd.hits;
+          r.hits = (r.hits ?? 0) + 1;
           r.last_hit = upd.last_hit;
           HIT_FLUSH.dirty.delete(r.id);
         }

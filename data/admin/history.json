@@ -1,5 +1,75 @@
 [
   {
+    "id": "hmwv8lod31imf",
+    "at": "2026-11-24T21:59:04.599Z",
+    "kind": "redirect-import",
+    "path": "/admin/redirect-management",
+    "summary": "CSV import: 0 new, 0 updated, 500 skipped"
+  },
+  {
+    "id": "hmwv8lmd5hobv",
+    "at": "2026-11-24T21:59:02.009Z",
+    "kind": "redirect-import",
+    "path": "/admin/redirect-management",
+    "summary": "CSV import: 0 new, 0 updated, 500 skipped"
+  },
+  {
+    "id": "hmwv8lk5ufywn",
+    "at": "2026-11-24T21:58:59.154Z",
+    "kind": "redirect-import",
+    "path": "/admin/redirect-management",
+    "summary": "CSV import: 500 new, 0 updated, 0 skipped"
+  },
+  {
+    "id": "hmwv8lgbyox9a",
+    "at": "2026-11-24T21:58:54.190Z",
+    "kind": "redirect-import",
+    "path": "/admin/redirect-management",
+    "summary": "CSV import: 500 new, 0 updated, 0 skipped"
+  },
+  {
+    "id": "hmwv8hy21lhwe",
+    "at": "2026-11-24T21:56:10.537Z",
+    "kind": "redirect-save",
+    "path": "/test-mgr-301",
+    "summary": "301 → /locations/tx/ [active]"
+  },
+  {
+    "id": "hmwv8g8ty9f40",
+    "at": "2026-11-24T21:54:51.190Z",
+    "kind": "redirect-save",
+    "path": "/test-mgr-q",
+    "summary": "301 → /contact/ [active]"
+  },
+  {
+    "id": "hmwv8g8h5iqvw",
+    "at": "2026-11-24T21:54:50.729Z",
+    "kind": "redirect-save",
+    "path": "/test-mgr-301",
+    "summary": "301 → /locations/tx/ [inactive]"
+  },
+  {
+    "id": "hmwv8g81wchfj",
+    "at": "2026-11-24T21:54:50.181Z",
+    "kind": "redirect-save",
+    "path": "/test-mgr-410",
+    "summary": "410 → (gone) [active]"
+  },
+  {
+    "id": "hmwv8g7mv09fi",
+    "at": "2026-11-24T21:54:49.639Z",
+    "kind": "redirect-save",
+    "path": "/test-mgr-301",
+    "summary": "301 → /locations/tx/ [active]"
+  },
+  {
+    "id": "hmwv8fx88wl0d",
+    "at": "2026-11-24T21:54:36.152Z",
+    "kind": "redirect-save",
+    "path": "/x1",
+    "summary": "301 → /x2/ [active]"
+  },
+  {
     "id": "hmwv63ky4vffi",
     "at": "2026-11-24T20:49:01.132Z",
     "kind": "post-save",

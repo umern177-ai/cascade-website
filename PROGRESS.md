@@ -1378,3 +1378,11 @@ checks 200; llms+robots+sitemap-all 200; redirect engine live rule verified
 (301 in seconds + inactive toggle + 410 rule); 404s logged (only true 404s;
 removed cities 410 separate); tsc 0 / build 0 across all phases. NOT
 deployed — awaiting owner OK.
+
+## Deployed to staging (Nov 24, commits a19794e + e535809)
+
+All phases live on staging. Fix commit e535809: proxy known-path set now
+includes the sitemap files (/sitemap-all.xml was being 404-blocked by the
+URL matcher; verified 793 URLs serve after redeploy). Staging checks: admin
+login 200, sitemap index/all 200 (793 URLs), llms/robots 200, city 200,
+removed city 410. Owner next step unchanged: add BLOB_READ_WRITE_TOKEN.

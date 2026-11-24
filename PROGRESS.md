@@ -1386,3 +1386,22 @@ includes the sitemap files (/sitemap-all.xml was being 404-blocked by the
 URL matcher; verified 793 URLs serve after redeploy). Staging checks: admin
 login 200, sitemap index/all 200 (793 URLs), llms/robots 200, city 200,
 removed city 410. Owner next step unchanged: add BLOB_READ_WRITE_TOKEN.
+
+## URL Redirect Manager (/admin/redirect-management) — full spec build (Nov 24)
+
+Per the owner's Redirect Manager spec (paste): sidebar "URL Redirect
+Manager" under Content & SEO; old /admin/redirects 307s to the new URL.
+Interactive client table (RedirectsClient): search with clear buttons,
+type/status dropdowns with clear buttons, "X rules found", checkbox bulk
+activate/deactivate/delete with confirms, sortable created/hits, pagination
+(first/«/numbers/»/last + go-to-page + 20/50/100/page), URL truncation with
+hover. Add/Edit popup with 4 type cards + Active/Inactive cards + 410-hides-
+target + "Will go live immediately" footer. Delete confirm. created_at/
+updated_at stored (legacy migration). CSV export with filters (fixed columns
+incl hits/created_at); import popup with Download Template, drag-drop or
+browse (CSV ≤5MB), server-side preview (new/update/skip + numbered errors),
+skip-or-overwrite, batches of 500 (2000-row proof: 1000 imported + 1000
+skipped, 0 errors, 14s). Hits-increment bug fixed (flush now increments the
+real file value). Test proof at commit time: 301 live via API, 410 works,
+inactive ignored, query strings passed, loop blocked, hits increment.
+Staging push 102526a.

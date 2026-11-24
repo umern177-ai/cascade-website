@@ -14,7 +14,7 @@ const KEPT = keptSlugs as SlugMap;
 const KEPT_STATES = new Set(Object.keys(KEPT));
 
 export const config = {
-  matcher: ["/((?!_next/|favicon|robots.txt|sitemap|llms.txt|images/|brand/|manifest|uploads/.*|api/|admin|_next).*)?"],
+  matcher: ["/((?!_next/|favicon|robots.txt|llms.txt|images/|brand/|manifest|uploads/.*|api/|admin|_next).*)?"],
 };
 
 // ---- tiny in-process cache so every request does not hit the disk --------
@@ -83,7 +83,9 @@ function wildcardHit(pattern: string, key: string): boolean {
 // known paths for the 404 monitor (page catalog approximation from data files)
 function isKnownPath(pathname: string): boolean {
   if (state.known) return state.known.has(norm(pathname));
-  const set = new Set<string>(["/", "/about/", "/contact/", "/faqs/", "/blog/", "/services/", "/fleet/", "/locations/", "/sitemap/", "/privacy-policy/", "/termsandconditions/", "/cancellation-policy/", "/admin/login"]);
+  const set = new Set<string>(["/", "/about/", "/contact/", "/faqs/", "/blog/", "/services/", "/fleet/", "/locations/", "/sitemap/", "/privacy-policy/", "/termsandconditions/", "/cancellation-policy/", "/admin/login",
+    "/sitemap.xml", "/sitemap-all.xml", "/sitemap-static.xml", "/sitemap-services.xml", "/sitemap-fleet.xml", "/sitemap-locations.xml", "/sitemap-posts.xml", "/blog/rss.xml", "/llms.txt"]);
+  for (const st of Object.keys(KEPT)) set.add(norm("/sitemap-locations-" + st + ".xml"));
   const services = readJson("data/services-live.json") as { slug?: string }[] | null;
   void services;
   // service + fleet slugs: code constants (kept in sync with lib/site-data.ts)

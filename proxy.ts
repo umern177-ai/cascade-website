@@ -162,7 +162,11 @@ export default function proxy(req: NextRequest) {
       pathname.startsWith("/admin/") ||
       pathname.startsWith("/api/admin") ||
       pathname.startsWith("/api/quote") || // the public quote API keeps working (leads save)
-      pathname.startsWith("/uploads");
+      pathname.startsWith("/uploads") ||
+      /^\/sitemap/i.test(pathname) || // sitemap files stay public while closed
+      pathname === "/llms.txt" ||
+      pathname === "/robots.txt" ||
+      pathname === "/blog/rss.xml";
     const hasSession = !!req.cookies.get("cb_admin_open");
     if (!isAdminSurface && !hasSession) {
       const url = req.nextUrl.clone();
